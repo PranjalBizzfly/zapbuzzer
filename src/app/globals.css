@@ -1,0 +1,472 @@
+@import "tailwindcss";
+
+/*
+ * ZapBuzzer design tokens — derived from zapbuzzer.com:
+ * indigo accent oklch(56% .2 277), violet→fuchsia gradient, cool off-white
+ * background, near-black ink surfaces. Inter for body, Poppins for headings.
+ */
+:root {
+  --bg: oklch(97.9% 0.004 265); /* ≈ #f8f9fc */
+  --surface: #ffffff;
+  --surface-2: oklch(96% 0.008 270);
+  --ink: #0b0e1a; /* dark band surface */
+  --ink-2: #151a2b;
+  --fg: #141627;
+  --muted: oklch(50% 0.022 270);
+  --border: oklch(90.5% 0.012 270);
+  --accent: oklch(56% 0.2 277); /* ≈ #5c5fe6 */
+  --accent-hover: oklch(50% 0.2 277);
+  --accent-text: #4446aa;
+  --accent-soft: oklch(56% 0.2 277 / 0.1);
+  --accent-fg: #ffffff;
+  --violet: #8b5cf6;
+  --fuchsia: #d946ef;
+  --success: oklch(62% 0.16 155);
+  --warning: oklch(76.9% 0.188 70);
+  --danger: oklch(60% 0.2 20);
+  --shadow: 0 1px 2px #1719280a, 0 8px 30px -12px #17192814;
+  --shadow-lg: 0 24px 60px -24px #1719283d;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --glass: rgb(255 255 255 / 0.86);
+  --glass-strong: rgb(255 255 255 / 0.95);
+  --accent-2: #a5a8ff; /* accent on dark surfaces */
+  color-scheme: light;
+}
+
+/* Dark theme — ZapBuzzer's own dark palette (zapbuzzer.com ships one too). */
+.dark {
+  --bg: #0b0d16;
+  --surface: #121522;
+  --surface-2: #181c2c;
+  --ink: #070912;
+  --ink-2: #10131f;
+  --fg: #eceefa;
+  --muted: oklch(72% 0.025 270);
+  --border: #252a3d;
+  --accent: oklch(62% 0.19 277);
+  --accent-hover: oklch(57% 0.2 277);
+  --accent-text: #a5a8ff;
+  --accent-soft: oklch(62% 0.19 277 / 0.16);
+  --shadow: 0 1px 2px #0006, 0 8px 30px -12px #0009;
+  --shadow-lg: 0 24px 60px -24px #000c;
+  --glass: rgb(18 21 34 / 0.82);
+  --glass-strong: rgb(18 21 34 / 0.94);
+  color-scheme: dark;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-glass: var(--glass);
+  --color-glass-strong: var(--glass-strong);
+  --color-accent-2: var(--accent-2);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-violet: var(--violet);
+  --color-fuchsia: var(--fuchsia);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --shadow-card: var(--shadow);
+  --shadow-lift: var(--shadow-lg);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--accent), var(--violet) 55%, var(--fuchsia));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse at top, #000 25%, transparent 72%);
+}
+
+.bg-dots {
+  background-image: radial-gradient(var(--border) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+/* One content width for every section (matches max-w-7xl + px-4 used on inner pages). */
+.container-x {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@layer components {
+/* ---------- Surfaces ---------- */
+
+/* Frosted card used across sections. */
+.glass-panel {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--glass);
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+  backdrop-filter: blur(14px) saturate(170%);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Lift + accent border + light sheen sweep on hover. */
+.card-fx {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    transform 0.35s var(--ease-out),
+    box-shadow 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out);
+}
+.card-fx::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background-image: linear-gradient(115deg, transparent 32%, rgb(255 255 255 / 0.55) 46%, oklch(56% 0.2 277 / 0.1) 52%, transparent 64%);
+  background-size: 250% 100%;
+  background-position: 155% 0;
+  background-repeat: no-repeat;
+  transition: opacity 0.35s;
+}
+.card-fx::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--fuchsia), transparent);
+  transform: scaleX(0.4);
+  transition: opacity 0.45s, transform 0.55s var(--ease-out);
+}
+.card-fx:hover {
+  transform: translateY(-4px);
+  border-color: oklch(56% 0.2 277 / 0.45);
+  box-shadow: 0 22px 44px -22px oklch(40% 0.18 277 / 0.35);
+}
+.card-fx:hover::after {
+  opacity: 1;
+  animation: zb-sheen 1.15s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+.card-fx:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Soft glow halo behind product mockups. */
+.halo {
+  position: relative;
+  isolation: isolate;
+}
+.halo::before {
+  content: "";
+  position: absolute;
+  inset: -0.75rem;
+  z-index: -1;
+  border-radius: 2rem;
+  background: linear-gradient(120deg, oklch(56% 0.2 277 / 0.22), oklch(60% 0.2 300 / 0.16), oklch(65% 0.22 330 / 0.14));
+  filter: blur(28px);
+  opacity: 0.8;
+}
+
+/* Blurred background orbs. */
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  pointer-events: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-shimmer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  z-index: 1;
+  width: 45%;
+  height: 200%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.06) 20%, rgb(255 255 255 / 0.4) 50%, rgb(255 255 255 / 0.06) 80%, transparent);
+  animation: zb-shimmer 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ---------- Navigation ---------- */
+
+.nav-underline {
+  position: relative;
+}
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--fuchsia));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s var(--ease-out);
+}
+.nav-underline:hover::after,
+.nav-underline[data-active="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ---------- Marquee ---------- */
+
+.marquee {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: zb-marquee 38s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+}
+/* ---------- Motion ---------- */
+
+@keyframes zb-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes zb-pulse-ring {
+  0% { box-shadow: 0 0 0 0 oklch(56% 0.2 277 / 0.45); }
+  100% { box-shadow: 0 0 0 12px oklch(56% 0.2 277 / 0); }
+}
+@keyframes zb-fill {
+  from { stroke-dashoffset: var(--dash); }
+}
+@keyframes zb-bar {
+  from { transform: scaleY(0.1); }
+}
+@keyframes zb-sheen {
+  0% { background-position: 155% 0; }
+  100% { background-position: -55% 0; }
+}
+@keyframes zb-shimmer {
+  0% { transform: translateX(-160%) skewX(-20deg); }
+  55%, 100% { transform: translateX(420%) skewX(-20deg); }
+}
+@keyframes zb-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes zb-orb {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.08); }
+}
+@keyframes zb-marquee {
+  to { transform: translateX(-50%); }
+}
+@keyframes zb-menu {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes zb-drawer {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.anim-rise { animation: zb-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-ping { animation: zb-pulse-ring 1.8s ease-out infinite; }
+.anim-bar { transform-origin: bottom; animation: zb-bar 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-ring { animation: zb-fill 1.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-float { animation: zb-float 6s ease-in-out infinite; }
+.anim-orb { animation: zb-orb 9s ease-in-out infinite; }
+.anim-menu { animation: zb-menu 0.2s ease-out both; }
+.anim-drawer { animation: zb-drawer 0.25s ease-out both; }
+
+/* Staggered entrance for hero children. */
+.stagger > * { animation: zb-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.stagger > *:nth-child(2) { animation-delay: 0.06s; }
+.stagger > *:nth-child(3) { animation-delay: 0.12s; }
+.stagger > *:nth-child(4) { animation-delay: 0.18s; }
+.stagger > *:nth-child(5) { animation-delay: 0.24s; }
+.stagger > *:nth-child(6) { animation-delay: 0.3s; }
+
+/*
+ * Scroll reveal. Elements are only hidden once the RevealOnScroll script has
+ * set html.reveal-ready, so content is always visible without JavaScript.
+ */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Subtle 3D tilt for hero mockups on hover (pointer devices only). */
+@media (hover: hover) {
+  .tilt {
+    transition: transform 0.6s var(--ease-out);
+    transform: perspective(1200px) rotateX(0) rotateY(0);
+  }
+  .tilt:hover {
+    transform: perspective(1200px) rotateX(2deg) rotateY(-3deg) translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-ready [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+  .tw-caret { display: none; }
+}
+
+@layer components {
+/* ---------- Sky9-style additions ---------- */
+
+.dark .card-fx::after {
+  background-image: linear-gradient(115deg, transparent 32%, rgb(255 255 255 / 0.1) 46%, oklch(70% 0.17 277 / 0.16) 52%, transparent 64%);
+}
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Typewriter caret */
+@keyframes zb-caret { 50% { opacity: 0; } }
+.tw-caret { animation: zb-caret 1s steps(1) infinite; }
+
+/* Spotlight that follows the cursor (position set by SpotlightCard). */
+.spotlight-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+  background: radial-gradient(350px circle at var(--mx, 50%) var(--my, 50%), oklch(56% 0.2 277 / 0.13), transparent 80%);
+}
+.dark .spotlight-layer {
+  background: radial-gradient(350px circle at var(--mx, 50%) var(--my, 50%), oklch(70% 0.17 277 / 0.16), transparent 80%);
+}
+.spotlight:hover > .spotlight-layer { opacity: 1; }
+
+/* Animated border beam used on the "Most popular" badge. */
+@keyframes zb-beam { to { transform: rotate(360deg); } }
+.beam {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.beam::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  z-index: -2;
+  background: conic-gradient(from 0deg, transparent 0 70%, var(--accent-2) 80%, var(--fuchsia) 88%, transparent 100%);
+  animation: zb-beam 4s linear infinite;
+}
+.beam::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  z-index: -1;
+  border-radius: inherit;
+  background: #10132a;
+}
+
+/* Hero bar chart pulse. */
+@keyframes zb-bars {
+  0%, 100% { transform: scaleY(0.55); }
+  33% { transform: scaleY(0.9); }
+  66% { transform: scaleY(0.72); }
+}
+.anim-bars > * { transform-origin: bottom; animation: zb-bars 2.8s ease-in-out infinite; }
+.anim-bars > *:nth-child(2) { animation-duration: 2.4s; }
+.anim-bars > *:nth-child(3) { animation-duration: 3.1s; }
+.anim-bars > *:nth-child(4) { animation-duration: 2.2s; }
+
+.anim-float-slow { animation: zb-float 5s ease-in-out infinite reverse; }
+
+/* Slide-in mobile drawer */
+@keyframes zb-slide-in { from { transform: translateX(100%); } to { transform: none; } }
+@keyframes zb-fade-in { from { opacity: 0; } to { opacity: 1; } }
+.anim-slide-in { animation: zb-slide-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-fade-in { animation: zb-fade-in 0.2s ease-out both; }
+
+/* Accordion body */
+@keyframes zb-open { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.anim-open { animation: zb-open 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+}
