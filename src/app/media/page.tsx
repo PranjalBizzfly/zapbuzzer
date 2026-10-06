@@ -101,7 +101,7 @@ export default function MediaPage() {
             </div>
           </div>
           <div className="min-w-0 lg:col-span-5">
-            <div data-reveal className="glass-panel rounded-2xl p-6">
+        <div data-reveal className="glass-panel mt-6 rounded-2xl p-6 sm:p-8">
               <h3 className="font-heading text-lg font-bold">Fact Sheet</h3>
               <dl className="mt-4 divide-y divide-line text-sm">
                 {facts.map(([k, v]) => (
@@ -141,9 +141,9 @@ export default function MediaPage() {
 
       <Band>
         <div className="grid gap-10 lg:grid-cols-2">
-          <div>
+          <div className="flex flex-col">
             <SectionHeading center={false} eyebrow="Announcements" title="Latest From ZapBuzzer" typewriter={false} />
-            <div className="space-y-4">
+            <div className="flex flex-1 flex-col gap-4 [&>*]:flex-1">
               {announcements.map((a) => (
                 <div key={a.title} data-reveal className="glass-panel rounded-2xl p-6">
                   <h3 className="font-heading text-lg font-bold">{a.title}</h3>
@@ -155,15 +155,17 @@ export default function MediaPage() {
               ))}
             </div>
           </div>
-          <div>
+          <div className="flex flex-col">
             <SectionHeading center={false} eyebrow="Press Coverage" title="In the News" typewriter={false} />
-            <div data-reveal className="glass-panel rounded-2xl p-6 text-[15px] leading-relaxed text-muted">
+            <div data-reveal className="glass-panel flex-1 rounded-2xl p-6 text-[15px] leading-relaxed text-muted">
               <p>We do not list any press coverage yet. When ZapBuzzer is covered by a publication, the article will be linked here.</p>
               <p className="mt-3">Writing about ZapBuzzer? Send us the link once it is published and we will add it.</p>
             </div>
-            <div data-reveal className="mt-4 glass-panel rounded-2xl p-6">
+          </div>
+        </div>
+        <div data-reveal className="glass-panel mt-6 rounded-2xl p-6 sm:p-8">
               <h3 className="font-heading text-lg font-bold">Story Angles We Can Speak To</h3>
-              <ul className="mt-3 space-y-3">
+              <ul className="mt-4 grid gap-x-8 gap-y-4 md:grid-cols-2">
                 {topics.map((t) => (
                   <li key={t.title} className="text-sm">
                     <span className="font-semibold">{t.title}.</span> <span className="text-muted">{t.body}</span>
@@ -171,8 +173,6 @@ export default function MediaPage() {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
       </Band>
 
       <Band alt id="media-enquiry">

@@ -143,7 +143,7 @@ export default function CareersPage() {
 
       <Band>
         <SectionHeading eyebrow="Hiring Process" title="What Applying Looks Like" />
-        <ol className="mx-auto grid max-w-5xl gap-4 md:grid-cols-5">
+        <ol className="mx-auto grid max-w-5xl items-start gap-4 md:grid-cols-5">
           {process.map((s, i) => (
             <li key={s.title} data-reveal className="glass-panel rounded-2xl p-5">
               <span className="font-heading text-3xl font-extrabold text-accent/40">{String(i + 1).padStart(2, "0")}</span>

@@ -267,8 +267,12 @@ export default function Home() {
       />
 
       {/* ───────── Hero ───────── */}
-      <section className="relative -mt-[72px] overflow-hidden bg-bg pb-[300px] pt-[104px] sm:pb-[440px] sm:pt-[120px] lg:pb-[490px] lg:pt-[132px]">
+      <section className="relative -mt-[72px] overflow-hidden bg-bg pb-[340px] pt-[104px] sm:pb-[440px] sm:pt-[120px] lg:pb-[490px] lg:pt-[132px]">
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
+          {/* Light-mode backdrop (hidden in dark mode) */}
+          <div className="hero-light-bg absolute inset-0 dark:hidden">
+            <div className="dots right-[3%] top-[18%] h-56 w-56" />
+          </div>
           {/* Full-hero 3D stage: machined request discs orbiting the ZapBuzzer bell */}
           <HeroDiscs className="absolute inset-0" />
           <div className="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-bg to-transparent" />
@@ -282,7 +286,7 @@ export default function Home() {
               </div>
               <div className="z-depth-2 space-y-3">
                 <h1 className="font-heading text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl md:text-6xl">
-                  <Typewriter text="Stop Calling the Pantry Boy Three Times for One Coffee." cursor />
+                  <Typewriter text="Stop Calling the Pantry Boy Three Times for One Coffee." highlight="One Coffee." cursor />
                 </h1>
                 <p className="text-xl font-semibold text-accent-text sm:text-2xl">{titleCase(site.tagline)}</p>
               </div>
@@ -292,7 +296,7 @@ export default function Home() {
               </p>
               <div className="z-depth-3 flex flex-col items-center justify-center gap-4 pt-2 sm:flex-row">
                 <Button href={site.app.signUp} className="w-full sm:w-auto">Start free 14-day trial</Button>
-                <Button href={site.app.demo} variant="secondary" className="w-full sm:w-auto">Try the demo</Button>
+                <Button href={site.app.demo} variant="secondary" className="w-full sm:w-auto" lead={<Icon name="play" className="h-5 w-5" />}>Try the demo</Button>
               </div>
               <ul className="z-depth-1 flex flex-wrap justify-center gap-4 pt-4 text-xs font-medium text-muted sm:text-sm md:gap-6">
                 {["No Credit Card", "No Setup Call", "Up and Running in an Afternoon"].map((t) => (

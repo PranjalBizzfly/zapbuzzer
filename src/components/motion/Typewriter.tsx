@@ -13,12 +13,15 @@ export function Typewriter({
   delay = 150,
   cursor = false,
   className = "",
+  highlight,
 }: {
   text: string;
   speed?: number;
   delay?: number;
   cursor?: boolean;
   className?: string;
+  /** A phrase inside `text` to render with the brand gradient (e.g. "One Coffee."). */
+  highlight?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [shown, setShown] = useState<number | null>(null); // null = not started (render full text)
@@ -58,13 +61,27 @@ export function Typewriter({
     };
   }, [text, speed, delay]);
 
-  if (shown === null) return <span ref={ref} className={className}>{text}</span>;
+  // Renders the first `n` characters, with the highlighted phrase in the gradient style.
+  const hs = highlight ? text.indexOf(highlight) : -1;
+  const render = (n: number) => {
+    const part = text.slice(0, n);
+    if (hs < 0 || n <= hs) return part;
+    return (
+      <>
+        {part.slice(0, hs)}
+        <span className="text-gradient-brand">{part.slice(hs, hs + highlight!.length)}</span>
+        {part.slice(hs + highlight!.length)}
+      </>
+    );
+  };
+
+  if (shown === null) return <span ref={ref} className={className}>{render(text.length)}</span>;
 
   return (
     <span ref={ref} className={`relative inline-block ${className}`}>
-      <span className="invisible">{text}</span>
+      <span className="invisible">{render(text.length)}</span>
       <span className="absolute inset-0" aria-hidden>
-        {text.slice(0, shown)}
+        {render(shown)}
         {(cursor || !done) && (
           <span className="tw-caret -mr-[7px] ml-1 inline-block h-[0.85em] w-[3px] rounded-sm bg-accent align-middle shadow-[0_0_8px_oklch(56%_0.2_277/0.6)]" />
         )}

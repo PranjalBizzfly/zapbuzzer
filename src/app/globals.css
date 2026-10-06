@@ -121,6 +121,28 @@ p {
   color: transparent;
 }
 
+/* Hero highlight ("One Coffee."): indigo → periwinkle → violet. */
+.text-gradient-brand {
+  background: linear-gradient(95deg, #5c5fe6 0%, #7c7ff5 45%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.dark .text-gradient-brand { background-image: linear-gradient(95deg, #8b8eff 0%, #a5a8ff 50%, #c4b5fd 100%); }
+
+/* Light-mode hero backdrop: lavender wash and a dot grid. */
+.hero-light-bg {
+  background:
+    radial-gradient(60% 55% at 50% 78%, rgb(165 168 255 / 0.28), transparent 70%),
+    linear-gradient(180deg, #f6f6ff 0%, #eeeefe 55%, #e9e9fd 100%);
+}
+.hero-light-bg .dots {
+  position: absolute;
+  background-image: radial-gradient(rgb(92 95 230 / 0.28) 1.4px, transparent 1.6px);
+  background-size: 18px 18px;
+  mask-image: radial-gradient(closest-side, #000 40%, transparent);
+}
+
 .bg-grid {
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),

@@ -30,16 +30,20 @@ type Look = {
   exposure: number; body: number; bodyMetal: number; edge: number; mark: number; markMetal: number; markGlow: number;
   bezel: number; bezelGlow: number; rim: number; rimA: number; rimBackA: number; plinth: number; plinthMetal: number; bump: number;
   trace: [number, number, number]; traceA: number; halo: [number, number, number]; haloA: number; clapperGlow: number;
+  bead: number; beadMetal: number; bodyGlow: number;
 };
 const DARK: Look = {
   exposure: 0.9, body: 0x1c1f36, bodyMetal: 1, edge: 0x8a8fc4, mark: 0xc9cbff, markMetal: 0.35, markGlow: 0.16,
   bezel: LAVENDER, bezelGlow: 0.18, rim: 0x8b8eff, rimA: 0.32, rimBackA: 0.22, plinth: 0x0d0f1c, plinthMetal: 1, bump: 0.4,
   trace: [0.42, 0.44, 0.98], traceA: 0.5, halo: [0.36, 0.37, 0.9], haloA: 0.16, clapperGlow: 0.12,
+  bead: 0x3a3f78, beadMetal: 0.6, bodyGlow: 0,
 };
+// Light: frosted white glass discs and a pearly platform with lavender light, indigo line-art.
 const LIGHT: Look = {
-  exposure: 1.0, body: 0xf1f2fa, bodyMetal: 0.32, edge: 0xb3b7dc, mark: INDIGO, markMetal: 0.25, markGlow: 0,
-  bezel: INDIGO, bezelGlow: 0, rim: INDIGO, rimA: 0.38, rimBackA: 0.12, plinth: 0xf3f4fa, plinthMetal: 0.15, bump: 0.12,
-  trace: [0.36, 0.37, 0.9], traceA: 0.14, halo: [0.62, 0.63, 1.0], haloA: 0.14, clapperGlow: 0,
+  exposure: 1.12, body: 0xffffff, bodyMetal: 0.04, edge: 0xd9daff, mark: INDIGO, markMetal: 0.2, markGlow: 0.06,
+  bezel: 0x6a6df0, bezelGlow: 0.12, rim: 0x8b8eff, rimA: 0.5, rimBackA: 0.16, plinth: 0xffffff, plinthMetal: 0.04, bump: 0.05,
+  trace: [0.36, 0.37, 0.9], traceA: 0, halo: [0.66, 0.67, 1.0], haloA: 0.38, clapperGlow: 0.1,
+  bead: 0xe6e7ff, beadMetal: 0.05, bodyGlow: 0.24,
 };
 
 export function HeroDiscs({ className = "" }: { className?: string }) {
@@ -71,7 +75,8 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
       } catch {
         return; // No WebGL: the hero background and the text remain.
       }
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, lowPower ? 1 : small ? 1.5 : 2));
+      // Phones get up to 2x so the metal edges and line-art stay crisp; low-power devices stay at 1.25x.
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, lowPower ? 1.25 : 2));
       renderer.setClearColor(0x000000, 0); // transparent: the hero's own theme background shows through
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -223,7 +228,7 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
       // Every symbol maps to a request type or step named in src/content/FACTS.md:
       //   brand      → ZapBuzzer bell logo        coffee     → Pantry (coffee, tea, snacks)
       //   print      → Print room (PDF → copies)   it         → IT support (monitor + wrench)
-      //   facilities → Facilities (AC unit, "AC too cold")   courier → Courier pickup (delivery truck)
+      //   facilities → Facilities (AC unit with airflow, "AC too cold")   courier → Courier pickup (delivery truck)
       //   assign     → First-accept-wins (whoever accepts owns the request)
       const ICONS: Record<string, T.Shape[]> = {
         coffee: [
@@ -245,10 +250,15 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
           ...box(-0.82, -0.18, 1.64, 0.96, W, 0.1), ...line(0, -0.2, 0, -0.5), ...line(-0.38, -0.56, 0.38, -0.56),
           ...line(-0.4, -0.02, 0.1, 0.36, 0.16), ...arc(0.22, 0.46, 0.17, 1.25, 0.35 + Math.PI * 2, 0.13),
         ],
-        // Facilities — a wall-mounted AC unit with cold air flowing down ("AC too cold").
+        // Facilities: a wall-mounted AC unit (body, louvre slot, status light) blowing three wavy
+        // streams of cool air ("AC too cold"). Waves, not straight lines, so it can't read as a cursor.
         facilities: [
-          ...box(-0.85, 0.08, 1.7, 0.62, W, 0.14), ...line(-0.58, 0.24, 0.58, 0.24, 0.08), circle(0.6, 0.52, 0.055),
-          ...line(-0.42, -0.14, -0.52, -0.66, 0.11), ...line(0, -0.14, 0, -0.72, 0.11), ...line(0.42, -0.14, 0.52, -0.66, 0.11),
+          ...box(-0.82, 0.2, 1.64, 0.56, W, 0.16), ...line(-0.56, 0.36, 0.56, 0.36, 0.08), circle(0.6, 0.6, 0.055),
+          ...[-0.44, 0, 0.44].flatMap((x) => [
+            ...arc(x, -0.06, 0.1, Math.PI / 2, (3 * Math.PI) / 2, 0.1),
+            ...arc(x, -0.26, 0.1, -Math.PI / 2, Math.PI / 2, 0.1),
+            ...arc(x, -0.46, 0.1, Math.PI / 2, (3 * Math.PI) / 2, 0.1),
+          ]),
         ],
         // Courier pickup — a delivery truck.
         courier: [
@@ -302,17 +312,28 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
       scene.add(stage);
 
       const hero = makeDisc("brand", 1.0);
-      hero.position.set(0, 0.25, 0.3);
+      hero.position.set(0, 0.45, 0.1);
       stage.add(hero);
 
-      // Wide base with a fine lit top edge; most of it sits below the frame.
-      const plinthMat = keep(new THREE.MeshPhysicalMaterial({ metalness: 1, roughness: 0.45, clearcoat: 0.3, envMapIntensity: 0.5 }));
-      const plinth = new THREE.Mesh(keep(new THREE.CylinderGeometry(2.0, 2.1, 0.6, small ? 64 : 128)), plinthMat);
-      plinth.position.y = -1.42;
-      const plinthRim = new THREE.Mesh(keep(new THREE.TorusGeometry(2.0, 0.012, 8, 200)), glowBlue);
-      plinthRim.rotation.x = Math.PI / 2;
-      plinthRim.position.y = -1.12;
-      stage.add(plinth, plinthRim);
+      // Glowing light for orbit rings and plinth edges: additive in dark mode, solid indigo in light.
+      const ringMat = keep(new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false }));
+
+      // Stepped plinth: three machined tiers, each with a lit top edge that breathes gently.
+      const plinthMat = keep(new THREE.MeshPhysicalMaterial({ metalness: 1, roughness: 0.4, clearcoat: 0.4, envMapIntensity: 0.6 }));
+      const seg = small ? 72 : 144;
+      const tiers = [
+        { r: 1.25, h: 0.16, top: -1.0 },
+        { r: 1.75, h: 0.18, top: -1.16 },
+        { r: 2.35, h: 0.34, top: -1.34 },
+      ].map(({ r, h, top }) => {
+        const body = new THREE.Mesh(keep(new THREE.CylinderGeometry(r, r + 0.04, h, seg)), plinthMat);
+        body.position.y = top - h / 2;
+        const edge = new THREE.Mesh(keep(new THREE.TorusGeometry(r, 0.014, 8, 220)), ringMat);
+        edge.rotation.x = Math.PI / 2;
+        edge.position.y = top;
+        stage.add(body, edge);
+        return edge;
+      });
 
       // Compact circuit board glowing behind the centre disc: dense orthogonal traces and pads
       // on a grid, brightest at the centre and fading out.
@@ -385,10 +406,36 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
 
       // Ten discs on a slow wheel arching behind the centre disc; the lower half of the wheel runs
       // below the frame, so discs rise in on one side and sink out on the other.
-      const SAT = ["coffee", "print", "it", "facilities", "courier", "assign", "coffee", "print", "it", "assign"];
+      const SAT = ["coffee", "print", "it", "facilities", "courier", "assign"];
+      // Orbit plane, tilted so the far side rises: the discs and the glowing rings share it.
+      const orbitGroup = new THREE.Group();
+      orbitGroup.position.y = -0.5;
+      orbitGroup.rotation.x = 0.36;
+      stage.add(orbitGroup);
+      // Partial arcs at different radii; spinning them makes the light visibly travel round the orbit.
+      const rings = [
+        { r: 1.0, arc: 1.55, speed: 0.22, tube: 0.009 },
+        { r: 1.16, arc: 1.2, speed: -0.15, tube: 0.006 },
+        { r: 0.86, arc: 0.9, speed: 0.34, tube: 0.004 },
+        { r: 1.3, arc: 0.7, speed: -0.26, tube: 0.003 },
+      ].map(({ r, arc, speed, tube }) => {
+        const m = new THREE.Mesh(keep(new THREE.TorusGeometry(r, tube, 8, 260, Math.PI * arc)), ringMat);
+        m.rotation.x = Math.PI / 2;
+        orbitGroup.add(m);
+        return { m, speed };
+      });
+      // Small glass beads riding the orbit, between the discs.
+      const beadMat = keep(new THREE.MeshPhysicalMaterial({ roughness: 0.08, clearcoat: 1, clearcoatRoughness: 0.05, envMapIntensity: 1.3 }));
+      const beadGeo = keep(new THREE.SphereGeometry(1, 32, 24));
+      const beads = [0.5, 1.6, 2.7, 3.9, 5.2].map((a, i) => {
+        const m = new THREE.Mesh(beadGeo, beadMat);
+        m.scale.setScalar(i % 2 ? 0.07 : 0.11);
+        orbitGroup.add(m);
+        return { m, a, r: i % 2 ? 1.16 : 1.0 };
+      });
       const sats = SAT.map((icon, i) => {
-        const d = makeDisc(icon, 0.82);
-        stage.add(d);
+        const d = makeDisc(icon, 0.6);
+        orbitGroup.add(d);
         return { d, phase: (i / SAT.length) * Math.PI * 2, spin: 0.22 + (i % 3) * 0.09, wob: i * 1.7 };
       });
 
@@ -410,6 +457,7 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         trace: [0, 1, 2].map((i) => mix(a.trace[i], b.trace[i], t)) as Look["trace"], traceA: mix(a.traceA, b.traceA, t),
         halo: [0, 1, 2].map((i) => mix(a.halo[i], b.halo[i], t)) as Look["halo"], haloA: mix(a.haloA, b.haloA, t),
         clapperGlow: mix(a.clapperGlow, b.clapperGlow, t),
+        bead: mixHex(a.bead, b.bead, t), beadMetal: mix(a.beadMetal, b.beadMetal, t), bodyGlow: mix(a.bodyGlow, b.bodyGlow, t),
       });
       const fade = { from: isDark() ? DARK : LIGHT, to: isDark() ? DARK : LIGHT, toDark: isDark(), start: -1 };
       const FADE_MS = 520;
@@ -441,6 +489,10 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         orangeMat.emissiveIntensity = L.clapperGlow;
         glowBlue.color.set(L.rim);
         glowBlue.opacity = L.rimA;
+        ringMat.color.set(L.rim);
+        ringMat.opacity = Math.min(1, L.rimA * (isDark() ? 2.7 : 1.5));
+        const blend = isDark() ? THREE.AdditiveBlending : THREE.NormalBlending;
+        if (ringMat.blending !== blend) { ringMat.blending = blend; ringMat.needsUpdate = true; }
         glowViolet.opacity = L.rimBackA;
         plinthMat.color.set(L.plinth);
         plinthMat.metalness = L.plinthMetal;
@@ -448,6 +500,13 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         traceUniforms.uAlpha.value = L.traceA;
         haloUniforms.uColor.value.set(...L.halo);
         haloUniforms.uAlpha.value = L.haloA;
+        // a soft white self-light in light mode reads as frosted glass instead of grey metal
+        bodyMat.emissive.set(0xffffff);
+        bodyMat.emissiveIntensity = L.bodyGlow;
+        plinthMat.emissive.set(0xffffff);
+        plinthMat.emissiveIntensity = L.bodyGlow * 0.8;
+        beadMat.color.set(L.bead);
+        beadMat.metalness = L.beadMetal;
       };
       const applyTheme = () => {
         const dark = isDark();
@@ -469,6 +528,9 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
 
       // ───────── layout: place the sculpture beside (desktop) or below (mobile) the copy ─────────
       const CLUSTER_R = 3.1; // world-space half-width of the arrangement
+      const CLUSTER_R_COMPACT = 2.6; // tighter arch on phones (see ORBIT_X)
+      let compact = false; // phones: tighter arch, larger render, calmer camera
+      let ORBIT_X = 2.45;
       let W_ = 1, H_ = 1;
       const layout = () => {
         W_ = el.clientWidth || 1;
@@ -476,15 +538,19 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         renderer.setSize(W_, H_, false);
         camera.aspect = W_ / H_;
         const desktop = W_ >= 1024;
+        compact = W_ < 640;
+        ORBIT_X = compact ? 1.85 : 2.45;
+        rimL.intensity = compact ? 2.3 : 1.6; // richer blue-violet rims where the object is small
+        rimR.intensity = compact ? 1.6 : 1.1;
         // Centred beneath the copy, inside the space the hero reserves at the bottom (matches its pb-*).
-        const stageH = desktop ? 490 : W_ >= 640 ? 440 : 300; // must match the hero section's pb-* values
+        const stageH = desktop ? 490 : W_ >= 640 ? 440 : 340; // must match the hero section's pb-* values
         const cx = W_ * 0.5;
         // The plinth hangs below the cluster centre, so aim a little above the band middle;
         // otherwise the sculpture sat low, leaving a blank strip under the copy and a cropped base.
-        const cy = H_ - stageH * (desktop ? 0.455 : 0.58);
-        const rpx = Math.min(W_ * (desktop ? 0.27 : W_ >= 640 ? 0.46 : 0.5), stageH * (desktop ? 0.8 : 0.66));
+        const cy = H_ - stageH * (desktop ? 0.455 : compact ? 0.5 : 0.58);
+        const rpx = compact ? Math.min(W_ * 0.5, stageH * 0.64) : Math.min(W_ * (desktop ? 0.27 : 0.46), stageH * (desktop ? 0.8 : 0.66));
         const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
-        baseDist = (CLUSTER_R * (H_ / 2)) / (tan * rpx);
+        baseDist = ((compact ? CLUSTER_R_COMPACT : CLUSTER_R) * (H_ / 2)) / (tan * rpx);
         camera.setViewOffset(W_, H_, W_ / 2 - cx, H_ / 2 - cy, W_, H_);
         camera.updateProjectionMatrix();
       };
@@ -508,16 +574,27 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         // centre disc: slow turn so light sweeps across the relief, gentle float
         hero.rotation.y = Math.sin(time * 0.33) * 0.42;
         hero.rotation.x = Math.sin(time * 0.21) * 0.05;
-        hero.position.y = 0.1 + Math.sin(time * 0.7) * 0.035;
+        hero.position.y = 0.45 + Math.sin(time * 0.7) * 0.035;
 
-        // wheel: discs arc up behind the centre disc and sink below the frame
-        const orbit = time * 0.1;
+        // carousel: request discs circle the bell on the tilted orbit, upright and facing the viewer,
+        // passing in front of and behind it; the light arcs travel round at their own speeds.
+        const orbit = time * 0.16;
         for (const s of sats) {
           const th = orbit + s.phase;
-          s.d.visible = Math.cos(th) > -0.3; // only the arch is ever on screen
-          s.d.position.set(Math.sin(th) * 2.25, -1.45 + Math.cos(th) * 1.6, -0.55 + (1 - Math.abs(Math.cos(th))) * 0.45);
-          s.d.rotation.set(-0.1, -Math.sin(th) * 1.3 + Math.sin(time * s.spin + s.wob) * 0.1, -Math.sin(th) * 0.35);
+          s.d.position.set(Math.sin(th) * ORBIT_X, 0.05 + Math.sin(time * 0.8 + s.wob) * 0.04, Math.cos(th) * ORBIT_X);
+          s.d.scale.setScalar(compact ? 0.48 : 0.6);
+          s.d.rotation.set(-orbitGroup.rotation.x, -Math.sin(th) * 0.45 + Math.sin(time * s.spin + s.wob) * 0.12, 0);
         }
+        for (const b of beads) {
+          const th = orbit * 1.35 + b.a;
+          b.m.position.set(Math.sin(th) * ORBIT_X * b.r, 0.02 + Math.sin(time * 0.9 + b.a) * 0.05, Math.cos(th) * ORBIT_X * b.r);
+        }
+        for (const g of rings) {
+          g.m.scale.setScalar(ORBIT_X);
+          g.m.rotation.z = time * g.speed;
+        }
+        // plinth edges breathe softly, outer tiers slightly behind inner ones
+        tiers.forEach((e, i) => e.scale.setScalar(1 + Math.sin(time * 1.2 - i * 0.6) * 0.004));
 
         traceUniforms.uTime.value = time;
         if (themeActive) themeActive = stepTheme(performance.now());
@@ -525,7 +602,7 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         // camera: mouse parallax + scroll crane
         mouse.x += (mouse.tx - mouse.x) * 0.045;
         mouse.y += (mouse.ty - mouse.y) * 0.045;
-        const sy = Math.min(window.scrollY / Math.max(H_, 1), 1);
+        const sy = Math.min(window.scrollY / Math.max(H_, 1), 1) * (compact ? 0.35 : 1); // gentle crane on phones
         const dist = baseDist * (1 + sy * 0.18);
         camera.position.set(mouse.x * 0.9, 0.35 + sy * 1.4 - mouse.y * 0.5, dist);
         camera.lookAt(mouse.x * 0.25, -0.2 - sy * 0.35, 0);
@@ -584,7 +661,7 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
       ref={host}
       className={`hero-discs ${ready ? "is-ready" : ""} ${className || "relative"}`}
       role="img"
-      aria-label="3D scene: a machined metal disc bearing the ZapBuzzer bell, circled by discs embossed with the office requests ZapBuzzer routes: a coffee cup for the pantry, a printer for the print room, a monitor with a wrench for IT support, an AC unit for facilities, a delivery truck for courier pickups, and a person with a tick for first-accept assignment"
+      aria-label="3D scene: a machined metal disc bearing the ZapBuzzer bell, circled by discs embossed with the office requests ZapBuzzer routes: a coffee cup for the pantry, a printer for the print room, a monitor with a wrench for IT support, an AC unit blowing cool air for facilities, a delivery truck for courier pickups, and a person with a tick for first-accept assignment"
     >
       <style>{`.hero-discs canvas{opacity:0;transition:opacity 1.6s ease}.hero-discs.is-ready canvas{opacity:1}`}</style>
     </div>

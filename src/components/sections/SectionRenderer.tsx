@@ -77,46 +77,6 @@ function PortraitFill({ src, alt, hoverZoom = false }: { src: string; alt: strin
   );
 }
 
-/** Dedicated unique avatar images for specific pages and sections (strictly 1 usage per image across the website). */
-export function getDedicatedAudienceImage(pagePath?: string, role?: string): { src: string; alt: string } | null {
-  const p = (pagePath || "").toLowerCase();
-  const r = (role || "").toLowerCase();
-
-  // /solutions/pantry -> Raj (Audience: "Pantry staff" only)
-  if (p === "solutions/pantry" && r === "pantry staff") {
-    return {
-      src: "/images/avatar-raj.webp",
-      alt: "Portrait of Raj from the pantry team, smiling in a navy apron at the office coffee counter",
-    };
-  }
-
-  // /solutions/print-room -> Kavya (Audience: "Sales teams" only)
-  if (p === "solutions/print-room" && r === "sales teams") {
-    return {
-      src: "/images/avatar-kavya.webp",
-      alt: "Portrait of Kavya from sales, smiling in a green blazer at a desk in an open-plan office",
-    };
-  }
-
-  // /solutions/facilities -> Deepak (Audience: "Admin head" only)
-  if (p === "solutions/facilities" && r === "admin head") {
-    return {
-      src: "/images/avatar-deepak.webp",
-      alt: "Portrait of Deepak, the admin head, in a light blue shirt in the office facilities and admin area",
-    };
-  }
-
-  // /solutions/courier -> Neha (Audience: "Receptionists" only)
-  if (p === "solutions/courier" && r === "receptionists") {
-    return {
-      src: "/images/avatar-neha.webp",
-      alt: "Portrait of Neha, the reception lead, standing at the front desk in a blue blazer",
-    };
-  }
-
-  return null;
-}
-
 export function getDedicatedScenarioImage(pagePath?: string, persona?: string): { src: string; alt: string } | null {
   const p = (pagePath || "").toLowerCase();
   const per = (persona || "").toLowerCase();
@@ -362,11 +322,13 @@ export function SectionRenderer({
                   {section.outcome}
                 </div>
               </div>
-              <ol className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-7">
+              {/* Vertical timeline joined by a line. On desktop the steps share the photo column's height, so no empty block is left below them. */}
+              <ol className="relative flex flex-col gap-3 lg:col-span-7 lg:self-stretch">
+                <span className="absolute bottom-6 left-[2.45rem] top-6 z-[5] w-px bg-gradient-to-b from-accent-2/50 via-accent-2/25 to-transparent" aria-hidden />
                 {section.timeline.map((t, i) => (
-                  <li key={i} className="flex gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4 transition duration-300 hover:border-accent-2/40 hover:bg-white/[0.07]">
-                    <span className="h-fit shrink-0 rounded-md bg-accent/30 px-2 py-1 font-mono text-[11px] font-bold tabular-nums text-accent-2">{t.time}</span>
-                    <span className="text-sm text-white/85">{t.event}</span>
+                  <li key={i} className="relative flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4 transition lg:flex-1 lg:items-center duration-300 hover:border-accent-2/40 hover:bg-white/[0.07]">
+                    <span className="relative z-10 h-fit shrink-0 rounded-md bg-[#262a6b] px-2 py-1 font-mono text-[11px] font-bold tabular-nums text-accent-2">{t.time}</span>
+                    <span className="text-sm leading-relaxed text-white/85">{t.event}</span>
                   </li>
                 ))}
               </ol>
@@ -507,29 +469,21 @@ export function SectionRenderer({
       );
 
     case "audience":
-      // Sky9 practitioner / people cards: photo banner on designated hub, icon tile on all others.
-      return (
+      // Practitioner / people cards: one consistent icon header on every card (no single photo
+      // card, which made one card taller than its row). Rows are centred, so a short last row
+      // (e.g. 5 items) sits in the middle instead of leaving a lone card on the left.
+      {
+        const n = section.items.length;
+        const per = n % 4 === 0 ? 4 : n === 2 ? 2 : 3;
+        const itemW = per === 4 ? "lg:w-[calc(25%-18px)]" : per === 3 ? "lg:w-[calc(33.333%-16px)]" : "lg:w-[calc(50%-12px)]";
+        return (
         <div>
           <SectionHeading {...headProps} title={section.heading} />
-          <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${section.items.length % 3 === 0 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
+          <div className="flex flex-wrap justify-center gap-6">
             {section.items.map((a, i) => {
-              const candidateImg = getDedicatedAudienceImage(pagePath, a.role);
-              const dedicatedImg = candidateImg && !pageUsed.has(candidateImg.src) ? candidateImg : null;
-              if (dedicatedImg) {
-                pageUsed.add(dedicatedImg.src);
-              }
               return (
-                <div key={a.role} data-reveal style={delay(i, 4)} className="glass-panel card-fx group overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1.5 hover:border-accent/50">
-                  {dedicatedImg ? (
-                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-2">
-                      <PortraitFill src={dedicatedImg.src} alt={dedicatedImg.alt} hoverZoom />
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-                      <div className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-black/70 px-2.5 py-1 text-[11px] font-semibold text-emerald-300 backdrop-blur-md">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        <span>Verified Workplace Role</span>
-                      </div>
-                    </div>
-                  ) : (
+                <div key={a.role} data-reveal style={delay(i, 4)} className={`glass-panel card-fx group w-full overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1.5 hover:border-accent/50 sm:w-[calc(50%-12px)] ${itemW}`}>
+                  {(
                     <div className="flex items-center gap-3.5 border-b border-line bg-surface-2/60 p-5">
                       <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-accent/20 bg-accent-soft text-accent shadow-sm transition duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                         <Icon name={icons[i % icons.length]} className="h-6 w-6" />
@@ -543,15 +497,15 @@ export function SectionRenderer({
                     </div>
                   )}
                   <div className="p-5 sm:p-6">
-                    {dedicatedImg && <h3 className="font-heading text-lg font-bold transition-colors group-hover:text-accent-text">{a.role}</h3>}
-                    <p className={`${dedicatedImg ? "mt-2" : ""} text-sm leading-relaxed text-muted`}>{a.benefit}</p>
+                    <p className="text-sm leading-relaxed text-muted">{a.benefit}</p>
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
-      );
+        );
+      }
 
     case "metrics":
       return (

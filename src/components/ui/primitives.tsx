@@ -151,10 +151,13 @@ export function Button({
   children,
   variant = "primary",
   className = "",
+  lead,
 }: {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "light" | "ghost-dark" | "dark";
+  /** Optional icon shown before the label (e.g. a play icon). */
+  lead?: React.ReactNode;
   className?: string;
 }) {
   const styles = {
@@ -168,6 +171,7 @@ export function Button({
   const cls = `group inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 active:translate-y-0 sm:px-8 sm:py-4 sm:text-base ${styles} ${className}`;
   const inner = (
     <>
+      {lead && <span className="relative z-[2] -ml-1 flex">{lead}</span>}
       <span className="relative z-[2]">{titleCaseNode(children)}</span>
       {(variant === "primary" || variant === "light" || variant === "dark") && (
         <svg className="relative z-[2] h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
