@@ -7,7 +7,7 @@ export const pages: PageContent[] = [
     title: "Office Request Notifications That Get Answered",
     description:
       "ZapBuzzer pings the right team on app, email, Telegram and WhatsApp at once, and repeats until someone accepts. Missed requests stop being a thing.",
-    h1: "Notifications that keep ringing until someone says yes",
+    h1: "Notifications That Keep Ringing Until Someone Says Yes",
     eyebrow: "Notifications",
     lead:
       "A request is only as good as the alert behind it. ZapBuzzer sends every buzz to the whole team on every channel at the same moment, repeats it until someone taps Accept, and rings the Android app even on a silent, locked phone.",
@@ -22,10 +22,10 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "problem-solution",
-        heading: "Why office requests get missed",
+        heading: "Why Office Requests Get Missed",
         intro: "Most requests are not refused. They just never reach anyone who is free to act.",
         problem: {
-          title: "The usual channels",
+          title: "The Usual Channels",
           points: [
             "A message in the pantry WhatsApp group scrolls away under forty others.",
             "The IT desk phone rings while the only IT person is in Conference Room B.",
@@ -34,7 +34,7 @@ export const pages: PageContent[] = [
           ],
         },
         solution: {
-          title: "How ZapBuzzer notifies",
+          title: "How ZapBuzzer Notifies",
           points: [
             "Every channel fires at once, so whichever one a person is looking at shows it.",
             "Everyone on the team is notified, not one person who might be busy.",
@@ -46,7 +46,7 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "notification-flow",
-        heading: "One buzz, four channels, one owner",
+        heading: "One Buzz, Four Channels, One Owner",
         body: "When Aarav taps Coffee for the Boss Cabin, the request fans out to the pantry team in the ZapBuzzer app and by email, and on Telegram and WhatsApp if you are on Pro. All of it happens at the same moment. The first person to accept owns the request, and the reminders stop for everyone else.",
         points: [
           "App, email, Telegram and WhatsApp in parallel, not one after another",
@@ -56,8 +56,8 @@ export const pages: PageContent[] = [
       },
       {
         type: "prose",
-        eyebrow: "The idea",
-        heading: "Notify the team, not a person",
+        eyebrow: "The Idea",
+        heading: "Notify the Team, Not a Person",
         paragraphs: [
           "Most office alerting is built around one person: call Raju, message the IT guy, email facilities. That works until Raju is on a break. ZapBuzzer routes each request to a team, such as pantry, print room, IT desk, facilities or mailroom, and notifies everyone on it together. Whoever is free first takes it.",
           "That is why notifications and first-accept-wins go together. Notifying everyone would cause chaos if three people all walked to the boss cabin with coffee. Because the first accept locks the request to one owner, a wide alert produces exactly one response.",
@@ -66,9 +66,9 @@ export const pages: PageContent[] = [
       },
       {
         type: "table",
-        heading: "Channels and plans",
+        heading: "Channels and Plans",
         intro: "Every plan includes the ZapBuzzer web and mobile apps.",
-        headers: ["Channel", "Free", "Pro", "Best for"],
+        headers: ["Channel", "Free", "Pro", "Best For"],
         rows: [
           ["ZapBuzzer mobile app", "Yes", "Yes", "Staff on the move. Rings on silent or locked Android phones"],
           ["Web app", "Yes", "Yes", "Front desks, admin screens, staff at a computer"],
@@ -79,7 +79,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "A coffee during a board call",
+        heading: "A Coffee During a Board Call",
         persona: "Aarav, CEO",
         setting: "Aarav is on a board call in his cabin and can’t step out or make a phone call.",
         timeline: [
@@ -93,35 +93,35 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "What the notification system does",
+        heading: "What the Notification System Does",
         items: [
-          { title: "Parallel delivery", body: "All of a team’s channels fire together, so there is no waiting for one channel to fail before trying the next." },
-          { title: "Repeat until accepted", body: "Unanswered requests keep pinging. Silence is never treated as acknowledgement." },
-          { title: "Rings through silent mode", body: "The Android app rings even when the phone is on silent or locked." },
-          { title: "Team routing", body: "Each catalogue item is routed to its team, so pantry alerts never reach IT." },
-          { title: "Escalation", body: "If a request runs past its SLA, it auto-escalates to a manager. A full escalation chain is part of Pro." },
-          { title: "Status updates", body: "Requesters see accepted, started with ETA, and delivered as they happen." },
+          { title: "Parallel Delivery", body: "All of a team’s channels fire together, so there is no waiting for one channel to fail before trying the next." },
+          { title: "Repeat Until Accepted", body: "Unanswered requests keep pinging. Silence is never treated as acknowledgement." },
+          { title: "Rings Through Silent Mode", body: "The Android app rings even when the phone is on silent or locked." },
+          { title: "Team Routing", body: "Each catalogue item is routed to its team, so pantry alerts never reach IT." },
+          { title: "Escalation", body: "If a request runs past its SLA (its time limit), it is passed up to a manager automatically. A full escalation chain is part of Pro." },
+          { title: "Status Updates", body: "Requesters see accepted, started with ETA, and delivered as they happen." },
         ],
       },
       {
         type: "stats",
-        heading: "What faster notifications looked like in pilots",
+        heading: "What Faster Notifications Looked Like in Pilots",
         items: [
-          { value: "32s", label: "average accept time" },
-          { value: "−87%", label: "phone calls" },
-          { value: "96%", label: "on-time delivery" },
-          { value: "1.2M", label: "requests routed" },
+          { value: "32s", label: "Average Accept Time" },
+          { value: "−87%", label: "Phone Calls" },
+          { value: "96%", label: "On-Time Delivery" },
+          { value: "1.2M", label: "Requests Routed" },
         ],
         note: "Pilot office figures from the first month. Requests routed is a company-wide total.",
       },
       {
         type: "comparison",
-        heading: "A WhatsApp group vs ZapBuzzer notifications",
-        columns: ["Pantry WhatsApp group", "ZapBuzzer"],
+        heading: "A WhatsApp Group vs ZapBuzzer Notifications",
+        columns: ["Pantry WhatsApp Group", "ZapBuzzer"],
         rows: [
-          { label: "Who sees it", a: "Everyone, including people who don’t need to", b: "Only the team the request is routed to" },
-          { label: "If nobody replies", a: "It scrolls away", b: "It repeats, then escalates" },
-          { label: "Who is doing it", a: "‘I thought you were’", b: "First accept owns it, by name" },
+          { label: "Who Sees It", a: "Everyone, including people who don’t need to", b: "Only the team the request is routed to" },
+          { label: "If Nobody Replies", a: "It scrolls away", b: "It repeats, then escalates" },
+          { label: "Who Is Doing It", a: "‘I thought you were’", b: "First accept owns it, by name" },
           { label: "Record", a: "Buried in chat", b: "Timed and logged" },
         ],
       },
@@ -133,12 +133,14 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Which channels are included on the Free plan?", a: "Free includes the ZapBuzzer mobile and web apps and email notifications. Telegram and WhatsApp pings are part of Pro." },
-      { q: "Do channels fire one after another or all together?", a: "All together. A request goes out on every channel the team uses at the same moment, and keeps repeating until someone accepts." },
-      { q: "When do the reminders stop?", a: "As soon as one person accepts the request. It then belongs to them, and the requester sees their name and photo." },
-      { q: "Will staff hear alerts if their phone is on silent?", a: "On the Android app, yes. It rings through even when the phone is on silent or locked." },
-      { q: "What if nobody accepts at all?", a: "Notifications keep repeating. If the request runs past its SLA, it auto-escalates to a manager, and on Pro it can climb a full escalation chain." },
-      { q: "Is ZapBuzzer just a Telegram bot?", a: "No. Telegram is one delivery channel. The request itself, including routing, first-accept, SLA timers, ratings and analytics, lives in ZapBuzzer." },
+      { q: "Which Channels Are Included on the Free Plan?", a: "Free includes the ZapBuzzer mobile and web apps and email notifications. Telegram and WhatsApp pings are part of Pro." },
+      { q: "Do Channels Fire One After Another or All Together?", a: "All together. A request goes out on every channel the team uses at the same moment, and keeps repeating until someone accepts." },
+      { q: "When Do the Reminders Stop?", a: "As soon as one person accepts the request. It then belongs to them, and the requester sees their name and photo." },
+      { q: "Will Staff Hear Alerts If Their Phone Is on Silent?", a: "On the Android app, yes. It rings through even when the phone is on silent or locked." },
+      { q: "What If Nobody Accepts at All?", a: "Notifications keep repeating. If the request runs past its SLA, it auto-escalates to a manager, and on Pro it can climb a full escalation chain." },
+      { q: "Is ZapBuzzer Just a Telegram Bot?", a: "No. Telegram is one delivery channel. The request itself, including routing, first-accept, SLA timers, ratings and analytics, lives in ZapBuzzer." },
+      { q: "Can I See Who Is on My Request Once the Alerts Stop?", a: "Yes. When someone accepts, the requester sees their name and photo, then an ETA once the work starts. That is usually enough to stop the follow-up calls that used to chase every request." },
+      { q: "How Much Did Notifications Cut Phone Calls in Pilot Offices?", a: "Pilot offices saw phone calls drop by 87% in their first month, with a 32-second average accept time. Alerts reaching the whole team at once, on every channel, is a big part of that." },
     ],
     related: [
       "notifications/multi-channel",
@@ -151,19 +153,19 @@ export const pages: PageContent[] = [
       "free-trial",
     ],
     cta: {
-      title: "Make sure every buzz gets heard",
+      title: "Make Sure Every Buzz Gets Heard",
       body: "Start a 14-day free trial with no credit card and no setup call. Invite your pantry team and send your first buzz this afternoon.",
     },
   },
 
   // ───────────────────────────── MULTI-CHANNEL ─────────────────────────────
   {
-    path: "notifications/multi-channel",
+    path: "notifications/multi-channel-notifications",
     title: "Multi-Channel Request Alerts, All at Once",
     description:
       "Send every office request to app, email, Telegram and WhatsApp simultaneously. Whichever screen staff are looking at, the buzz is there. Repeats till accepted.",
-    h1: "Every channel, the same second",
-    eyebrow: "Multi-channel",
+    h1: "Every Channel, the Same Second",
+    eyebrow: "Multi-Channel",
     lead:
       "People don’t live in one app. Your pantry staff might check WhatsApp, the IT desk might have Telegram open, and facilities may be on the ZapBuzzer app. Multi-channel means the request reaches all of them together.",
     keywords: ["multi-channel notifications", "simultaneous staff alerts", "app email whatsapp telegram alerts", "parallel notifications"],
@@ -171,7 +173,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Parallel beats fallback",
+        heading: "All at Once Beats One After Another",
         paragraphs: [
           "Many alerting tools work as a ladder: try the app, and if there is no response, try email after a few minutes, then SMS. Each step adds delay, and the delay matters most when someone is standing at the gate or waiting in a meeting.",
           "ZapBuzzer doesn’t make the request wait. It sends to every channel the team uses at once and repeats until someone accepts. The fastest channel for any given person wins, and the first accept ends the noise for everyone.",
@@ -180,13 +182,13 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "notification-flow",
-        heading: "The fan-out",
+        heading: "The Fan-Out",
         body: "A single request appears in the ZapBuzzer app, in email, and on Pro in Telegram and WhatsApp, all within the same moment. Each notification carries the item, the note and the destination.",
       },
       {
         type: "table",
-        heading: "Which channel catches whom",
-        headers: ["Person", "Where they usually are", "Channel that reaches them"],
+        heading: "Which Channel Catches Whom",
+        headers: ["Person", "Where They Usually Are", "Channel That Reaches Them"],
         rows: [
           ["Pantry staff", "Kitchen, phone in pocket", "Android app ringing through silent, or WhatsApp"],
           ["IT desk", "At a laptop", "Web app or Telegram"],
@@ -196,7 +198,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "Prints before a pitch",
+        heading: "Prints Before a Pitch",
         persona: "Kavya, Sales Lead",
         setting: "A pitch in 10 minutes. She needs 24 colour copies.",
         timeline: [
@@ -209,23 +211,23 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Fallback alerting vs parallel alerting",
-        columns: ["Fallback ladder", "ZapBuzzer parallel"],
+        heading: "Fallback Alerting vs Parallel Alerting",
+        columns: ["Fallback Ladder", "ZapBuzzer Parallel"],
         rows: [
-          { label: "First alert", a: "One channel", b: "All channels" },
-          { label: "Delay to second channel", a: "Minutes", b: "None" },
-          { label: "If unanswered", a: "Moves down the ladder", b: "Repeats on all, then escalates" },
+          { label: "First Alert", a: "One channel", b: "All channels" },
+          { label: "Delay to Second Channel", a: "Minutes", b: "None" },
+          { label: "If Unanswered", a: "Moves down the ladder", b: "Repeats on all, then escalates" },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "Plan note",
+        title: "Plan Note",
         body: "On Free, multi-channel means the app plus email. Pro adds Telegram and WhatsApp to the same simultaneous fan-out.",
       },
       {
         "type": "prose",
-        "heading": "Why one channel is never enough",
+        "heading": "Why One Channel Is Never Enough",
         "paragraphs": [
           "Every channel has a blind spot. Email is ignored in the kitchen. A phone on silent gets nothing from an ordinary push. WhatsApp is noisy at lunch, and Telegram is only useful if the person has it open. Pick any one of them and some requests will wait.",
           "Firing on all of them at once covers those blind spots without anyone having to guess which channel a colleague is watching right now. The cost is a few duplicate alerts for a short while, and that ends the moment someone accepts."
@@ -233,7 +235,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "checklist",
-        "heading": "Getting multi-channel right",
+        "heading": "Getting Multi-Channel Right",
         "items": [
           "Install the mobile app for every staff member who is away from a desk",
           "Keep email on for every team as the written record",
@@ -244,52 +246,53 @@ export const pages: PageContent[] = [
       },
       {
         "type": "metrics",
-        "heading": "How to tell it’s working",
+        "heading": "How to Tell It’s Working",
         "items": [
           {
-            "metric": "Average accept time",
+            "metric": "Average Accept Time",
             "meaning": "Pilot offices averaged 32 seconds in their first month. A team well above its peers may be missing a channel."
           },
           {
-            "metric": "Phone calls",
+            "metric": "Phone Calls",
             "meaning": "Pilot offices saw 87% fewer. If people are still calling, alerts aren’t landing."
           },
           {
-            "metric": "On-time delivery",
-            "meaning": "Pilot offices reached 96%. Faster accepts leave more of the SLA for the work itself."
+            "metric": "On-Time Delivery",
+            "meaning": "Pilot offices reached 96%. Faster accepts leave more of the SLA, the time limit for the request, for the work itself."
           }
         ]
       },
     ],
     faqs: [
-      { q: "Won’t staff get the same alert four times?", a: "They may see it in more than one place, which is the point: it reaches them wherever they look first. Once anyone accepts, the reminders stop." },
-      { q: "Can a team use only some channels?", a: "Teams can rely on whichever channels suit them. The app and email are available on every plan, and Telegram and WhatsApp on Pro." },
-      { q: "Is there SMS?", a: "The channels ZapBuzzer offers are the app, email, Telegram and WhatsApp. For anything beyond that, talk to us about Enterprise." },
-      { q: "Does the requester get notified too?", a: "The requester sees status changes, including accepted with name and photo, started with an ETA, and delivered." },
+      { q: "Won’t Staff Get the Same Alert Four Times?", a: "They may see it in more than one place, which is the point: it reaches them wherever they look first. Once anyone accepts, the reminders stop." },
+      { q: "Can a Team Use Only Some Channels?", a: "Teams can rely on whichever channels suit them. The app and email are available on every plan, and Telegram and WhatsApp on Pro." },
+      { q: "Is There SMS?", a: "The channels ZapBuzzer offers are the app, email, Telegram and WhatsApp. For anything beyond that, talk to us about Enterprise." },
+      { q: "Does the Requester Get Notified Too?", a: "The requester sees status changes, including accepted with name and photo, started with an ETA, and delivered." },
       {
-        "q": "Do all channels show the same information?",
+        "q": "Do All Channels Show the Same Information?",
         "a": "Each notification carries the same request details: the item, the note and the destination. Accepting and tracking happen in ZapBuzzer itself."
       },
       {
-        "q": "What happens to the other alerts once someone accepts?",
+        "q": "What Happens to the Other Alerts Once Someone Accepts?",
         "a": "The reminders stop for the whole team on every channel. The requester sees who accepted, with their name and photo."
       },
       {
-        "q": "Is multi-channel worth it for a small office?",
+        "q": "Is Multi-Channel Worth It for a Small Office?",
         "a": "Even on Free, the app and email fire together, which covers both people at desks and people on the move. Pro adds Telegram and WhatsApp when a team relies on them."
       },
+      { q: "Which Channels Fire Together on the Pro Plan?", a: "On Pro, a request goes out on the app, email, Telegram and WhatsApp at the same moment. Free uses the app and email. Pro is ₹99 per seat per month." },
     ],
     related: ["notifications", "notifications/telegram", "notifications/whatsapp", "notifications/email", "features/real-time-updates", "pricing/pro"],
-    cta: { title: "Reach staff wherever they are", body: "Try multi-channel notifications free for 14 days, including Telegram and WhatsApp on the Pro trial." },
+    cta: { title: "Reach Staff Wherever They Are", body: "Try multi-channel notifications free for 14 days, including Telegram and WhatsApp on the Pro trial." },
   },
 
   // ───────────────────────────── TELEGRAM ─────────────────────────────
   {
-    path: "notifications/telegram",
+    path: "notifications/telegram-integration",
     title: "Telegram Notifications for Office Requests",
     description:
       "Get ZapBuzzer request alerts in Telegram alongside the app and email. Available on Pro. Repeats until accepted, so a busy chat never hides a buzz.",
-    h1: "Office requests where your team already reads Telegram",
+    h1: "Office Requests Where Your Team Already Reads Telegram",
     eyebrow: "Telegram · Pro",
     lead:
       "If your staff keep Telegram open all day, that is where a buzz should show up. On Pro, ZapBuzzer sends request alerts to Telegram alongside the app and email, and the request itself stays in ZapBuzzer.",
@@ -298,7 +301,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Not a glorified Telegram bot",
+        heading: "Not a Glorified Telegram Bot",
         paragraphs: [
           "Plenty of offices already run requests through Telegram: a group called ‘Pantry’ or ‘IT help’ where people post and hope. The trouble is not Telegram. It is that a chat has no owner, no timer and no memory.",
           "ZapBuzzer uses Telegram as a delivery channel. The request is raised, routed, accepted, timed, escalated and rated in ZapBuzzer. Telegram is where your team sees it, along with the app and email, at the same moment.",
@@ -306,17 +309,17 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "How Telegram fits in",
+        heading: "How Telegram Fits In",
         steps: [
-          { title: "Requester buzzes", body: "Someone taps an item, adds a note and a destination, and buzzes it." },
-          { title: "Alert on Telegram and elsewhere", body: "The team is pinged on Telegram, the app and email at the same time." },
-          { title: "Someone accepts", body: "The first person to accept owns it, and reminders stop for the rest of the team." },
+          { title: "Requester Buzzes", body: "Someone taps an item, adds a note and a destination, and buzzes it." },
+          { title: "Alert on Telegram and Elsewhere", body: "The team is pinged on Telegram, the app and email at the same time." },
+          { title: "Someone Accepts", body: "The first person to accept owns it, and reminders stop for the rest of the team." },
           { title: "Tracked in ZapBuzzer", body: "Started, ETA, delivered and rating all live on the request, not in chat history." },
         ],
       },
       {
         type: "scenario",
-        heading: "Raj accepts in 12 seconds",
+        heading: "Raj Accepts in 12 Seconds",
         persona: "Raj, Pantry",
         setting: "Raj is restocking the 3rd-floor pantry with Telegram open on his phone.",
         timeline: [
@@ -329,30 +332,30 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "acceptance",
-        heading: "Telegram shows it, ZapBuzzer settles it",
+        heading: "Telegram Shows It, ZapBuzzer Settles It",
         body: "Three people might see the same alert on Telegram. Only one gets to own it: the first to accept. No more three people replying ‘on it’ in the group.",
       },
       {
         type: "callout",
         tone: "info",
-        title: "Pro feature",
+        title: "Pro Feature",
         body: "Telegram pings are part of Pro at ₹99 per seat per month. The Free plan uses the app and email notifications. Your workspace admin connects Telegram during setup, and if you need help, write to hello@zapbuzzer.com.",
       },
       {
         "type": "comparison",
-        "heading": "A Telegram group vs Telegram alerts from ZapBuzzer",
+        "heading": "A Telegram Group vs Telegram Alerts From ZapBuzzer",
         "columns": [
-          "‘IT help’ Telegram group",
+          "‘IT Help’ Telegram Group",
           "ZapBuzzer on Telegram"
         ],
         "rows": [
           {
-            "label": "Who it reaches",
+            "label": "Who It Reaches",
             "a": "Everyone in the group, every message",
             "b": "The team the item is routed to"
           },
           {
-            "label": "Who owns it",
+            "label": "Who Owns It",
             "a": "Whoever says ‘on it’, sometimes three people",
             "b": "The first to accept, by name and photo"
           },
@@ -370,25 +373,25 @@ export const pages: PageContent[] = [
       },
       {
         "type": "audience",
-        "heading": "Teams that tend to choose Telegram",
+        "heading": "Teams That Tend to Choose Telegram",
         "items": [
           {
-            "role": "IT desk",
+            "role": "IT Desk",
             "benefit": "Often keep Telegram open on desktop and phone, so an HDMI or projector request appears beside their other work."
           },
           {
-            "role": "Engineering-heavy offices",
+            "role": "Engineering-Heavy Offices",
             "benefit": "Where Telegram is already the default chat, alerts land somewhere people actually read."
           },
           {
-            "role": "Pantry teams",
+            "role": "Pantry Teams",
             "benefit": "Raj picked up Aarav’s coffee in 12 seconds because Telegram was already open."
           }
         ]
       },
       {
         "type": "checklist",
-        "heading": "Before you switch Telegram on",
+        "heading": "Before You Switch Telegram On",
         "items": [
           "Confirm the team really reads Telegram during working hours",
           "Make sure each team member is in ZapBuzzer, where requests are accepted",
@@ -399,34 +402,35 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Is Telegram available on the Free plan?", a: "No. Free includes app and email notifications. Telegram and WhatsApp pings come with Pro." },
-      { q: "Does Telegram replace the ZapBuzzer app?", a: "No. Telegram is one of several channels that fire together. Accepting, tracking and rating happen in ZapBuzzer." },
-      { q: "Can we keep our existing Telegram group?", a: "You can keep it for chat. Requests work better as buzzes, because each one gets an owner, a timer and a record." },
-      { q: "What if a Telegram alert is missed?", a: "Notifications repeat until someone accepts, on Telegram and every other channel. Overdue requests escalate to a manager." },
+      { q: "Is Telegram Available on the Free Plan?", a: "No. Free includes app and email notifications. Telegram and WhatsApp pings come with Pro." },
+      { q: "Does Telegram Replace the ZapBuzzer App?", a: "No. Telegram is one of several channels that fire together. Accepting, tracking and rating happen in ZapBuzzer." },
+      { q: "Can We Keep Our Existing Telegram Group?", a: "You can keep it for chat. Requests work better as buzzes, because each one gets an owner, a timer and a record." },
+      { q: "What If a Telegram Alert Is Missed?", a: "Notifications repeat until someone accepts, on Telegram and every other channel. Overdue requests escalate to a manager." },
       {
-        "q": "Does the Telegram alert include the request details?",
+        "q": "Does the Telegram Alert Include the Request Details?",
         "a": "Yes. Staff see the item, the requester’s note and the destination, so they know whether they can take it before opening ZapBuzzer."
       },
       {
-        "q": "Can we use Telegram for one team and WhatsApp for another?",
+        "q": "Can We Use Telegram for One Team and WhatsApp for Another?",
         "a": "Yes. On Pro, teams can lean on the channels they already use. The app and email keep firing alongside either one."
       },
       {
-        "q": "Does escalation still apply to requests alerted on Telegram?",
-        "a": "Yes. The channel only affects how the team hears a buzz. If the request passes its SLA it auto-escalates to a manager, and the full escalation chain is part of Pro."
+        "q": "Does Escalation Still Apply to Requests Alerted on Telegram?",
+        "a": "Yes. The channel only affects how the team hears a buzz. If the request passes its SLA (its time limit), it goes up to a manager automatically, and the full escalation chain is part of Pro."
       },
+      { q: "Do Staff Need to Change How They Use Telegram?", a: "No. They keep using Telegram as normal and the buzz arrives there alongside the app and other channels. Accepting, starting and delivering the request still happen in ZapBuzzer." },
     ],
     related: ["notifications", "notifications/whatsapp", "notifications/multi-channel", "features/first-accept-wins", "compare/whatsapp", "pricing/pro"],
-    cta: { title: "Bring requests to Telegram, properly", body: "Start a Pro trial free for 14 days. No credit card needed." },
+    cta: { title: "Bring Requests to Telegram, Properly", body: "Start a Pro trial free for 14 days. No credit card needed." },
   },
 
   // ───────────────────────────── WHATSAPP ─────────────────────────────
   {
-    path: "notifications/whatsapp",
+    path: "notifications/whatsapp-notifications",
     title: "WhatsApp Notifications for Office Staff",
     description:
       "Ping pantry, housekeeping and facilities staff on WhatsApp the moment a request comes in, with app and email at the same time. Included in Pro.",
-    h1: "Reach staff on WhatsApp, without the WhatsApp group chaos",
+    h1: "Reach Staff on WhatsApp, Without the WhatsApp Group Chaos",
     eyebrow: "WhatsApp · Pro",
     lead:
       "For many office staff, WhatsApp is the one app that is always checked. On Pro, ZapBuzzer sends request alerts there, and keeps the request itself out of the group chat.",
@@ -435,9 +439,9 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "problem-solution",
-        heading: "The pantry WhatsApp group problem",
+        heading: "The Pantry WhatsApp Group Problem",
         problem: {
-          title: "Requests in a group chat",
+          title: "Requests in a Group Chat",
           points: [
             "Orders, jokes and forwards all in one thread.",
             "No owner, so either nobody acts or three people do.",
@@ -446,7 +450,7 @@ export const pages: PageContent[] = [
           ],
         },
         solution: {
-          title: "WhatsApp as an alert channel",
+          title: "WhatsApp as an Alert Channel",
           points: [
             "Each request is pinged to the right team on WhatsApp, the app and email together.",
             "First accept owns it.",
@@ -458,7 +462,7 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "before-after",
-        heading: "Before and after",
+        heading: "Before and After",
         body: "Before: asking Raju to bring two coffees to the boss cabin meant 3 phone calls, 25 minutes and a cold coffee (1 cup). After: no calls at all, 4 minutes and a hot coffee (1 cup).",
       },
       {
@@ -476,7 +480,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "prose",
-        heading: "Quieter, not just faster",
+        heading: "Quieter, Not Just Faster",
         paragraphs: [
           "The goal is not more WhatsApp messages. It is fewer, better ones. Each alert is about one request for one team, and it stops repeating once someone accepts.",
           "As one office manager put it: “Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager",
@@ -485,14 +489,14 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Pro feature",
+        title: "Pro Feature",
         body: "WhatsApp pings are part of Pro at ₹99 per seat per month. On Free, staff are notified in the app and by email. Your workspace admin connects WhatsApp during setup, and our team can help at hello@zapbuzzer.com.",
       },
       {
         "type": "table",
-        "heading": "What lives in WhatsApp and what lives in ZapBuzzer",
+        "heading": "What Lives in WhatsApp and What Lives in ZapBuzzer",
         "headers": [
-          "Part of the request",
+          "Part of the Request",
           "WhatsApp",
           "ZapBuzzer"
         ],
@@ -526,10 +530,10 @@ export const pages: PageContent[] = [
       },
       {
         "type": "workflow",
-        "heading": "Moving the pantry off the group",
+        "heading": "Moving the Pantry Off the Group",
         "steps": [
           {
-            "title": "Add the usual orders",
+            "title": "Add the Usual Orders",
             "body": "Put coffee, tea, juice, snacks and lunch into the pantry catalogue."
           },
           {
@@ -537,25 +541,25 @@ export const pages: PageContent[] = [
             "body": "Your workspace admin connects WhatsApp so the pantry team gets alerts there."
           },
           {
-            "title": "Tell the office",
+            "title": "Tell the Office",
             "body": "Ask people to buzz instead of posting orders in the group."
           },
           {
-            "title": "Let the group go quiet",
+            "title": "Let the Group Go Quiet",
             "body": "Keep it for chat if you like. Orders now arrive one at a time, each with an owner."
           }
         ]
       },
       {
         "type": "audience",
-        "heading": "Teams that often prefer WhatsApp",
+        "heading": "Teams That Often Prefer WhatsApp",
         "items": [
           {
-            "role": "Pantry and housekeeping",
+            "role": "Pantry and Housekeeping",
             "benefit": "Already check WhatsApp through the day, so a buzz shows up where they look."
           },
           {
-            "role": "Mailroom and reception",
+            "role": "Mailroom and Reception",
             "benefit": "Get courier pickup requests on the phone they carry at the desk or gate."
           },
           {
@@ -566,7 +570,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "checklist",
-        heading: "Before you switch WhatsApp alerts on",
+        heading: "Before You Switch WhatsApp Alerts On",
         intro: "A little preparation makes the first week smooth for staff who have only ever taken orders in a group.",
         items: [
           "Confirm each staff member’s WhatsApp number with your workspace admin",
@@ -578,35 +582,35 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "What if a staff member changes their phone number?", a: "Ask your workspace admin to update their WhatsApp details so alerts follow them. In the meantime they still receive every request in the app and by email." },
-      { q: "Is WhatsApp included on Free?", a: "No. Free uses app and email notifications. WhatsApp and Telegram pings are part of Pro." },
-      { q: "Do staff accept requests from WhatsApp?", a: "The WhatsApp alert gets their attention. The request is accepted and tracked in ZapBuzzer, where first-accept-wins, timers and ratings live." },
-      { q: "Will this spam our staff?", a: "Alerts only go to the team a request is routed to, and they stop once someone accepts." },
-      { q: "Should we delete the pantry group?", a: "That’s up to you. Many offices keep it for chat and move requests to ZapBuzzer." },
+      { q: "What If a Staff Member Changes Their Phone Number?", a: "Ask your workspace admin to update their WhatsApp details so alerts follow them. In the meantime they still receive every request in the app and by email." },
+      { q: "Is WhatsApp Included on Free?", a: "No. Free uses app and email notifications. WhatsApp and Telegram pings are part of Pro." },
+      { q: "Do Staff Accept Requests From WhatsApp?", a: "The WhatsApp alert gets their attention. The request is accepted and tracked in ZapBuzzer, where first-accept-wins, timers and ratings live." },
+      { q: "Will This Spam Our Staff?", a: "Alerts only go to the team a request is routed to, and they stop once someone accepts." },
+      { q: "Should We Delete the Pantry Group?", a: "That’s up to you. Many offices keep it for chat and move requests to ZapBuzzer." },
       {
-        "q": "Does each WhatsApp alert go to the whole team?",
+        "q": "Does Each WhatsApp Alert Go to the Whole Team?",
         "a": "Yes. Every member of the team the request is routed to is notified together, and the first to accept in ZapBuzzer owns it."
       },
       {
-        "q": "What do staff see in the WhatsApp alert?",
+        "q": "What Do Staff See in the WhatsApp Alert?",
         "a": "The alert carries the request’s item, the note and the destination, so staff know what is needed and where before they open ZapBuzzer to accept."
       },
       {
-        "q": "Can WhatsApp be tried before paying?",
+        "q": "Can WhatsApp Be Tried Before Paying?",
         "a": "The 14-day free trial needs no credit card, and you can try Pro features such as WhatsApp pings during it. After that, WhatsApp needs a Pro plan."
       },
     ],
     related: ["notifications", "notifications/telegram", "use-cases/reduce-whatsapp-requests", "compare/whatsapp", "solutions/pantry", "pricing/pro"],
-    cta: { title: "Quiet the group chat", body: "Try WhatsApp notifications on a 14-day Pro trial. You won't need a card or a setup call." },
+    cta: { title: "Quiet the Group Chat", body: "Try WhatsApp notifications on a 14-day Pro trial. You won't need a card or a setup call." },
   },
 
   // ───────────────────────────── EMAIL ─────────────────────────────
   {
-    path: "notifications/email",
+    path: "notifications/email-notifications",
     title: "Email Notifications on Every Plan",
     description:
       "ZapBuzzer sends email alerts for office requests on every plan, including Free. A dependable channel and a written record, alongside the app.",
-    h1: "Email alerts that come with every plan",
+    h1: "Email Alerts That Come With Every Plan",
     eyebrow: "Email",
     lead:
       "Email is the channel every workspace gets, Free included. It sits beside the ZapBuzzer app, fires at the same time and repeats until someone accepts.",
@@ -615,22 +619,22 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Why email still matters",
+        heading: "Why Email Still Matters",
         paragraphs: [
           "Email is rarely the fastest way to reach pantry staff, but it is the one channel everybody has, it works on any device and it leaves a written trail. For admin, IT and facilities teams who live at a desk, it is often where they look first.",
-          "In ZapBuzzer, email is not a fallback that waits its turn. It goes out with the app notification, so a desk-bound IT person and a mobile pantry runner both see the request at once.",
+          "In ZapBuzzer, email doesn’t wait its turn as a backup. It goes out with the app notification, so a desk-bound IT person and a mobile pantry runner both see the request at once.",
         ],
       },
       {
         type: "visual",
         visual: "notification-flow",
-        heading: "Email in the fan-out",
+        heading: "Email in the Fan-Out",
         body: "Each request reaches the team by email at the same moment as the app. On Pro, Telegram and WhatsApp join in.",
       },
       {
         type: "table",
-        heading: "Email by plan",
-        headers: ["Plan", "Email", "Other channels"],
+        heading: "Email by Plan",
+        headers: ["Plan", "Email", "Other Channels"],
         rows: [
           ["Free", "Yes", "Mobile and web app"],
           ["Pro", "Yes", "App, Telegram, WhatsApp"],
@@ -639,7 +643,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "A small office on Free",
+        heading: "A Small Office on Free",
         persona: "Priya, Office Manager",
         setting: "An eight-person office trying ZapBuzzer on one floor.",
         timeline: [
@@ -652,45 +656,45 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "Pair email with the app",
+        title: "Pair Email With the App",
         body: "For staff who move around, install the mobile app as well. On Android it rings even on silent, which an email can’t do.",
       },
       {
         "type": "features",
-        "heading": "What a ZapBuzzer email carries",
+        "heading": "What a ZapBuzzer Email Carries",
         "items": [
           {
-            "title": "The item",
+            "title": "The Item",
             "body": "What was asked for, such as two coffees, 24 colour copies or an HDMI cable."
           },
           {
-            "title": "The note",
+            "title": "The Note",
             "body": "Anything the requester typed, like ‘no sugar’ or ‘needed before the 11 o’clock board meeting’."
           },
           {
-            "title": "The destination",
+            "title": "The Destination",
             "body": "Where it should go, for example Boss Cabin or Conference Room B."
           },
           {
-            "title": "A way to act",
+            "title": "A Way to Act",
             "body": "The request itself is accepted in ZapBuzzer on web or mobile, so the owner is recorded and shown to the requester."
           }
         ]
       },
       {
         "type": "audience",
-        "heading": "Who email suits best",
+        "heading": "Who Email Suits Best",
         "items": [
           {
-            "role": "IT desk",
+            "role": "IT Desk",
             "benefit": "Already working in a browser and an inbox, so a request shows up alongside the rest of their work."
           },
           {
-            "role": "Admin and facilities leads",
+            "role": "Admin and Facilities Leads",
             "benefit": "A written copy of what came in is handy when reviewing the day or following up with a vendor."
           },
           {
-            "role": "Small offices on Free",
+            "role": "Small Offices on Free",
             "benefit": "Email plus the app covers everything needed to run requests for up to 10 staff without paying."
           },
           {
@@ -701,10 +705,10 @@ export const pages: PageContent[] = [
       },
       {
         "type": "comparison",
-        "heading": "Email alone vs email in ZapBuzzer",
+        "heading": "Email Alone vs Email in ZapBuzzer",
         "columns": [
-          "A shared email inbox",
-          "Email from ZapBuzzer"
+          "A Shared Email Inbox",
+          "Email From ZapBuzzer"
         ],
         "rows": [
           {
@@ -720,10 +724,10 @@ export const pages: PageContent[] = [
           {
             "label": "Deadline",
             "a": "None",
-            "b": "Every request is timed against its SLA"
+            "b": "Every request is timed against its SLA (time limit)"
           },
           {
-            "label": "Close-out",
+            "label": "Close-Out",
             "a": "A ‘done’ reply, sometimes",
             "b": "Delivered, optional photo and a 1–5★ rating"
           }
@@ -731,7 +735,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "checklist",
-        "heading": "Making email work for your team",
+        "heading": "Making Email Work for Your Team",
         "items": [
           "Use work addresses people actually check during the day",
           "Ask staff who move around to install the mobile app as well",
@@ -741,7 +745,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "prose",
-        heading: "Keeping request emails out of the noise",
+        heading: "Keeping Request Emails Out of the Noise",
         paragraphs: [
           "The weak point of email is the rest of the inbox. A buzz for a projector fix can land between a newsletter and a long thread, and inbox filters sometimes sort it somewhere nobody looks. Ask each staff member to send a test buzz to themselves in the first week and check where it arrives.",
           "If it lands in a promotions or spam folder, mark it as important or add a simple inbox rule so ZapBuzzer emails stay in view. Because pings repeat until someone accepts, a missed first email is not the end of the request, but a clean inbox gets the accept time down.",
@@ -749,32 +753,33 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Our ZapBuzzer emails went to spam. What should we do?", a: "Mark one as not spam and add an inbox rule that keeps them in the main inbox. If your IT team manages mail filtering centrally, ask them to allow ZapBuzzer alerts." },
-      { q: "Is email the only channel on Free?", a: "Free includes email notifications plus the ZapBuzzer mobile and web apps. Telegram and WhatsApp are Pro." },
-      { q: "Does email repeat like the other channels?", a: "Notifications repeat until the request is accepted, so an unanswered buzz keeps coming back." },
-      { q: "Can we send from our own domain?", a: "Custom domain and white-label are Enterprise options. Talk to us for details." },
-      { q: "Can staff accept by replying to the email?", a: "Requests are accepted in ZapBuzzer on web or mobile, where the first accept is recorded and shown to the requester." },
+      { q: "Our ZapBuzzer Emails Went to Spam. What Should We Do?", a: "Mark one as not spam and add an inbox rule that keeps them in the main inbox. If your IT team manages mail filtering centrally, ask them to allow ZapBuzzer alerts." },
+      { q: "Is Email the Only Channel on Free?", a: "Free includes email notifications plus the ZapBuzzer mobile and web apps. Telegram and WhatsApp are Pro." },
+      { q: "Does Email Repeat Like the Other Channels?", a: "Notifications repeat until the request is accepted, so an unanswered buzz keeps coming back." },
+      { q: "Can We Send From Our Own Domain?", a: "Custom domain and white-label are Enterprise options. Talk to us for details." },
+      { q: "Can Staff Accept by Replying to the Email?", a: "Requests are accepted in ZapBuzzer on web or mobile, where the first accept is recorded and shown to the requester." },
       {
-        "q": "Do email alerts stop once someone accepts?",
+        "q": "Do Email Alerts Stop Once Someone Accepts?",
         "a": "Yes. Repeats stop for the whole team once one person accepts, on email and every other channel. The request then belongs to that person."
       },
       {
-        "q": "Is email enough for a pantry team?",
+        "q": "Is Email Enough for a Pantry Team?",
         "a": "It works, but pantry staff are rarely at an inbox. Pairing email with the Android app, which rings through silent mode, usually gets far quicker accepts."
       },
+      { q: "Who Is Email Alerting Best Suited To?", a: "Desk-based staff who keep their inbox open, and offices starting on the Free plan. Staff who move around the building usually do better with the mobile app, which rings through on silent." },
     ],
     related: ["notifications", "notifications/push", "notifications/multi-channel", "pricing/free", "integrations/custom-domain", "sign-up"],
-    cta: { title: "Start free with email alerts", body: "Free forever for up to 10 staff on one location. Sign up and send your first buzz." },
+    cta: { title: "Start Free With Email Alerts", body: "Free forever for up to 10 staff on one location. Sign up and send your first buzz." },
   },
 
   // ───────────────────────────── PUSH ─────────────────────────────
   {
-    path: "notifications/push",
+    path: "notifications/mobile-push-notifications",
     title: "Mobile Alerts That Ring Through Silent Mode",
     description:
       "The ZapBuzzer Android app keeps ringing on a silenced or locked handset, so staff walking the floor still catch every request. Accept and track from the phone.",
-    h1: "A phone on silent shouldn’t mean a missed request",
-    eyebrow: "Mobile app",
+    h1: "A Phone on Silent Shouldn’t Mean a Missed Request",
+    eyebrow: "Mobile App",
     lead:
       "Pantry runners, mailroom staff and facilities technicians carry their phones in a pocket, often on silent. The ZapBuzzer Android app rings through anyway, even when the phone is locked.",
     keywords: ["mobile push notifications staff", "ring through silent mode", "android staff alert app", "locked phone alerts"],
@@ -782,7 +787,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Built for staff who aren’t at a desk",
+        heading: "Built for Staff Who Aren’t at a Desk",
         paragraphs: [
           "A normal push notification is easy to miss: one buzz, one banner, and it is gone. For someone carrying a tray or fixing an AC unit, that isn’t enough.",
           "The ZapBuzzer Android app is built to ring through silent mode and a locked screen, so the alert gets the same attention as a call. Staff can then accept, start with an ETA and mark delivered without opening a laptop.",
@@ -791,22 +796,22 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "staff-queue",
-        heading: "Accept from the lock screen to the queue",
+        heading: "Accept From the Lock Screen to the Queue",
         body: "Staff see the request, the note and the destination, then tap Accept. Their queue shows what they own and what is still waiting for someone.",
       },
       {
         type: "features",
-        heading: "What the mobile app does",
+        heading: "What the Mobile App Does",
         items: [
-          { title: "Rings on silent and locked phones", body: "Alerts get through even when the phone is set not to." },
-          { title: "One-tap summon", body: "A single tap calls staff or security, flags an emergency or sends an order." },
-          { title: "Accept and track on the move", body: "Accept, start with an ETA, mark delivered and attach a photo." },
-          { title: "Account on the server", body: "The server holds your account and workspace, so nothing is lost when you switch phones." },
+          { title: "Rings on Silent and Locked Phones", body: "Alerts get through even when the phone is set not to." },
+          { title: "One-Tap Summon", body: "A single tap calls staff or security, flags an emergency or sends an order." },
+          { title: "Accept and Track on the Move", body: "Accept, start with an ETA, mark delivered and attach a photo." },
+          { title: "Account on the Server", body: "The server holds your account and workspace, so nothing is lost when you switch phones." },
         ],
       },
       {
         type: "scenario",
-        heading: "AC stuck at 16°C",
+        heading: "AC Stuck at 16°C",
         persona: "Om, Engineer",
         setting: "The Conference Room B AC is stuck at 16°C before a client call.",
         timeline: [
@@ -820,34 +825,34 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Getting the app",
+        title: "Getting the App",
         body: "The ZapBuzzer Android app (v1.15.2, 61 MB) is included on every plan, Free included.",
       },
       {
         "type": "comparison",
-        "heading": "A standard push vs a ZapBuzzer ring",
+        "heading": "A Standard Push vs a ZapBuzzer Ring",
         "columns": [
-          "Typical app push",
-          "ZapBuzzer Android app"
+          "Typical App Push",
+          "ZapBuzzer Android App"
         ],
         "rows": [
           {
-            "label": "Phone on silent",
+            "label": "Phone on Silent",
             "a": "No sound",
             "b": "Rings through"
           },
           {
-            "label": "Phone locked",
+            "label": "Phone Locked",
             "a": "A banner that is easy to miss",
             "b": "Rings like it matters"
           },
           {
-            "label": "Ignored once",
+            "label": "Ignored Once",
             "a": "Gone",
             "b": "Repeats until someone on the team accepts"
           },
           {
-            "label": "What you can do next",
+            "label": "What You Can Do Next",
             "a": "Open the app and look",
             "b": "Accept, start with an ETA, mark delivered"
           }
@@ -855,18 +860,18 @@ export const pages: PageContent[] = [
       },
       {
         "type": "audience",
-        "heading": "Who should have the app installed",
+        "heading": "Who Should Have the App Installed",
         "items": [
           {
-            "role": "Pantry staff",
+            "role": "Pantry Staff",
             "benefit": "Coffee and lunch orders reach them in the kitchen, even with their hands full."
           },
           {
-            "role": "Facilities technicians",
+            "role": "Facilities Technicians",
             "benefit": "AC, lighting and room issues reach them wherever they are in the building."
           },
           {
-            "role": "Mailroom and reception",
+            "role": "Mailroom and Reception",
             "benefit": "A courier at the gate gets picked up without anyone walking over to find them."
           },
           {
@@ -881,7 +886,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "checklist",
-        "heading": "Rolling the app out to staff phones",
+        "heading": "Rolling the App Out to Staff Phones",
         "items": [
           "Install the Android app on every staff member’s phone",
           "Sign each person in to the office workspace",
@@ -893,39 +898,40 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "warning",
-        "title": "Ringing through silent is deliberate",
+        "title": "Ringing Through Silent Is Deliberate",
         "body": "Staff should know in advance that the app will ring even on silent. That is what makes it work, and it stops the moment a teammate accepts, so it is loud only while a request is waiting."
       },
     ],
     faqs: [
-      { q: "Does it really ring when the phone is on silent?", a: "Yes. The Android app rings through even on a silent or locked phone." },
-      { q: "Is the mobile app part of the Free plan?", a: "Yes. Every plan includes the mobile and web apps." },
-      { q: "Can employees use the app to request, not just staff?", a: "Yes. Employees use it to tap what they need, and staff use it to accept and track." },
-      { q: "What happens if I change phones?", a: "Your account and workspace live on the server. Install the app on the new phone and sign in." },
+      { q: "Does It Really Ring When the Phone Is on Silent?", a: "Yes. The Android app rings through even on a silent or locked phone." },
+      { q: "Is the Mobile App Part of the Free Plan?", a: "Yes. Every plan includes the mobile and web apps." },
+      { q: "Can Employees Use the App to Request, Not Just Staff?", a: "Yes. Employees use it to tap what they need, and staff use it to accept and track." },
+      { q: "What Happens If I Change Phones?", a: "Your account and workspace live on the server. Install the app on the new phone and sign in." },
       {
-        "q": "Does the ringing stop if a colleague accepts first?",
+        "q": "Does the Ringing Stop If a Colleague Accepts First?",
         "a": "Yes. As soon as anyone on the team accepts, the request belongs to them and the reminders stop for everyone else."
       },
       {
-        "q": "Can staff attach a photo from the phone?",
+        "q": "Can Staff Attach a Photo From the Phone?",
         "a": "Yes. When marking a request delivered, staff can attach a photo, which is useful for a print job left at a desk or a courier handed over at reception."
       },
       {
-        "q": "Is there a web app for desk staff?",
+        "q": "Is There a Web App for Desk Staff?",
         "a": "Yes. Every plan includes both the web app and the mobile app, so desk-based teams can work from a browser."
       },
+      { q: "Do Mobile Alerts Work When the Phone Is Locked?", a: "Yes. The Android app is built to ring through on a locked phone as well as on silent, once notification permission has been granted after install." },
     ],
     related: ["notifications", "mobile-app", "mobile-app/android", "mobile-app/notifications", "notifications/email", "free-trial"],
-    cta: { title: "Put a buzzer in every pocket", body: "Sign up free and install the Android app on your staff phones today." },
+    cta: { title: "Put a Buzzer in Every Pocket", body: "Sign up free and install the Android app on your staff phones today." },
   },
 
   // ───────────────────────────── ROUTING ─────────────────────────────
   {
-    path: "notifications/routing",
+    path: "notifications/notification-routing",
     title: "Notification Routing to the Right Team",
     description:
       "Each request item notifies only its team: pantry, print room, IT or facilities. The right people are pinged at once and nobody else is disturbed.",
-    h1: "The right team gets pinged. Everyone else gets peace.",
+    h1: "The Right Team Gets Pinged. Everyone Else Gets Peace.",
     eyebrow: "Routing",
     lead:
       "Notifying everyone about everything is how WhatsApp groups go noisy. ZapBuzzer routes each request to the team responsible for it, so alerts reach the people who can act and no one else.",
@@ -934,7 +940,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Routing happens before the first ping",
+        heading: "Routing Happens Before the First Ping",
         paragraphs: [
           "Each catalogue item belongs to a team: coffee to pantry, a PDF print job to the print room, ‘projector stuck’ to IT, ‘AC too cold’ to facilities, and courier pickup to the mailroom. When someone buzzes, ZapBuzzer already knows who to notify.",
           "Requesters don’t need to know who is on shift. They pick what they need and where they are. Routing does the rest.",
@@ -942,8 +948,8 @@ export const pages: PageContent[] = [
       },
       {
         type: "table",
-        heading: "Example routing",
-        headers: ["Request", "Team notified", "Not notified"],
+        heading: "Example Routing",
+        headers: ["Request", "Team Notified", "Not Notified"],
         rows: [
           ["Coffee to Boss Cabin", "Pantry", "IT, Facilities, Print"],
           ["24 colour copies", "Print room", "Pantry, IT"],
@@ -955,12 +961,12 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "notification-flow",
-        heading: "Routed, then fanned out",
+        heading: "Routed, Then Fanned Out",
         body: "First the request is routed to a team, then it fans out to that team’s channels together. Two steps that happen in the same moment.",
       },
       {
         type: "scenario",
-        heading: "HDMI in three minutes",
+        heading: "HDMI in Three Minutes",
         persona: "Tanvi, Design",
         setting: "Tanvi is about to present and there is no HDMI cable in the room.",
         timeline: [
@@ -974,14 +980,14 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Multi-location on Pro",
+        title: "Multi-Location on Pro",
         body: "With multi-location on Pro, each office can route to its own teams, so a Pune coffee request doesn’t ping a Mumbai pantry.",
       },
       {
         "type": "problem-solution",
-        "heading": "What happens without routing",
+        "heading": "What Happens Without Routing",
         "problem": {
-          "title": "One alert for everyone",
+          "title": "One Alert for Everyone",
           "points": [
             "The IT desk mutes the channel because it is mostly coffee orders.",
             "The pantry team sees projector complaints it can do nothing about.",
@@ -990,7 +996,7 @@ export const pages: PageContent[] = [
           ]
         },
         "solution": {
-          "title": "One alert for the right team",
+          "title": "One Alert for the Right Team",
           "points": [
             "Each catalogue item already knows its team.",
             "Only that team is pinged, so its alerts stay worth reading.",
@@ -1001,49 +1007,49 @@ export const pages: PageContent[] = [
       },
       {
         "type": "workflow",
-        "heading": "Setting up routing for the first time",
+        "heading": "Setting Up Routing for the First Time",
         "intro": "Most offices get this done in an afternoon.",
         "steps": [
           {
-            "title": "List your teams",
+            "title": "List Your Teams",
             "body": "Pantry, print room, IT desk, facilities and mailroom are the usual starting set."
           },
           {
-            "title": "Add catalogue items",
+            "title": "Add Catalogue Items",
             "body": "Coffee, tea, snacks, print jobs, HDMI, AC, courier pickup and whatever else people ask for."
           },
           {
-            "title": "Assign each item to a team",
+            "title": "Assign Each Item to a Team",
             "body": "This is the routing. One decision per item, made once."
           },
           {
-            "title": "Invite the staff",
+            "title": "Invite the Staff",
             "body": "Add each person to the team that handles their work so they receive its alerts."
           },
           {
-            "title": "Send a test buzz",
+            "title": "Send a Test Buzz",
             "body": "Buzz one item per team and check that only the expected people were pinged."
           }
         ]
       },
       {
         "type": "metrics",
-        "heading": "Signs your routing is working",
+        "heading": "Signs Your Routing Is Working",
         "items": [
           {
-            "metric": "Accept time per team",
+            "metric": "Accept Time per Team",
             "meaning": "Quick, steady accepts suggest alerts reach people who are ready to act on them."
           },
           {
-            "metric": "Requests by category",
+            "metric": "Requests by Category",
             "meaning": "Shows which teams carry the most load and whether an item belongs somewhere else."
           },
           {
-            "metric": "Escalations by team",
+            "metric": "Escalations by Team",
             "meaning": "Frequent escalations in one team can point to a misrouted item or too few staff on it."
           },
           {
-            "metric": "Phone calls",
+            "metric": "Phone Calls",
             "meaning": "When routing is right, people stop calling around to find who handles what."
           }
         ]
@@ -1051,48 +1057,49 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "tip",
-        "title": "Route by job, not by person",
+        "title": "Route by Job, Not by Person",
         "body": "Assign items to teams rather than individuals. When someone is on leave or at lunch, the rest of the team still gets the ping, and first-accept-wins decides who takes it."
       },
     ],
     faqs: [
-      { q: "Who decides which team gets a request?", a: "Admins set up catalogue items and the team each one routes to. Requesters just pick the item." },
-      { q: "Can one team handle several items?", a: "Yes. A pantry team might own coffee, tea, snacks and lunch." },
-      { q: "What if the wrong team gets it?", a: "Fix the item’s routing once and every future request goes to the right place." },
-      { q: "Does routing work across locations?", a: "Yes, with multi-location on Pro. Free covers one location." },
+      { q: "Who Decides Which Team Gets a Request?", a: "Admins set up catalogue items and the team each one routes to. Requesters just pick the item." },
+      { q: "Can One Team Handle Several Items?", a: "Yes. A pantry team might own coffee, tea, snacks and lunch." },
+      { q: "What If the Wrong Team Gets It?", a: "Fix the item’s routing once and every future request goes to the right place." },
+      { q: "Does Routing Work Across Locations?", a: "Yes, with multi-location on Pro. Free covers one location." },
       {
-        "q": "Does routing send a request to one person or a whole team?",
+        "q": "Does Routing Send a Request to One Person or a Whole Team?",
         "a": "The whole team. Everyone in it is pinged together and the first to accept owns the request, so nobody has to be on duty alone for a request to be picked up."
       },
       {
-        "q": "Can a requester override where a request goes?",
+        "q": "Can a Requester Override Where a Request Goes?",
         "a": "Requesters choose the item and the destination, such as Boss Cabin or Conference Room B. The team is decided by the item’s routing, which keeps requests from landing with whoever the requester happens to know."
       },
       {
-        "q": "How do new staff start receiving alerts?",
+        "q": "How Do New Staff Start Receiving Alerts?",
         "a": "Add them to the right team. From then on they are pinged for that team’s items on the channels your plan includes."
       },
+      { q: "Can IT and Facilities Requests Go to Different Teams?", a: "Yes. Each catalogue item routes to its own team, so an HDMI request reaches the IT desk while a cold AC goes to facilities, without anyone forwarding it." },
     ],
     related: ["notifications", "features/request-routing", "solutions/it-support/ticket-routing", "solutions/facilities/routing", "notifications/escalation", "enterprise/multi-location"],
-    cta: { title: "Route every request to the right desk", body: "Set up your catalogue on a free trial in an afternoon." },
+    cta: { title: "Route Every Request to the Right Desk", body: "Set up your catalogue on a free trial in an afternoon." },
   },
 
   // ───────────────────────────── ESCALATION ─────────────────────────────
   {
-    path: "notifications/escalation",
+    path: "notifications/notification-escalation",
     title: "Notification Escalation for Overdue Requests",
     description:
-      "When repeat pings aren’t enough, overdue requests auto-escalate to a manager. Pro adds a full escalation chain so nothing rots unanswered.",
-    h1: "When nobody answers, someone with authority hears about it",
+      "When repeat pings aren’t enough, overdue requests are passed to a manager automatically. Pro adds a full escalation chain so nothing sits unanswered.",
+    h1: "When Nobody Answers, Someone With Authority Hears About It",
     eyebrow: "Escalation",
     lead:
-      "Repeating notifications handle most requests. For the few that still slip, ZapBuzzer escalates automatically when the SLA runs out, first to a manager and then up a chain on Pro.",
+      "Repeating notifications handle most requests. For the few that still slip, ZapBuzzer escalates automatically when the SLA (the time limit for the request) runs out, first to a manager and then up a chain on Pro.",
     keywords: ["notification escalation", "overdue request escalation", "manager escalation alerts", "escalation chain office"],
     heroVisual: "escalation",
     sections: [
       {
         type: "workflow",
-        heading: "Two layers of persistence",
+        heading: "Two Layers of Persistence",
         steps: [
           { title: "Repeat", body: "The team is pinged on all channels, repeating until someone accepts." },
           { title: "Timer", body: "Every request has an SLA deadline running from the buzz." },
@@ -1103,18 +1110,18 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "escalation",
-        heading: "The escalation ladder",
+        heading: "The Escalation Ladder",
         body: "Each rung is a person with more authority to unblock the request. The ladder only runs when the request is overdue, so managers aren’t copied on everything.",
       },
       {
         type: "visual",
         visual: "sla-timer",
-        heading: "The timer behind it",
+        heading: "The Timer Behind It",
         body: "Escalation is driven by the SLA timer. Requesters and staff can see the countdown, so the deadline is never a surprise.",
       },
       {
         type: "scenario",
-        heading: "Facilities, 15 minutes",
+        heading: "Facilities, 15 Minutes",
         persona: "Om, Engineer",
         setting: "Conference Room B AC stuck at 16°C with a 15-minute SLA.",
         timeline: [
@@ -1128,12 +1135,12 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Plan note",
+        title: "Plan Note",
         body: "Auto-escalation to a manager applies to overdue requests. The multi-step escalation chain is part of Pro, together with SLA reporting.",
       },
       {
         "type": "prose",
-        "heading": "Escalation is a message to someone new",
+        "heading": "Escalation Is a Message to Someone New",
         "paragraphs": [
           "Repeat pings talk to the same team over and over. Escalation changes the audience. When a request runs past its deadline, the alert stops being only the pantry’s or the IT desk’s problem and lands with a manager who can reassign work, call a vendor or move a meeting.",
           "That shift matters because most overdue requests are not ignored on purpose. The only technician is up a ladder on the 5th floor, the print room is jammed, or the part simply isn’t in the building. A teammate can’t fix those. A manager often can.",
@@ -1142,19 +1149,19 @@ export const pages: PageContent[] = [
       },
       {
         "type": "comparison",
-        "heading": "Chasing by hand vs automatic escalation",
+        "heading": "Chasing by Hand vs Automatic Escalation",
         "columns": [
-          "Chasing by hand",
-          "ZapBuzzer escalation"
+          "Chasing by Hand",
+          "ZapBuzzer Escalation"
         ],
         "rows": [
           {
-            "label": "Who notices the delay",
+            "label": "Who Notices the Delay",
             "a": "The requester, eventually",
             "b": "The SLA timer, the moment it passes"
           },
           {
-            "label": "Who gets told",
+            "label": "Who Gets Told",
             "a": "Whoever the requester knows to call",
             "b": "The manager on the escalation path"
           },
@@ -1164,7 +1171,7 @@ export const pages: PageContent[] = [
             "b": "The original item, note, destination and timeline"
           },
           {
-            "label": "Record afterwards",
+            "label": "Record Afterwards",
             "a": "None",
             "b": "Escalation logged against the request"
           }
@@ -1172,7 +1179,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "audience",
-        "heading": "Who escalation helps",
+        "heading": "Who Escalation Helps",
         "items": [
           {
             "role": "Requesters",
@@ -1194,7 +1201,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "checklist",
-        "heading": "Setting up escalation sensibly",
+        "heading": "Setting Up Escalation Sensibly",
         "items": [
           "Give each category a deadline people agree is fair, short for coffee and longer for facilities work",
           "Name a manager for each team who will actually act on an escalation",
@@ -1205,34 +1212,35 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Do managers get every notification?", a: "No. Managers hear about a request only when it is overdue and escalates." },
-      { q: "Is escalation only for unaccepted requests?", a: "Escalation is tied to the SLA deadline, so a request that is accepted but not delivered in time can escalate too." },
-      { q: "Is the escalation chain on Free?", a: "The multi-step escalation chain is a Pro feature." },
-      { q: "Can we see how often things escalate?", a: "Yes. Escalations show up in analytics and SLA reports on Pro." },
+      { q: "Do Managers Get Every Notification?", a: "No. Managers hear about a request only when it is overdue and escalates." },
+      { q: "Is Escalation Only for Unaccepted Requests?", a: "Escalation is tied to the SLA deadline, so a request that is accepted but not delivered in time can escalate too." },
+      { q: "Is the Escalation Chain on Free?", a: "The multi-step escalation chain is a Pro feature." },
+      { q: "Can We See How Often Things Escalate?", a: "Yes. Escalations show up in analytics and SLA reports on Pro." },
       {
-        "q": "Does escalation stop the original team’s notifications?",
+        "q": "Does Escalation Stop the Original Team’s Notifications?",
         "a": "No. The team still owns the work, and the person who accepted it remains responsible. Escalation adds a manager to the picture so the delay gets attention."
       },
       {
-        "q": "Can different teams escalate to different managers?",
+        "q": "Can Different Teams Escalate to Different Managers?",
         "a": "Yes. Each team’s escalation path can lead to the person responsible for it, so a pantry delay reaches the office manager and a facilities delay reaches the admin head."
       },
       {
-        "q": "Will escalation make staff look bad?",
+        "q": "Will Escalation Make Staff Look Bad?",
         "a": "Escalations are about requests, not blame. Because every request is timed, the record shows when a delay came from a blocker such as a missing part, and scorecards credit staff fairly for the work they do."
       },
+      { q: "How Soon Does an Overdue Request Escalate?", a: "Each request has its own deadline. If it is not done in time, it auto-escalates to a manager. For example, a stuck conference-room AC can escalate if not fixed within 15 minutes." },
     ],
     related: ["notifications", "sla/automatic-escalation", "sla/escalation-chains", "solutions/facilities/escalation", "notifications/routing", "pricing/pro"],
-    cta: { title: "Let the system chase, not you", body: "Try SLA escalation on a 14-day Pro trial." },
+    cta: { title: "Let the System Chase, Not You", body: "Try SLA escalation on a 14-day Pro trial." },
   },
 
   // ───────────────────────────── PREFERENCES ─────────────────────────────
   {
-    path: "notifications/preferences",
+    path: "notifications/notification-preferences",
     title: "Notification Preferences for Staff & Teams",
     description:
-      "Decide which channels each team relies on: app, email, Telegram or WhatsApp. Keep alerts useful for staff without letting requests slip.",
-    h1: "Choose how your team hears a buzz",
+      "Decide which channels each team relies on: app, email, Telegram or WhatsApp. Keep alerts useful for your staff without letting any requests slip.",
+    h1: "Choose How Your Team Hears a Buzz",
     eyebrow: "Preferences",
     lead:
       "Different teams have different habits. The pantry lives on WhatsApp and IT lives on a laptop. ZapBuzzer lets you lean on the channels each team actually checks, while keeping the repeat-until-accepted safety net.",
@@ -1241,7 +1249,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Preferences, with guardrails",
+        heading: "Preferences, With Guardrails",
         paragraphs: [
           "The point of preferences is not to let alerts be turned off. It is to make sure they land where people look. A pantry runner who never opens email gets little from it, while an IT lead at a laptop may prefer email and the web app.",
           "Whatever channels a team uses, two things stay fixed: the request goes to the whole team at once, and it repeats until someone accepts.",
@@ -1249,8 +1257,8 @@ export const pages: PageContent[] = [
       },
       {
         type: "table",
-        heading: "Common setups by team",
-        headers: ["Team", "Typical channels", "Why"],
+        heading: "Common Setups by Team",
+        headers: ["Team", "Typical Channels", "Why"],
         rows: [
           ["Pantry", "Android app and WhatsApp", "Phones in pockets, rings on silent"],
           ["Print room", "Web app and app", "Near a computer, often moving"],
@@ -1262,12 +1270,12 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "roles",
-        heading: "Roles shape what people see",
-        body: "Granular role permissions decide who can raise, accept or manage requests, and the owner alone sees spend. Notifications follow those roles.",
+        heading: "Roles Shape What People See",
+        body: "Detailed role permissions decide who can raise, accept or manage requests, and the owner alone sees spend. Notifications follow those roles.",
       },
       {
         type: "checklist",
-        heading: "Before you settle preferences",
+        heading: "Before You Settle Preferences",
         items: [
           "Ask each team which app they check first",
           "Install the Android app for anyone who isn’t at a desk",
@@ -1278,27 +1286,27 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "warning",
-        title: "Don’t rely on one channel",
+        title: "Don’t Rely on One Channel",
         body: "A team with a single quiet channel is how requests get missed. Pair at least one fast channel, such as the mobile app, with one that leaves a record, such as email.",
       },
       {
         "type": "workflow",
-        "heading": "Working out the right mix for a team",
+        "heading": "Working Out the Right Mix for a Team",
         "steps": [
           {
-            "title": "Watch a normal day",
+            "title": "Watch a Normal Day",
             "body": "Notice where each team member actually is: at a desk, in the pantry, at the gate or walking the floors."
           },
           {
-            "title": "Pick a fast channel",
+            "title": "Pick a Fast Channel",
             "body": "For people on the move that is usually the Android app, which rings through silent. On Pro it may also be WhatsApp or Telegram."
           },
           {
-            "title": "Pick a record channel",
+            "title": "Pick a Record Channel",
             "body": "Email works on every plan and leaves a written trail for desk-based leads."
           },
           {
-            "title": "Run it for a week",
+            "title": "Run It for a Week",
             "body": "Look at accept times for that team and ask staff whether alerts felt useful or noisy."
           },
           {
@@ -1309,11 +1317,11 @@ export const pages: PageContent[] = [
       },
       {
         "type": "comparison",
-        "heading": "Personal preference vs team guarantee",
+        "heading": "Personal Preference vs Team Guarantee",
         "intro": "Preferences shape how people hear a buzz. They don’t change the promise that someone will.",
         "columns": [
-          "What preferences can shape",
-          "What stays fixed"
+          "What Preferences Can Shape",
+          "What Stays Fixed"
         ],
         "rows": [
           {
@@ -1332,26 +1340,26 @@ export const pages: PageContent[] = [
             "b": "Pings repeat until someone accepts"
           },
           {
-            "label": "Late requests",
+            "label": "Late Requests",
             "a": "Who manages each team",
-            "b": "Overdue requests escalate when the SLA passes"
+            "b": "Overdue requests escalate when the SLA (time limit) passes"
           }
         ]
       },
       {
         "type": "audience",
-        "heading": "What a good setup feels like for each role",
+        "heading": "What a Good Setup Feels Like for Each Role",
         "items": [
           {
-            "role": "Pantry runner",
+            "role": "Pantry Runner",
             "benefit": "One ring in the pocket for a coffee order, and it stops as soon as a colleague accepts."
           },
           {
-            "role": "IT lead",
+            "role": "IT Lead",
             "benefit": "Requests appear on the laptop they already have open, with an email copy for reference."
           },
           {
-            "role": "Office manager",
+            "role": "Office Manager",
             "benefit": "No need to relay messages between teams. Each team hears its own requests directly."
           },
           {
@@ -1362,34 +1370,35 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Can staff mute notifications completely?", a: "ZapBuzzer is built so requests get answered. Notifications repeat until someone on the team accepts, which is the safety net." },
-      { q: "Which channels can we choose from?", a: "The app and email on every plan, and Telegram and WhatsApp on Pro." },
-      { q: "Do preferences change routing?", a: "No. Routing decides which team gets the request. Channels decide how that team hears about it." },
-      { q: "Can we change setups later?", a: "Yes. Adjust as your teams learn what works." },
+      { q: "Can Staff Mute Notifications Completely?", a: "ZapBuzzer is built so requests get answered. Notifications repeat until someone on the team accepts, which is the safety net." },
+      { q: "Which Channels Can We Choose From?", a: "The app and email on every plan, and Telegram and WhatsApp on Pro." },
+      { q: "Do Preferences Change Routing?", a: "No. Routing decides which team gets the request. Channels decide how that team hears about it." },
+      { q: "Can We Change Setups Later?", a: "Yes. Adjust as your teams learn what works." },
       {
-        "q": "Do employees who raise requests need notification preferences?",
+        "q": "Do Employees Who Raise Requests Need Notification Preferences?",
         "a": "Not really. Requesters mainly follow status in the app: accepted with a name and photo, started with an ETA, and delivered. Preferences matter most for the teams who receive and accept work."
       },
       {
-        "q": "What if one person on a team never reads WhatsApp?",
+        "q": "What If One Person on a Team Never Reads WhatsApp?",
         "a": "That’s why channels fire together. The same request reaches them in the app and by email at the same moment, so one unread channel doesn’t mean a missed request."
       },
       {
-        "q": "Is there a recommended starting setup?",
+        "q": "Is There a Recommended Starting Setup?",
         "a": "A simple start is the mobile app for anyone away from a desk plus email for everyone. Add Telegram or WhatsApp on Pro if a team already lives in one of them."
       },
+      { q: "Can Each Team Use a Different Set of Channels?", a: "Yes. A pantry team might lean on WhatsApp while the IT desk prefers the app and email. Telegram and WhatsApp need Pro; the app and email are on every plan." },
     ],
     related: ["notifications", "notifications/multi-channel", "admin/roles-and-permissions", "admin/team-management", "notifications/push", "pricing"],
-    cta: { title: "Fit alerts to your teams", body: "Start free and try different channels with each team for two weeks." },
+    cta: { title: "Fit Alerts to Your Teams", body: "Start free and try different channels with each team for two weeks." },
   },
 
   // ───────────────────────────── WORKFLOW ─────────────────────────────
   {
-    path: "notifications/workflow",
+    path: "notifications/notification-workflow",
     title: "How a ZapBuzzer Notification Works",
     description:
       "Follow one notification from buzz to delivery: routed to a team, sent on every channel, repeated until accepted, escalated if late and closed with a rating.",
-    h1: "The life of one buzz",
+    h1: "The Life of One Buzz",
     eyebrow: "Workflow",
     lead:
       "Here is what happens to a single notification from the moment someone taps Buzz to the moment the job is rated, and which part of ZapBuzzer handles each step.",
@@ -1398,27 +1407,27 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "workflow",
-        heading: "Step by step",
+        heading: "Step by Step",
         steps: [
           { title: "Buzz", body: "The requester picks an item, adds a note and destination and taps Buzz." },
           { title: "Route", body: "The item’s team is selected." },
-          { title: "Fan out", body: "The team is pinged on the app and by email, and on Pro on Telegram and WhatsApp, all together." },
+          { title: "Fan Out", body: "The team is pinged on the app and by email, and on Pro on Telegram and WhatsApp, all together." },
           { title: "Repeat", body: "Pings repeat until someone accepts." },
           { title: "Accept", body: "The first accept wins, reminders stop and the requester sees the name and photo." },
           { title: "Start and ETA", body: "The staff member starts the job and sets an ETA." },
-          { title: "Escalate if late", body: "If the SLA runs out, the request escalates to a manager, and up the chain on Pro." },
-          { title: "Deliver and rate", body: "Delivered, optionally with a photo, then rated from 1 to 5 stars and counted in analytics." },
+          { title: "Escalate If Late", body: "If the SLA (the time limit) runs out, the request goes to a manager, and up the chain on Pro." },
+          { title: "Deliver and Rate", body: "Delivered, optionally with a photo, then rated from 1 to 5 stars and counted in analytics." },
         ],
       },
       {
         type: "visual",
         visual: "request-timeline",
-        heading: "The timeline view",
+        heading: "The Timeline View",
         body: "Every step lands on the request’s timeline with a time and a name, from the first notification to the rating.",
       },
       {
         type: "scenario",
-        heading: "Courier at the gate",
+        heading: "Courier at the Gate",
         persona: "Neha, Reception",
         setting: "A courier arrives at Gate 1.",
         timeline: [
@@ -1432,11 +1441,11 @@ export const pages: PageContent[] = [
       },
       {
         type: "glossary",
-        heading: "Terms used here",
+        heading: "Terms Used Here",
         terms: [
           { term: "Buzz", definition: "A request sent from the catalogue." },
-          { term: "Fan-out", definition: "Sending to all of a team’s channels at once." },
-          { term: "First accept wins", definition: "The first person to accept owns the request." },
+          { term: "Fan-Out", definition: "Sending to all of a team’s channels at once." },
+          { term: "First Accept Wins", definition: "The first person to accept owns the request." },
           { term: "SLA", definition: "The deadline each request carries." },
           { term: "Escalation", definition: "Automatic notification of a manager when a request is overdue." },
         ],
@@ -1444,17 +1453,17 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "See it live",
+        title: "See It Live",
         body: "The read-only demo workspace lets you click through a request’s timeline without signing up.",
       },
       {
         "type": "table",
-        "heading": "Who sees what at each step",
+        "heading": "Who Sees What at Each Step",
         "headers": [
           "Step",
-          "Requester sees",
-          "Team sees",
-          "Manager sees"
+          "Requester Sees",
+          "Team Sees",
+          "Manager Sees"
         ],
         "rows": [
           [
@@ -1497,7 +1506,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "prose",
-        "heading": "Where the notification hands over to the request",
+        "heading": "Where the Notification Hands Over to the Request",
         "paragraphs": [
           "The notification’s job ends at accept. Up to that moment ZapBuzzer is trying to get attention, which is why it uses every channel and repeats. After it, the job is to keep everyone informed without noise: the requester sees status changes and the team stops being pinged.",
           "The SLA timer is the thread that runs through both halves. Every request carries a deadline, so a request that waits a long time for an owner is still being measured against it. That keeps the measure honest from the requester’s side of the desk."
@@ -1505,19 +1514,19 @@ export const pages: PageContent[] = [
       },
       {
         "type": "metrics",
-        "heading": "Numbers each step produces",
+        "heading": "Numbers Each Step Produces",
         "intro": "Because every request is timed, each step leaves something you can measure.",
         "items": [
           {
-            "metric": "Time to accept",
+            "metric": "Time to Accept",
             "meaning": "From buzz to first accept. Shows how well notifications reach people who are free."
           },
           {
-            "metric": "Time to deliver",
+            "metric": "Time to Deliver",
             "meaning": "From accept to delivered. Shows how long the work itself takes."
           },
           {
-            "metric": "On-time rate",
+            "metric": "On-Time Rate",
             "meaning": "Share of requests delivered within their SLA."
           },
           {
@@ -1529,38 +1538,40 @@ export const pages: PageContent[] = [
       {
         "type": "visual",
         "visual": "delivery",
-        "heading": "The last step: delivered and rated",
+        "heading": "The Last Step: Delivered and Rated",
         "body": "When the job is done, the staff member marks it delivered, with a photo if useful, and the requester gets a prompt to rate it from 1 to 5 stars."
       },
       {
         type: "comparison",
-        heading: "The same request, phoned in vs buzzed",
+        heading: "The Same Request, Phoned in vs Buzzed",
         intro: "Following one request for two coffees to the boss cabin shows where each step of the notification saves time.",
-        columns: ["Phone call", "ZapBuzzer buzz"],
+        columns: ["Phone Call", "ZapBuzzer Buzz"],
         rows: [
-          { label: "Reaching someone", a: "Ring the pantry extension, then a mobile, then walk over", b: "Whole team pinged on every channel at once" },
-          { label: "Nobody answers", a: "Try again later", b: "Pings repeat automatically" },
-          { label: "Two people hear it", a: "Both go, or neither", b: "First accept wins, the rest stop" },
-          { label: "Requester’s view", a: "Waits and wonders", b: "Name, photo and ETA" },
+          { label: "Reaching Someone", a: "Ring the pantry extension, then a mobile, then walk over", b: "Whole team pinged on every channel at once" },
+          { label: "Nobody Answers", a: "Try again later", b: "Pings repeat automatically" },
+          { label: "Two People Hear It", a: "Both go, or neither", b: "First accept wins, the rest stop" },
+          { label: "Requester’s View", a: "Waits and wonders", b: "Name, photo and ETA" },
           { label: "Afterwards", a: "Nothing recorded", b: "Timed, rated and in analytics" },
         ],
       },
     ],
     faqs: [
-      { q: "How quickly does the first notification go out?", a: "As soon as the requester taps Buzz. All channels fire together." },
-      { q: "How long do repeats continue?", a: "Until someone accepts. If the SLA passes first, escalation kicks in as well." },
-      { q: "Does the requester get notified at each step?", a: "They see live status: accepted, started with ETA, and delivered." },
-      { q: "Is every step recorded?", a: "Every request is timed and every action is audit-logged. Full audit logs and reports are part of Pro." },
+      { q: "How Quickly Does the First Notification Go Out?", a: "As soon as the requester taps Buzz. All channels fire together." },
+      { q: "How Long Do Repeats Continue?", a: "Until someone accepts. If the SLA passes first, escalation kicks in as well." },
+      { q: "Does the Requester Get Notified at Each Step?", a: "They see live status: accepted, started with ETA, and delivered." },
+      { q: "Is Every Step Recorded?", a: "Every request is timed and every action is audit-logged. Full audit logs and reports are part of Pro." },
       {
-        "q": "Can a request be delivered without being accepted first?",
+        "q": "Can a Request Be Delivered Without Being Accepted First?",
         "a": "The lifecycle runs buzz, accept, start, deliver and rate, so someone owns every request before it is closed. That ownership is what makes ratings and scorecards fair."
       },
       {
-        "q": "Where do I see the numbers from each step?",
+        "q": "Where Do I See the Numbers From Each Step?",
         "a": "Accept times, on-time delivery and ratings feed ZapBuzzer’s analytics and staff scorecards. Full analytics and scorecards are part of Pro."
       },
+      { q: "What Happens to the Notifications After Someone Accepts?", a: "They stop for the rest of the team. The request now belongs to the person who accepted, and the requester moves from waiting to seeing a name, photo and, once started, an ETA." },
+      { q: "Does the Requester Get a Prompt When the Job Is Delivered?", a: "Yes. Once the request is marked delivered, sometimes with a photo, the requester is asked to rate it 1–5★. That closes the loop and feeds the analytics." },
     ],
     related: ["notifications", "how-it-works", "features/request-status", "workflows/coffee-request", "notifications/escalation", "demo"],
-    cta: { title: "Follow a buzz yourself", body: "Open the read-only demo or start a free trial and send one." },
+    cta: { title: "Follow a Buzz Yourself", body: "Open the read-only demo or start a free trial and send one." },
   },
 ];

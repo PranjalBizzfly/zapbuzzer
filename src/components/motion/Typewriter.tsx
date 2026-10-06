@@ -66,7 +66,7 @@ export function Typewriter({
       <span className="absolute inset-0" aria-hidden>
         {text.slice(0, shown)}
         {(cursor || !done) && (
-          <span className="tw-caret ml-1 inline-block h-[0.85em] w-[3px] rounded-sm bg-accent align-middle shadow-[0_0_8px_oklch(56%_0.2_277/0.6)]" />
+          <span className="tw-caret -mr-[7px] ml-1 inline-block h-[0.85em] w-[3px] rounded-sm bg-accent align-middle shadow-[0_0_8px_oklch(56%_0.2_277/0.6)]" />
         )}
       </span>
     </span>

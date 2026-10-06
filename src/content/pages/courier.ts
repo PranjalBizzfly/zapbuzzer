@@ -3,11 +3,11 @@ import type { PageContent } from "../types";
 export const pages: PageContent[] = [
   // ───────────────────────────── HUB ─────────────────────────────
   {
-    path: "solutions/courier",
+    path: "solutions/courier-and-reception",
     title: "Courier & Mailroom Management for Offices",
     description:
       "Run courier pickups, mailroom handoffs and reception requests from one tap. ZapBuzzer routes every parcel request, times it and keeps an audit trail.",
-    h1: "Every parcel, pickup and handoff on one audit trail",
+    h1: "Every Parcel, Pickup and Handoff on One Audit Trail",
     eyebrow: "Courier & Reception",
     lead:
       "A courier waiting at the gate should not depend on someone finding the right phone number. With ZapBuzzer, reception taps Courier Pickup, the mailroom team is pinged on every channel at once, and the first person free accepts it. Every step is timed and logged.",
@@ -22,11 +22,11 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "problem-solution",
-        heading: "Why courier handling falls apart in busy offices",
+        heading: "Why Courier Handling Falls Apart in Busy Offices",
         intro:
           "Courier work is small and frequent, and it usually lands on whoever is nearest. That is why it goes missing.",
         problem: {
-          title: "How it usually goes",
+          title: "How It Usually Goes",
           points: [
             "The delivery agent waits at the gate while reception calls three extensions looking for someone from the mailroom.",
             "Outgoing documents sit on a desk because nobody was told the pickup slot is at 4 pm.",
@@ -35,7 +35,7 @@ export const pages: PageContent[] = [
           ],
         },
         solution: {
-          title: "How it goes with ZapBuzzer",
+          title: "How It Goes With ZapBuzzer",
           points: [
             "Reception taps Courier Pickup and adds a short note, such as ‘Blue Dart, 2 boxes, Gate 1’.",
             "The mailroom team is notified at the same time. The first person to tap Accept owns the request.",
@@ -46,11 +46,11 @@ export const pages: PageContent[] = [
       },
       {
         type: "prose",
-        eyebrow: "What counts as courier work",
-        heading: "One catalogue for every kind of handoff",
+        eyebrow: "What Counts as Courier Work",
+        heading: "One Catalogue for Every Kind of Handoff",
         paragraphs: [
           "Most offices deal with the same few jobs over and over: an inbound parcel at reception, an outbound document that needs to reach the courier counter, an envelope that has to go from the mailroom to the 4th-floor finance team, and the occasional ‘please collect this from my desk before 5’. In ZapBuzzer each of these can be its own catalogue item, so the request already says what kind of job it is before anyone reads the note.",
-          "Because courier requests are ordinary ZapBuzzer requests, they follow the same rules as coffee, prints and IT help. They are routed to a team instead of a person, they ring on every channel at once, the first accept wins, and an SLA timer runs from the moment the buzz goes out. Your mailroom staff don’t need to learn a separate tool.",
+          "Because courier requests are ordinary ZapBuzzer requests, they follow the same rules as coffee, prints and IT help. They are routed to a team instead of a person, they ring on every channel at once, the first accept wins, and an SLA timer (the time limit for finishing the job) runs from the moment the buzz goes out. Your mailroom staff don’t need to learn a separate tool.",
         ],
         bullets: [
           "Courier pickup from the gate or reception desk",
@@ -61,34 +61,34 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "How a courier request moves through ZapBuzzer",
+        heading: "How a Courier Request Moves Through ZapBuzzer",
         intro: "The same five steps whether it is an inbound box or an outbound contract.",
         steps: [
           {
-            title: "Reception or an employee taps the request",
+            title: "Reception or an Employee Taps the Request",
             body: "Pick Courier Pickup (or your own item, such as Outgoing Dispatch), add a note with the courier name, number of packages and location, and tap Buzz.",
           },
           {
-            title: "The mailroom team is pinged together",
+            title: "The Mailroom Team Is Pinged Together",
             body: "Everyone on the team gets the request at once in the app and by email, and on Telegram and WhatsApp on Pro. Notifications repeat until someone accepts.",
           },
           {
-            title: "First to accept owns it",
+            title: "First to Accept Owns It",
             body: "Whoever is free taps Accept. The requester sees their name and photo straight away, so reception can tell the courier agent who is coming.",
           },
           {
-            title: "Started, with an ETA",
+            title: "Started, With an ETA",
             body: "The staff member marks it started with an ETA. The SLA timer keeps running, and if it goes overdue it escalates to a manager.",
           },
           {
-            title: "Delivered, logged and rated",
+            title: "Delivered, Logged and Rated",
             body: "On completion a photo can be attached as proof of handoff. The requester rates the job, and the whole trail goes into the audit log.",
           },
         ],
       },
       {
         type: "scenario",
-        heading: "A courier at the gate, handled in under five minutes",
+        heading: "A Courier at the Gate, Handled in Under Five Minutes",
         persona: "Neha, Reception",
         setting: "A courier agent arrives at Gate 1 at 3:40 pm with two boxes for the finance team on the 4th floor.",
         timeline: [
@@ -104,7 +104,7 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "audit-log",
-        heading: "An audit trail for every handoff",
+        heading: "An Audit Trail for Every Handoff",
         body: "Couriers bring contracts, cheques, laptops and legal notices. When someone asks ‘who received it?’, the answer should take ten seconds to find. ZapBuzzer records every action, from request and accept to started and delivered, against a named person and a timestamp.",
         points: [
           "Every action is audit-logged, with who did it and when",
@@ -114,64 +114,76 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "What courier and reception teams get",
+        heading: "What Courier and Reception Teams Get",
         items: [
-          { title: "Courier catalogue items", body: "Separate items for inbound, outbound and internal delivery, so the request type is clear before anyone opens it." },
-          { title: "Team routing", body: "Requests go to the mailroom or reception team, not to one person who might be on leave." },
-          { title: "Repeat-until-accepted pings", body: "App, email and, on Pro, Telegram and WhatsApp all ring together and keep ringing until someone accepts." },
-          { title: "Rings on a silent phone", body: "The Android app rings through even when a staff phone is on silent or locked, which matters when the agent is waiting at the gate." },
-          { title: "SLA timers", body: "Each courier request carries a deadline, and late ones escalate automatically, with an escalation chain on Pro." },
-          { title: "Mailroom analytics", body: "See volume by hour, accept times and on-time delivery for the mailroom team, with full analytics on Pro." },
+          { title: "Courier Catalogue Items", body: "Separate items for inbound, outbound and internal delivery, so the request type is clear before anyone opens it." },
+          { title: "Team Routing", body: "Requests go to the mailroom or reception team, not to one person who might be on leave." },
+          { title: "Repeat-Until-Accepted Pings", body: "App, email and, on Pro, Telegram and WhatsApp all ring together and keep ringing until someone accepts." },
+          { title: "Rings on a Silent Phone", body: "The Android app rings through even when a staff phone is on silent or locked, which matters when the agent is waiting at the gate." },
+          { title: "SLA Timers", body: "Each courier request carries a deadline, and late ones escalate automatically, with an escalation chain on Pro." },
+          { title: "Mailroom Analytics", body: "See volume by hour, accept times and on-time delivery for the mailroom team, with full analytics on Pro." },
         ],
       },
       {
         type: "audience",
-        heading: "Who it helps",
+        heading: "Who It Helps",
         items: [
           { role: "Receptionists", benefit: "One tap at the front desk instead of a round of phone calls while the courier agent waits." },
-          { role: "Mailroom staff", benefit: "A clear queue, fair attribution for every handoff, and no more ‘I thought you were doing it’." },
-          { role: "Admin heads", benefit: "SLA timers and escalation so nothing waits at the gate unnoticed, plus reports on volume." },
+          { role: "Mailroom Staff", benefit: "A clear queue, fair credit for every handoff, and no more ‘I thought you were doing it’." },
+          { role: "Admin Heads", benefit: "SLA timers and escalation so nothing waits at the gate unnoticed, plus reports on volume." },
           { role: "Employees", benefit: "Know who has your parcel and when it will reach your desk, without walking down to ask." },
         ],
       },
       {
         type: "stats",
-        heading: "Month-one results from pilot offices",
+        heading: "Month-One Results From Pilot Offices",
         items: [
-          { value: "32s", label: "average accept time" },
-          { value: "96%", label: "on-time delivery" },
-          { value: "−87%", label: "phone calls" },
-          { value: "4.8★", label: "average staff rating" },
+          { value: "32s", label: "Average Accept Time" },
+          { value: "96%", label: "On-Time Delivery" },
+          { value: "−87%", label: "Phone Calls" },
+          { value: "4.8★", label: "Average Staff Rating" },
         ],
         note: "Figures across all request types in ZapBuzzer pilot offices, not courier requests alone.",
       },
       {
         type: "callout",
         tone: "info",
-        title: "Which plan do you need?",
+        title: "Which Plan Do You Need?",
         body: "The Free plan covers one location and up to 10 staff, with email notifications and 30 days of history, which is enough to try courier requests with a small team. Telegram and WhatsApp pings, escalation chains, full analytics and audit logs with reports come with Pro at ₹99 per seat per month.",
       },
     ],
     faqs: [
       {
-        q: "Does ZapBuzzer connect to courier companies’ tracking systems?",
+        q: "Does ZapBuzzer Connect to Courier Companies’ Tracking Systems?",
         a: "No. ZapBuzzer tracks the internal side of the job: who requested it, who accepted it, when it was started and when it was handed over. Staff can add the courier name or a reference number in the request note so it stays with the record.",
       },
       {
-        q: "Can reception raise requests for other employees?",
+        q: "Can Reception Raise Requests for Other Employees?",
         a: "Yes. Reception simply raises the request and uses the note and destination to say who the parcel is for. The mailroom team sees the details and the employee’s location before accepting.",
       },
       {
-        q: "What happens if nobody in the mailroom accepts?",
+        q: "What Happens If Nobody in the Mailroom Accepts?",
         a: "Notifications repeat until someone accepts. If the request runs past its SLA, it auto-escalates to a manager, and on Pro it can move up an escalation chain.",
       },
       {
-        q: "Can we prove who received a parcel?",
+        q: "Can We Prove Who Received a Parcel?",
         a: "Every action is audit-logged against a named person and a time, and staff can attach a photo when they mark a request delivered. That gives you a clear record of each handoff.",
       },
       {
-        q: "Do we need separate software for the mailroom?",
+        q: "Do We Need Separate Software for the Mailroom?",
         a: "No. Courier requests use the same ZapBuzzer app your office uses for pantry, print and IT requests, on web and mobile.",
+      },
+      {
+        q: "Should Inbound, Outbound and Internal Courier Jobs Be Separate Catalogue Items?",
+        a: "Usually, yes. Separate items such as Courier Pickup, Outgoing Dispatch and internal delivery tell the mailroom what kind of job it is before they read the note, and keep reporting on each type clear.",
+      },
+      {
+        q: "Can the Front-Desk Tablet Be Used to Raise Courier Requests?",
+        a: "Yes. The web app runs on a front-desk computer or tablet, so reception can tap Courier Pickup while the agent waits. Mailroom staff can accept and update the request from the mobile app.",
+      },
+      {
+        q: "Can We Try Courier Requests on the Free Plan Before Rolling Out?",
+        a: "Yes. Free covers one location and up to 10 staff with email notifications and 30 days of history, which is enough for a small mailroom to try it. There is also a 14-day free trial of Pro with no credit card.",
       },
     ],
     related: [
@@ -185,19 +197,19 @@ export const pages: PageContent[] = [
       "free-trial",
     ],
     cta: {
-      title: "Stop chasing the mailroom by phone",
+      title: "Stop Chasing the Mailroom by Phone",
       body: "The free trial runs for 14 days and needs neither a card nor a setup call. Add a Courier Pickup item and invite your reception team this afternoon.",
     },
   },
 
   // ───────────────────────────── PICKUP ─────────────────────────────
   {
-    path: "solutions/courier/pickup",
+    path: "solutions/courier-and-reception/courier-pickup",
     title: "Courier Pickup Requests in One Tap",
     description:
-      "Reception taps Courier Pickup, the mailroom is pinged on every channel, and the first person free collects it. Timed, attributed and audit-logged.",
-    h1: "The courier is at the gate. Someone is already on the way.",
-    eyebrow: "Courier pickup",
+      "Reception taps Courier Pickup, the mailroom is pinged on every channel, and the first person free collects it. Timed, credited and audit-logged.",
+    h1: "The Courier Is at the Gate. Someone Is Already on the Way.",
+    eyebrow: "Courier Pickup",
     lead:
       "Courier pickup is a job with a real person waiting. ZapBuzzer gets it to the mailroom team in seconds and shows reception exactly who is coming.",
     keywords: ["courier pickup request", "office parcel pickup", "reception courier alert", "mailroom pickup app"],
@@ -205,7 +217,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Why pickup is the most time-sensitive courier job",
+        heading: "Why Pickup Is the Most Time-Sensitive Courier Job",
         paragraphs: [
           "Most office requests can wait a few minutes. A courier pickup often cannot: the delivery agent has a route to finish, and if nobody turns up they may leave with the parcel or drop it at the wrong desk. Every minute reception spends looking for someone is a minute the agent stands at the gate.",
           "ZapBuzzer treats a pickup like any other buzz, sent to the whole team at once and repeated until accepted, but the payoff is bigger because the waiting is so visible. Reception gets a name and an ETA to pass on instead of ‘someone will come’.",
@@ -213,23 +225,23 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "Pickup in four taps",
+        heading: "Pickup in Four Taps",
         steps: [
           { title: "Tap Courier Pickup", body: "From the front-desk tablet, web app or phone. Add the courier name, number of packages and the gate or desk." },
-          { title: "Mailroom is pinged together", body: "App and email for everyone, with Telegram and WhatsApp on Pro, repeating until someone accepts." },
-          { title: "Accept and walk", body: "The first person free taps Accept. Reception sees who it is right away." },
-          { title: "Collected and logged", body: "Staff mark it started, then delivered once the parcel is with the recipient or in the mailroom, with an optional photo." },
+          { title: "Mailroom Is Pinged Together", body: "App and email for everyone, with Telegram and WhatsApp on Pro, repeating until someone accepts." },
+          { title: "Accept and Walk", body: "The first person free taps Accept. Reception sees who it is right away." },
+          { title: "Collected and Logged", body: "Staff mark it started, then delivered once the parcel is with the recipient or in the mailroom, with an optional photo." },
         ],
       },
       {
         type: "visual",
         visual: "staff-queue",
-        heading: "What the mailroom team sees",
+        heading: "What the Mailroom Team Sees",
         body: "Each person on the team sees the pickup in their queue with the note, the location and the time it was raised. One tap on Accept takes it, and it disappears from everyone else’s list so nobody makes a wasted trip to the gate.",
       },
       {
         type: "scenario",
-        heading: "Two pickups at once on a Monday",
+        heading: "Two Pickups at Once on a Monday",
         persona: "Neha, Reception",
         setting: "Monday 11:15 am. Two courier agents arrive within a minute of each other.",
         timeline: [
@@ -242,18 +254,18 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Pickup by phone vs pickup by buzz",
-        columns: ["Calling around", "ZapBuzzer"],
+        heading: "Pickup by Phone vs Pickup by Buzz",
+        columns: ["Calling Around", "ZapBuzzer"],
         rows: [
-          { label: "Finding someone", a: "Call extensions until one answers", b: "Whole team pinged at once" },
-          { label: "Who is coming", a: "‘Someone will be there’", b: "Name, photo and ETA" },
-          { label: "If nobody answers", a: "Keep calling", b: "Repeats, then escalates past SLA" },
-          { label: "Record afterwards", a: "None", b: "Audit-logged with timestamps" },
+          { label: "Finding Someone", a: "Call extensions until one answers", b: "Whole team pinged at once" },
+          { label: "Who Is Coming", a: "‘Someone will be there’", b: "Name, photo and ETA" },
+          { label: "If Nobody Answers", a: "Keep calling", b: "Repeats, then escalates past SLA" },
+          { label: "Record Afterwards", a: "None", b: "Audit-logged with timestamps" },
         ],
       },
       {
         type: "checklist",
-        heading: "What to put in a pickup note",
+        heading: "What to Put in a Pickup Note",
         items: [
           "Courier company name",
           "Number of packages and rough size",
@@ -265,46 +277,48 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "Keep a phone ringing at the mailroom",
+        title: "Keep a Phone Ringing at the Mailroom",
         body: "The ZapBuzzer Android app rings through even on a silent or locked phone. Mailroom staff who step away from their desk still hear pickups as they come in.",
       },
       {
         type: "metrics",
-        heading: "Pickup numbers worth a weekly look",
+        heading: "Pickup Numbers Worth a Weekly Look",
         intro: "Because every pickup is timed, reception and the mailroom lead can see where the gate wait actually comes from.",
         items: [
-          { metric: "Time to accept", meaning: "How long the agent stood at the gate before anyone in the mailroom took ownership. This is the number that decides whether couriers start dreading your building." },
-          { metric: "Accept to delivered", meaning: "How long it took to walk to the gate, sign and get the parcel to the recipient or the mailroom shelf." },
-          { metric: "Pickups by hour", meaning: "Shows the slots when agents cluster, so you can keep one more person near the mailroom at those times." },
-          { metric: "Escalated pickups", meaning: "Requests that ran past their deadline and went to a manager. A rising count usually points to a staffing gap at a particular hour, not a lazy team." },
+          { metric: "Time to Accept", meaning: "How long the agent stood at the gate before anyone in the mailroom took ownership. This is the number that decides whether couriers start dreading your building." },
+          { metric: "Accept to Delivered", meaning: "How long it took to walk to the gate, sign and get the parcel to the recipient or the mailroom shelf." },
+          { metric: "Pickups by Hour", meaning: "Shows the slots when agents cluster, so you can keep one more person near the mailroom at those times." },
+          { metric: "Escalated Pickups", meaning: "Requests that ran past their deadline and went to a manager. A rising count usually points to a staffing gap at a particular hour, not a lazy team." },
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Let reception rate the gate run",
+        title: "Let Reception Rate the Gate Run",
         body: "Reception raised the pickup, so reception rates it once it is delivered. Those ratings give mailroom staff credit on their scorecard for the unglamorous gate runs that usually go unnoticed.",
       },
     ],
     faqs: [
-      { q: "Can the courier agent raise the request?", a: "Requests are raised by people in your workspace, typically reception. The agent tells reception, reception taps once, and the mailroom takes it from there." },
-      { q: "How fast does the mailroom get notified?", a: "Immediately. The request goes out on all of the team’s channels at once and repeats until someone accepts. Pilot offices averaged a 32-second accept time across request types." },
-      { q: "Is pickup different from an outgoing dispatch?", a: "Yes. Pickup is usually about receiving something at the gate. Outgoing dispatch is about getting your documents to the courier, and many offices set it up as a separate catalogue item." },
-      { q: "Can I see past pickups?", a: "Yes. Request history covers the last 30 days on Free, and Pro adds full audit logs and reports." },
-      { q: "What if the mailroom is empty during lunch?", a: "The request still goes to the whole team on every channel they use, so someone eating in the pantry can accept from their phone. If nobody accepts before the deadline, it escalates to a manager instead of quietly waiting." },
-      { q: "Can security or reception handle the pickup instead?", a: "Yes. Courier Pickup routes to whichever team you assign it to. Some offices send it to reception during the day and rely on escalation to pull in a manager when the desk is busy." },
+      { q: "Can the Courier Agent Raise the Request?", a: "Requests are raised by people in your workspace, typically reception. The agent tells reception, reception taps once, and the mailroom takes it from there." },
+      { q: "How Fast Does the Mailroom Get Notified?", a: "Immediately. The request goes out on all of the team’s channels at once and repeats until someone accepts. Pilot offices averaged a 32-second accept time across request types." },
+      { q: "Is Pickup Different From an Outgoing Dispatch?", a: "Yes. Pickup is usually about receiving something at the gate. Outgoing dispatch is about getting your documents to the courier, and many offices set it up as a separate catalogue item." },
+      { q: "Can I See Past Pickups?", a: "Yes. Request history covers the last 30 days on Free, and Pro adds full audit logs and reports." },
+      { q: "What If the Mailroom Is Empty During Lunch?", a: "The request still goes to the whole team on every channel they use, so someone eating in the pantry can accept from their phone. If nobody accepts before the deadline, it escalates to a manager instead of quietly waiting." },
+      { q: "Can Security or Reception Handle the Pickup Instead?", a: "Yes. Courier Pickup routes to whichever team you assign it to. Some offices send it to reception during the day and rely on escalation to pull in a manager when the desk is busy." },
+      { q: "What Should Reception Write in the Pickup Note?", a: "Keep it to one line the mailroom can act on: the courier company, number of packages, who it is for and where the agent is waiting, such as ‘Blue Dart, 2 boxes, Gate 1’." },
+      { q: "Will the Mailroom Phone Ring for a Pickup If It Is on Silent?", a: "Yes. The Android app rings through even when the phone is on silent or locked, which matters when an agent is waiting at the gate. Notifications repeat until someone accepts." },
     ],
-    related: ["solutions/courier", "solutions/courier/reception", "workflows/courier-pickup", "features/first-accept-wins", "mobile-app/android", "pricing/pro"],
-    cta: { title: "Make the gate wait shorter", body: "Try Courier Pickup with your reception team free for 14 days, with no card required." },
+    related: ["solutions/courier-and-reception", "solutions/courier/reception", "workflows/courier-pickup", "features/first-accept-wins", "mobile-app/android", "pricing/pro"],
+    cta: { title: "Make the Gate Wait Shorter", body: "Try Courier Pickup with your reception team free for 14 days, with no card required." },
   },
 
   // ───────────────────────────── MAILROOM ─────────────────────────────
   {
-    path: "solutions/courier/mailroom",
+    path: "solutions/courier-and-reception/mailroom-requests",
     title: "Mailroom Request Management",
     description:
       "Give your mailroom a single queue for parcels, envelopes and internal deliveries, with first-accept routing, SLA timers and fair credit for every handoff.",
-    h1: "A mailroom queue that runs itself",
+    h1: "A Mailroom Queue That Runs Itself",
     eyebrow: "Mailroom",
     lead:
       "Mailroom staff juggle inbound parcels, outbound documents and desk deliveries, usually from three different places. ZapBuzzer puts them in one queue, shared by the team and timed from the first tap.",
@@ -313,17 +327,17 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "problem-solution",
-        heading: "The mailroom’s real problem is the inbox, not the parcels",
+        heading: "The Mailroom’s Real Problem Is the Inbox, Not the Parcels",
         problem: {
-          title: "Requests from everywhere",
+          title: "Requests From Everywhere",
           points: [
             "Calls from reception, messages in a WhatsApp group, and people walking in.",
             "No shared view of what is pending, so two people chase the same envelope.",
-            "Good work goes unnoticed because nothing is attributed.",
+            "Good work goes unnoticed because nobody’s name is on it.",
           ],
         },
         solution: {
-          title: "One shared queue",
+          title: "One Shared Queue",
           points: [
             "Every request arrives as a buzz in the same queue.",
             "First to accept owns it, and it leaves everyone else’s list.",
@@ -334,22 +348,22 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "request-dashboard",
-        heading: "The whole mailroom on one screen",
+        heading: "The Whole Mailroom on One Screen",
         body: "The dashboard shows each open request with its status, whether that is buzzed, accepted, started or delivered, along with who owns it and how long it has been open. A supervisor can see at a glance what is stuck.",
       },
       {
         type: "features",
-        heading: "Built for how mailrooms work",
+        heading: "Built for How Mailrooms Work",
         items: [
-          { title: "Team-based routing", body: "Requests go to the mailroom team as a whole, so shift changes and leave days don’t break anything." },
-          { title: "Statuses that mean something", body: "Accepted means someone owns it. Started means it is moving. Delivered means it reached the person." },
-          { title: "Photo on delivery", body: "Attach a photo when you mark a request delivered, which is useful for parcels left in a cabin." },
-          { title: "Fair attribution", body: "Scorecards show who handled how many requests and how they were rated. This is people-first, not another nag tool." },
+          { title: "Team-Based Routing", body: "Requests go to the mailroom team as a whole, so shift changes and leave days don’t break anything." },
+          { title: "Statuses That Mean Something", body: "Accepted means someone owns it. Started means it is moving. Delivered means it reached the person." },
+          { title: "Photo on Delivery", body: "Attach a photo when you mark a request delivered, which is useful for parcels left in a cabin." },
+          { title: "Fair Credit", body: "Scorecards show who handled how many requests and how they were rated. The aim is to credit people, not to nag them." },
         ],
       },
       {
         type: "scenario",
-        heading: "End-of-day dispatch rush",
+        heading: "End-of-Day Dispatch Rush",
         persona: "Farah, Mailroom",
         setting: "4:30 pm. The last courier pickup is at 5:15 and six people need things sent.",
         timeline: [
@@ -362,33 +376,33 @@ export const pages: PageContent[] = [
       },
       {
         type: "metrics",
-        heading: "Numbers a mailroom lead can watch",
+        heading: "Numbers a Mailroom Lead Can Watch",
         items: [
-          { metric: "Accept time", meaning: "How long a request waits before someone takes it." },
-          { metric: "On-time %", meaning: "Share of requests delivered within their SLA." },
+          { metric: "Accept Time", meaning: "How long a request waits before someone takes it." },
+          { metric: "On-Time %", meaning: "Share of requests delivered within their SLA." },
           { metric: "Rating", meaning: "The 1–5★ score from the person who asked." },
-          { metric: "Peak hours", meaning: "When courier work bunches up, so you can plan staffing." },
+          { metric: "Peak Hours", meaning: "When courier work bunches up, so you can plan staffing." },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "Plan note",
+        title: "Plan Note",
         body: "Basic request history works on Free. Full analytics, scorecards, audit logs and reports are part of Pro.",
       },
       {
         type: "audience",
-        heading: "Who uses the mailroom queue, and for what",
+        heading: "Who Uses the Mailroom Queue, and for What",
         items: [
-          { role: "Mailroom staff", benefit: "One list of open jobs on the phone, an Accept button, and credit on the scorecard for every parcel they move." },
-          { role: "Mailroom lead", benefit: "Sees which jobs are unclaimed or running late without walking the floor, and can step in before escalation does." },
+          { role: "Mailroom Staff", benefit: "One list of open jobs on the phone, an Accept button, and credit on the scorecard for every parcel they move." },
+          { role: "Mailroom Lead", benefit: "Sees which jobs are unclaimed or running late without walking the floor, and can step in before escalation does." },
           { role: "Employees", benefit: "Ask for a parcel to be brought up or a packet to be sent out, then see a name and ETA instead of guessing." },
-          { role: "Office owner", benefit: "Gets a mailroom that can be measured, with role-based permissions and an audit log on every action." },
+          { role: "Office Owner", benefit: "Gets a mailroom that can be measured, with role-based permissions and an audit log on every action." },
         ],
       },
       {
         type: "checklist",
-        heading: "Moving a mailroom off WhatsApp in a week",
+        heading: "Moving a Mailroom Off WhatsApp in a Week",
         intro: "Most teams switch over gradually. This order keeps the old group quiet without losing anything in between.",
         items: [
           "Day 1: list every kind of job the mailroom does today and turn each into a catalogue item.",
@@ -401,23 +415,26 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Can we run more than one mailroom?", a: "Yes. Multi-location is part of Pro, so each office or building can route requests to its own team." },
-      { q: "Does every request need a mailroom staff account?", a: "Staff who accept requests need to be in your workspace. Free covers up to 10 staff, and Pro has unlimited staff at ₹99 per seat per month." },
-      { q: "How do we stop two people doing the same job?", a: "First accept wins. Once someone accepts, the request is theirs and nobody else is asked to do it." },
-      { q: "Can mailroom staff work from their phones?", a: "Yes. The mobile app lets them accept, start and deliver on the move, and the Android app rings even when the phone is on silent." },
-      { q: "Can the mailroom handle requests that are not about couriers?", a: "Yes. Many mailrooms also store stationery, move boxes or run small errands. Add those as catalogue items routed to the same team and they share one queue." },
+      { q: "Can We Run More Than One Mailroom?", a: "Yes. Multi-location is part of Pro, so each office or building can route requests to its own team." },
+      { q: "Does Every Request Need a Mailroom Staff Account?", a: "Staff who accept requests need to be in your workspace. Free covers up to 10 staff, and Pro has unlimited staff at ₹99 per seat per month." },
+      { q: "How Do We Stop Two People Doing the Same Job?", a: "First accept wins. Once someone accepts, the request is theirs and nobody else is asked to do it." },
+      { q: "Can Mailroom Staff Work From Their Phones?", a: "Yes. The mobile app lets them accept, start and deliver on the move, and the Android app rings even when the phone is on silent." },
+      { q: "Can the Mailroom Handle Requests That Are Not About Couriers?", a: "Yes. Many mailrooms also store stationery, move boxes or run small errands. Add those as catalogue items routed to the same team and they share one queue." },
+      { q: "Can a Mailroom Supervisor See Who Handled the Most Jobs This Week?", a: "Yes. Scorecards show who accepted and delivered each request, accept times and ratings, so busy mailroom staff get fair credit. Full analytics and scorecards are on Pro." },
+      { q: "What Happens When the Mailroom Is Overloaded and a Job Runs Late?", a: "Every request has an SLA deadline. If a mailroom job goes overdue it auto-escalates to a manager, and on Pro it follows your escalation chain so someone steps in." },
+      { q: "Do Mailroom Staff Get Notified on WhatsApp or Telegram?", a: "On Pro, yes. Requests ring on the app, email, Telegram and WhatsApp at the same time. The Free plan uses app and email notifications." },
     ],
-    related: ["solutions/courier", "solutions/courier/mailroom-analytics", "solutions/courier/outgoing-workflow", "features/request-management", "analytics/staff", "pricing"],
-    cta: { title: "Give your mailroom one queue", body: "Set it up in an afternoon. Sign up free, add your mailroom team and start routing." },
+    related: ["solutions/courier-and-reception", "solutions/courier/mailroom-analytics", "solutions/courier/outgoing-workflow", "features/request-management", "analytics/staff", "pricing"],
+    cta: { title: "Give Your Mailroom One Queue", body: "Set it up in an afternoon. Sign up free, add your mailroom team and start routing." },
   },
 
   // ───────────────────────────── RECEPTION ─────────────────────────────
   {
-    path: "solutions/courier/reception",
+    path: "solutions/courier-and-reception/reception-requests",
     title: "Reception Requests Without Phone Tag",
     description:
       "Reception raises couriers, visitor packages and front-desk handoffs with one tap. The right team is pinged at once and reception sees who is coming.",
-    h1: "The front desk, without the phone",
+    h1: "The Front Desk, Without the Phone",
     eyebrow: "Reception",
     lead:
       "Reception is where office requests start: a courier, a visitor’s package, a key left for someone. ZapBuzzer gives the front desk one tap for each, and a clear answer to ‘who’s coming?’",
@@ -426,7 +443,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Reception is a dispatcher, whether you planned it or not",
+        heading: "Reception Is a Dispatcher, Whether You Planned It or Not",
         paragraphs: [
           "Receptionists spend a large part of the day passing messages along: courier at the gate, guest wants water, package for the CEO, projector delivery for Conference Room B. Each one usually means a phone call, and a phone call means waiting for someone to pick up.",
           "With ZapBuzzer, the front desk raises a request to the right team, whether that is mailroom, pantry, IT or facilities, and goes back to the next visitor. The team sorts out who takes it, and reception watches the status instead of chasing it.",
@@ -435,13 +452,13 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "mobile-app",
-        heading: "A request grid built for the front desk",
+        heading: "A Request Grid Built for the Front Desk",
         body: "The employee app shows your catalogue as a grid of large buttons. Reception can keep Courier Pickup, Visitor Package and Guest Refreshments one tap away on a tablet or phone.",
       },
       {
         type: "table",
-        heading: "Typical reception requests and where they go",
-        headers: ["Request", "Routed to", "Usual note"],
+        heading: "Typical Reception Requests and Where They Go",
+        headers: ["Request", "Routed To", "Usual Note"],
         rows: [
           ["Courier pickup", "Mailroom", "Courier name, packages, gate"],
           ["Visitor package", "Mailroom", "Recipient name and floor"],
@@ -452,7 +469,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "A client walks in early",
+        heading: "A Client Walks in Early",
         persona: "Neha, Reception",
         setting: "10:50 am. A client arrives for an 11:00 board meeting while a courier waits at the gate.",
         timeline: [
@@ -464,33 +481,33 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "Why reception teams like it",
+        heading: "Why Reception Teams Like It",
         items: [
-          { title: "Names, not promises", body: "See who accepted, with photo, so you can tell visitors exactly who is coming." },
-          { title: "No more chasing", body: "Notifications repeat until accepted, and late requests escalate to a manager on their own." },
-          { title: "A record for disputes", body: "Every handoff is audit-logged, which helps when someone says a parcel never arrived." },
+          { title: "Names, Not Promises", body: "See who accepted, with photo, so you can tell visitors exactly who is coming." },
+          { title: "No More Chasing", body: "Notifications repeat until accepted, and late requests escalate to a manager on their own." },
+          { title: "A Record for Disputes", body: "Every handoff is audit-logged, which helps when someone says a parcel never arrived." },
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Summon security in one tap",
+        title: "Summon Security in One Tap",
         body: "The mobile app has one-tap summon for staff or security and can raise an emergency, which is useful for a front desk that is often staffed by one person.",
       },
       {
         type: "comparison",
-        heading: "The front desk on the intercom vs. on ZapBuzzer",
-        columns: ["Intercom and mobile calls", "ZapBuzzer"],
+        heading: "The Front Desk on the Intercom vs. On ZapBuzzer",
+        columns: ["Intercom and Mobile Calls", "ZapBuzzer"],
         rows: [
-          { label: "Finding someone", a: "Call extensions until one picks up.", b: "One tap reaches the whole team." },
-          { label: "Telling the visitor", a: "“Someone is coming, I think.”", b: "The name and photo of the person who accepted." },
-          { label: "When nobody answers", a: "Try again, then walk over.", b: "Pings repeat, then the request escalates." },
-          { label: "End of the day", a: "No record of what was asked.", b: "Every request timed and logged." },
+          { label: "Finding Someone", a: "Call extensions until one picks up.", b: "One tap reaches the whole team." },
+          { label: "Telling the Visitor", a: "“Someone is coming, I think.”", b: "The name and photo of the person who accepted." },
+          { label: "When Nobody Answers", a: "Try again, then walk over.", b: "Pings repeat, then the request escalates." },
+          { label: "End of the Day", a: "No record of what was asked.", b: "Every request timed and logged." },
         ],
       },
       {
         type: "prose",
-        heading: "Reception’s own workload becomes visible",
+        heading: "Reception’s Own Workload Becomes Visible",
         paragraphs: [
           "Front-desk work is easy to undercount because most of it happens on the phone. When every courier, refreshment and help request is raised through ZapBuzzer, the count shows up in analytics, and an office manager can see that reception raised dozens of requests on a Monday rather than hearing that it was ‘a busy day’.",
           "That record also helps hand-overs. A receptionist starting the afternoon shift can look at open requests and see what is still with the mailroom or facilities, instead of relying on a note stuck to the keyboard.",
@@ -498,25 +515,27 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Can reception raise requests for any team?", a: "Yes. Reception sees the catalogue items your workspace sets up and can raise any of them. Each item routes to its team." },
-      { q: "Does reception need the mobile app?", a: "No. The web app works well on a front-desk computer or tablet. The mobile app is useful if reception moves around." },
-      { q: "How does reception know a request was handled?", a: "The status changes from requested to accepted, started and delivered, each with the staff member’s name. Reception can also rate the job." },
-      { q: "Is this a visitor management system?", a: "No. ZapBuzzer handles internal requests such as couriers, refreshments and help. It does not check in visitors or print badges." },
-      { q: "Can reception see requests it did not raise?", a: "What each person can see is controlled by roles and permissions in your workspace. Many offices let reception view open requests so the front desk can answer ‘is someone on it?’ for anyone who asks." },
-      { q: "Does reception need a paid plan?", a: "No. Free covers up to 10 staff in one location with email notifications. Telegram and WhatsApp pings, escalation chains and multi-location come with Pro." },
+      { q: "Can Reception Raise Requests for Any Team?", a: "Yes. Reception sees the catalogue items your workspace sets up and can raise any of them. Each item routes to its team." },
+      { q: "Does Reception Need the Mobile App?", a: "No. The web app works well on a front-desk computer or tablet. The mobile app is useful if reception moves around." },
+      { q: "How Does Reception Know a Request Was Handled?", a: "The status changes from requested to accepted, started and delivered, each with the staff member’s name. Reception can also rate the job." },
+      { q: "Is This a Visitor Management System?", a: "No. ZapBuzzer handles internal requests such as couriers, refreshments and help. It does not check in visitors or print badges." },
+      { q: "Can Reception See Requests It Did Not Raise?", a: "What each person can see is controlled by roles and permissions in your workspace. Many offices let reception view open requests so the front desk can answer ‘is someone on it?’ for anyone who asks." },
+      { q: "Does Reception Need a Paid Plan?", a: "No. Free covers up to 10 staff in one location with email notifications. Telegram and WhatsApp pings, escalation chains and multi-location come with Pro." },
+      { q: "Can the Front Desk Tell a Waiting Courier Agent Who Is Coming?", a: "Yes. As soon as someone accepts, reception sees their name, photo and ETA, so the agent can be told who is on the way instead of waiting while extensions are called." },
+      { q: "How Much Time Does This Save Reception During a Busy Morning?", a: "Pilot offices saw phone calls fall by 87% in their first month across all request types. For reception, one tap replaces the round of calls to find someone free." },
     ],
-    related: ["solutions/courier", "solutions/courier/reception-workflow", "use-cases/reception", "solutions/courier/pickup", "features/one-tap-requests", "free-trial"],
-    cta: { title: "Give your front desk one tap", body: "Free for up to 10 staff on one location. Sign up and add your reception team today." },
+    related: ["solutions/courier-and-reception", "solutions/courier/reception-workflow", "use-cases/reception", "solutions/courier/pickup", "features/one-tap-requests", "free-trial"],
+    cta: { title: "Give Your Front Desk One Tap", body: "Free for up to 10 staff on one location. Sign up and add your reception team today." },
   },
 
   // ───────────────────────────── DELIVERY REQUESTS ─────────────────────────────
   {
-    path: "solutions/courier/delivery-requests",
+    path: "solutions/courier-and-reception/delivery-requests",
     title: "Internal Delivery Requests to Desks and Cabins",
     description:
       "Get parcels, documents and packages from reception or the mailroom to the right desk. Assigned, timed and confirmed with a photo on delivery.",
-    h1: "From the mailroom to your desk, with proof",
-    eyebrow: "Delivery requests",
+    h1: "From the Mailroom to Your Desk, With Proof",
+    eyebrow: "Delivery Requests",
     lead:
       "The last fifty metres are where parcels get lost: on a reception counter, a mailroom shelf or the wrong floor. ZapBuzzer turns each internal delivery into a request with an owner, an ETA and a delivered status.",
     keywords: ["internal parcel delivery", "office desk delivery", "mailroom to desk delivery", "delivery confirmation photo"],
@@ -524,7 +543,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "‘It came in yesterday’ is not a location",
+        heading: "‘It Came in Yesterday’ Is Not a Location",
         paragraphs: [
           "When a parcel arrives, the courier’s job ends at reception. Getting it to the person who needs it, whether a laptop for a new joiner, a cheque for accounts or samples for the sales team, is an internal job that nobody tracks. That is how a parcel spends two days on a shelf.",
           "A delivery request gives that last leg an owner. The mailroom or reception raises it, the right person accepts, and the recipient sees it coming. When it is handed over, it is marked delivered, optionally with a photo, and the recipient rates it.",
@@ -532,24 +551,24 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "How an internal delivery runs",
+        heading: "How an Internal Delivery Runs",
         steps: [
           { title: "Raise", body: "Reception or the mailroom raises a delivery request with the recipient and destination, for example ‘Laptop box for Tanvi, Design, 3rd floor’." },
           { title: "Accept", body: "The first free team member accepts it and the request now has an owner." },
-          { title: "Start with an ETA", body: "They mark it started and give an ETA, so the recipient knows when to expect it." },
-          { title: "Deliver with proof", body: "Marked delivered with an optional photo of the parcel at the desk." },
+          { title: "Start With an ETA", body: "They mark it started and give an ETA, so the recipient knows when to expect it." },
+          { title: "Deliver With Proof", body: "Marked delivered with an optional photo of the parcel at the desk." },
           { title: "Rate", body: "The person who asked rates the job from 1 to 5 stars." },
         ],
       },
       {
         type: "visual",
         visual: "delivery",
-        heading: "Delivered means delivered",
+        heading: "Delivered Means Delivered",
         body: "When staff mark a request delivered they can attach a photo, and the requester is prompted to rate it. If a parcel is left in an empty cabin, the photo shows where.",
       },
       {
         type: "scenario",
-        heading: "A new joiner’s laptop",
+        heading: "A New Joiner’s Laptop",
         persona: "Tanvi, Design",
         setting: "Her new laptop arrives at reception while she is in a workshop on another floor.",
         timeline: [
@@ -562,13 +581,13 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Untracked vs tracked internal delivery",
-        columns: ["Shelf and hope", "Delivery request"],
+        heading: "Untracked vs Tracked Internal Delivery",
+        columns: ["Shelf and Hope", "Delivery Request"],
         rows: [
           { label: "Owner", a: "Whoever notices", b: "Named staff member" },
-          { label: "Recipient knows", a: "When they ask", b: "Live status and ETA" },
+          { label: "Recipient Knows", a: "When they ask", b: "Live status and ETA" },
           { label: "Proof", a: "None", b: "Delivered status and optional photo" },
-          { label: "If late", a: "Nobody notices", b: "SLA timer escalates" },
+          { label: "If Late", a: "Nobody notices", b: "SLA timer escalates" },
         ],
       },
       {
@@ -579,9 +598,9 @@ export const pages: PageContent[] = [
       },
       {
         type: "table",
-        heading: "What to deliver, and what to note",
+        heading: "What to Deliver, and What to Note",
         intro: "Different items need different details. A consistent note makes the job quick for whoever accepts it.",
-        headers: ["Item", "What to put in the note", "Worth a photo?"],
+        headers: ["Item", "What to Put in the Note", "Worth a Photo?"],
         rows: [
           ["Laptop or equipment box", "Recipient, team, floor and whether IT needs to see it first", "Yes, at the desk"],
           ["Signed documents", "Recipient and whether it must be handed over in person", "Only if left in a cabin"],
@@ -592,37 +611,40 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Ratings come from the requester",
+        title: "Ratings Come From the Requester",
         body: "The person who raised the delivery request is the one who rates it. If reception raises it on someone’s behalf, agree whether reception rates after hearing back, or whether recipients raise their own ‘Bring my parcel up’ request instead.",
       },
       {
         type: "audience",
-        heading: "Who relies on internal delivery",
+        heading: "Who Relies on Internal Delivery",
         items: [
-          { role: "New joiners", benefit: "Equipment reaches the right desk on day one instead of waiting at reception." },
+          { role: "New Joiners", benefit: "Equipment reaches the right desk on day one instead of waiting at reception." },
           { role: "Accounts", benefit: "Cheques and signed documents are handed over with a timestamp and a named carrier." },
-          { role: "Event organisers", benefit: "Boxes reach the event room before the session, with a photo to confirm the count." },
+          { role: "Event Organisers", benefit: "Boxes reach the event room before the session, with a photo to confirm the count." },
         ],
       },
     ],
     faqs: [
-      { q: "Can a delivery request be raised from a phone?", a: "Yes. Reception or mailroom staff can raise, accept and update delivery requests from the mobile app, including attaching the delivery photo." },
-      { q: "Can employees request a delivery themselves?", a: "Yes. If you add a catalogue item such as ‘Bring my parcel up’, employees can ask the mailroom to deliver anything waiting for them." },
-      { q: "Is the photo mandatory?", a: "A photo can be attached when a request is delivered. How strictly your team uses it is up to you." },
-      { q: "What if the recipient is not at their desk?", a: "Staff can leave the item and attach a photo showing where it is. The requester sees the delivered status and the photo." },
-      { q: "Does this cover deliveries between offices?", a: "Each request is handled by a team in your workspace. With multi-location on Pro, each office can run its own deliveries." },
+      { q: "Can a Delivery Request Be Raised From a Phone?", a: "Yes. Reception or mailroom staff can raise, accept and update delivery requests from the mobile app, including attaching the delivery photo." },
+      { q: "Can Employees Request a Delivery Themselves?", a: "Yes. If you add a catalogue item such as ‘Bring my parcel up’, employees can ask the mailroom to deliver anything waiting for them." },
+      { q: "Is the Photo Mandatory?", a: "A photo can be attached when a request is delivered. How strictly your team uses it is up to you." },
+      { q: "What If the Recipient Is Not at Their Desk?", a: "Staff can leave the item and attach a photo showing where it is. The requester sees the delivered status and the photo." },
+      { q: "Does This Cover Deliveries Between Offices?", a: "Each request is handled by a team in your workspace. With multi-location on Pro, each office can run its own deliveries." },
+      { q: "Can the Recipient Rate the Delivery to Their Desk?", a: "Yes. Once a delivery request is marked delivered, the requester rates it from 1 to 5 stars. Ratings feed the scorecards that give mailroom staff fair credit." },
+      { q: "Who Gets the Delivery Request If the Usual Runner Is on Leave?", a: "Delivery requests go to the whole team, not one person, so whoever is free accepts it. Nobody needs to know the rota for the parcel to move." },
+      { q: "Is There a Deadline for Getting a Parcel From the Mailroom to a Desk?", a: "Each delivery request carries an SLA timer from the moment it is raised. If it goes overdue, it escalates to a manager automatically." },
     ],
-    related: ["solutions/courier", "solutions/courier/incoming-workflow", "features/delivery-confirmation", "features/eta-tracking", "solutions/courier/tracking", "pricing/pro"],
-    cta: { title: "Close the last fifty metres", body: "Try delivery requests free for 14 days. No credit card required." },
+    related: ["solutions/courier-and-reception", "solutions/courier/incoming-workflow", "features/delivery-confirmation", "features/eta-tracking", "solutions/courier/tracking", "pricing/pro"],
+    cta: { title: "Close the Last Fifty Metres", body: "Try delivery requests free for 14 days. No credit card required." },
   },
 
   // ───────────────────────────── INCOMING WORKFLOW ─────────────────────────────
   {
-    path: "solutions/courier/incoming-workflow",
+    path: "solutions/courier-and-reception/incoming-courier-workflow",
     title: "Incoming Courier Workflow, Step by Step",
     description:
       "How an incoming parcel moves from the gate to the recipient in ZapBuzzer: logged at reception, accepted by the mailroom, delivered and rated.",
-    h1: "Incoming parcels, from the gate to the right hands",
+    h1: "Incoming Parcels, From the Gate to the Right Hands",
     eyebrow: "Workflow",
     lead:
       "Here is the inbound path in ZapBuzzer, from the courier arriving at the gate to the parcel reaching its owner, and where the timer, escalation and audit log come in.",
@@ -631,25 +653,25 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "workflow",
-        heading: "The inbound path",
+        heading: "The Inbound Path",
         steps: [
-          { title: "Courier arrives", body: "The delivery agent reaches the gate or reception with one or more parcels." },
-          { title: "Reception buzzes", body: "Reception taps Courier Pickup with the courier name, package count and recipient, if known." },
-          { title: "Mailroom accepts", body: "The team is pinged at once and the first to accept walks to the gate. Reception sees who it is." },
-          { title: "Received and started", body: "The staff member signs for the parcel, marks the request started and sets an ETA to the recipient." },
+          { title: "Courier Arrives", body: "The delivery agent reaches the gate or reception with one or more parcels." },
+          { title: "Reception Buzzes", body: "Reception taps Courier Pickup with the courier name, package count and recipient, if known." },
+          { title: "Mailroom Accepts", body: "The team is pinged at once and the first to accept walks to the gate. Reception sees who it is." },
+          { title: "Received and Started", body: "The staff member signs for the parcel, marks the request started and sets an ETA to the recipient." },
           { title: "Delivered", body: "The parcel reaches the recipient’s desk or cabin and is marked delivered, with an optional photo." },
-          { title: "Rated and logged", body: "The requester rates it and every step stays in the audit trail." },
+          { title: "Rated and Logged", body: "The requester rates it and every step stays in the audit trail." },
         ],
       },
       {
         type: "visual",
         visual: "request-timeline",
-        heading: "Every step has a timestamp",
+        heading: "Every Step Has a Timestamp",
         body: "The request timeline shows when the parcel was buzzed, accepted, started and delivered. If someone asks how long it took a parcel to get from the gate to the 4th floor, the answer is on the request.",
       },
       {
         type: "prose",
-        heading: "Where incoming parcels used to get stuck",
+        heading: "Where Incoming Parcels Used to Get Stuck",
         paragraphs: [
           "Two points usually break: the gap between the agent arriving and someone coming to sign, and the gap between signing and handing over. The first leaves the agent waiting. The second leaves the parcel on a shelf.",
           "In this workflow the first gap is closed by the team-wide ping that repeats until someone accepts. The second is closed because the request stays open, and its SLA timer keeps running, until someone marks it delivered.",
@@ -657,7 +679,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "A legal notice that cannot wait",
+        heading: "A Legal Notice That Cannot Wait",
         persona: "Deepak, Admin Head",
         setting: "A registered legal notice arrives for the company secretary at 2:10 pm.",
         timeline: [
@@ -671,7 +693,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "checklist",
-        heading: "Setting up an incoming workflow",
+        heading: "Setting Up an Incoming Workflow",
         items: [
           "Create a Courier Pickup catalogue item routed to the mailroom team",
           "Add mailroom staff to the team and install the mobile app on their phones",
@@ -682,8 +704,8 @@ export const pages: PageContent[] = [
       },
       {
         type: "table",
-        heading: "Who does what on the inbound path",
-        headers: ["Step", "Owner", "What they see"],
+        heading: "Who Does What on the Inbound Path",
+        headers: ["Step", "Owner", "What They See"],
         rows: [
           ["Agent at the gate", "Reception", "Who accepted and is coming to sign"],
           ["Signing and collecting", "Mailroom staff member", "The note with courier, count and recipient"],
@@ -695,28 +717,31 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "warning",
-        title: "Valuable or confidential items",
+        title: "Valuable or Confidential Items",
         body: "For items such as legal notices, cheques or equipment, write ‘hand over in person’ in the note and treat delivered as a handover, not a drop at the desk. The audit trail then shows exactly who carried it and when.",
       },
     ],
     faqs: [
-      { q: "Can we tell how long parcels wait before reaching people?", a: "Yes. The timeline records when each request was accepted, started and delivered, so the gap between the gate and the desk is visible per parcel and, on Pro, in analytics." },
-      { q: "Should incoming and outgoing be separate requests?", a: "Usually, yes. They go to the same team but have different notes and different deadlines, so separate catalogue items keep reporting clear." },
-      { q: "What SLA should incoming parcels have?", a: "That depends on your office. Many teams pick a short deadline for the gate step because someone is waiting. ZapBuzzer escalates whatever you set once it runs out." },
-      { q: "Can one request cover several parcels?", a: "Yes. Put the count in the note. If parcels go to different people, separate delivery requests make each handoff traceable." },
-      { q: "What if the recipient is not in today?", a: "Staff can leave a note on the request and mark it delivered when it is handed over, or follow your own rule such as leaving it at the desk with a photo." },
+      { q: "Can We Tell How Long Parcels Wait Before Reaching People?", a: "Yes. The timeline records when each request was accepted, started and delivered, so the gap between the gate and the desk is visible per parcel and, on Pro, in analytics." },
+      { q: "Should Incoming and Outgoing Be Separate Requests?", a: "Usually, yes. They go to the same team but have different notes and different deadlines, so separate catalogue items keep reporting clear." },
+      { q: "What SLA Should Incoming Parcels Have?", a: "That depends on your office. Many teams pick a short deadline for the gate step because someone is waiting. ZapBuzzer escalates whatever you set once it runs out." },
+      { q: "Can One Request Cover Several Parcels?", a: "Yes. Put the count in the note. If parcels go to different people, separate delivery requests make each handoff traceable." },
+      { q: "What If the Recipient Is Not in Today?", a: "Staff can leave a note on the request and mark it delivered when it is handed over, or follow your own rule such as leaving it at the desk with a photo." },
+      { q: "Who Should Own the Step From the Gate to the Mailroom?", a: "Route the incoming item to whichever team receives parcels, usually the mailroom or reception. First to accept owns it, so there is always one named person responsible for the parcel." },
+      { q: "Can We Prove When an Incoming Parcel Arrived and Who Signed for It?", a: "Yes. Every action is audit-logged with a name and timestamp, and staff can attach a photo when they mark it delivered. That record answers ‘who took it?’ later." },
+      { q: "Does the Employee Get Told Their Parcel Has Arrived?", a: "If the employee raised the request, they see its status change to accepted, started and delivered. If reception raised it, the note names the recipient, and visibility depends on your roles and permissions." },
     ],
-    related: ["solutions/courier", "solutions/courier/outgoing-workflow", "solutions/courier/delivery-requests", "workflows/courier-pickup", "sla/automatic-escalation", "demo"],
-    cta: { title: "Map your inbound path in ZapBuzzer", body: "Book a demo or explore the read-only demo workspace to see a request timeline end to end." },
+    related: ["solutions/courier-and-reception", "solutions/courier/outgoing-workflow", "solutions/courier/delivery-requests", "workflows/courier-pickup", "sla/automatic-escalation", "demo"],
+    cta: { title: "Map Your Inbound Path in ZapBuzzer", body: "Book a demo or explore the read-only demo workspace to see a request timeline end to end." },
   },
 
   // ───────────────────────────── OUTGOING WORKFLOW ─────────────────────────────
   {
-    path: "solutions/courier/outgoing-workflow",
+    path: "solutions/courier-and-reception/outgoing-courier-workflow",
     title: "Outgoing Courier & Dispatch Workflow",
     description:
       "Send documents and parcels out on time: employees buzz a dispatch request, the mailroom collects it, and every handoff to the courier is logged.",
-    h1: "Get it out the door before the courier leaves",
+    h1: "Get It Out the Door Before the Courier Leaves",
     eyebrow: "Workflow",
     lead:
       "Outgoing couriers fail quietly: a contract still on a desk after the last pickup. With ZapBuzzer, the sender buzzes the mailroom, someone collects it from their seat, and the sender can see it reach the dispatch desk.",
@@ -725,24 +750,24 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "workflow",
-        heading: "The outbound path",
+        heading: "The Outbound Path",
         steps: [
-          { title: "Sender buzzes", body: "The employee taps Outgoing Dispatch and notes what is going, where, and how urgent it is." },
-          { title: "Mailroom accepts", body: "The first free person accepts it and the sender sees their name and photo." },
-          { title: "Collected from the desk", body: "The staff member collects the packet, marks it started and gives an ETA for the dispatch desk." },
-          { title: "Handed to the courier", body: "Marked delivered once it is with the courier or at the dispatch point, with an optional photo." },
+          { title: "Sender Buzzes", body: "The employee taps Outgoing Dispatch and notes what is going, where, and how urgent it is." },
+          { title: "Mailroom Accepts", body: "The first free person accepts it and the sender sees their name and photo." },
+          { title: "Collected From the Desk", body: "The staff member collects the packet, marks it started and gives an ETA for the dispatch desk." },
+          { title: "Handed to the Courier", body: "Marked delivered once it is with the courier or at the dispatch point, with an optional photo." },
           { title: "Rated", body: "The sender rates the job and the request is closed with a full trail." },
         ],
       },
       {
         type: "visual",
         visual: "acceptance",
-        heading: "First accept wins, even in the 4:45 pm rush",
+        heading: "First Accept Wins, Even in the 4:45 Pm Rush",
         body: "When five people want things sent before the last pickup, everyone on the mailroom team sees the requests together. Each one is owned by whoever accepts first, so nothing is collected twice and nothing is forgotten.",
       },
       {
         type: "scenario",
-        heading: "A signed contract before the last pickup",
+        heading: "A Signed Contract Before the Last Pickup",
         persona: "Kavya, Sales Lead",
         setting: "4:40 pm. A signed contract must go to a client in Mumbai with the 5:15 courier.",
         timeline: [
@@ -755,9 +780,9 @@ export const pages: PageContent[] = [
       },
       {
         type: "problem-solution",
-        heading: "Why outbound is different from inbound",
+        heading: "Why Outbound Is Different From Inbound",
         problem: {
-          title: "Outbound risks",
+          title: "Outbound Risks",
           points: [
             "A fixed courier cut-off, so a late collection means a missed day.",
             "The sender is busy and assumes someone else is handling it.",
@@ -765,7 +790,7 @@ export const pages: PageContent[] = [
           ],
         },
         solution: {
-          title: "How ZapBuzzer handles them",
+          title: "How ZapBuzzer Handles Them",
           points: [
             "An SLA timer on every dispatch request, with escalation if it runs late.",
             "A named owner from the moment of accept.",
@@ -776,12 +801,12 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "Use the note for the cut-off",
+        title: "Use the Note for the Cut-Off",
         body: "Writing ‘must go with the 5:15 pickup’ in the note tells the mailroom team the real deadline at a glance.",
       },
       {
         type: "checklist",
-        heading: "What a good dispatch note includes",
+        heading: "What a Good Dispatch Note Includes",
         intro: "The mailroom collects from your desk, so the note has to stand in for a conversation.",
         items: [
           "What is going: ‘signed contract, 1 envelope’ or ‘2 sample boxes’",
@@ -793,18 +818,18 @@ export const pages: PageContent[] = [
       },
       {
         type: "metrics",
-        heading: "Outbound numbers worth knowing",
+        heading: "Outbound Numbers Worth Knowing",
         intro: "Dispatch requests are timed like any other, which makes a few outbound-specific measures easy to read.",
         items: [
-          { metric: "Requests after the cut-off window", meaning: "How many senders buzz too close to the last pickup. A rising count is a reminder to send earlier." },
-          { metric: "Desk-to-dispatch time", meaning: "From accepted to delivered at the dispatch point. Shows whether collection rounds keep up in the afternoon." },
-          { metric: "Escalated dispatches", meaning: "Packets that went past SLA, which usually means a missed courier day." },
-          { metric: "Dispatch volume by team", meaning: "Which departments send most, useful when planning the mailroom’s afternoon." },
+          { metric: "Requests After the Cut-Off Window", meaning: "How many senders buzz too close to the last pickup. A rising count is a reminder to send earlier." },
+          { metric: "Desk-to-Dispatch Time", meaning: "From accepted to delivered at the dispatch point. Shows whether collection rounds keep up in the afternoon." },
+          { metric: "Escalated Dispatches", meaning: "Packets that went past SLA, which usually means a missed courier day." },
+          { metric: "Dispatch Volume by Team", meaning: "Which departments send most, useful when planning the mailroom’s afternoon." },
         ],
       },
       {
         type: "prose",
-        heading: "Batching the afternoon rush",
+        heading: "Batching the Afternoon Rush",
         paragraphs: [
           "Outbound traffic tends to bunch up late in the day. When several dispatch requests come in from the same floor, one mailroom staff member can accept them all and collect in a single round, with each request still closed separately so every sender sees their own packet handed over.",
           "If you want to reduce the rush, an internal cut-off helps: ask senders to buzz at least 30 minutes before the courier arrives. The SLA on the Outgoing Dispatch item can reflect that, so late requests are visible as late rather than silently squeezed in.",
@@ -812,23 +837,26 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Can one person collect several dispatch requests in one round?", a: "Yes. They can accept several requests and work through them together. Each request is still marked delivered on its own, so every sender gets a status." },
-      { q: "Does ZapBuzzer book the courier?", a: "No. ZapBuzzer handles the internal steps of collecting, carrying and handing over. Your office’s courier arrangement stays as it is." },
-      { q: "Can the sender add the tracking number later?", a: "Staff and requesters can use the request note to record details such as a courier reference, so it stays with the request history." },
-      { q: "What happens if dispatch runs late?", a: "Each request has an SLA. If it runs over, it auto-escalates to a manager, and on Pro it follows your escalation chain." },
-      { q: "Can we see how many items go out each day?", a: "Yes. Analytics show request volume by type and time of day, with full analytics and reports on Pro." },
+      { q: "Can One Person Collect Several Dispatch Requests in One Round?", a: "Yes. They can accept several requests and work through them together. Each request is still marked delivered on its own, so every sender gets a status." },
+      { q: "Does ZapBuzzer Book the Courier?", a: "No. ZapBuzzer handles the internal steps of collecting, carrying and handing over. Your office’s courier arrangement stays as it is." },
+      { q: "Can the Sender Add the Tracking Number Later?", a: "Staff and requesters can use the request note to record details such as a courier reference, so it stays with the request history." },
+      { q: "What Happens If Dispatch Runs Late?", a: "Each request has an SLA. If it runs over, it auto-escalates to a manager, and on Pro it follows your escalation chain." },
+      { q: "Can We See How Many Items Go Out Each Day?", a: "Yes. Analytics show request volume by type and time of day, with full analytics and reports on Pro." },
+      { q: "How Do We Make Sure Documents Reach the Courier Before the Pickup Slot?", a: "Raise the dispatch request with a deadline that leaves time before the slot. The SLA timer runs from the buzz, and if nobody has delivered it in time, it escalates." },
+      { q: "Can the Sender See That Their Outgoing Parcel Has Been Handed Over?", a: "Yes. The sender sees who accepted the request, the ETA and when it is marked delivered, and staff can attach a photo as proof of the handover." },
+      { q: "Can Outgoing Dispatch Be Its Own Catalogue Item?", a: "Yes. Many offices add an Outgoing Dispatch item next to Courier Pickup, routed to the same team, so collections from desks are clearly separated from parcels arriving at the gate." },
     ],
-    related: ["solutions/courier", "solutions/courier/incoming-workflow", "solutions/courier/mailroom", "sla", "use-cases/sales", "pricing"],
-    cta: { title: "Never miss the last pickup", body: "Add an Outgoing Dispatch item on a free trial and let your senders track their own packets." },
+    related: ["solutions/courier-and-reception", "solutions/courier/incoming-workflow", "solutions/courier/mailroom", "sla", "use-cases/sales", "pricing"],
+    cta: { title: "Never Miss the Last Pickup", body: "Add an Outgoing Dispatch item on a free trial and let your senders track their own packets." },
   },
 
   // ───────────────────────────── TRACKING ─────────────────────────────
   {
-    path: "solutions/courier/tracking",
+    path: "solutions/courier-and-reception/courier-tracking",
     title: "Courier Tracking Inside Your Office",
     description:
       "Track every courier request inside your office: who accepted it, when it started, the ETA and delivery. Live status for senders, recipients and admins.",
-    h1: "Know where every parcel is inside the building",
+    h1: "Know Where Every Parcel Is Inside the Building",
     eyebrow: "Tracking",
     lead:
       "Courier companies track the parcel up to your gate. ZapBuzzer tracks what happens after that: who took it, when, and whether it has reached the person yet.",
@@ -837,7 +865,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "The blind spot between the gate and the desk",
+        heading: "The Blind Spot Between the Gate and the Desk",
         paragraphs: [
           "External tracking ends with ‘Delivered’ the moment reception signs. For the person waiting, that is often when the confusion starts. Is it at reception, in the mailroom or already on their desk?",
           "Every courier request in ZapBuzzer carries a live status. The requester, the recipient named in the note and admins all see the same thing: buzzed, accepted by Sunil, started with ETA 10 minutes, delivered at 3:52 pm.",
@@ -846,14 +874,14 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "request-timeline",
-        heading: "One timeline per parcel",
+        heading: "One Timeline per Parcel",
         body: "Each request shows its full path with timestamps and names. Updates happen in real time, so there is no need to refresh or ask.",
         points: ["Buzzed, accepted, started, delivered and rated", "Name and photo of the person handling it", "ETA once started"],
       },
       {
         type: "table",
-        heading: "What each status tells you",
-        headers: ["Status", "Meaning for a courier request"],
+        heading: "What Each Status Tells You",
+        headers: ["Status", "Meaning for a Courier Request"],
         rows: [
           ["Buzzed", "Reception or the sender has raised it and the mailroom is being pinged"],
           ["Accepted", "A named person owns it and is on the way"],
@@ -864,7 +892,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "‘Has my parcel come?’, answered without a call",
+        heading: "‘Has My Parcel Come?’, Answered Without a Call",
         persona: "Om, Engineer",
         setting: "Om is expecting a replacement keyboard and keeps checking with reception.",
         timeline: [
@@ -877,45 +905,45 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "Tracking features that matter for couriers",
+        heading: "Tracking Features That Matter for Couriers",
         items: [
-          { title: "Real-time status", body: "Statuses update live on web and mobile." },
-          { title: "Every request timed", body: "Accept time and delivery time are recorded automatically." },
+          { title: "Real-Time Status", body: "Statuses update live on web and mobile." },
+          { title: "Every Request Timed", body: "Accept time and delivery time are recorded automatically." },
           { title: "History", body: "30 days of request history on Free, with longer records, audit logs and reports on Pro." },
         ],
       },
       {
         type: "comparison",
-        heading: "Two kinds of tracking, side by side",
+        heading: "Two Kinds of Tracking, Side by Side",
         intro: "They answer different questions, and an office needs both.",
-        columns: ["Courier company tracking", "ZapBuzzer tracking"],
+        columns: ["Courier Company Tracking", "ZapBuzzer Tracking"],
         rows: [
           { label: "Covers", a: "Sender to your gate", b: "Your gate to the person’s desk, and desk to dispatch" },
-          { label: "Ends at", a: "‘Delivered’ when reception signs", b: "Delivered and rated inside the office" },
+          { label: "Ends At", a: "‘Delivered’ when reception signs", b: "Delivered and rated inside the office" },
           { label: "Names", a: "The delivery agent", b: "The staff member who accepted the request" },
-          { label: "Who updates it", a: "The courier company", b: "Your own team, from the app" },
+          { label: "Who Updates It", a: "The courier company", b: "Your own team, from the app" },
           { label: "Proof", a: "Signature at the gate", b: "Timestamps and an optional photo at the desk" },
         ],
       },
       {
         type: "audience",
-        heading: "Who checks the status, and why",
+        heading: "Who Checks the Status, and Why",
         items: [
           { role: "Recipient", benefit: "Knows whether to walk down or wait, and where the parcel was left if they were away." },
-          { role: "Sender of an outgoing packet", benefit: "Sees it collected and handed over without calling the mailroom." },
+          { role: "Sender of an Outgoing Packet", benefit: "Sees it collected and handed over without calling the mailroom." },
           { role: "Reception", benefit: "Answers ‘has it come?’ by pointing to the request instead of searching shelves." },
-          { role: "Admin head", benefit: "Spots requests that are stuck in started for too long before anyone complains." },
+          { role: "Admin Head", benefit: "Spots requests that are stuck in started for too long before anyone complains." },
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Name the recipient the same way every time",
+        title: "Name the Recipient the Same Way Every Time",
         body: "Tracking only helps if people can find their parcel. Agree a note format such as ‘Name, team, floor’ so a search or a glance at the queue turns it up straight away.",
       },
       {
         type: "prose",
-        heading: "What ‘started’ is really telling you",
+        heading: "What ‘Started’ Is Really Telling You",
         paragraphs: [
           "Most internal parcel questions are about the middle of the journey. Accepted means someone owns it. Started means the parcel is physically in their hands, and the ETA is their own estimate of when it will arrive. A request that sits in started far longer than its ETA is the one to look at.",
           "Because every step is timed, the gap is visible to everyone with access rather than discovered at the end of the day. If the SLA runs out first, the request escalates on its own.",
@@ -923,23 +951,26 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Can I record the courier’s tracking number on the request?", a: "Yes, put it in the note. ZapBuzzer doesn’t connect to courier companies’ systems, but keeping the reference on the request means it stays with the internal history." },
-      { q: "Does this replace the courier company’s tracking?", a: "No. Use the courier’s tracking until the parcel reaches your office. ZapBuzzer covers the internal journey after that." },
-      { q: "Can the recipient see the status if reception raised it?", a: "Reception can name the recipient in the note. How widely a request is visible depends on your roles and permissions." },
-      { q: "Is tracking available on the phone?", a: "Yes. The mobile app shows live request status, and staff can accept and update requests from it." },
-      { q: "How long is courier history kept?", a: "The Free plan shows the last 30 days. Pro adds audit logs and reports for longer-term records." },
+      { q: "Can I Record the Courier’s Tracking Number on the Request?", a: "Yes, put it in the note. ZapBuzzer doesn’t connect to courier companies’ systems, but keeping the reference on the request means it stays with the internal history." },
+      { q: "Does This Replace the Courier Company’s Tracking?", a: "No. Use the courier’s tracking until the parcel reaches your office. ZapBuzzer covers the internal journey after that." },
+      { q: "Can the Recipient See the Status If Reception Raised It?", a: "Reception can name the recipient in the note. How widely a request is visible depends on your roles and permissions." },
+      { q: "Is Tracking Available on the Phone?", a: "Yes. The mobile app shows live request status, and staff can accept and update requests from it." },
+      { q: "How Long Is Courier History Kept?", a: "The Free plan shows the last 30 days. Pro adds audit logs and reports for longer-term records." },
+      { q: "What Statuses Does an Internal Parcel Move Through?", a: "Requested, accepted, started with an ETA, delivered with an optional photo, and rated. Each status is timestamped against a named person." },
+      { q: "Can I See Who Has My Parcel Right Now?", a: "Yes. Once someone accepts, the request shows their name and photo along with the ETA, so you know who to ask without walking down to the mailroom." },
+      { q: "Can Managers Spot Parcels That Are Stuck Inside the Office?", a: "Yes. Every request is timed against its SLA, and overdue ones auto-escalate to a manager, so a parcel sitting in the mailroom does not go unnoticed." },
     ],
-    related: ["solutions/courier", "features/request-tracking", "features/real-time-updates", "solutions/courier/delivery-requests", "mobile-app/request-tracking", "free-trial"],
-    cta: { title: "See every parcel’s last fifty metres", body: "Start free and track your first courier request today." },
+    related: ["solutions/courier-and-reception", "features/request-tracking", "features/real-time-updates", "solutions/courier/delivery-requests", "mobile-app/request-tracking", "free-trial"],
+    cta: { title: "See Every Parcel’s Last Fifty Metres", body: "Start free and track your first courier request today." },
   },
 
   // ───────────────────────────── RECEPTION WORKFLOW ─────────────────────────────
   {
-    path: "solutions/courier/reception-workflow",
+    path: "solutions/courier-and-reception/reception-workflow",
     title: "Reception Workflow for Busy Front Desks",
     description:
       "A practical front-desk routine in ZapBuzzer: triage what arrives, buzz the right team, watch status and close the loop without picking up the phone.",
-    h1: "A front-desk routine that doesn’t depend on who answers",
+    h1: "A Front-Desk Routine That Doesn’t Depend on Who Answers",
     eyebrow: "Workflow",
     lead:
       "This is a practical routine for receptionists using ZapBuzzer: what to buzz, where it goes and how to close the loop, whether one person is on the desk or three.",
@@ -948,24 +979,24 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "workflow",
-        heading: "The front-desk loop",
+        heading: "The Front-Desk Loop",
         steps: [
           { title: "Triage", body: "Something arrives, whether a courier, a guest, a delivery or a problem. Decide which team it belongs to." },
           { title: "Buzz", body: "Tap the matching catalogue item and add a one-line note. It goes to the whole team." },
-          { title: "Tell the person waiting", body: "As soon as someone accepts, you see their name and can tell the agent or guest who is coming." },
-          { title: "Watch, don’t chase", body: "Status updates come to you. If nobody responds, repeat pings and escalation take over." },
-          { title: "Close and rate", body: "When it is delivered, rate it. That rating feeds the staff scorecard." },
+          { title: "Tell the Person Waiting", body: "As soon as someone accepts, you see their name and can tell the agent or guest who is coming." },
+          { title: "Watch, Don’t Chase", body: "Status updates come to you. If nobody responds, repeat pings and escalation take over." },
+          { title: "Close and Rate", body: "When it is delivered, rate it. That rating feeds the staff scorecard." },
         ],
       },
       {
         type: "visual",
         visual: "notification-flow",
-        heading: "One tap, every channel",
+        heading: "One Tap, Every Channel",
         body: "Each buzz from reception goes out to the team on the app and by email at once, and on Telegram and WhatsApp on Pro. Notifications repeat until someone accepts, so reception never needs to follow up by phone.",
       },
       {
         type: "scenario",
-        heading: "Monday morning at the front desk",
+        heading: "Monday Morning at the Front Desk",
         persona: "Neha, Reception",
         setting: "9:30–10:00 am, the busiest half-hour of the week.",
         timeline: [
@@ -974,11 +1005,11 @@ export const pages: PageContent[] = [
           { time: "09:45", event: "Projector in Conference Room B not working: buzzes IT and Priya accepts." },
           { time: "09:58", event: "All three delivered. Neha rates each one." },
         ],
-        outcome: "Three teams engaged in thirty minutes with no extensions dialled.",
+        outcome: "Three teams on the job within thirty minutes, and not one extension dialled.",
       },
       {
         type: "checklist",
-        heading: "Front-desk setup checklist",
+        heading: "Front-Desk Setup Checklist",
         items: [
           "Keep the reception catalogue to the requests you actually raise every week",
           "Use the same note format, for example what, how many, where",
@@ -990,14 +1021,14 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Free for small front desks",
+        title: "Free for Small Front Desks",
         body: "The Free plan supports one location and up to 10 staff with email notifications. Offices with several buildings or receptions use Pro for multi-location and Telegram and WhatsApp pings.",
       },
       {
         type: "table",
-        heading: "Triage at a glance",
+        heading: "Triage at a Glance",
         intro: "Most of what lands at a front desk falls into a handful of buckets. Printing this next to the screen helps a relief receptionist on their first day.",
-        headers: ["What arrives", "Buzz", "One-line note"],
+        headers: ["What Arrives", "Buzz", "One-Line Note"],
         rows: [
           ["Courier agent with a parcel", "Courier Pickup", "Courier name, count, recipient"],
           ["Employee wants something sent out", "Outgoing Dispatch", "What, destination, pickup it must make"],
@@ -1008,19 +1039,19 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Shift handover, before and after",
+        heading: "Shift Handover, Before and After",
         intro: "The riskiest moment at reception is when one person hands over to the next.",
-        columns: ["Verbal handover", "Handover in ZapBuzzer"],
+        columns: ["Verbal Handover", "Handover in ZapBuzzer"],
         rows: [
-          { label: "Open items", a: "‘I think the IT thing is sorted’", b: "Every open request is visible with its status" },
-          { label: "Who is on it", a: "Remembered, or not", b: "Name and photo on each accepted request" },
-          { label: "Overdue work", a: "Found when someone complains", b: "SLA timer shows it and escalation has already started" },
-          { label: "What happened earlier", a: "Lost with the morning shift", b: "Request history and timestamps" },
+          { label: "Open Items", a: "‘I think the IT thing is sorted’", b: "Every open request is visible with its status" },
+          { label: "Who Is on It", a: "Remembered, or not", b: "Name and photo on each accepted request" },
+          { label: "Overdue Work", a: "Found when someone complains", b: "SLA timer shows it and escalation has already started" },
+          { label: "What Happened Earlier", a: "Lost with the morning shift", b: "Request history and timestamps" },
         ],
       },
       {
         type: "prose",
-        heading: "When the desk is empty for ten minutes",
+        heading: "When the Desk Is Empty for Ten Minutes",
         paragraphs: [
           "Receptionists take breaks, walk guests to rooms and sign for deliveries at the gate. A routine that only works while someone is sitting at the desk is fragile. Because requests are raised and tracked from the mobile app as well as the web app, Neha can buzz Courier Pickup from the lobby and see Sunil accept while she is still walking back.",
           "It also means the team, not the receptionist, owns the follow-up. Once a request is buzzed it keeps pinging the team until someone accepts, whether or not reception is watching the screen.",
@@ -1028,23 +1059,26 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "How should a relief receptionist learn the routine?", a: "Give them the triage table and a login. The catalogue does the routing, so the main skill is picking the right item and writing a clear one-line note." },
-      { q: "What if reception is unsure which team a request belongs to?", a: "Keep catalogue names plain, such as ‘Courier Pickup’, ‘AC / Facilities’ or ‘IT Help’. Each item is already routed, so reception only picks the closest one." },
-      { q: "Can two receptionists share the workload?", a: "Yes. Both can raise requests, and each request shows who raised it in the audit log." },
-      { q: "Do teams get reception’s note?", a: "Yes. The note travels with the request to every channel the team is notified on." },
-      { q: "What if reception is the one being asked to do something?", a: "Reception can be a team too. Employees can buzz reception for things like booking a cab or holding a parcel." },
+      { q: "How Should a Relief Receptionist Learn the Routine?", a: "Give them the triage table and a login. The catalogue does the routing, so the main skill is picking the right item and writing a clear one-line note." },
+      { q: "What If Reception Is Unsure Which Team a Request Belongs To?", a: "Keep catalogue names plain, such as ‘Courier Pickup’, ‘AC / Facilities’ or ‘IT Help’. Each item is already routed, so reception only picks the closest one." },
+      { q: "Can Two Receptionists Share the Workload?", a: "Yes. Both can raise requests, and each request shows who raised it in the audit log." },
+      { q: "Do Teams Get Reception’s Note?", a: "Yes. The note travels with the request to every channel the team is notified on." },
+      { q: "What If Reception Is the One Being Asked to Do Something?", a: "Reception can be a team too. Employees can buzz reception for things like booking a cab or holding a parcel." },
+      { q: "How Does Reception Follow Up Without Calling the Mailroom?", a: "Reception watches the request status instead. It shows who accepted, the ETA and when it was delivered, and overdue requests escalate to a manager on their own." },
+      { q: "Can Reception Raise a Facilities or IT Request on Behalf of a Visitor-Facing Room?", a: "Yes. Reception can pick any catalogue item, such as AC / Facilities or IT Help, choose the room as the destination and add a note. The request routes to that team as usual." },
+      { q: "Does the Reception Routine Change When the Office Moves to Pro?", a: "The steps stay the same. Pro adds Telegram and WhatsApp pings for the teams, escalation chains, multi-location and full audit logs with reports." },
     ],
-    related: ["solutions/courier", "solutions/courier/reception", "use-cases/reception", "notifications/multi-channel", "features/request-catalog", "pricing/free"],
-    cta: { title: "Try it at your front desk", body: "Sign up free, add Courier Pickup and two other items, and run Monday morning on it." },
+    related: ["solutions/courier-and-reception", "solutions/courier/reception", "use-cases/reception", "notifications/multi-channel", "features/request-catalog", "pricing/free"],
+    cta: { title: "Try It at Your Front Desk", body: "Sign up free, add Courier Pickup and two other items, and run Monday morning on it." },
   },
 
   // ───────────────────────────── MAILROOM ANALYTICS ─────────────────────────────
   {
-    path: "solutions/courier/mailroom-analytics",
+    path: "solutions/courier-and-reception/mailroom-analytics",
     title: "Mailroom Analytics & Courier Reports",
     description:
       "See courier volume by hour, accept and delivery times, on-time rates and staff ratings for your mailroom. Full analytics and scorecards on Pro.",
-    h1: "What your mailroom data says about your office",
+    h1: "What Your Mailroom Data Says About Your Office",
     eyebrow: "Analytics",
     lead:
       "Every courier request is timed from buzz to delivery. Put together, those timings show when the mailroom is busiest, who is carrying the load and where parcels wait.",
@@ -1054,18 +1088,18 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "analytics",
-        heading: "The mailroom at a glance",
-        body: "KPI tiles for requests, accept time and on-time delivery sit above a chart of when the office buzzes most. Filter to courier requests to see the mailroom on its own.",
+        heading: "The Mailroom at a Glance",
+        body: "Summary tiles for requests, accept time and on-time delivery sit above a chart of when the office buzzes most. Filter to courier requests to see the mailroom on its own.",
       },
       {
         type: "metrics",
-        heading: "Metrics worth watching",
+        heading: "Metrics Worth Watching",
         intro: "All of these come from timestamps ZapBuzzer records anyway. Nobody has to fill in a spreadsheet.",
         items: [
-          { metric: "Volume by hour", meaning: "When couriers arrive and dispatch requests pile up, which helps you plan breaks and shifts." },
-          { metric: "Accept time", meaning: "How long a courier agent waits before someone owns the pickup." },
-          { metric: "Delivery time", meaning: "Gate to desk. Long delivery times usually mean parcels sitting on a shelf." },
-          { metric: "On-time %", meaning: "Share of courier requests finished within SLA." },
+          { metric: "Volume by Hour", meaning: "When couriers arrive and dispatch requests pile up, which helps you plan breaks and shifts." },
+          { metric: "Accept Time", meaning: "How long a courier agent waits before someone owns the pickup." },
+          { metric: "Delivery Time", meaning: "Gate to desk. Long delivery times usually mean parcels sitting on a shelf." },
+          { metric: "On-Time %", meaning: "Share of courier requests finished within their SLA, the deadline set for each request." },
           { metric: "Escalations", meaning: "How often a request went past SLA and reached a manager." },
           { metric: "Rating", meaning: "Average stars from the people the mailroom serves." },
         ],
@@ -1073,12 +1107,12 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "scorecard",
-        heading: "Scorecards that give credit",
+        heading: "Scorecards That Give Credit",
         body: "Mailroom work is often invisible. Scorecards show each person’s handled requests, on-time rate and rating, so the person who carried the 4:45 pm rush gets the credit for it.",
       },
       {
         type: "scenario",
-        heading: "Fixing the post-lunch backlog",
+        heading: "Fixing the Post-Lunch Backlog",
         persona: "Deepak, Admin Head",
         setting: "Deepak reviews a month of courier data.",
         timeline: [
@@ -1092,14 +1126,14 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Plan note",
-        body: "Full analytics, scorecards, audit logs and reports are part of Pro at ₹99 per seat per month. Enterprise adds a REST API and webhooks for teams that want to move data into their own systems.",
+        title: "Plan Note",
+        body: "Full analytics, scorecards, audit logs and reports are part of Pro at ₹99 per seat per month. Enterprise adds a REST API and webhooks, which let your own systems pull in ZapBuzzer data and get notified when something happens.",
       },
       {
         type: "table",
-        heading: "From a question to a decision",
+        heading: "From a Question to a Decision",
         intro: "Mailroom data is only useful if it changes something. These are common questions admin heads bring to the numbers, and what usually follows.",
-        headers: ["Question", "Where to look", "Typical action"],
+        headers: ["Question", "Where to Look", "Typical Action"],
         rows: [
           ["Are couriers waiting at the gate?", "Accept time on courier pickup requests", "Add a second person to the team during peak arrival hours"],
           ["Are parcels sitting on shelves?", "Gap between started and delivered", "Agree a rule for parcels whose recipient is away"],
@@ -1110,7 +1144,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "prose",
-        heading: "Reading mailroom numbers fairly",
+        heading: "Reading Mailroom Numbers Fairly",
         paragraphs: [
           "Courier work is lumpy. A single afternoon delivery of thirty boxes for an event can drag the week’s average delivery time up without anyone doing a worse job. Look at volume next to timing before drawing conclusions, and compare like with like: incoming against incoming, dispatch against dispatch.",
           "Ratings need the same care. A parcel that arrived late from the courier company is not the mailroom’s fault, and requesters sometimes rate the whole experience. Use averages over a month rather than reacting to a single 2★ job, and read the notes on low-rated requests before talking to anyone.",
@@ -1118,7 +1152,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "checklist",
-        heading: "A 20-minute monthly mailroom review",
+        heading: "A 20-minute Monthly Mailroom Review",
         items: [
           "Compare this month’s courier volume with last month’s, split into incoming and outgoing",
           "Check the busiest hour and whether staffing matched it",
@@ -1129,14 +1163,16 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "How much data do I need before the numbers mean anything?", a: "A couple of weeks of normal courier traffic usually shows the daily pattern. A full month smooths out one-off spikes such as event deliveries or quarter-end dispatches." },
-      { q: "Do analytics include the courier company’s transit times?", a: "No. ZapBuzzer only measures the internal steps it records, from the buzz to delivery inside your office. Transit times stay with your courier company." },
-      { q: "Can I see analytics only for courier requests?", a: "Courier requests are separate catalogue items, so you can view them apart from pantry, print or IT work." },
-      { q: "Are scorecards used to punish staff?", a: "ZapBuzzer is built to be people-first. Scorecards give fair attribution and credit, not just another nag tool. How you use them is up to your office." },
-      { q: "Can I export mailroom reports?", a: "Reports are part of Pro. For pulling data into other systems, Enterprise includes a REST API and webhooks. Talk to us for details." },
-      { q: "Does the Free plan include analytics?", a: "Free includes the mobile and web app with 30 days of history. Full analytics and scorecards come with Pro." },
+      { q: "How Much Data Do I Need Before the Numbers Mean Anything?", a: "A couple of weeks of normal courier traffic usually shows the daily pattern. A full month smooths out one-off spikes such as event deliveries or quarter-end dispatches." },
+      { q: "Do Analytics Include the Courier Company’s Transit Times?", a: "No. ZapBuzzer only measures the internal steps it records, from the buzz to delivery inside your office. Transit times stay with your courier company." },
+      { q: "Can I See Analytics Only for Courier Requests?", a: "Courier requests are separate catalogue items, so you can view them apart from pantry, print or IT work." },
+      { q: "Are Scorecards Used to Punish Staff?", a: "ZapBuzzer is built to be people-first. Scorecards are there to give staff fair credit, not to nag them. How you use them is up to your office." },
+      { q: "Can I Export Mailroom Reports?", a: "Reports are part of Pro. For pulling data into other systems, Enterprise includes a REST API and webhooks. Talk to us for details." },
+      { q: "Does the Free Plan Include Analytics?", a: "Free includes the mobile and web app with 30 days of history. Full analytics and scorecards come with Pro." },
+      { q: "Which Mailroom Numbers Should an Admin Head Check Each Week?", a: "Start with volume by hour, average accept time and on-time delivery against SLA. Together they show when the mailroom is busiest and whether staffing matches the peaks." },
+      { q: "Can Mailroom Analytics Compare Our Different Offices?", a: "Yes. With multi-location on Pro, every site’s courier requests are timed the same way, so you can compare accept times and on-time delivery across offices." },
     ],
-    related: ["solutions/courier", "analytics", "analytics/staff", "solutions/courier/mailroom", "sla/reporting", "pricing/pro"],
-    cta: { title: "See your mailroom’s numbers", body: "Run a 14-day free trial of Pro and look at the data after the first week." },
+    related: ["solutions/courier-and-reception", "analytics", "analytics/staff", "solutions/courier/mailroom", "sla/reporting", "pricing/pro"],
+    cta: { title: "See Your Mailroom’s Numbers", body: "Run a 14-day free trial of Pro and look at the data after the first week." },
   },
 ];

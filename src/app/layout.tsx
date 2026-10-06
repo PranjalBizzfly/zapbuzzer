@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { RevealOnScroll } from "@/components/layout/RevealOnScroll";
+import { TiltManager } from "@/components/three/TiltManager";
+import { ScrollFX } from "@/components/three/ScrollFX";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/lib/site";
 
@@ -13,7 +15,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["600", "700", "800"], var
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} — ${site.tagline}`, template: `%s | ${site.name}` },
+  title: { default: `${site.name} | ${site.tagline}`, template: `%s | ${site.name}` },
   description: site.description,
   applicationName: site.name,
   openGraph: { siteName: site.name, type: "website", locale: "en_IN" },
@@ -54,6 +56,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Footer />
         <BackToTop />
         <RevealOnScroll />
+        <TiltManager />
+        <ScrollFX />
       </body>
     </html>
   );

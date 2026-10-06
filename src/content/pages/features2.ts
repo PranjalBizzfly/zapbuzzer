@@ -7,10 +7,10 @@ export const pages: PageContent[] = [
     title: "Request Timers for Every Office Ask",
     description:
       "Every ZapBuzzer request is timed from buzz to delivery. See how long requests wait, how fast staff accept, and which ones are about to miss their deadline.",
-    h1: "Every request has a clock running",
+    h1: "Every Request Has a Clock Running",
     eyebrow: "Feature · Request Timers",
     lead:
-      "You cannot improve what you do not time. ZapBuzzer starts a timer the instant someone taps Buzz and stops it on delivery, so wait time, accept time and delivery time stop being guesses.",
+      "It is hard to speed things up if nobody knows how long they take. ZapBuzzer starts a timer the instant someone taps Buzz and stops it on delivery, so wait time, accept time and delivery time stop being guesses.",
     keywords: [
       "request timers",
       "office request response time",
@@ -22,18 +22,18 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        eyebrow: "What is timed",
-        heading: "From the tap to the doorstep",
+        eyebrow: "What Is Timed",
+        heading: "From the Tap to the Doorstep",
         paragraphs: [
           "Every request in ZapBuzzer is timed. The clock starts when the employee taps Buzz, and each stage after that is time-stamped: when someone accepts, when they start, when they deliver and when the requester rates it.",
-          "That gives you three numbers that matter. Time to accept tells you how responsive the team is. Time from start to delivery tells you how long the work takes. And total time tells you what the requester actually experienced — the number that decides whether coffee arrives hot.",
-          "Timers are also what make deadlines possible. Each request has an SLA deadline, and the timer is what tells everyone how much of it is left.",
+          "That gives you three numbers that matter. Time to accept tells you how responsive the team is. Time from start to delivery tells you how long the work takes. Total time tells you how long the requester actually waited. That is the number that decides whether the coffee arrives hot.",
+          "Timers also make deadlines possible. Each request has an SLA, which is the time limit for finishing it, and the timer tells everyone how much of that time is left.",
         ],
       },
       {
         type: "visual",
         visual: "sla-timer",
-        heading: "The countdown ring",
+        heading: "The Countdown Ring",
         body: "Open requests show a countdown against their deadline, so staff and managers can see at a glance what is comfortable, what is getting close and what has gone over.",
         points: [
           "Time elapsed since the buzz",
@@ -44,8 +44,8 @@ export const pages: PageContent[] = [
       },
       {
         type: "table",
-        heading: "The timestamps on every request",
-        headers: ["Stage", "Timestamp", "What it tells you"],
+        heading: "The Timestamps on Every Request",
+        headers: ["Stage", "Timestamp", "What It Tells You"],
         rows: [
           ["Buzzed", "Request created", "Start of the requester’s wait"],
           ["Accepted", "First Accept tapped", "Team responsiveness"],
@@ -56,48 +56,48 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "The 15-minute AC fix",
+        heading: "The 15-minute AC Fix",
         persona: "Om, Engineer",
         setting: "Conference Room B AC stuck at 16°C before a client workshop.",
         timeline: [
           { time: "09:30", event: "Om buzzes Facilities. A 15-minute deadline begins." },
-          { time: "09:31", event: "Deepak accepts — 48 seconds on the clock." },
+          { time: "09:31", event: "Deepak accepts, 48 seconds on the clock." },
           { time: "09:33", event: "Deepak marks started with a 10-minute ETA." },
-          { time: "09:41", event: "Delivered at 11 minutes — inside the deadline." },
+          { time: "09:41", event: "Delivered at 11 minutes, inside the deadline." },
         ],
         outcome: "If Deepak had been delayed past 09:45, the timer would have tipped the request into overdue and auto-escalated it to a manager. As Deepak put it: “Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.”",
       },
       {
         type: "features",
-        heading: "What timers make possible",
+        heading: "What Timers Make Possible",
         items: [
           { title: "Deadlines", body: "Timers power the SLA deadline on every request." },
           { title: "Escalation", body: "Overdue requests auto-escalate; the chain is on Pro." },
           { title: "Scorecards", body: "Accept and delivery times feed each staff member’s scorecard." },
           { title: "Analytics", body: "See average accept time, on-time rate and busy hours." },
-          { title: "Fair comparisons", body: "Everyone is timed the same way, so speed is measured, not argued about." },
+          { title: "Fair Comparisons", body: "Everyone is timed the same way, so speed is measured, not argued about." },
         ],
       },
       {
         type: "stats",
-        heading: "Timed results from pilot offices",
+        heading: "Timed Results From Pilot Offices",
         items: [
-          { value: "32s", label: "average accept time" },
-          { value: "96%", label: "on-time delivery" },
-          { value: "4 min", label: "boss-cabin coffee, buzz to delivery" },
+          { value: "32s", label: "Average Accept Time" },
+          { value: "96%", label: "On-Time Delivery" },
+          { value: "4 min", label: "Boss-Cabin Coffee, Buzz to Delivery" },
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Look at accept time first",
-        body: "If total times are long, check accept time before anything else. A slow pickup usually means notifications are not reaching people — install the mobile app and, on Pro, add Telegram or WhatsApp.",
+        title: "Look at Accept Time First",
+        body: "If total times are long, check accept time before anything else. A slow pickup usually means notifications are not reaching people. Install the mobile app and, on Pro, add Telegram or WhatsApp.",
       },
       {
         type: "checklist",
-        heading: "Using timers well",
+        heading: "Using Timers Well",
         items: [
-          "Set realistic deadlines per category — a lunch for 12 is not a cup of tea",
+          "Set realistic deadlines per category: a lunch for 12 is not a cup of tea",
           "Ask staff to tap Start so the start-to-delivery gap is accurate",
           "Watch the countdown on the dashboard during busy hours",
           "Review weekly averages, not single slow requests",
@@ -105,29 +105,29 @@ export const pages: PageContent[] = [
       },
       {
         "type": "comparison",
-        "heading": "Without timers versus with timers",
+        "heading": "Without Timers Versus With Timers",
         "columns": [
-          "No timers",
-          "ZapBuzzer timers"
+          "No Timers",
+          "ZapBuzzer Timers"
         ],
         "rows": [
           {
-            "label": "How long things take",
+            "label": "How Long Things Take",
             "a": "Anyone’s guess",
             "b": "Recorded on every request"
           },
           {
-            "label": "Late jobs",
+            "label": "Late Jobs",
             "a": "Discovered when someone complains",
             "b": "Flagged as the deadline nears"
           },
           {
-            "label": "Staff performance",
+            "label": "Staff Performance",
             "a": "Based on impressions",
             "b": "Based on accept and delivery times"
           },
           {
-            "label": "Planning staff",
+            "label": "Planning Staff",
             "a": "Guesswork",
             "b": "Volume and timing by hour of day"
           }
@@ -141,18 +141,17 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      {
-        "q": "Do timers put pressure on staff?",
-        "a": "Timers make good work visible as much as they flag delays. Fast, on-time deliveries show up on staff scorecards, which is how ZapBuzzer gives fair attribution rather than acting as a nag tool."
-      },
-      { q: "When does the timer start?", a: "The moment the requester taps Buzz. Every stage after that — accept, start, deliver, rate — is time-stamped." },
-      { q: "Does accepting stop the timer?", a: "No. Accepting is recorded, but the clock runs until delivery, because that is what the requester experiences." },
-      { q: "Are timers available on the Free plan?", a: "Yes, every request is timed on every plan. The SLA escalation chain and full analytics and scorecards are part of Pro." },
-      { q: "Can different requests have different deadlines?", a: "Deadlines make sense per kind of request — a coffee and a team lunch are not the same job. Configure them to match what is realistic for each category." },
-      { q: "Will staff feel watched?", a: "Timers exist to give fair credit, not to nag. Scorecards balance speed with ratings and on-time delivery, so good work is visible." },
+      { q: "Do Timers Put Pressure on Staff?", a: "Timers make good work visible as much as they flag delays. Fast, on-time deliveries show up on staff scorecards, which is how ZapBuzzer gives staff fair credit instead of just nagging them." },
+      { q: "When Does a Request Timer Start?", a: "The moment the requester taps Buzz. Every stage after that (accept, start, deliver, rate) is time-stamped." },
+      { q: "Does the Request Timer Stop When Staff Accept?", a: "No. Accepting is recorded, but the clock runs until delivery, because that is what the requester experiences." },
+      { q: "Is Every Request Timed on the Free Plan Too?", a: "Yes, every request is timed on every plan. The SLA escalation chain and full analytics and scorecards are part of Pro." },
+      { q: "Can a Coffee and a Team Lunch Have Different Timer Deadlines?", a: "Deadlines work best when they suit the kind of request, because a coffee and a team lunch are very different jobs. Set them to match what is realistic for each category." },
+      { q: "Which Timestamps Does a Request Timer Record?", a: "Buzzed, accepted, started and delivered, plus the rating. Together they show accept time, work time and the total time from tap to doorstep." },
+      { q: "What Does the Countdown Ring Show Staff?", a: "How much time is left before the request’s deadline, so staff can see at a glance which jobs need attention first." },
+      { q: "Which Timer Metric Should We Look at First?", a: "Accept time. It shows how quickly someone takes ownership, and in pilot offices it averaged 32 seconds in the first month." },
     ],
     related: ["features", "features/eta-tracking", "sla/timers", "sla", "analytics/response-time", "workflows/ac-issue", "pricing/pro"],
-    cta: { title: "Find out how long things really take", body: "Run ZapBuzzer free for 14 days and see your office’s real accept and delivery times." },
+    cta: { title: "Find Out How Long Things Really Take", body: "Run ZapBuzzer free for 14 days and see your office’s real accept and delivery times." },
   },
 
   // ───────────────────────────── ETA TRACKING
@@ -160,8 +159,8 @@ export const pages: PageContent[] = [
     path: "features/eta-tracking",
     title: "ETA Tracking for Office Requests",
     description:
-      "When staff start a request they share an ETA, so requesters know when coffee, prints or an IT fix will arrive and can plan meetings around it — no calls.",
-    h1: "Know when it will arrive, not just that it is coming",
+      "When staff start a request they share an ETA, so requesters know when coffee, prints or an IT fix will arrive and can plan meetings around it, no calls.",
+    h1: "Know When It Will Arrive, Not Just That It Is Coming",
     eyebrow: "Feature · ETA Tracking",
     lead:
       "“Someone’s on it” is good. “Raj will be there in four minutes” is better. When staff start a request in ZapBuzzer they give an ETA, and the requester sees it immediately.",
@@ -177,17 +176,17 @@ export const pages: PageContent[] = [
       {
         type: "prose",
         eyebrow: "Why ETA",
-        heading: "Planning needs a time, not a promise",
+        heading: "Planning Needs a Time, Not a Promise",
         paragraphs: [
           "Most office requests are tied to something else: a client arriving at 11, a pitch in 10 minutes, a board call that has just started. Knowing that someone accepted is reassuring, but it does not tell you whether to stall the meeting or carry on.",
           "In ZapBuzzer, the owner marks a request as started and gives an ETA. The requester sees it on their screen next to the owner’s name and photo. Kavya can decide to begin her pitch with the slides on screen while the prints arrive; Aarav knows the coffee will land before the second agenda item.",
-          "ETA sits between acceptance and delivery in the lifecycle, and it turns waiting from anxious to predictable.",
+          "The ETA comes between acceptance and delivery, so you know roughly when to expect it instead of just waiting.",
         ],
       },
       {
         type: "visual",
         visual: "request-timeline",
-        heading: "ETA in the request timeline",
+        heading: "ETA in the Request Timeline",
         body: "Accepted → Started with ETA → Delivered. The ETA appears the moment the owner starts work.",
         points: [
           "Owner name and photo",
@@ -197,7 +196,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "Deck copies with a deadline",
+        heading: "Deck Copies With a Deadline",
         persona: "Kavya, Sales Lead",
         setting: "Client arriving in 10 minutes; 24 colour copies needed in Conference Room A.",
         timeline: [
@@ -205,36 +204,36 @@ export const pages: PageContent[] = [
           { time: "10:51", event: "Ramesh accepts." },
           { time: "10:52", event: "Ramesh starts the job with a 6-minute ETA." },
           { time: "10:52", event: "Kavya sees “ETA 6 min” and decides not to delay the meeting." },
-          { time: "10:57", event: "Prints delivered — a minute early." },
+          { time: "10:57", event: "Prints delivered, a minute early." },
         ],
         outcome: "Kavya made a decision based on a real arrival time instead of calling the print room to ask.",
       },
       {
         type: "comparison",
-        heading: "Asking versus seeing",
+        heading: "Asking Versus Seeing",
         columns: ["Without ETA", "With ZapBuzzer ETA"],
         rows: [
-          { label: "Requester’s question", a: "“How long will it be?”", b: "Already answered on screen" },
-          { label: "Staff interruption", a: "Phone call mid-task", b: "None" },
-          { label: "Meeting planning", a: "Guesswork", b: "Based on a stated time" },
+          { label: "Requester’s Question", a: "“How long will it be?”", b: "Already answered on screen" },
+          { label: "Staff Interruption", a: "Phone call mid-task", b: "None" },
+          { label: "Meeting Planning", a: "Guesswork", b: "Based on a stated time" },
           { label: "Accountability", a: "No commitment recorded", b: "ETA and delivery both time-stamped" },
         ],
       },
       {
         type: "features",
-        heading: "ETA details",
+        heading: "ETA Details",
         items: [
-          { title: "Given by the owner", body: "The person doing the job sets the ETA, so it reflects reality on the floor." },
-          { title: "Visible instantly", body: "Requesters see it the moment work starts." },
-          { title: "Paired with deadline", body: "ETA is the staff member’s estimate; the SLA deadline is the commitment the office has set." },
-          { title: "Works on mobile", body: "Staff start requests and set ETAs from the app while walking." },
+          { title: "Given by the Owner", body: "The person doing the job sets the ETA, so it reflects reality on the floor." },
+          { title: "Visible Instantly", body: "Requesters see it the moment work starts." },
+          { title: "Paired With Deadline", body: "The ETA is the staff member’s estimate. The SLA deadline is the time limit the office has set for that kind of request." },
+          { title: "Works on Mobile", body: "Staff start requests and set ETAs from the app while walking." },
         ],
       },
       {
         type: "audience",
-        heading: "Who relies on ETAs",
+        heading: "Who Relies on ETAs",
         items: [
-          { role: "Sales teams", benefit: "Time prints and refreshments around client arrivals." },
+          { role: "Sales Teams", benefit: "Time prints and refreshments around client arrivals." },
           { role: "Leaders", benefit: "Know whether to wait or move on in a meeting." },
           { role: "Reception", benefit: "Tell a courier or guest exactly when someone will come." },
           { role: "Staff", benefit: "Set expectations once instead of answering calls." },
@@ -243,12 +242,12 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "Honest ETAs build trust",
+        title: "Honest ETAs Build Trust",
         body: "Encourage staff to give a realistic ETA rather than an optimistic one. Requesters forgive a 6-minute wait that arrives in 6 minutes far more than a 2-minute promise that takes 6.",
       },
       {
         "type": "checklist",
-        "heading": "Setting ETAs people can trust",
+        "heading": "Setting ETAs People Can Trust",
         "intro": "An ETA is a small promise. These habits keep it believable.",
         "items": [
           "Give the ETA when you start the job, so it reflects real work rather than a guess at accept time.",
@@ -260,7 +259,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "prose",
-        "heading": "ETAs and the SLA are different clocks",
+        "heading": "ETAs and the SLA Are Different Clocks",
         "paragraphs": [
           "The SLA deadline is the office’s promise for a category: facilities sorts an AC complaint within 15 minutes, say. The ETA is the staff member’s estimate for this particular job. Most of the time the ETA sits comfortably inside the deadline.",
           "When it does not, that is useful information. An ETA past the deadline tells the requester to plan around a delay, and tells the manager that the job may need help before the timer escalates it."
@@ -268,21 +267,17 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      {
-        "q": "Who sets the ETA?",
-        "a": "The staff member who owns the request gives it when they start work. The requester sees it next to the owner’s name and photo."
-      },
-      {
-        "q": "Does a missed ETA trigger escalation?",
-        "a": "Escalation is driven by the SLA deadline, not the ETA. A missed ETA is visible on the request, but auto-escalation to a manager happens when the deadline is crossed."
-      },
-      { q: "Who sets the ETA?", a: "The staff member who accepted the request sets it when they mark the request as started." },
-      { q: "Is ETA the same as the SLA deadline?", a: "No. The deadline is the office’s commitment for that kind of request. The ETA is the owner’s estimate for this particular job, which should normally land inside the deadline." },
-      { q: "Can requesters see ETAs on the web app?", a: "Yes. ETAs appear on both the web app and the mobile app, since your workspace lives on the server." },
-      { q: "What if the ETA passes and nothing has arrived?", a: "The request is still tracked against its deadline. If it goes overdue, it auto-escalates to a manager — on Pro through the escalation chain." },
+      { q: "Who Sets the ETA?", a: "The staff member who owns the request gives it when they start work. The requester sees it next to the owner’s name and photo." },
+      { q: "Does a Missed ETA Trigger Escalation?", a: "Escalation is driven by the SLA deadline, not the ETA. A missed ETA is visible on the request, but auto-escalation to a manager happens when the deadline is crossed." },
+      { q: "Is ETA the Same as the SLA Deadline?", a: "No. The deadline is the office’s commitment for that kind of request. The ETA is the owner’s estimate for this particular job, which should normally land inside the deadline." },
+      { q: "Can Requesters See ETAs on the Web App?", a: "Yes. ETAs appear on both the web app and the mobile app, since your workspace lives on the server." },
+      { q: "What If the ETA Passes and Nothing Has Arrived?", a: "The request is still tracked against its deadline. If it goes overdue, it auto-escalates to a manager, on Pro through the escalation chain." },
+      { q: "When Does an ETA Appear on My Request?", a: "Once the owner marks the request as started. Before that you see who accepted it; after, you see their estimate alongside their name and photo." },
+      { q: "Why Is Seeing an ETA Better Than Asking When Something Will Arrive?", a: "An ETA lets you plan, such as starting a meeting knowing the prints are minutes away, without calling the print room or walking over to ask." },
+      { q: "How Does an ETA Help When Prints Are Needed Before a Pitch?", a: "When Kavya sends 24 colour copies ahead of a demo, the ETA tells her when they’ll arrive, so she can prepare her pitch instead of chasing the print room." },
     ],
     related: ["features", "features/request-timers", "features/request-tracking", "mobile-app/delivery-tracking", "solutions/print-room/request-tracking", "use-cases/sales", "free-trial"],
-    cta: { title: "Give every request an arrival time", body: "Try ZapBuzzer free with no card required, and be live within one afternoon." },
+    cta: { title: "Give Every Request an Arrival Time", body: "Try ZapBuzzer free with no card required, and be live within one afternoon." },
   },
 
   // ───────────────────────────── REQUEST STATUS
@@ -291,7 +286,7 @@ export const pages: PageContent[] = [
     title: "Request Status Lifecycle Explained",
     description:
       "Requested, accepted, started, delivered, rated: what each ZapBuzzer request status means, who changes it, and how statuses drive escalation and reporting.",
-    h1: "Five statuses that tell the whole story",
+    h1: "Five Statuses That Tell the Whole Story",
     eyebrow: "Feature · Request Status",
     lead:
       "Every ZapBuzzer request is always in exactly one status. That status tells the requester what to expect, tells staff what to do next and tells managers where things are stuck.",
@@ -306,8 +301,8 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        eyebrow: "Shared language",
-        heading: "Why a fixed set of statuses helps",
+        eyebrow: "Shared Language",
+        heading: "Why a Fixed Set of Statuses Helps",
         paragraphs: [
           "When requests live in chats, status is whatever someone last typed: “ok”, “on it”, “coming”, a thumbs-up. Nobody can tell if “ok” means accepted, done or merely read.",
           "ZapBuzzer uses a small, fixed lifecycle. Each status has one meaning and is set by a specific action. That shared language is what lets the requester stop worrying, lets the team avoid double work and lets the system know when to escalate.",
@@ -315,7 +310,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "glossary",
-        heading: "The statuses",
+        heading: "The Statuses",
         terms: [
           { term: "Requested (Buzzed)", definition: "The employee has tapped Buzz. The team has been notified and pings repeat until someone accepts." },
           { term: "Accepted", definition: "A team member tapped Accept and owns the request. The requester sees their name and photo." },
@@ -328,13 +323,13 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "request-timeline",
-        heading: "Statuses on the timeline",
+        heading: "Statuses on the Timeline",
         body: "Each status change is a time-stamped point on the request’s timeline.",
         points: ["Requested", "Accepted", "Started with ETA", "Delivered with optional photo", "Rated 1–5★"],
       },
       {
         type: "table",
-        heading: "Who moves a request between statuses",
+        heading: "Who Moves a Request Between Statuses",
         headers: ["From", "To", "Action", "Who"],
         rows: [
           ["—", "Requested", "Tap Buzz", "Employee"],
@@ -346,38 +341,38 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "Lunch for twelve, status by status",
+        heading: "Lunch for Twelve, Status by Status",
         persona: "Vivek, Operations",
         setting: "Team lunch for 12 during a quarterly review.",
         timeline: [
-          { time: "12:10", event: "Requested — Vivek buzzes lunch items with a note." },
-          { time: "12:11", event: "Accepted — Meena from the pantry takes it." },
-          { time: "12:15", event: "Started — ETA 45 minutes." },
-          { time: "12:58", event: "Delivered — with a photo of the set-up table." },
-          { time: "13:30", event: "Rated — 5★." },
+          { time: "12:10", event: "Requested: Vivek buzzes lunch items with a note." },
+          { time: "12:11", event: "Accepted: Meena from the pantry takes it." },
+          { time: "12:15", event: "Started: ETA 45 minutes." },
+          { time: "12:58", event: "Delivered: with a photo of the set-up table." },
+          { time: "13:30", event: "Rated: 5★." },
         ],
         outcome: "At any point Vivek and the owner could see exactly where lunch was without a single message.",
       },
       {
         type: "features",
-        heading: "What statuses drive",
+        heading: "What Statuses Drive",
         items: [
-          { title: "Requester view", body: "What they see changes with each status: waiting, owner, ETA, rate." },
-          { title: "Staff queues", body: "Requested items sit in the open queue; accepted ones move to the owner’s list." },
+          { title: "Requester View", body: "What they see changes with each status: waiting, owner, ETA, rate." },
+          { title: "Staff Queues", body: "Requested items sit in the open queue; accepted ones move to the owner’s list." },
           { title: "Escalation", body: "Requests that pass their deadline before delivery escalate automatically." },
           { title: "Analytics", body: "Time between statuses becomes accept time and delivery time." },
-          { title: "Audit log", body: "Every status change is logged with who made it." },
+          { title: "Audit Log", body: "Every status change is logged with who made it." },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "Rating closes the loop",
+        title: "Rating Closes the Loop",
         body: "A request is not fully finished until it is rated. Ratings feed staff scorecards, so encourage employees to tap the stars when the delivery prompt appears.",
       },
       {
         "type": "glossary",
-        "heading": "Status words, defined",
+        "heading": "Status Words, Defined",
         "terms": [
           {
             "term": "Buzzed",
@@ -403,8 +398,8 @@ export const pages: PageContent[] = [
       },
       {
         "type": "metrics",
-        "heading": "What the gaps between statuses tell you",
-        "intro": "Each status carries a timestamp, so the time between two of them is a diagnostic.",
+        "heading": "What the Gaps Between Statuses Tell You",
+        "intro": "Each status has a timestamp, so the time between two of them shows where a request slowed down.",
         "items": [
           {
             "metric": "Buzzed to Accepted",
@@ -426,30 +421,26 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      {
-        "q": "Can a request skip a status?",
-        "a": "Requests follow the same order every time, which is what makes the timestamps comparable. A quick job may move from accepted to delivered within moments, but each step is still recorded."
-      },
-      {
-        "q": "What happens to status if a request goes overdue?",
-        "a": "The status stays where it is, but the SLA timer marks it overdue and it auto-escalates to a manager (with a full escalation chain on Pro). The record shows both the status and the escalation."
-      },
-      { q: "Can a request skip a status?", a: "Statuses follow the lifecycle in order because each one is set by a specific action. Asking staff to tap Start keeps the ETA and timing accurate." },
-      { q: "Is overdue a status?", a: "Overdue is a condition on top of the current status. A request can be accepted or started and still be overdue, which is what triggers escalation." },
-      { q: "Who can see status changes?", a: "The requester sees their own requests, staff see their team’s and managers see those their role allows. Every change is recorded in the audit log." },
-      { q: "What if a requester never rates?", a: "The request is still delivered and counted. Ratings simply add quality data to the scorecard, so they are worth encouraging." },
+      { q: "Can a Request Skip a Status?", a: "Requests follow the same order every time, which is what makes the timestamps comparable. A quick job may move from accepted to delivered within moments, but each step is still recorded." },
+      { q: "What Happens to Status If a Request Goes Overdue?", a: "The status stays where it is, but the SLA timer (the clock counting down to its deadline) marks it overdue and it auto-escalates to a manager (with a full escalation chain on Pro). The record shows both the status and the escalation." },
+      { q: "Is Overdue a Status?", a: "Overdue is a condition on top of the current status. A request can be accepted or started and still be overdue, which is what triggers escalation." },
+      { q: "Who Can See Status Changes?", a: "The requester sees their own requests, staff see their team’s and managers see those their role allows. Every change is recorded in the audit log." },
+      { q: "What If a Requester Never Rates?", a: "The request is still delivered and counted. Ratings simply add quality data to the scorecard, so they are worth encouraging." },
+      { q: "What Are the Request Statuses in ZapBuzzer?", a: "Buzzed, Accepted, Started (with an ETA), Delivered (optionally with a photo) and Rated (1–5★). Every request follows the same lifecycle and every step is timed." },
+      { q: "Who Moves a Request From One Status to the Next?", a: "The requester buzzes and later rates it; the staff member who accepts it marks it started and delivered. Each change is a single tap." },
+      { q: "Why Use a Fixed Set of Request Statuses?", a: "Everyone reads the same words the same way, so “started” means someone is actually working on it. Fixed statuses also make timings comparable across teams." },
     ],
     related: ["features", "features/request-tracking", "features/delivery-confirmation", "admin/audit-logs", "resources/glossary", "workflows", "pricing"],
-    cta: { title: "Give your office one language for requests", body: "Start free and see the lifecycle in action on your first request." },
+    cta: { title: "Give Your Office One Language for Requests", body: "Start free and see the lifecycle in action on your first request." },
   },
 
   // ───────────────────────────── DELIVERY CONFIRMATION
   {
     path: "features/delivery-confirmation",
-    title: "Delivery Confirmation with Photo Proof",
+    title: "Delivery Confirmation With Photo Proof",
     description:
       "Staff mark requests delivered and can attach a photo; requesters confirm with a rating. ZapBuzzer gives every coffee, print and courier job a clear finish.",
-    h1: "Done means delivered — and everyone can see it",
+    h1: "Done Means Delivered, And Everyone Can See It",
     eyebrow: "Feature · Delivery Confirmation",
     lead:
       "A request is only finished when the requester has what they asked for. ZapBuzzer closes each request with a delivery step: the owner marks it delivered, can attach a photo, and the requester is prompted to rate it.",
@@ -464,24 +455,24 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        eyebrow: "Closing the loop",
-        heading: "Why “done” needs proof",
+        eyebrow: "Closing the Loop",
+        heading: "Why “Done” Needs Proof",
         paragraphs: [
           "Without confirmation, requests fade out instead of ending. The print job was probably delivered. The parcel was likely collected. The projector might be working. When something goes wrong later, nobody can say what actually happened.",
-          "In ZapBuzzer, delivery is an explicit step. The owner taps Delivered when the job is complete and can attach a photo — the prints on the table, the parcel at reception, the meeting room set up. The requester sees it and gets a rating prompt. The timer stops and the request is recorded as on time or late.",
+          "In ZapBuzzer, delivery is an explicit step. The owner taps Delivered when the job is complete and can attach a photo: the prints on the table, the parcel at reception, the meeting room set up. The requester sees it and gets a rating prompt. The timer stops and the request is recorded as on time or late.",
         ],
       },
       {
         type: "visual",
         visual: "delivery",
-        heading: "The delivery moment",
+        heading: "The Delivery Moment",
         body: "The requester sees a delivered card with the owner, the time and any photo, followed by a 1–5★ rating prompt.",
         points: ["Delivered by name and photo", "Optional photo of the result", "Total time from buzz", "Tap to rate"],
       },
       {
         type: "table",
-        heading: "When a delivery photo helps",
-        headers: ["Request", "Useful photo"],
+        heading: "When a Delivery Photo Helps",
+        headers: ["Request", "Useful Photo"],
         rows: [
           ["Print job", "Stack of copies left in the room"],
           ["Courier pickup", "Parcel handed over or logged at the mailroom"],
@@ -492,7 +483,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "scenario",
-        heading: "Prints left in an empty room",
+        heading: "Prints Left in an Empty Room",
         persona: "Kavya, Sales Lead",
         setting: "Kavya is greeting the client in the lobby while her prints are delivered.",
         timeline: [
@@ -505,44 +496,44 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "What confirmation gives you",
+        heading: "What Confirmation Gives You",
         items: [
-          { title: "Clear finish", body: "Every request ends with a recorded delivery, not a guess." },
-          { title: "Photo proof", body: "Optional photos show what was delivered and where." },
-          { title: "Accurate timing", body: "Delivery stops the clock, so on-time rates are real." },
-          { title: "Rating prompt", body: "Requesters are asked to rate at the right moment." },
-          { title: "Audit trail", body: "Deliveries are logged — useful for courier and mailroom work." },
+          { title: "Clear Finish", body: "Every request ends with a recorded delivery, not a guess." },
+          { title: "Photo Proof", body: "Optional photos show what was delivered and where." },
+          { title: "Accurate Timing", body: "Delivery stops the clock, so on-time rates are real." },
+          { title: "Rating Prompt", body: "Requesters are asked to rate at the right moment." },
+          { title: "Audit Trail", body: "Deliveries are logged, useful for courier and mailroom work." },
         ],
       },
       {
         type: "problem-solution",
-        heading: "Fading out versus finishing",
+        heading: "Fading Out Versus Finishing",
         problem: {
-          title: "No confirmation",
+          title: "No Confirmation",
           points: ["“I left it somewhere”", "Disputes about whether it happened", "On-time rates are guesswork"],
         },
         solution: {
-          title: "ZapBuzzer delivery",
+          title: "ZapBuzzer Delivery",
           points: ["Delivered with time and optional photo", "Requester confirms by rating", "96% on-time in pilot offices, measured not estimated"],
         },
       },
       {
         type: "checklist",
-        heading: "Good delivery habits for staff",
+        heading: "Good Delivery Habits for Staff",
         items: [
           "Mark delivered only when the item is in the requester’s hands or place",
           "Add a photo when the requester is not present",
           "Deliver to the destination on the request, not the requester’s usual desk",
-          "Check the note before leaving — “less sugar” matters",
+          "Check the note before leaving: “less sugar” matters",
         ],
       },
       {
         "type": "table",
-        "heading": "When to attach a photo, by job type",
+        "heading": "When to Attach a Photo, by Job Type",
         "intro": "Not every delivery needs a photo. A rough guide many offices use:",
         "headers": [
           "Job",
-          "Photo useful?",
+          "Photo Useful?",
           "Why"
         ],
         "rows": [
@@ -575,7 +566,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "scenario",
-        "heading": "The courier that was “never collected”",
+        "heading": "The Courier That Was “Never Collected”",
         "persona": "Neha, Reception",
         "setting": "A client says a signed contract never reached them.",
         "timeline": [
@@ -600,21 +591,17 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      {
-        "q": "Is a delivery photo required?",
-        "a": "A photo can be attached on delivery but is optional. Offices typically ask for one on jobs where the requester is not present to receive the item."
-      },
-      {
-        "q": "What does the requester see on delivery?",
-        "a": "They see the request marked delivered, any photo attached, and a prompt to rate the job from one to five stars."
-      },
-      { q: "Is a photo required on delivery?", a: "No, photos are optional. They are most useful when the requester is away from the destination, such as prints left in a meeting room or a parcel at the mailroom." },
-      { q: "What happens after a request is marked delivered?", a: "The timer stops, the requester is prompted to rate 1–5★ and the request flows into analytics and the owner’s scorecard." },
-      { q: "Can delivery confirmation help with courier audits?", a: "Yes. Courier pickups are logged and every action is audit-logged. Audit logs and reports are part of Pro." },
-      { q: "Can staff mark delivered from their phone?", a: "Yes. Staff accept, start and deliver requests on the move with the mobile app, including attaching a photo." },
+      { q: "Is a Delivery Photo Required?", a: "A photo can be attached on delivery but is optional. Offices typically ask for one on jobs where the requester is not present to receive the item, such as prints left in a meeting room or a parcel at the mailroom." },
+      { q: "What Does the Requester See on Delivery?", a: "They see the request marked delivered, any photo attached, and a prompt to rate the job from one to five stars." },
+      { q: "What Happens After a Request Is Marked Delivered?", a: "The timer stops, the requester is prompted to rate 1–5★ and the request flows into analytics and the owner’s scorecard." },
+      { q: "Can Delivery Confirmation Help With Courier Audits?", a: "Yes. Courier pickups are logged and every action is audit-logged. Audit logs and reports are part of Pro." },
+      { q: "Can Staff Mark Delivered From Their Phone?", a: "Yes. Staff accept, start and deliver requests on the move with the mobile app, including attaching a photo." },
+      { q: "Why Mark a Request Delivered Rather Than Just Leaving It?", a: "Without a delivered step, requests fade out and nobody knows if they finished. Marking delivered stops the timer, tells the requester and counts towards on-time delivery." },
+      { q: "What If Prints Are Left in an Empty Meeting Room?", a: "Staff mark the request delivered and attach a photo of the prints in the room, so the requester knows exactly where to find them." },
+      { q: "What Delivery Habits Should Staff Follow?", a: "Mark delivered at the moment of hand-over, add a photo when the requester isn’t there, and note anything unusual. That keeps timings accurate and ratings fair." },
     ],
     related: ["features", "features/request-ratings", "features/request-status", "mobile-app/delivery-tracking", "solutions/courier/tracking", "workflows/print-request", "free-trial"],
-    cta: { title: "Make every request end properly", body: "Try ZapBuzzer free for 14 days and see delivery confirmation on your first job." },
+    cta: { title: "Make Every Request End Properly", body: "Try ZapBuzzer free for 14 days and see delivery confirmation on your first job." },
   },
 
   // ───────────────────────────── REQUEST RATINGS
@@ -623,10 +610,10 @@ export const pages: PageContent[] = [
     title: "Request Ratings and Staff Feedback",
     description:
       "After each delivery the requester rates it 1–5 stars. Ratings feed fair staff scorecards so pantry, print, IT and facilities teams get credit for good work.",
-    h1: "Five stars, credited to the person who earned them",
+    h1: "Five Stars, Credited to the Person Who Earned Them",
     eyebrow: "Feature · Request Ratings",
     lead:
-      "Office staff rarely hear when they do a great job — they mostly hear when something goes wrong. ZapBuzzer asks every requester to rate each delivery from 1 to 5 stars and credits it to the person who did the work.",
+      "Office staff rarely hear when they do a great job. They mostly hear when something goes wrong. ZapBuzzer asks every requester to rate each delivery from 1 to 5 stars and credits it to the person who did the work.",
     keywords: [
       "request ratings",
       "office staff feedback",
@@ -638,25 +625,25 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        eyebrow: "People-first",
-        heading: "Feedback for the people who keep the office running",
+        eyebrow: "People-First",
+        heading: "Feedback for the People Who Keep the Office Running",
         paragraphs: [
           "ZapBuzzer is built on a people-first principle: rather than being nagged by yet another tool, staff receive scorecards and fair credit for their work. Ratings are the main way that happens.",
-          "When a request is delivered, the requester gets a simple prompt: rate it 1 to 5 stars. Because every request has a single owner from the moment of acceptance, that rating lands with the right person — not with “the pantry” in general.",
+          "When a request is delivered, the requester gets a simple prompt: rate it 1 to 5 stars. Because every request has a single owner from the moment of acceptance, that rating lands with the right person, not with “the pantry” in general.",
           "Over time, ratings build into a picture. Who gets consistent 5★? Which categories draw lower scores? Pilot offices averaged 4.8★ across staff in their first month.",
         ],
       },
       {
         type: "visual",
         visual: "scorecard",
-        heading: "Ratings on the scorecard",
+        heading: "Ratings on the Scorecard",
         body: "Each staff member’s scorecard combines average rating with accept time and on-time delivery.",
         points: ["Average stars across delivered requests", "On-time percentage", "Accept speed", "Volume handled"],
       },
       {
         type: "scenario",
-        heading: "A week in the pantry",
-        persona: "Raj, Pantry team",
+        heading: "A Week in the Pantry",
+        persona: "Raj, Pantry Team",
         setting: "Raj handles most third-floor coffee and lunch requests.",
         timeline: [
           { time: "Mon", event: "Accepts the CEO’s boss-cabin coffee in 12s; rated 5★." },
@@ -664,57 +651,57 @@ export const pages: PageContent[] = [
           { time: "Thu", event: "A tea order arrives cold during a rush; rated 3★." },
           { time: "Fri", event: "Scorecard shows a strong average, high volume and one dip on Thursday afternoon." },
         ],
-        outcome: "Raj’s manager sees real evidence of his work — and that Thursday afternoons need a second person in the pantry.",
+        outcome: "Raj’s manager sees real evidence of his work, and that Thursday afternoons need a second person in the pantry.",
       },
       {
         type: "features",
-        heading: "How ratings are used",
+        heading: "How Ratings Are Used",
         items: [
           { title: "Credit", body: "Ratings attach to the owner, so good work is visible." },
-          { title: "Coaching", body: "Patterns of low ratings point to real problems — cold tea, wrong destination." },
+          { title: "Coaching", body: "Patterns of low ratings point to real problems: cold tea, wrong destination." },
           { title: "Staffing", body: "Ratings dipping at busy times suggest a team needs more hands." },
           { title: "Analytics", body: "Rating analytics roll up by person, team and category on Pro." },
         ],
       },
       {
         type: "metrics",
-        heading: "Rating metrics worth watching",
+        heading: "Rating Metrics Worth Watching",
         items: [
-          { metric: "Average rating", meaning: "Overall satisfaction for a person or team." },
-          { metric: "Rating by category", meaning: "Whether, say, prints score lower than coffee." },
-          { metric: "Rating by time of day", meaning: "Whether quality drops when the office buzzes most." },
-          { metric: "Rating response rate", meaning: "How many requesters actually rate — low rates make averages less reliable." },
+          { metric: "Average Rating", meaning: "Overall satisfaction for a person or team." },
+          { metric: "Rating by Category", meaning: "Whether, say, prints score lower than coffee." },
+          { metric: "Rating by Time of Day", meaning: "Whether quality drops when the office buzzes most." },
+          { metric: "Rating Response Rate", meaning: "How many requesters actually rate. Low rates make averages less reliable." },
         ],
       },
       {
         type: "stats",
         items: [
-          { value: "4.8★", label: "average staff rating in pilot offices" },
-          { value: "96%", label: "on-time delivery" },
+          { value: "4.8★", label: "Average Staff Rating in Pilot Offices" },
+          { value: "96%", label: "On-Time Delivery" },
         ],
       },
       {
         type: "callout",
         tone: "warning",
-        title: "Ratings are not a stick",
+        title: "Ratings Are Not a Stick",
         body: "Use ratings to recognise and to fix systems, not to punish individuals for one bad day. A 3★ during a lunch rush usually says more about staffing than effort.",
       },
       {
         "type": "comparison",
-        "heading": "Hallway feedback versus a star rating",
+        "heading": "Hallway Feedback Versus a Star Rating",
         "intro": "Offices already give feedback to support staff. It is just scattered, late and mostly negative.",
         "columns": [
-          "Hallway feedback",
-          "ZapBuzzer rating"
+          "Hallway Feedback",
+          "ZapBuzzer Rating"
         ],
         "rows": [
           {
-            "label": "When it arrives",
+            "label": "When It Arrives",
             "a": "Days later, if ever",
             "b": "Right after delivery, while it is fresh"
           },
           {
-            "label": "Who hears it",
+            "label": "Who Hears It",
             "a": "Whoever the complainer bumps into",
             "b": "The person who did the job, and their manager"
           },
@@ -724,12 +711,12 @@ export const pages: PageContent[] = [
             "b": "Every delivery can be rated, so good days count"
           },
           {
-            "label": "Tied to a job",
+            "label": "Tied to a Job",
             "a": "“The coffee is always late”",
             "b": "One request, one owner, one score"
           },
           {
-            "label": "Usable later",
+            "label": "Usable Later",
             "a": "Lost in conversation",
             "b": "Rolls up into the scorecard"
           }
@@ -737,7 +724,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "checklist",
-        "heading": "Making ratings fair",
+        "heading": "Making Ratings Fair",
         "intro": "Ratings only help if staff trust them. A few habits keep them honest.",
         "items": [
           "Look at averages over weeks, not a single one-star rating on a busy Monday.",
@@ -749,21 +736,17 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      {
-        "q": "Do requesters have to rate every request?",
-        "a": "Rating is offered after delivery, and the more requests get rated the more useful the averages become. Many offices simply ask people to tap a star when their coffee or prints arrive, which takes a second."
-      },
-      {
-        "q": "Can a low rating hurt a staff member unfairly?",
-        "a": "A single rating rarely tells the full story, which is why ratings sit beside accept time and on-time delivery on the scorecard. Managers should look at patterns and the request details before drawing conclusions."
-      },
-      { q: "Who can rate a request?", a: "The requester rates their own request after it is delivered, on a 1–5 star scale." },
-      { q: "Do staff see their ratings?", a: "Scorecards exist to give staff fair attribution for their work. What each person sees is controlled by roles and permissions." },
-      { q: "Are scorecards on the Free plan?", a: "Ratings are collected on every request. Full analytics and staff scorecards are part of Pro at ₹99 per seat per month." },
-      { q: "Can ratings be anonymous?", a: "Ratings are tied to the request so they can be credited to the right owner. Treat them as service feedback rather than personal reviews." },
+      { q: "Do Requesters Have to Rate Every Request?", a: "Rating is offered after delivery, and the more requests get rated the more useful the averages become. Many offices simply ask people to tap a star when their coffee or prints arrive, which takes a second." },
+      { q: "Can a Low Rating Hurt a Staff Member Unfairly?", a: "A single rating rarely tells the full story, which is why ratings sit beside accept time and on-time delivery on the scorecard. Managers should look at patterns and the request details before drawing conclusions." },
+      { q: "Who Can Rate a Request?", a: "The requester rates their own request after it is delivered, on a 1–5 star scale." },
+      { q: "Do Staff See Their Ratings?", a: "Scorecards exist to give staff fair credit for their work. What each person sees is controlled by roles and permissions." },
+      { q: "Are Rating-Based Staff Scorecards on the Free Plan?", a: "Ratings are collected on every request. Full analytics and staff scorecards are part of Pro at ₹99 per seat per month." },
+      { q: "Can Ratings Be Anonymous?", a: "Ratings are tied to the request so they can be credited to the right owner. Treat them as service feedback rather than personal reviews." },
+      { q: "What Can Ratings Tell an Office Manager?", a: "Patterns: which teams and items consistently earn 5★ and where quality dips. In pilot offices, staff averaged a 4.8★ rating in the first month." },
+      { q: "How Should Managers Talk to Staff About Their Ratings?", a: "As recognition and coaching, not as a stick. Celebrate consistent 5★ work and talk through patterns of low ratings with the request details in front of you." },
     ],
     related: ["features", "features/delivery-confirmation", "analytics/ratings", "analytics/staff", "use-cases/staff-accountability", "mobile-app/ratings", "pricing/pro"],
-    cta: { title: "Let your staff’s good work show", body: "Turn on ratings and scorecards with a 14-day Pro trial." },
+    cta: { title: "Let Your Staff’s Good Work Show", body: "Turn on ratings and scorecards with a 14-day Pro trial." },
   },
 
   // ───────────────────────────── REQUEST HISTORY
@@ -771,8 +754,8 @@ export const pages: PageContent[] = [
     path: "features/request-history",
     title: "Searchable Office Request History",
     description:
-      "Look back at who asked for what, who handled it and how long it took. ZapBuzzer keeps request history — 30 days on Free, full history and reports on Pro.",
-    h1: "A record of everything your office asked for",
+      "Look back at who asked for what, who handled it and how long it took. ZapBuzzer keeps request history: 30 days on Free, full history and reports on Pro.",
+    h1: "A Record of Everything Your Office Asked For",
     eyebrow: "Feature · Request History",
     lead:
       "Every ZapBuzzer request leaves a record: who buzzed it, what for, where, who accepted, when it was delivered and how it was rated. Request history turns that into a log you can look back on.",
@@ -788,7 +771,7 @@ export const pages: PageContent[] = [
       {
         type: "prose",
         eyebrow: "Memory",
-        heading: "Offices forget. Records do not.",
+        heading: "Offices Forget. Records Do Not.",
         paragraphs: [
           "Requests in chats and phone calls leave no usable trail. Was the projector in Conference Room B fixed last week too? Did the courier from Tuesday actually get picked up? How many prints did Sales run before the quarterly review?",
           "ZapBuzzer’s request history answers those questions because every request is stored with its full timeline. History is per person for employees, per team for staff and office-wide for admins and owners, depending on role.",
@@ -797,23 +780,23 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "audit-log",
-        heading: "The record behind every request",
+        heading: "The Record Behind Every Request",
         body: "Each history entry carries the request and its time-stamped actions, and every action is audit-logged.",
         points: ["Requester, category, note and destination", "Owner and timestamps", "Delivery photo if attached", "Rating"],
       },
       {
         type: "table",
-        heading: "History by plan",
-        headers: ["Plan", "History kept", "Extras"],
+        heading: "History by Plan",
+        headers: ["Plan", "History Kept", "Extras"],
         rows: [
           ["Free", "Last 30 days", "Email notifications, 1 location, up to 10 staff"],
           ["Pro", "Full history", "Audit logs + reports, full analytics"],
-          ["Enterprise", "Full history", "REST API + webhooks, on-prem option — talk to us"],
+          ["Enterprise", "Full history", "REST API + webhooks, on-prem option, talk to us"],
         ],
       },
       {
         type: "scenario",
-        heading: "The recurring projector",
+        heading: "The Recurring Projector",
         persona: "Deepak, Admin Head",
         setting: "The Conference Room B projector keeps failing before meetings.",
         timeline: [
@@ -825,34 +808,34 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "What history is used for",
+        heading: "What History Is Used For",
         items: [
-          { title: "Resolving disputes", body: "See exactly when something was accepted and delivered." },
-          { title: "Spotting repeats", body: "Recurring issues in one room or category become visible." },
-          { title: "Courier audit", body: "Pickups and deliveries are audit-trailed." },
-          { title: "Spend review", body: "Owners can look back at the cost of requests like lunch orders." },
+          { title: "Resolving Disputes", body: "See exactly when something was accepted and delivered." },
+          { title: "Spotting Repeats", body: "Recurring issues in one room or category become visible." },
+          { title: "Courier Audit", body: "Pickups and deliveries are audit-trailed." },
+          { title: "Spend Review", body: "Owners can look back at the cost of requests like lunch orders." },
           { title: "Reporting", body: "History feeds reports and analytics on Pro." },
         ],
       },
       {
         type: "audience",
-        heading: "Who uses history",
+        heading: "Who Uses History",
         items: [
           { role: "Employees", benefit: "Repeat or check past requests." },
-          { role: "Facilities and IT leads", benefit: "Find recurring faults by room or equipment." },
-          { role: "Reception and mailroom", benefit: "Prove a courier was handled." },
+          { role: "Facilities and IT Leads", benefit: "Find recurring faults by room or equipment." },
+          { role: "Reception and Mailroom", benefit: "Prove a courier was handled." },
           { role: "Owners", benefit: "Review spend and service quality over time." },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "Need data outside ZapBuzzer?",
+        title: "Need Data Outside ZapBuzzer?",
         body: "Enterprise includes a REST API and webhooks for organisations that want request data in their own systems. Talk to us for details.",
       },
       {
         "type": "checklist",
-        "heading": "Questions history settles in under a minute",
+        "heading": "Questions History Settles in Under a Minute",
         "intro": "Most disputes about office requests are really disputes about memory. A searchable record turns them into lookups.",
         "items": [
           "Did the colour print job for the client deck actually go out on Tuesday, and who delivered it?",
@@ -866,12 +849,12 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "warning",
-        "title": "Thirty days goes faster than you think",
+        "title": "Thirty Days Goes Faster Than You Think",
         "body": "On the Free plan, history covers the last 30 days. That is enough to settle this week’s arguments, but not to spot a projector that fails every quarter or compare December’s pantry load with March. If you plan to review trends or keep a longer trail, Pro adds audit logs and reports on top of the request record."
       },
       {
         "type": "prose",
-        "heading": "History as onboarding material",
+        "heading": "History as Onboarding Material",
         "paragraphs": [
           "A quieter use of history is teaching. When a new pantry staffer or office assistant starts, scrolling through last week’s requests shows them the real rhythm of the floor: the 9 a.m. coffee wave, the post-lunch print rush, which cabins order the same thing every day and which notes they leave.",
           "It also shows good examples. A delivery with a photo and a five-star rating is a model of what “done” looks like; a request that sat accepted but not started for twenty minutes is an honest example of what to avoid."
@@ -879,21 +862,17 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      {
-        "q": "Can staff see their own past requests?",
-        "a": "Requesters see the requests they raised, and staff see the work they accepted and delivered. Admins and owners see the wider record according to their role. What each person can view follows the role permissions you set."
-      },
-      {
-        "q": "Is history the same as the audit log?",
-        "a": "Not quite. History is the record of requests: what was asked, by whom, who owned it, the timestamps and the rating. The audit log, on Pro, records every action taken in the workspace so you can see who did what."
-      },
-      { q: "How long is request history kept?", a: "Free keeps the last 30 days. Pro keeps full history along with audit logs and reports." },
-      { q: "Can employees see other people’s requests?", a: "Visibility follows roles and permissions. Employees typically see their own requests, while admins and owners see office-wide history." },
-      { q: "Is history the same as the audit log?", a: "They are related. History is the record of requests; the audit log records every action taken, including who changed what." },
-      { q: "Can we export history?", a: "Reports are part of Pro. For pulling data into your own systems, Enterprise offers a REST API and webhooks — contact us for specifics." },
+      { q: "Can Staff See Their Own Past Requests?", a: "Requesters see the requests they raised, and staff see the work they accepted and delivered. Admins and owners see the wider record according to their role. What each person can view follows the role permissions you set." },
+      { q: "Is History the Same as the Audit Log?", a: "Not quite. History is the record of requests: what was asked, by whom, who owned it, the timestamps and the rating. The audit log, on Pro, records every action taken in the workspace so you can see who did what." },
+      { q: "How Many Days of Request History Does Each Plan Keep?", a: "Free keeps the last 30 days. Pro keeps full history along with audit logs and reports." },
+      { q: "Can Employees See Other People’s Requests?", a: "Visibility follows roles and permissions. Employees typically see their own requests, while admins and owners see office-wide history." },
+      { q: "Can We Export History?", a: "Reports are part of Pro. For pulling data into your own systems, Enterprise offers a REST API and webhooks, contact us for specifics." },
+      { q: "What Is Recorded in Each Request’s History?", a: "What was asked and where, who requested and who owned it, every timestamp from buzz to delivery, any delivery photo and the rating." },
+      { q: "How Can History Help With a Recurring Problem?", a: "Look back at the same item and room over time. A projector that fails every week shows up clearly, which makes the case for a repair or replacement." },
+      { q: "Can History Settle a Question About a Courier Pickup?", a: "Yes. Courier pickups are logged with who handled them and when, and on Pro every action is also in the audit log." },
     ],
     related: ["features", "features/request-reports", "admin/audit-logs", "solutions/courier/tracking", "use-cases/prevent-lost-requests", "pricing/free", "pricing/pro"],
-    cta: { title: "Stop relying on memory", body: "Start free with 30 days of history, or try Pro’s full history free for 14 days." },
+    cta: { title: "Stop Relying on Memory", body: "Start free with 30 days of history, or try Pro’s full history free for 14 days." },
   },
 
   // ───────────────────────────── REQUEST REPORTS
@@ -902,7 +881,7 @@ export const pages: PageContent[] = [
     title: "Office Request Reports and Insights",
     description:
       "Reports on request volume, accept times, on-time delivery, ratings and spend. See who is fastest, what the office asks for and when it buzzes most. Pro plan.",
-    h1: "Reports that answer the questions your office keeps asking",
+    h1: "Reports That Answer the Questions Your Office Keeps Asking",
     eyebrow: "Feature · Request Reports",
     lead:
       "Reports turn thousands of small requests into answers. Which team is fastest? How often do we miss deadlines? When does the office buzz most? What did lunches cost this month? Reports and full analytics are part of ZapBuzzer Pro.",
@@ -917,8 +896,8 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        eyebrow: "From records to decisions",
-        heading: "Small requests add up to big questions",
+        eyebrow: "From Records to Decisions",
+        heading: "Small Requests Add Up to Big Questions",
         paragraphs: [
           "A single coffee request tells you nothing. A month of them tells you when the pantry is overloaded, whether the print room is meeting deadlines before client meetings and whether the AC in one room keeps failing.",
           "Because every ZapBuzzer request is categorised, owned, timed and rated, reports can slice by team, category, person, location and time without anyone filling in a spreadsheet.",
@@ -927,26 +906,26 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "analytics",
-        heading: "The reporting view",
+        heading: "The Reporting View",
         body: "KPI tiles for volume, accept time, on-time rate and rating, with charts of activity over the day and week.",
         points: ["Requests by category and team", "Average accept and delivery time", "On-time percentage", "Busy hours"],
       },
       {
         type: "metrics",
-        heading: "Core report metrics",
+        heading: "Core Report Metrics",
         items: [
-          { metric: "Request volume", meaning: "How many requests, by category, team and location." },
-          { metric: "Average accept time", meaning: "Responsiveness; pilot offices averaged 32s." },
-          { metric: "On-time delivery", meaning: "Share delivered inside deadline; pilots hit 96%." },
+          { metric: "Request Volume", meaning: "How many requests, by category, team and location." },
+          { metric: "Average Accept Time", meaning: "Responsiveness; pilot offices averaged 32s." },
+          { metric: "On-Time Delivery", meaning: "Share delivered inside deadline; pilots hit 96%." },
           { metric: "Escalations", meaning: "How often requests went overdue and were escalated." },
-          { metric: "Average rating", meaning: "Quality as rated by requesters." },
-          { metric: "Peak hours", meaning: "When the office buzzes most." },
-          { metric: "Spend", meaning: "Cost of requests like lunch orders — owner-only." },
+          { metric: "Average Rating", meaning: "Quality as rated by requesters." },
+          { metric: "Peak Hours", meaning: "When the office buzzes most." },
+          { metric: "Spend", meaning: "Cost of requests like lunch orders, owner-only." },
         ],
       },
       {
         type: "scenario",
-        heading: "The monthly review",
+        heading: "The Monthly Review",
         persona: "Priya, Office Manager",
         setting: "Preparing a one-page update for the founder.",
         timeline: [
@@ -955,42 +934,42 @@ export const pages: PageContent[] = [
           { time: "Step 3", event: "Reviews scorecards to credit the fastest staff." },
           { time: "Step 4", event: "Owner reviews spend on team lunches." },
         ],
-        outcome: "Priya walks in with facts instead of anecdotes — and a case for one more facilities person on Thursdays.",
+        outcome: "Priya walks in with facts instead of anecdotes, and a case for one more facilities person on Thursdays.",
       },
       {
         type: "audience",
-        heading: "Who reads the reports",
+        heading: "Who Reads the Reports",
         items: [
           { role: "Founders and CEOs", benefit: "See service quality and spend without asking around." },
-          { role: "Office and admin managers", benefit: "Staff the right teams at the right hours." },
-          { role: "IT and facilities leads", benefit: "Track deadlines and recurring issues." },
+          { role: "Office and Admin Managers", benefit: "Staff the right teams at the right hours." },
+          { role: "IT and Facilities Leads", benefit: "Track deadlines and recurring issues." },
           { role: "Staff", benefit: "Scorecards that credit their work fairly." },
         ],
       },
       {
         type: "table",
-        heading: "Reporting by plan",
+        heading: "Reporting by Plan",
         headers: ["Plan", "Reporting"],
         rows: [
           ["Free", "Basic request history for the last 30 days"],
           ["Pro", "Complete analytics with scorecards, plus reports and audit logs"],
-          ["Enterprise", "Everything in Pro plus REST API and webhooks for your own reporting — talk to us"],
+          ["Enterprise", "Everything in Pro plus REST API and webhooks for your own reporting, talk to us"],
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Review weekly for the first month",
+        title: "Review Weekly for the First Month",
         body: "Early reports show where notifications are slow, which categories need tighter deadlines and which tiles nobody uses. Weekly reviews help you tune quickly.",
       },
       {
         "type": "table",
-        "heading": "Report questions by role",
+        "heading": "Report Questions by Role",
         "intro": "The same data answers different questions depending on who is reading.",
         "headers": [
           "Reader",
           "Question",
-          "Where it shows up"
+          "Where It Shows Up"
         ],
         "rows": [
           [
@@ -1022,36 +1001,31 @@ export const pages: PageContent[] = [
       },
       {
         "type": "prose",
-        "heading": "From a report to a decision",
+        "heading": "From a Report to a Decision",
         "paragraphs": [
-          "A report is only worth reading if it changes something. A typical example: volume by hour shows the 3rd-floor pantry gets a large share of its daily orders between 9 and 10:30 a.m., while on-time delivery dips in exactly that window. The fix is not a pep talk, it is moving one pantry shift thirty minutes earlier.",
-          "Another: the print room’s accept time is fine, but colour jobs for sales consistently land close to the deadline. Reading the notes shows decks are uploaded minutes before pitches. The answer is a nudge to the sales team, not more print staff.",
+          "A report is only worth reading if it changes something. A typical example: volume by hour shows the 3rd-floor pantry gets a large share of its daily orders between 9 and 10:30 a.m., while on-time delivery dips in exactly that window. The fix is simple: move one pantry shift thirty minutes earlier.",
+          "Another: the print room’s accept time is fine, but colour jobs for sales consistently land close to the deadline. Reading the notes shows decks are uploaded minutes before pitches. So the answer is a reminder to the sales team to upload earlier. More print staff would not help.",
           "Reports point at where to look. The request records underneath tell you why."
         ]
       },
       {
         "type": "callout",
         "tone": "tip",
-        "title": "Keep the review short",
+        "title": "Keep the Review Short",
         "body": "Pick three numbers for the monthly review, such as accept time, on-time delivery and average rating, and only dig into a category when one of them moves. Long reports nobody reads are how offices end up back on gut feel."
       },
     ],
     faqs: [
-      {
-        "q": "Who can see cost figures in reports?",
-        "a": "Spend is owner-only. Other roles see volume, timing and rating data according to their permissions, but not what lunches or orders cost."
-      },
-      {
-        "q": "Can I get reports on the Free plan?",
-        "a": "Free keeps 30 days of request history so you can look back at recent work. Full analytics, scorecards, audit logs and reports are part of Pro."
-      },
-      { q: "Which plan includes reports?", a: "Full analytics, scorecards, audit logs and reports are part of Pro at ₹99 per seat per month. Free includes 30 days of request history." },
-      { q: "Can reports cover multiple offices?", a: "Multi-location is part of Pro, so reports can span your sites. Groups and facility companies may want Enterprise." },
-      { q: "Who can see spend in reports?", a: "Request cost visibility is owner-only, so spend figures are visible to the owner." },
-      { q: "Can we feed request data into our own BI tools?", a: "Enterprise includes a REST API and webhooks for that purpose. Contact us to discuss your setup." },
-      { q: "How soon will reports be useful?", a: "Within the first week you will see volumes and accept times. A month of data gives reliable patterns, which is the period our pilot figures cover." },
+      { q: "Who Can See Cost Figures in Reports?", a: "Spend is owner-only. Other roles see volume, timing and rating data according to their permissions, but not what lunches or orders cost." },
+      { q: "Can I Get Reports on the Free Plan?", a: "Free keeps 30 days of request history so you can look back at recent work. Full analytics, scorecards, audit logs and reports are part of Pro at ₹99 per seat per month." },
+      { q: "Can Reports Cover Multiple Offices?", a: "Multi-location is part of Pro, so reports can span your sites. Groups and facility companies may want Enterprise." },
+      { q: "Can We Feed Request Data Into Our Own BI Tools?", a: "Enterprise includes a REST API and webhooks for that purpose. Contact us to discuss your setup." },
+      { q: "How Soon Will Reports Be Useful?", a: "Within the first week you will see volumes and accept times. A month of data gives reliable patterns, which is the period our pilot figures cover." },
+      { q: "What Metrics Do Request Reports Include?", a: "Request volume by item and team, accept time, on-time delivery, ratings and the busiest times of day. Owners also see request costs." },
+      { q: "How Should We Run a Monthly Request Review?", a: "Look at volume, on-time delivery and ratings by team, then pick one or two items to improve. Review weekly during the first month while habits form." },
+      { q: "Who Usually Reads Request Reports?", a: "Owners for spend and overall service, office managers for team performance, and admin heads for facilities and IT trends." },
     ],
     related: ["features", "features/request-history", "analytics", "analytics/requests", "sla/reporting", "use-cases/ceo", "pricing/pro", "demo"],
-    cta: { title: "Get the numbers behind your office", body: "Start a 14-day Pro trial — no credit card — and see your first report within a week." },
+    cta: { title: "Get the Numbers Behind Your Office", body: "Start a 14-day Pro trial, no credit card, and see your first report within a week." },
   },
 ];

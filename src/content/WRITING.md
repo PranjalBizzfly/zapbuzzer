@@ -51,7 +51,15 @@ no markdown or HTML inside strings.
    board meeting at 11, pitch in 10 minutes). Use the canonical cast where it fits; you may add
    other Indian first names for staff/employees in scenarios. No hype words like "revolutionary",
    "seamless", "cutting-edge", "unlock", "leverage", "in today's fast-paced world".
-6. FAQs: 4–7 per page, genuinely page-specific, answers 2–4 sentences.
+6. FAQs: exactly 8 per page, genuinely page-specific, no question repeated on any other page,
+   answers 1–3 sentences. Check with `npx tsx scripts/faq-audit.ts`.
+6a. Plain English: write for a busy office manager, not a developer or a brochure. Short sentences,
+   one idea each; "you" and everyday verbs ("use", "help", "see", not "utilise", "facilitate",
+   "visibility into"). Keep real terms that people search for (SLA, escalation, audit log,
+   first-accept-wins, SSO, webhook) but explain each in plain words the first time it appears on a
+   page. Avoid AI patterns: "It's not X — it's Y", "Whether you're…", stacked lists of three,
+   filler openers and closers, heavy em-dashes. Run `node scripts/copy-audit.mjs` to catch common
+   offenders.
 7. `related`: 5–8 paths that exist in the manifest; include the parent hub, a sibling, a feature,
    a use case or workflow, and a commercial page (pricing/free-trial/demo) where relevant.
 8. Titles ≤ 60 chars, unique. Descriptions unique. H1 different from title wording where natural.

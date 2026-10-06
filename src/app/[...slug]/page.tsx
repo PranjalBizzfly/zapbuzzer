@@ -87,23 +87,26 @@ export default async function ContentPage({ params }: Props) {
         <div className="mx-auto max-w-7xl px-4">
           <StatsBar
             items={[
-              { value: "32s", label: "Average time until someone accepts" },
-              { value: "96%", label: "Requests delivered on time" },
-              { value: "−87%", label: "Fewer phone calls" },
-              { value: "4.8★", label: "Average staff rating" },
+              { value: "32s", label: "Average Time Until Someone Accepts" },
+              { value: "96%", label: "Requests Delivered on Time" },
+              { value: "−87%", label: "Fewer Phone Calls" },
+              { value: "4.8★", label: "Average Staff Rating" },
             ]}
           />
         </div>
       </section>
 
-      {/* Content sections: full-width bands with alternating backgrounds */}
-      {page.sections.map((s, i) => (
-        <section key={i} className={`py-10 sm:py-12 md:py-16 ${i % 2 ? "border-y border-line/60 bg-surface-2/60" : "bg-bg"}`}>
-          <div className="mx-auto max-w-7xl px-4">
-            <SectionRenderer section={s} index={i} introVisual={introVisual} />
-          </div>
-        </section>
-      ))}
+      {/* Content sections: full-width bands with strictly unique, non-repeating images */}
+      {(() => {
+        const usedImagesOnPage = new Set<string>();
+        return page.sections.map((s, i) => (
+          <section key={i} className={`py-10 sm:py-12 md:py-16 ${i % 2 ? "border-y border-line/60 bg-surface-2/60" : "bg-bg"}`}>
+            <div className="mx-auto max-w-7xl px-4" data-scroll3d={(["enter-up", "depth", "enter-left", "enter-right"] as const)[i % 4]}>
+              <SectionRenderer section={s} index={i} introVisual={introVisual} pagePath={page.path} usedImages={usedImagesOnPage} />
+            </div>
+          </section>
+        ));
+      })()}
 
       {siblings && <SiblingGrid name={siblings.name} links={siblings.links} />}
 

@@ -39,15 +39,15 @@ export function FeatureExplorer({ tabs, items }: { tabs: string[]; items: Explor
         ))}
       </div>
       <div className="flex flex-wrap justify-center gap-5">
-        {shown.map((f, i) => (
-          <div key={f.title} className="anim-rise w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(25%-0.94rem)]" style={{ animationDelay: `${i * 0.06}s` }}>
+        {shown.map((f) => (
+          <div key={f.title} className="w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(25%-0.94rem)]">
             <Spotlight className="glass-panel card-fx group flex h-full flex-col justify-between rounded-2xl p-6 transition duration-300 hover:-translate-y-2">
               <div className="relative z-[2]">
                 <div className="mb-5 flex items-center justify-between">
                   <span className="grid h-12 w-12 place-items-center rounded-xl bg-accent-soft text-accent transition duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                     <Icon name={f.icon} className="h-6 w-6 transition-transform duration-300 group-hover:rotate-6" />
                   </span>
-                  <span className="rounded-full border border-accent/30 bg-accent-soft px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-accent-text">{f.meta}</span>
+                  <span className="rounded-full border border-accent/30 bg-accent-soft px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-accent-text">{f.meta}</span>
                 </div>
                 <h3 className="mb-2 font-heading text-lg font-bold transition-colors group-hover:text-accent-text">{f.title}</h3>
                 <p className="text-sm leading-relaxed text-muted">{f.body}</p>

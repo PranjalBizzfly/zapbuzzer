@@ -1,6 +1,7 @@
 import type { Section, VisualKind } from "@/content/types";
+import Image from "next/image";
 import { Visual } from "@/components/visuals/Visual";
-import { Avatar, Button, Eyebrow, SectionHeading } from "@/components/ui/primitives";
+import { Button, Eyebrow, SectionHeading } from "@/components/ui/primitives";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { Spotlight } from "@/components/motion/Spotlight";
 import { site } from "@/lib/site";
@@ -55,7 +56,112 @@ function FeatureCard({ icon, title, body, i, cols = 3 }: { icon: IconName; title
 /** Grid that keeps an odd last card spanning, like Sky9 does. */
 const spanLast = (i: number, n: number, cls: string) => (i === n - 1 && n % 2 !== 0 ? cls : "");
 
-export function SectionRenderer({ section, index, introVisual }: { section: Section; index: number; introVisual?: VisualKind }) {
+/**
+ * Shows a square 320px portrait inside a wide 16:10 frame without stretching it: the sharp portrait
+ * sits centred at the frame's height, over a soft blurred copy that fills the sides (decorative).
+ */
+function PortraitFill({ src, alt, hoverZoom = false }: { src: string; alt: string; hoverZoom?: boolean }) {
+  return (
+    <>
+      <Image src={src} alt="" aria-hidden fill sizes="64px" className="scale-125 object-cover opacity-70 blur-2xl" />
+      <div className="absolute inset-y-0 left-1/2 aspect-square -translate-x-1/2">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 640px) 62vw, 270px"
+          className={`object-cover ${hoverZoom ? "transition-transform duration-700 ease-out group-hover:scale-105" : ""}`}
+        />
+      </div>
+    </>
+  );
+}
+
+/** Dedicated unique avatar images for specific pages and sections (strictly 1 usage per image across the website). */
+export function getDedicatedAudienceImage(pagePath?: string, role?: string): { src: string; alt: string } | null {
+  const p = (pagePath || "").toLowerCase();
+  const r = (role || "").toLowerCase();
+
+  // /solutions/pantry -> Raj (Audience: "Pantry staff" only)
+  if (p === "solutions/pantry" && r === "pantry staff") {
+    return {
+      src: "/images/avatar-raj.webp",
+      alt: "Portrait of Raj from the pantry team, smiling in a navy apron at the office coffee counter",
+    };
+  }
+
+  // /solutions/print-room -> Kavya (Audience: "Sales teams" only)
+  if (p === "solutions/print-room" && r === "sales teams") {
+    return {
+      src: "/images/avatar-kavya.webp",
+      alt: "Portrait of Kavya from sales, smiling in a green blazer at a desk in an open-plan office",
+    };
+  }
+
+  // /solutions/facilities -> Deepak (Audience: "Admin head" only)
+  if (p === "solutions/facilities" && r === "admin head") {
+    return {
+      src: "/images/avatar-deepak.webp",
+      alt: "Portrait of Deepak, the admin head, in a light blue shirt in the office facilities and admin area",
+    };
+  }
+
+  // /solutions/courier -> Neha (Audience: "Receptionists" only)
+  if (p === "solutions/courier" && r === "receptionists") {
+    return {
+      src: "/images/avatar-neha.webp",
+      alt: "Portrait of Neha, the reception lead, standing at the front desk in a blue blazer",
+    };
+  }
+
+  return null;
+}
+
+export function getDedicatedScenarioImage(pagePath?: string, persona?: string): { src: string; alt: string } | null {
+  const p = (pagePath || "").toLowerCase();
+  const per = (persona || "").toLowerCase();
+
+  // /mobile-app -> Tanvi (Scenario: Tanvi only)
+  if (p === "mobile-app" && per.includes("tanvi")) {
+    return {
+      src: "/images/avatar-tanvi.webp",
+      alt: "Portrait of Tanvi from the design team, smiling at her desk in a modern office",
+    };
+  }
+
+  // /use-cases/office-manager -> Priya (Scenario: Priya only)
+  if (p === "use-cases/office-manager" && per.includes("priya")) {
+    return {
+      src: "/images/avatar-priya.webp",
+      alt: "Portrait of Priya, the office manager, in a grey blazer in an open-plan office",
+    };
+  }
+
+  // /use-cases/improve-response-time -> Om (Scenario: Om only)
+  if (p === "use-cases/improve-response-time" && per.includes("om")) {
+    return {
+      src: "/images/avatar-om.webp",
+      alt: "Portrait of Om, an engineer, smiling in front of rows of developer workstations",
+    };
+  }
+
+  return null;
+}
+
+export function SectionRenderer({
+  section,
+  index,
+  introVisual,
+  pagePath,
+  usedImages,
+}: {
+  section: Section;
+  index: number;
+  introVisual?: VisualKind;
+  pagePath?: string;
+  usedImages?: Set<string>;
+}) {
+  const pageUsed = usedImages ?? new Set<string>();
   const headProps = { eyebrow: badgeFor[section.type], typewriter: true };
 
   switch (section.type) {
@@ -85,12 +191,25 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
                 </div>
               )}
               <div className="pt-2">
-                <Button href={site.app.signUp}>Start free — 14-day trial</Button>
+                <Button href={site.app.signUp}>Start free 14-day trial</Button>
               </div>
             </div>
             <div data-reveal style={delay(1)} className="relative">
-              <div className="glass-panel rounded-3xl p-3 shadow-2xl">
-                <div className="rounded-2xl bg-surface-2/60 p-4 sm:p-6">
+              <div className="glass-panel group relative overflow-hidden rounded-3xl border border-line bg-surface/80 p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
+                <div className="mb-4 flex items-center justify-between border-b border-line pb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="flex gap-1.5" aria-hidden>
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+                    </span>
+                    <span className="truncate text-xs font-semibold text-muted">ZapBuzzer Operational Flow</span>
+                  </div>
+                  <span className="shrink-0 inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live System
+                  </span>
+                </div>
+                <div className="rounded-2xl bg-surface-2/60 p-3.5 sm:p-4">
                   <Visual kind={introVisual ?? "request-timeline"} />
                 </div>
               </div>
@@ -122,8 +241,8 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
       );
     }
 
-    case "problem-solution":
-      // Sky9 Mission / Vision: two large side-by-side cards.
+    case "problem-solution": {
+      // Sky9 Mission / Vision: two large side-by-side cards with modern workplace visual accent.
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} intro={section.intro} />
@@ -133,6 +252,18 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
               { t: section.solution.title, pts: section.solution.points, icon: "check" as IconName, bad: false },
             ].map((c, i) => (
               <div key={c.t} data-reveal style={delay(i, 2)} className={`glass-panel rounded-3xl p-7 sm:p-9 ${c.bad ? "" : "border-accent/40"}`}>
+                {!c.bad && (
+                  <div className="mb-6 flex items-center justify-between rounded-xl border border-accent/25 bg-accent-soft/60 px-4 py-2.5 text-xs font-semibold text-accent-text">
+                    <span className="flex items-center gap-2">
+                      <Icon name="sparkles" className="h-4 w-4 text-accent" />
+                      <span>With ZapBuzzer · Automated & Silent</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-medium">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      Optimized
+                    </span>
+                  </div>
+                )}
                 <span className={`mb-6 grid h-12 w-12 place-items-center rounded-xl ${c.bad ? "bg-[oklch(60%_0.2_20/0.12)] text-danger" : "bg-accent-soft text-accent"}`}>
                   <Icon name={c.icon} className="h-6 w-6" strokeWidth={2.4} />
                 </span>
@@ -150,6 +281,7 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
           </div>
         </div>
       );
+    }
 
     case "features":
       return (
@@ -176,7 +308,7 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
                 <span className="mb-5 grid h-10 w-10 place-items-center rounded-lg bg-accent-soft font-heading font-bold text-accent-text transition-colors group-hover:bg-accent group-hover:text-white">
                   {i + 1}
                 </span>
-                <h3 className="mb-2 font-heading text-lg font-bold">{s.title}</h3>
+                <h3 className="mb-2 font-heading text-lg font-bold">{s.title.replace(/^\d+[.)]\s*/, "")}</h3>
                 <p className="text-sm leading-relaxed text-muted">{s.body}</p>
               </li>
             ))}
@@ -184,24 +316,53 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
         </div>
       );
 
-    case "scenario":
+    case "scenario": {
+      const candidateScenarioImg = getDedicatedScenarioImage(pagePath, section.persona);
+      const scenarioImg = candidateScenarioImg && !pageUsed.has(candidateScenarioImg.src) ? candidateScenarioImg : null;
+      if (scenarioImg) {
+        pageUsed.add(scenarioImg.src);
+      }
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} intro={section.setting} />
-          <div data-reveal className="relative overflow-hidden rounded-3xl border border-accent/20 bg-gradient-to-br from-ink via-ink to-[#1b1d55] p-6 text-white sm:p-10">
+          <div data-reveal className="relative overflow-hidden rounded-3xl border border-accent/20 bg-gradient-to-br from-ink via-ink to-[#1b1d55] p-6 text-white shadow-2xl sm:p-10">
             <div className="orb -left-24 -top-24 h-72 w-72 bg-accent/35" aria-hidden />
-            <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-12">
-              <div className="space-y-5 lg:col-span-4">
-                <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-                  <Avatar name={section.persona} size="h-12 w-12 text-base" />
-                  <p className="font-heading font-bold">{section.persona}</p>
+            <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+              <div className="space-y-4 lg:col-span-5">
+                <div className="overflow-hidden rounded-2xl border border-white/15 bg-white/5 backdrop-blur-md shadow-lg">
+                  {scenarioImg ? (
+                    <div className="relative aspect-[16/10] w-full overflow-hidden">
+                      <PortraitFill src={scenarioImg.src} alt={scenarioImg.alt} />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                      <div className="absolute bottom-2.5 left-3 flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-black/75 px-2.5 py-1 text-[11px] font-semibold text-emerald-300 backdrop-blur-md">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        <span>Active Workplace Scenario</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-3.5 border-b border-white/10 p-5 bg-white/[0.04]">
+                      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-accent-2/30 bg-accent/30 font-heading font-bold text-accent-2">
+                        <Icon name="users" className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" /> Verified Scenario
+                        </span>
+                        <p className="font-heading text-lg font-bold text-white">{section.persona}</p>
+                      </div>
+                    </div>
+                  )}
+                  <div className="p-4 sm:p-5">
+                    {scenarioImg && <p className="font-heading text-lg font-bold text-white">{section.persona}</p>}
+                    <p className={`${scenarioImg ? "mt-1" : ""} text-xs leading-relaxed text-white/70`}>{section.setting}</p>
+                  </div>
                 </div>
-                <p className="rounded-2xl border border-accent-2/30 bg-accent/20 p-5 text-sm leading-relaxed text-white/90 sm:text-base">
+                <div className="rounded-2xl border border-accent-2/30 bg-accent/20 p-4 sm:p-5 text-sm leading-relaxed text-white/90">
                   <span className="font-bold text-accent-2">Outcome: </span>
                   {section.outcome}
-                </p>
+                </div>
               </div>
-              <ol className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-8">
+              <ol className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-7">
                 {section.timeline.map((t, i) => (
                   <li key={i} className="flex gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4 transition duration-300 hover:border-accent-2/40 hover:bg-white/[0.07]">
                     <span className="h-fit shrink-0 rounded-md bg-accent/30 px-2 py-1 font-mono text-[11px] font-bold tabular-nums text-accent-2">{t.time}</span>
@@ -213,6 +374,7 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
           </div>
         </div>
       );
+    }
 
     case "visual": {
       const flip = index % 2 === 1;
@@ -236,7 +398,20 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
             )}
           </div>
           <div data-reveal style={delay(1)} className={`min-w-0 ${flip ? "lg:order-1" : ""}`}>
-            <div className="glass-panel rounded-2xl p-5 sm:p-6">
+            <div className="glass-panel group overflow-hidden rounded-3xl border border-line bg-surface/90 p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
+              <div className="mb-4 flex items-center justify-between border-b border-line pb-3">
+                <div className="flex items-center gap-2">
+                  <span className="flex gap-1.5" aria-hidden>
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+                  </span>
+                  <span className="truncate text-xs font-semibold text-muted">ZapBuzzer Workplace Terminal</span>
+                </div>
+                <span className="shrink-0 inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live Telemetry
+                </span>
+              </div>
               <Visual kind={section.visual} />
             </div>
           </div>
@@ -332,22 +507,48 @@ export function SectionRenderer({ section, index, introVisual }: { section: Sect
       );
 
     case "audience":
-      // Sky9 people cards: avatar header, role, benefit.
+      // Sky9 practitioner / people cards: photo banner on designated hub, icon tile on all others.
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} />
           <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${section.items.length % 3 === 0 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
-            {section.items.map((a, i) => (
-              <div key={a.role} data-reveal style={delay(i, 4)} className="glass-panel card-fx group overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1.5">
-                <div className="grid h-28 place-items-center bg-gradient-to-br from-accent/25 via-violet/15 to-fuchsia/15">
-                  <Avatar name={a.role} size="h-16 w-16 text-2xl ring-4 ring-surface" />
+            {section.items.map((a, i) => {
+              const candidateImg = getDedicatedAudienceImage(pagePath, a.role);
+              const dedicatedImg = candidateImg && !pageUsed.has(candidateImg.src) ? candidateImg : null;
+              if (dedicatedImg) {
+                pageUsed.add(dedicatedImg.src);
+              }
+              return (
+                <div key={a.role} data-reveal style={delay(i, 4)} className="glass-panel card-fx group overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1.5 hover:border-accent/50">
+                  {dedicatedImg ? (
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-2">
+                      <PortraitFill src={dedicatedImg.src} alt={dedicatedImg.alt} hoverZoom />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                      <div className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-black/70 px-2.5 py-1 text-[11px] font-semibold text-emerald-300 backdrop-blur-md">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        <span>Verified Workplace Role</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-3.5 border-b border-line bg-surface-2/60 p-5">
+                      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-accent/20 bg-accent-soft text-accent shadow-sm transition duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                        <Icon name={icons[i % icons.length]} className="h-6 w-6" />
+                      </span>
+                      <div>
+                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" /> Verified Role
+                        </span>
+                        <h3 className="font-heading text-base font-bold transition-colors group-hover:text-accent-text">{a.role}</h3>
+                      </div>
+                    </div>
+                  )}
+                  <div className="p-5 sm:p-6">
+                    {dedicatedImg && <h3 className="font-heading text-lg font-bold transition-colors group-hover:text-accent-text">{a.role}</h3>}
+                    <p className={`${dedicatedImg ? "mt-2" : ""} text-sm leading-relaxed text-muted`}>{a.benefit}</p>
+                  </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-heading text-lg font-bold transition-colors group-hover:text-accent-text">{a.role}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted">{a.benefit}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       );

@@ -5,9 +5,9 @@ import { Avatar, StatusPill, type Status } from "@/components/ui/primitives";
 
 const steps: { status: Status; label: string; note: string }[] = [
   { status: "new", label: "Buzzed", note: "Aarav · Boss Cabin" },
-  { status: "pinging", label: "Pinging pantry", note: "App · Telegram · WhatsApp · Email" },
-  { status: "accepted", label: "Raj accepted", note: "First to tap · 12s" },
-  { status: "started", label: "On the way", note: "ETA 3 min" },
+  { status: "pinging", label: "Pinging Pantry", note: "App · Telegram · WhatsApp · Email" },
+  { status: "accepted", label: "Arjun Accepted", note: "First to tap · 12s" },
+  { status: "started", label: "On the Way", note: "ETA 3 min" },
   { status: "delivered", label: "Delivered", note: "Rated ★★★★★" },
 ];
 
@@ -46,7 +46,7 @@ export function LiveRequest() {
         </ol>
         <div className="mt-4 flex items-center justify-between rounded-2xl bg-surface-2 px-3.5 py-3" aria-live="polite">
           <div className="flex items-center gap-2.5">
-            {i >= 2 ? <Avatar name="Raj" /> : <span className="grid h-8 w-8 place-items-center rounded-full bg-surface text-sm" aria-hidden>🔔</span>}
+            {i >= 2 ? <Avatar name="Arjun" /> : <span className="grid h-8 w-8 place-items-center rounded-full bg-surface text-sm" aria-hidden>🔔</span>}
             <div>
               <p className="text-sm font-semibold">{s.label}</p>
               <p className="text-xs text-muted">{s.note}</p>
@@ -64,7 +64,7 @@ export function LiveRequest() {
         ].map(([e, l]) => (
           <div key={l} className="rounded-2xl border border-line bg-surface/90 px-1 py-2.5 shadow-card">
             <span aria-hidden>{e}</span>
-            <p className="text-[10px] font-medium text-muted">{l}</p>
+            <p className="text-[11px] font-medium text-muted">{l}</p>
           </div>
         ))}
       </div>

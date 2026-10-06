@@ -6,11 +6,11 @@ import type { IndexedPage } from "@/lib/pageIndex";
 import { Icon } from "@/components/ui/Icon";
 
 const startHere = [
-  { href: "/product", label: "Product overview" },
-  { href: "/features", label: "Every feature in the app" },
-  { href: "/solutions/pantry", label: "Solutions" },
+  { href: "/overview", label: "Overview" },
+  { href: "/features", label: "Features" },
+  { href: "/solutions/pantry", label: "Pantry" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/resources", label: "Resources" },
+  { href: "/resource-hub", label: "Resource Hub" },
 ];
 
 let cache: IndexedPage[] | null = null;
@@ -101,7 +101,7 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
               setActive(0);
             }}
             placeholder="Search features, solutions, guides…"
-            aria-label="Search pages"
+            aria-label="Search Pages"
             className="min-w-0 flex-1 bg-transparent text-base text-fg outline-none placeholder:text-muted"
           />
           <button type="button" onClick={onClose} className="rounded-lg border border-line px-2 py-1 text-xs font-semibold text-muted hover:text-fg">
@@ -137,10 +137,10 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
           <p className="px-3 pb-1 pt-3 text-xs text-muted">Type to search every page on the site. Use ↑ ↓ to move, Enter to open.</p>
         </div>
 
-        <button type="button" onClick={() => go("/explore")} className="flex w-full items-center justify-between border-t border-line bg-surface-2/70 px-5 py-4 text-left transition-colors hover:bg-accent-soft">
+        <button type="button" onClick={() => go("/explore-all-pages")} className="flex w-full items-center justify-between border-t border-line bg-surface-2/70 px-5 py-4 text-left transition-colors hover:bg-accent-soft">
           <span className="flex items-center gap-3 font-semibold">
             <Icon name="grid" className="h-4 w-4 text-accent" />
-            Explore all pages
+            Explore All Pages
           </span>
           <span className="flex items-center gap-2 text-sm text-muted">
             {total} pages

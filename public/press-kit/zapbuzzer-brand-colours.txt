@@ -1,0 +1,21 @@
+ZAPBUZZER — BRAND COLOURS
+Source: zapbuzzer.com/press-kit
+
+LOGO (app icon)
+  Logo blue        #0E3E9F   RGB 14 62 159
+  Bell orange      #FB800A   RGB 251 128 10
+  Bell off-white   #F0F4F7   RGB 240 244 247
+
+WEBSITE INTERFACE
+  Indigo accent    #5C5FE6   RGB 92 95 230     (oklch 56% 0.2 277)
+  Indigo text      #4446AA   RGB 68 70 170
+  Violet           #8B5CF6   RGB 139 92 246
+  Fuchsia          #D946EF   RGB 217 70 239
+  Ink (dark)       #0B0E1A   RGB 11 14 26
+  Text             #141627   RGB 20 22 39
+  Light accent     #A5A8FF   RGB 165 168 255   (accent on dark backgrounds)
+
+TYPEFACES (website)
+  Headings: Poppins (600/700/800)
+  Body: Inter
+Both are open-source fonts available from Google Fonts.

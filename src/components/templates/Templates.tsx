@@ -12,9 +12,9 @@ export const plans = [
     price: "₹0",
     unit: "no expiry",
     href: site.app.signUp,
-    cta: "Create a free workspace",
+    cta: "Create a Free Workspace",
     features: ["A team of up to 10 people", "One office location", "Web app and Android app", "Alerts by email", "30 days of request history"],
-    more: "/pricing/free",
+    more: "/pricing/free-plan",
   },
   {
     name: "Pro",
@@ -22,20 +22,20 @@ export const plans = [
     price: "₹99",
     unit: "per seat, monthly",
     href: site.app.signUpPro,
-    cta: "Try Pro for 14 days",
+    cta: "Try Pro for 14 Days",
     popular: true,
     features: ["No cap on team size", "Several offices in one account", "Alerts on Telegram and WhatsApp too", "Deadlines with a manager escalation chain", "Complete analytics and staff scorecards", "Audit trail and reporting"],
-    more: "/pricing/pro",
+    more: "/pricing/pro-plan",
   },
   {
     name: "Enterprise",
     tagline: "Built for business groups and facility operators",
     price: "Quoted",
     unit: "to fit your rollout",
-    href: "/contact",
-    cta: "Talk to our team",
+    href: "/contact-us",
+    cta: "Talk to Our Team",
     features: ["Company sign-in via SSO and SAML", "Your brand on your own domain", "REST API and webhooks", "A named customer success manager", "Option to host on your own servers"],
-    more: "/pricing/enterprise",
+    more: "/pricing/enterprise-plan",
   },
 ];
 
@@ -78,7 +78,7 @@ export function PricingCards() {
             <Button href={p.href} variant={p.popular ? "primary" : "secondary"} className="mt-8 w-full">
               {p.cta}
             </Button>
-            <Link href={p.more} className="mt-3 text-center text-sm font-medium text-muted transition-colors hover:text-accent-text">
+            <Link href={p.more} className="tap mt-3 text-center text-sm font-medium text-muted transition-colors hover:text-accent-text">
               {p.name} plan details →
             </Link>
           </div>
@@ -100,7 +100,7 @@ export function ContactBlock() {
             <IconChip name="mail" className="h-11 w-11" iconClass="h-5 w-5" />
             <div className="min-w-0">
               <p className="text-sm text-muted">Email</p>
-              <a href={`mailto:${site.email}`} className="break-all text-lg font-semibold text-accent-text hover:underline">{site.email}</a>
+              <a href={`mailto:${site.email}`} className="tap break-all text-lg font-semibold text-accent-text hover:underline">{site.email}</a>
             </div>
           </div>
           <div className="group flex items-start gap-4 border-t border-line pt-5">
@@ -119,7 +119,7 @@ export function ContactBlock() {
           <div className="orb -right-12 -top-12 h-40 w-40 bg-accent/50" aria-hidden />
           <p className="relative font-heading font-semibold">Prefer to explore on your own?</p>
           <p className="relative mt-1 text-sm text-white/70">A sample workspace is open to browse in view-only mode, no account required.</p>
-          <a href={site.app.demo} className="group relative mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#b9bbff]">
+          <a href={site.app.demo} className="tap group relative mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#b9bbff]">
             Open the sample workspace
             <Icon name="arrowRight" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
@@ -140,7 +140,7 @@ export function AuthPanel({ mode }: { mode: "signin" | "signup" }) {
         <span className="mx-auto mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-accent via-violet to-fuchsia text-white shadow-card" aria-hidden>
           <Icon name="bolt" className="h-7 w-7" />
         </span>
-        <h2 className="font-heading text-2xl font-extrabold">{signin ? "Welcome back" : "Start your 14-day free trial"}</h2>
+        <h2 className="font-heading text-2xl font-extrabold">{signin ? "Welcome Back" : "Start Your 14-day Free Trial"}</h2>
         <p className="mt-2 text-muted">
           {signin
             ? "Sign in to your ZapBuzzer workspace on the web. Staff can also sign in from the Android app."
@@ -154,9 +154,9 @@ export function AuthPanel({ mode }: { mode: "signin" | "signup" }) {
         </div>
         <p className="mt-6 text-sm text-muted">
           {signin ? (
-            <>New to ZapBuzzer? <Link href="/sign-up" className="font-semibold text-accent-text hover:underline">Create an account</Link></>
+            <>New to ZapBuzzer? <Link href="/sign-up" className="font-semibold text-accent-text hover:underline">Sign Up</Link></>
           ) : (
-            <>Already have a workspace? <Link href="/sign-in" className="font-semibold text-accent-text hover:underline">Sign in</Link></>
+            <>Already have a workspace? <Link href="/sign-in" className="font-semibold text-accent-text hover:underline">Sign In</Link></>
           )}
         </p>
       </div>
@@ -176,7 +176,7 @@ export function SitemapList() {
           <ul className="mt-3 space-y-2">
             {g.pages.map(([p, l]) => (
               <li key={p}>
-                <Link href={`/${p}`} className="group inline-flex items-center gap-1 text-[15px] text-fg/80 transition-colors hover:text-accent-text">
+                <Link href={`/${p}`} className="tap group inline-flex items-center gap-1 text-[15px] text-fg/80 transition-colors hover:text-accent-text">
                   {l}
                   <Icon name="arrowRight" className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
                 </Link>

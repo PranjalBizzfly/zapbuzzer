@@ -6,8 +6,8 @@ export const pages: PageContent[] = [
     path: "solutions/it-support",
     title: "Office IT Support Requests for Everyday Fixes",
     description:
-      "ZapBuzzer gives your IT desk one place for quick office asks: projector stuck, HDMI missing, meeting room not working. One tap, first accept owns it, every request timed.",
-    h1: "The quick IT asks that never deserved a ticket, handled in seconds",
+      "ZapBuzzer gives your IT desk one place for quick office asks: projector stuck, HDMI missing, meeting room down. One tap, first to accept owns it, all timed.",
+    h1: "The Quick IT Asks That Never Deserved a Ticket, Handled in Seconds",
     eyebrow: "IT Support",
     lead:
       "Most IT requests in an office are small and urgent: the projector in Conference Room B won’t wake up, someone needs an HDMI cable before a client call, a mouse has died. ZapBuzzer turns each of those into one tap that pings the whole IT desk at once, and the first person free owns it.",
@@ -23,19 +23,19 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        eyebrow: "Where ZapBuzzer fits",
-        heading: "Built for the ask-in-the-corridor kind of IT work",
+        eyebrow: "Where ZapBuzzer Fits",
+        heading: "Built for the Ask-in-the-Corridor Kind of IT Work",
         paragraphs: [
-          "Every office has two kinds of IT work. There is the long-running kind: laptop provisioning projects, network changes, licence audits, incidents that need investigation and a written root cause. Then there is the five-minute kind: “the projector isn’t showing my laptop”, “can someone bring a USB-C adapter to the 4th floor”, “the room display is frozen and the board meets at 11”. The second kind is where most daily friction lives, and it usually travels by phone call, WhatsApp message or a shout across the floor.",
-          "ZapBuzzer is designed for that second kind. It is an internal-request tool, not a full IT service management suite. It won’t replace an ITSM platform if you run change management, asset databases or problem records. What it does is make the quick asks fast, visible and accountable: the employee taps IT, picks what they need, adds a note and a location, and the IT desk is pinged immediately. Many teams run both side by side, with ZapBuzzer catching the corridor requests that would never make it into a formal ticket anyway.",
-          "The reason this matters is simple. Our founders started in a Pune office where IT tickets died in someone’s DMs. The request was made, nobody wrote it down, and the person who asked spent the meeting apologising to the client. Small IT requests have a short shelf life; if they aren’t picked up in minutes, they don’t matter any more.",
+          "Every office has two kinds of IT work. There is the long-running kind: setting up new laptops, network changes, licence checks, and problems that need investigating and a written report on the cause. Then there is the five-minute kind: “the projector isn’t showing my laptop”, “can someone bring a USB-C adapter to the 4th floor”, “the room display is frozen and the board meets at 11”. The second kind causes most of the daily hassle, and it usually travels by phone call, WhatsApp message or a shout across the floor.",
+          "ZapBuzzer is designed for that second kind. It is an internal-request tool, not a full IT service management (ITSM) system, the kind of software big IT teams use for formal tickets. It won’t replace one if you track planned changes, equipment records or long-running problems. What it does is make quick asks fast and clear, with one named person responsible. The employee taps IT, picks what they need, adds a note and a location, and the IT desk is pinged straight away. Many teams run both side by side, with ZapBuzzer catching the corridor requests that would never make it into a formal ticket anyway.",
+          "Here’s why it matters. Our founders started in a Pune office where IT tickets died in someone’s DMs. The request was made, nobody wrote it down, and the person who asked spent the meeting apologising to the client. Small IT requests have a short shelf life; if they aren’t picked up in minutes, they don’t matter any more.",
         ],
       },
       {
         type: "problem-solution",
-        heading: "What changes for the IT desk",
+        heading: "What Changes for the IT Desk",
         problem: {
-          title: "Without a request tool",
+          title: "Without a Request Tool",
           points: [
             "Asks arrive on personal phones, WhatsApp groups and in person, so nobody sees the full list.",
             "Two technicians walk to the same room while a third request goes unanswered.",
@@ -56,7 +56,7 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "staff-queue",
-        heading: "The IT desk sees one live queue",
+        heading: "The IT Desk Sees One Live Queue",
         body:
           "Technicians see open requests on their phone with what is needed, where, who asked and how long it has been waiting. Tapping Accept claims the job for them and tells everyone else it is taken.",
         points: [
@@ -67,51 +67,51 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "Explore IT support in ZapBuzzer",
+        heading: "Explore IT Support in ZapBuzzer",
         intro:
           "Each part of the IT setup has its own page with more detail. Start with whichever problem is loudest in your office.",
         items: [
           {
-            title: "IT request management",
+            title: "IT Request Management",
             body: "How quick IT asks are captured, queued, accepted and closed, and how admins keep the catalogue tidy. See solutions/it-support/request-management.",
           },
           {
-            title: "Projector support",
+            title: "Projector Support",
             body: "Getting someone to a stuck projector before the meeting starts, with ETA visible to the presenter. See solutions/it-support/projector-support.",
           },
           {
-            title: "HDMI and adapter requests",
+            title: "HDMI and Adapter Requests",
             body: "The most common two-minute IT ask in any office, made one tap. See solutions/it-support/hdmi-requests.",
           },
           {
-            title: "Meeting room IT support",
+            title: "Meeting Room IT Support",
             body: "Room-by-room help for displays, conferencing kits and cables before and during meetings. See solutions/it-support/meeting-room-support.",
           },
           {
-            title: "Hardware requests",
+            title: "Hardware Requests",
             body: "Spare mice, keyboards, chargers, headsets and loaners requested and delivered to the desk. See solutions/it-support/hardware-requests.",
           },
           {
-            title: "Software support requests",
+            title: "Software Support Requests",
             body: "Quick help with logins, installs and “it won’t open” moments, routed to whoever can sit with you. See solutions/it-support/software-requests.",
           },
           {
-            title: "IT ticket routing",
-            body: "How categories send each ask to the right IT team, and how first-accept-wins avoids double handling. See solutions/it-support/ticket-routing.",
+            title: "IT Ticket Routing",
+            body: "How categories send each ask to the right IT team, and how first-accept-wins (the first person to tap Accept owns the request) stops two people doing the same job. See solutions/it-support/ticket-routing.",
           },
           {
-            title: "IT SLA management",
-            body: "Deadlines per request and automatic escalation to a manager when a fix runs late (Pro). See solutions/it-support/sla.",
+            title: "IT SLA Management",
+            body: "An SLA is the time limit for finishing a request. Set one per request, and a fix that runs late is passed up (escalated) to a manager automatically (Pro). See solutions/it-support/sla.",
           },
           {
-            title: "IT support analytics",
+            title: "IT Support Analytics",
             body: "Accept times, on-time rate, ratings and the rooms that buzz most (Pro). See solutions/it-support/analytics.",
           },
         ],
       },
       {
         type: "scenario",
-        heading: "Tanvi’s missing HDMI cable",
+        heading: "Tanvi’s Missing HDMI Cable",
         persona: "Tanvi, Design",
         setting: "Client review at 3:00 in Conference Room B; the cable in the room is gone.",
         timeline: [
@@ -126,7 +126,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "How an IT request moves",
+        heading: "How an IT Request Moves",
         steps: [
           { title: "Tap", body: "The employee picks an IT item from the catalogue, adds a note and location, and taps Buzz." },
           { title: "Ping", body: "Everyone on the IT team is notified at once, and the ping repeats until someone accepts." },
@@ -137,58 +137,61 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "ZapBuzzer or a full ITSM platform?",
+        heading: "ZapBuzzer or a Full ITSM Platform?",
         intro:
           "They solve different problems. Use this to decide where ZapBuzzer fits in your setup.",
-        columns: ["Full ITSM platform", "ZapBuzzer"],
+        columns: ["Full ITSM Platform", "ZapBuzzer"],
         rows: [
-          { label: "Best for", a: "Incidents, changes, asset records, formal processes", b: "Quick in-office asks that need someone physically there in minutes" },
-          { label: "Raising a request", a: "Form with fields, category trees and priority", b: "One tap from a catalogue, plus an optional note" },
-          { label: "Who picks it up", a: "Assigned by a dispatcher or queue rules", b: "Whole team pinged; first to accept owns it" },
+          { label: "Best For", a: "Incidents, changes, asset records, formal processes", b: "Quick in-office asks that need someone physically there in minutes" },
+          { label: "Raising a Request", a: "Form with fields, category trees and priority", b: "One tap from a catalogue, plus an optional note" },
+          { label: "Who Picks It Up", a: "Assigned by a dispatcher or queue rules", b: "Whole team pinged; first to accept owns it" },
           { label: "Setup", a: "Often weeks, sometimes with consultants", b: "Live within one afternoon, with no setup fees" },
-          { label: "Also covers", a: "IT only", b: "Pantry, print room, facilities and courier in the same app" },
+          { label: "Also Covers", a: "IT only", b: "Pantry, print room, facilities and courier in the same app" },
         ],
       },
       {
         type: "stats",
-        heading: "Results from the first month in pilot offices",
+        heading: "Results From the First Month in Pilot Offices",
         items: [
-          { value: "32s", label: "average accept time" },
-          { value: "96%", label: "on-time delivery" },
-          { value: "−87%", label: "phone calls" },
-          { value: "4.8★", label: "average staff rating" },
+          { value: "32s", label: "Average Accept Time" },
+          { value: "96%", label: "On-Time Delivery" },
+          { value: "−87%", label: "Phone Calls" },
+          { value: "4.8★", label: "Average Staff Rating" },
         ],
         note: "Figures from ZapBuzzer pilot offices across all request types, not IT alone.",
       },
       {
         type: "callout",
         tone: "info",
-        title: "Which plan do I need?",
+        title: "Which Plan Do I Need?",
         body:
-          "Free covers up to 10 staff in one location with email notifications and 30 days of history, which is enough to trial an IT desk. Telegram and WhatsApp pings, SLA deadlines with escalation chains, full analytics and audit reports are on Pro at ₹99 per seat per month.",
+          "Free covers up to 10 staff in one location with email notifications and 30 days of history, which is enough to trial an IT desk. Telegram and WhatsApp pings, SLA deadlines (time limits) with escalation chains, full analytics and audit reports are on Pro at ₹99 per seat per month.",
       },
     ],
     faqs: [
       {
-        q: "Is ZapBuzzer an IT helpdesk or ITSM replacement?",
+        q: "Does ZapBuzzer Replace an IT Helpdesk or ITSM Tool?",
         a: "No. ZapBuzzer handles quick internal asks like projectors, cables and meeting room help, where speed matters more than forms. If you run incident, change or asset management, keep your ITSM tool for that and use ZapBuzzer for the corridor requests.",
       },
       {
-        q: "Can the IT team share ZapBuzzer with pantry and facilities?",
+        q: "Can the IT Team Share ZapBuzzer With Pantry and Facilities?",
         a: "Yes. One workspace covers IT, pantry, print room, facilities and courier. Each request is routed only to the team that handles that category, so IT never sees coffee orders.",
       },
       {
-        q: "What happens if nobody on IT accepts a request?",
-        a: "Notifications repeat until someone accepts. On Pro, an SLA deadline is attached and overdue requests auto-escalate to a manager.",
+        q: "What Happens If Nobody on IT Accepts a Request?",
+        a: "Notifications repeat until someone accepts. On Pro, each request also gets an SLA deadline (a time limit), and overdue requests escalate to a manager automatically.",
       },
       {
-        q: "Do technicians need a laptop to use it?",
+        q: "Do Technicians Need a Laptop to Use It?",
         a: "No. Most IT staff use the Android app, which rings through even on silent and lets them accept, start and deliver requests on the move. A web app is also available.",
       },
       {
-        q: "How long does setup take for an IT desk?",
+        q: "How Long Does Setup Take for an IT Desk?",
         a: "Most offices are running in an afternoon. Add your IT staff, set up a few catalogue items such as HDMI cable or projector help, and share the app with employees.",
       },
+      { q: "How Does an Employee Raise an IT Request?", a: "They open the app, tap an IT item such as HDMI cable or projector help, choose the room, add a short note and tap Buzz. The whole IT desk is pinged and the employee sees who accepted and their ETA." },
+      { q: "Which Channels Does the IT Team Get Pinged On?", a: "The app, Telegram, WhatsApp and email, all at the same time, repeating until someone accepts. Free includes email notifications; Telegram and WhatsApp pings come with Pro." },
+      { q: "How Much Does ZapBuzzer Cost for an IT Team?", a: "Free covers up to 10 staff at one location. Pro is ₹99 per seat per month with unlimited staff, SLA escalation and full analytics, and there is a 14-day free trial with no credit card." },
     ],
     related: [
       "solutions/it-support/projector-support",
@@ -201,21 +204,21 @@ export const pages: PageContent[] = [
       "pricing",
     ],
     cta: {
-      title: "Give your IT desk one queue this afternoon",
+      title: "Give Your IT Desk One Queue This Afternoon",
       body: "Start the 14-day free trial, add your technicians and put HDMI and projector help one tap away. No credit card needed.",
     },
   },
 
   // ───────────────────────── REQUEST MANAGEMENT ─────────────────────────
   {
-    path: "solutions/it-support/request-management",
+    path: "solutions/it-support/it-request-management",
     title: "IT Request Management for Quick Office Fixes",
     description:
-      "Capture, queue and close small IT requests in one place. ZapBuzzer gives IT staff a live list, owners a timed record, and employees a clear answer to “is anyone coming?”",
-    h1: "Keep every small IT ask in one list, from tap to rating",
+      "Capture, queue and close small IT requests in one place. IT staff get a live list, owners get a timed record, and employees get an answer to “is anyone coming?”",
+    h1: "Keep Every Small IT Ask in One List, From Tap to Rating",
     eyebrow: "IT Support",
     lead:
-      "IT request management in ZapBuzzer is deliberately lightweight. Employees request from a short catalogue, the IT team works from one live queue, and every request carries its own timer, owner and outcome.",
+      "IT request management in ZapBuzzer is kept simple on purpose. Employees request from a short catalogue, the IT team works from one live queue, and every request carries its own timer, owner and outcome.",
     keywords: [
       "it request management",
       "manage office it requests",
@@ -227,16 +230,16 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Managing requests, not tickets",
+        heading: "Managing Requests, Not Tickets",
         paragraphs: [
-          "A request in ZapBuzzer is smaller than a ticket in a helpdesk. It has what was asked for, a note, a destination, who asked, who accepted and a set of timestamps. That’s enough to get a technician to the right room and to measure how long it took. It isn’t trying to hold diagnostics, linked incidents or change approvals.",
+          "A request in ZapBuzzer is smaller than a ticket in a helpdesk. It has what was asked for, a note, a destination, who asked, who accepted and a set of timestamps. That’s enough to get a technician to the right room and to measure how long it took. It doesn’t try to hold fault reports, linked incidents or change approvals.",
           "Keeping it small is what makes it work for everyday IT. An employee with a meeting in ten minutes will tap a button. They won’t fill in a six-field form. And an IT team juggling a dozen asks an hour needs a list they can glance at on a phone, not a console.",
         ],
       },
       {
         type: "visual",
         visual: "request-dashboard",
-        heading: "One dashboard for the whole IT queue",
+        heading: "One Dashboard for the Whole IT Queue",
         body:
           "Admins and IT leads see live requests with status, owner and age. Anything still waiting stands out, and you can see at a glance who is busy and which rooms have open issues.",
         points: [
@@ -247,7 +250,7 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The life of a managed IT request",
+        heading: "The Life of a Managed IT Request",
         steps: [
           { title: "Captured", body: "An employee picks an item such as “Projector help” or “Spare charger”, adds a note and taps Buzz. The request is created with a timestamp." },
           { title: "Queued", body: "It appears in the IT queue and pings every IT team member until someone accepts." },
@@ -258,17 +261,17 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "Tools for whoever runs the IT desk",
+        heading: "Tools for Whoever Runs the IT Desk",
         items: [
-          { title: "A short IT catalogue", body: "Set up the handful of asks that make up most of your day: HDMI cable, projector help, room display, spare mouse, login help. Fewer, clearer items mean faster taps." },
-          { title: "Notes and destinations", body: "Every request carries where and what exactly, so technicians grab the right adapter before walking over." },
-          { title: "Request history", body: "See past requests by item, room, requester or technician. Free keeps 30 days; Pro keeps full history with reports." },
-          { title: "Roles and permissions", body: "Decide who can request, who can accept IT jobs and who can see reports. Every action is audit-logged." },
+          { title: "A Short IT Catalogue", body: "Set up the handful of asks that make up most of your day: HDMI cable, projector help, room display, spare mouse, login help. Fewer, clearer items mean faster taps." },
+          { title: "Notes and Destinations", body: "Every request carries where and what exactly, so technicians grab the right adapter before walking over." },
+          { title: "Request History", body: "See past requests by item, room, requester or technician. Free keeps 30 days; Pro keeps full history with reports." },
+          { title: "Roles and Permissions", body: "Decide who can request, who can accept IT jobs and who can see reports. Every action is audit-logged." },
         ],
       },
       {
         type: "scenario",
-        heading: "A Monday morning at the IT desk",
+        heading: "A Monday Morning at the IT Desk",
         persona: "Rohan, IT Lead",
         setting: "Two technicians, 140 staff across three floors, a client visit at 10.",
         timeline: [
@@ -278,22 +281,22 @@ export const pages: PageContent[] = [
           { time: "9:20", event: "Rohan checks the dashboard: nothing open, all three closed inside 15 minutes." },
         ],
         outcome:
-          "Rohan didn’t dispatch anything. The queue and first-accept-wins did the coordination, and he has timings for all three.",
+          "Rohan didn’t hand out any jobs. The queue did it: whoever accepted first owned each request. And he has timings for all three.",
       },
       {
         type: "metrics",
-        heading: "Numbers you can manage by",
-        intro: "Every request is timed, so these come for free once the team is using it. Full analytics is on Pro.",
+        heading: "Numbers You Can Manage By",
+        intro: "Every request is timed, so you get these numbers automatically once the team is using it. Full analytics is on Pro.",
         items: [
-          { metric: "Time to accept", meaning: "How long employees wait before someone owns their request." },
-          { metric: "Time to deliver", meaning: "Tap to fixed, the number the requester actually feels." },
-          { metric: "On-time rate", meaning: "Share of requests closed before their SLA deadline." },
+          { metric: "Time to Accept", meaning: "How long employees wait before someone owns their request." },
+          { metric: "Time to Deliver", meaning: "Tap to fixed, the number the requester actually feels." },
+          { metric: "On-Time Rate", meaning: "Share of requests closed before their SLA deadline (the time limit for each request)." },
           { metric: "Rating", meaning: "1–5★ from the requester, per technician and per item." },
         ],
       },
       {
         type: "checklist",
-        heading: "Before you go live",
+        heading: "Before You Go Live",
         items: [
           "List the ten IT asks you hear most often and make each one a catalogue item.",
           "Add every technician who walks to desks and rooms.",
@@ -305,21 +308,22 @@ export const pages: PageContent[] = [
     ],
     faqs: [
       {
-        q: "Can I import existing IT tickets into ZapBuzzer?",
-        a: "ZapBuzzer is built for new, short-lived requests rather than migrating ticket backlogs. Most teams start fresh with quick asks and keep their existing system for long-running work.",
+        q: "Can I Import Existing IT Tickets Into ZapBuzzer?",
+        a: "ZapBuzzer is built for new, short-lived requests, not for moving over a backlog of old tickets. Most teams start fresh with quick asks and keep their existing system for long-running work.",
       },
       {
-        q: "How many catalogue items should IT have?",
+        q: "How Many Catalogue Items Should IT Have?",
         a: "Start with five to ten. A short list makes requesting quick and keeps routing simple; you can add items later as patterns emerge.",
       },
       {
-        q: "Can a request be reassigned after it is accepted?",
+        q: "Can a Request Be Reassigned After It Is Accepted?",
         a: "The first person to accept owns the request, which is what keeps accountability clear. Admins can manage requests from the dashboard if something needs to change.",
       },
-      {
-        q: "How long is request history kept?",
-        a: "The Free plan keeps the last 30 days. Pro keeps full history along with audit logs and reports.",
-      },
+      { q: "How Far Back Can IT Look at Past Requests?", a: "The Free plan keeps the last 30 days of history. Pro adds audit logs and reports, so IT leads can review timings, owners and ratings across a longer period." },
+      { q: "What Does the IT Team’s Live Queue Show?", a: "Every open request with its item, room, note, owner if accepted, and how long it has been waiting. Technicians can see at a glance what is unclaimed and what is already in hand." },
+      { q: "Can a Technician Add a Photo When Closing an IT Request?", a: "Yes. A photo can be attached at delivery, which is useful for showing a reconnected display or a replaced cable. The requester then rates the work." },
+      { q: "How Is IT Request Management Different From a Helpdesk Ticket Queue?", a: "There are no long forms, and nobody has to sort tickets first. Employees pick from a short catalogue, the first technician free accepts, and each request is timed from tap to rating." },
+      { q: "Do Employees Get Updates as Their IT Request Progresses?", a: "Yes. They see who accepted, their photo and ETA, and when the request is started and delivered, so there is no need to call IT to check." },
     ],
     related: [
       "solutions/it-support",
@@ -331,7 +335,7 @@ export const pages: PageContent[] = [
       "free-trial",
     ],
     cta: {
-      title: "Put your IT queue in one place",
+      title: "Put Your IT Queue in One Place",
       body: "Try ZapBuzzer free for 14 days and see every IT request, owner and timing on one dashboard.",
     },
   },
@@ -341,8 +345,8 @@ export const pages: PageContent[] = [
     path: "solutions/it-support/projector-support",
     title: "Projector Support Requests Before Meetings Start",
     description:
-      "When the projector won’t show your laptop and the meeting starts in five minutes, one tap gets IT moving. See who is coming, their ETA, and a full record of room issues.",
-    h1: "Projector stuck? Get IT to the room before your guests sit down",
+      "Projector won’t show your laptop and the meeting starts in five minutes? One tap gets IT moving. See who is coming, their ETA, and a record of room issues.",
+    h1: "Projector Stuck? Get IT to the Room Before Your Guests Sit Down",
     eyebrow: "Projector Support",
     lead:
       "A projector that won’t wake up is a two-minute fix for IT and a disaster for the presenter. ZapBuzzer makes the ask one tap from inside the room, pings the IT team at once and shows the presenter exactly who is on the way.",
@@ -357,15 +361,15 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Why projector issues need speed, not paperwork",
+        heading: "Why Projector Issues Need Speed, Not Paperwork",
         paragraphs: [
-          "Projector problems almost always appear at the worst moment: when the laptop is plugged in and the client is walking down the corridor. The fix is usually simple, a wrong input source, a sleeping lamp, a loose cable, a resolution mismatch. What takes time is finding someone from IT who is free and getting them to the right room.",
-          "In most offices that means a phone call to whoever you know in IT, then a second call when they don’t pick up, then a walk to the IT room. ZapBuzzer removes the hunt. The presenter taps Projector help, picks the room, and every IT technician is pinged together. Whoever is closest accepts, and the presenter can focus on the meeting instead of the hunt.",
+          "Projector problems almost always appear at the worst moment: when the laptop is plugged in and the client is walking down the corridor. The fix is usually simple: a wrong input source, a sleeping lamp, a loose cable or the wrong resolution. What takes time is finding someone from IT who is free and getting them to the right room.",
+          "In most offices that means a phone call to whoever you know in IT, then a second call when they don’t pick up, then a walk to the IT room. ZapBuzzer removes the hunt. The presenter taps Projector help, picks the room, and every IT technician is pinged together. Whoever is closest accepts, and the presenter can focus on the meeting.",
         ],
       },
       {
         type: "scenario",
-        heading: "Board Room, 10:56, meeting at 11",
+        heading: "Board Room, 10:56, Meeting at 11",
         persona: "Aarav, CEO",
         setting: "Quarterly board meeting; the Board Room projector shows “No signal”.",
         timeline: [
@@ -380,7 +384,7 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "request-timeline",
-        heading: "The presenter always knows the status",
+        heading: "The Presenter Always Knows the Status",
         body:
           "From the moment of the tap, the requester sees the request move: buzzed, accepted, started with an ETA, delivered. No guessing whether IT got the message.",
         points: [
@@ -391,18 +395,18 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "What helps with projector requests",
+        heading: "What Helps With Projector Requests",
         items: [
-          { title: "Room as destination", body: "Each request carries the exact room, so nobody walks to Conference Room A when the problem is in B." },
-          { title: "Notes for context", body: "“No signal”, “HDMI only”, “presenting from iPad” lets the technician bring the right thing first time." },
-          { title: "Repeat pings", body: "If nobody accepts, the notification repeats so a projector request doesn’t sit unseen." },
-          { title: "Short SLA", body: "On Pro, give projector help a tight deadline. If it runs over, it escalates to the IT lead automatically." },
+          { title: "Room as Destination", body: "Each request carries the exact room, so nobody walks to Conference Room A when the problem is in B." },
+          { title: "Notes for Context", body: "“No signal”, “HDMI only”, “presenting from iPad” lets the technician bring the right thing first time." },
+          { title: "Repeat Pings", body: "If nobody accepts, the notification repeats so a projector request doesn’t sit unseen." },
+          { title: "Short SLA", body: "An SLA is a time limit for the request. On Pro, give projector help a tight one. If it runs over, it goes to the IT lead automatically." },
         ],
       },
       {
         type: "table",
-        heading: "Common projector asks and what to put in the note",
-        headers: ["Problem", "Helpful note", "Typical fix"],
+        heading: "Common Projector Asks and What to Put in the Note",
+        headers: ["Problem", "Helpful Note", "Typical Fix"],
         rows: [
           ["No signal", "Device and port, e.g. “MacBook, USB-C”", "Input source or adapter"],
           ["Projector won’t turn on", "Any lights on the unit?", "Power, remote batteries, lamp"],
@@ -412,23 +416,23 @@ export const pages: PageContent[] = [
       },
       {
         type: "metrics",
-        heading: "Projector data worth watching",
+        heading: "Projector Data Worth Watching",
         items: [
-          { metric: "Requests per room", meaning: "The same room buzzing every week usually means hardware, not users." },
-          { metric: "Time to accept", meaning: "How quickly IT reacts when a meeting is about to start." },
-          { metric: "Time of day", meaning: "Clusters before 10 and 3 o’clock meetings suggest pre-checks." },
+          { metric: "Requests per Room", meaning: "The same room buzzing every week usually means hardware, not users." },
+          { metric: "Time to Accept", meaning: "How quickly IT reacts when a meeting is about to start." },
+          { metric: "Time of Day", meaning: "Clusters before 10 and 3 o’clock meetings suggest pre-checks." },
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Use the data to prevent the next one",
+        title: "Use the Data to Prevent the Next One",
         body:
           "If one room keeps generating projector requests, schedule a check before the morning’s first meeting. Pro analytics shows when and where the office buzzes most.",
       },
       {
         "type": "checklist",
-        "heading": "Before the big presentation",
+        "heading": "Before the Big Presentation",
         "items": [
           "Buzz a room check request an hour ahead.",
           "Note the laptop type so the right adapter arrives.",
@@ -438,31 +442,34 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "tip",
-        "title": "Use the request history to fix the room for good",
+        "title": "Use the Request History to Fix the Room for Good",
         "body": "If the same projector needs help every week, the request history by room shows it clearly. That is usually the evidence needed to repair the unit or relabel the inputs."
       },
     ],
     faqs: [
       {
-        "q": "Can visitors’ laptops be supported?",
+        "q": "Can Visitors’ Laptops Be Supported?",
         "a": "Yes. Whoever is hosting raises the request for the room and notes the visitor’s laptop type, and IT brings what’s needed."
       },
       {
-        q: "Can someone else request projector help on my behalf?",
+        q: "Can Someone Else Request Projector Help on My Behalf?",
         a: "Yes. An assistant or colleague can raise the request and set the room as the destination. The technician goes to the room, not to the requester’s desk.",
       },
       {
-        q: "What if the technician can’t fix it on the spot?",
+        q: "What If the Technician Can’t Fix It on the Spot?",
         a: "They can note what happened when marking the request delivered or attach a photo. Longer repairs are usually tracked in your regular IT or facilities process.",
       },
       {
-        q: "Will IT get the ping if their phone is on silent?",
+        q: "Will IT Get the Ping If Their Phone Is on Silent?",
         a: "The ZapBuzzer mobile app is built to keep ringing when a phone is locked or silenced, and notifications repeat until someone accepts.",
       },
       {
-        q: "Can projector requests escalate automatically?",
-        a: "On Pro, yes. Each request has a deadline, and overdue requests escalate to a manager through your escalation chain.",
+        q: "Can Projector Requests Escalate Automatically?",
+        a: "On Pro, yes. Each request has a deadline, and overdue requests go up to a manager through your escalation chain (the list of people a late request is passed to).",
       },
+      { q: "How Quickly Can IT Reach a Meeting Room for a Projector Issue?", a: "Pilot offices saw an average accept time of 32 seconds across requests. The presenter sees who accepted and their ETA, so they know whether to start without slides." },
+      { q: "Should Projector Help Be a Separate Catalogue Item?", a: "Yes. A dedicated projector item routes straight to IT and makes reports clearer, so you can see which rooms raise projector requests most often." },
+      { q: "What Should the Presenter Write in the Note?", a: "The room, what the projector is doing and the laptop being used, for example ‘no signal from USB-C laptop’. It helps the technician bring the right adapter first time." },
     ],
     related: [
       "solutions/it-support",
@@ -474,7 +481,7 @@ export const pages: PageContent[] = [
       "demo",
     ],
     cta: {
-      title: "Never start a meeting on “No signal” again",
+      title: "Never Start a Meeting on “No Signal” Again",
       body: "Set up projector help in ZapBuzzer today and let presenters summon IT in one tap.",
     },
   },
@@ -485,7 +492,7 @@ export const pages: PageContent[] = [
     title: "HDMI Cable and Adapter Requests in One Tap",
     description:
       "The cable vanished from the meeting room again. ZapBuzzer lets anyone request an HDMI cable or adapter in one tap and see IT bring it, usually within minutes.",
-    h1: "The missing HDMI cable, delivered to the room in minutes",
+    h1: "The Missing HDMI Cable, Delivered to the Room in Minutes",
     eyebrow: "HDMI Requests",
     lead:
       "HDMI cables and adapters walk out of meeting rooms every week. Instead of messaging the IT group and hoping, employees tap HDMI cable, choose the room, note their laptop’s port, and the first free technician brings the right one.",
@@ -500,15 +507,15 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "The most common IT ask in the building",
+        heading: "The Most Common IT Ask in the Building",
         paragraphs: [
-          "Ask any office IT team what they hear most and cables come near the top. HDMI leads get borrowed for a desk monitor and never returned. Adapters disappear into laptop bags. New laptops ship with only USB-C. The request itself is trivial; the cost is the presenter standing in a room with a dead screen while they try to reach someone.",
+          "Ask any office IT team what they hear most and cables come near the top. HDMI leads get borrowed for a desk monitor and never returned. Adapters disappear into laptop bags. New laptops ship with only USB-C. The request itself is tiny. The real cost is the presenter standing in a room with a dead screen while they try to reach someone.",
           "Because the ask is so predictable, it suits a single catalogue item. “HDMI cable” and “USB-C to HDMI adapter” as one-tap options mean the employee doesn’t have to explain, and IT knows exactly what to grab before leaving their desk.",
         ],
       },
       {
         type: "scenario",
-        heading: "Tanvi and the client review",
+        heading: "Tanvi and the Client Review",
         persona: "Tanvi, Design",
         setting: "Conference Room B, client review in nine minutes, the cable is gone.",
         timeline: [
@@ -522,37 +529,37 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "mobile-app",
-        heading: "Request from your phone, in the room",
+        heading: "Request From Your Phone, in the Room",
         body:
           "Employees use the web app at their desk or the mobile app in the room. HDMI cable sits in the IT section of the grid, one tap away.",
       },
       {
         type: "comparison",
-        heading: "Group chat vs. one tap",
-        columns: ["IT WhatsApp group", "ZapBuzzer"],
+        heading: "Group Chat vs. One Tap",
+        columns: ["IT WhatsApp Group", "ZapBuzzer"],
         rows: [
           { label: "Asking", a: "“Anyone have an HDMI? Room B, urgent”", b: "Tap HDMI cable, pick Room B" },
-          { label: "Who responds", a: "Maybe two people, maybe nobody", b: "First to accept owns it, others are told" },
-          { label: "Knowing it’s coming", a: "Scroll for a thumbs-up", b: "Name, photo and ETA on screen" },
+          { label: "Who Responds", a: "Maybe two people, maybe nobody", b: "First to accept owns it, others are told" },
+          { label: "Knowing It’s Coming", a: "Scroll for a thumbs-up", b: "Name, photo and ETA on screen" },
           { label: "Afterwards", a: "No record", b: "Timed, rated, counted per room" },
         ],
       },
       {
         type: "features",
-        heading: "Small details that make HDMI requests faster",
+        heading: "Small Details That Make HDMI Requests Faster",
         items: [
-          { title: "Separate items for cable types", body: "HDMI cable, USB-C adapter and display port adapter as separate items save a return trip." },
-          { title: "Room as destination", body: "The request goes to the room, not the requester’s desk." },
-          { title: "First-accept-wins", body: "Only one person walks over. Everyone else sees it’s taken." },
-          { title: "Per-room counts", body: "Analytics (Pro) shows which rooms lose cables most, so you can fix the cause." },
+          { title: "Separate Items for Cable Types", body: "HDMI cable, USB-C adapter and display port adapter as separate items save a return trip." },
+          { title: "Room as Destination", body: "The request goes to the room, not the requester’s desk." },
+          { title: "First-Accept-Wins", body: "The first person to tap Accept owns the request. Only one person walks over, and everyone else sees it’s taken." },
+          { title: "Per-Room Counts", body: "Analytics (Pro) shows which rooms lose cables most, so you can fix the cause." },
         ],
       },
       {
         type: "checklist",
-        heading: "Setting up HDMI requests",
+        heading: "Setting Up HDMI Requests",
         items: [
           "Add HDMI cable and your common adapters as IT catalogue items.",
-          "Keep a stocked cable box near the IT desk so the accept-to-deliver gap is short.",
+          "Keep a stocked cable box near the IT desk so delivery is quick once someone accepts.",
           "Name rooms consistently so destinations match signage.",
           "Review the per-room count monthly and replace or secure cables in repeat rooms.",
         ],
@@ -560,27 +567,27 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "Fix the leak, not just the request",
+        title: "Fix the Leak, Not Just the Request",
         body: "If one room keeps buzzing for cables, it might need a cable tethered to the table. The request history tells you where to look.",
       },
       {
         "type": "workflow",
-        "heading": "From missing cable to connected screen",
+        "heading": "From Missing Cable to Connected Screen",
         "steps": [
           {
-            "title": "Tap HDMI from the room",
+            "title": "Tap HDMI From the Room",
             "body": "Pick the cable or adapter item and choose the room, with a note about the laptop port."
           },
           {
-            "title": "IT desk pinged at once",
+            "title": "IT Desk Pinged at Once",
             "body": "Every technician on the team is notified; the first to accept owns it."
           },
           {
-            "title": "Walk over with the right adapter",
+            "title": "Walk Over With the Right Adapter",
             "body": "The note means the right cable leaves the cupboard the first time."
           },
           {
-            "title": "Delivered and rated",
+            "title": "Delivered and Rated",
             "body": "The requester rates once the screen is showing, often before the meeting starts."
           }
         ]
@@ -588,35 +595,37 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "tip",
-        "title": "Keep a cable in every room, and still use requests",
+        "title": "Keep a Cable in Every Room, and Still Use Requests",
         "body": "Room cables go missing. Requests tell you which rooms lose them, so you know where to restock instead of guessing."
       },
     ],
     faqs: [
       {
-        "q": "What if IT is busy with another request when an HDMI buzz comes in?",
+        "q": "What If IT Is Busy With Another Request When an HDMI Buzz Comes In?",
         "a": "The request goes to the whole IT team, so a colleague who is free can accept it. If nobody accepts, notifications keep repeating, and on Pro an overdue request escalates to a manager."
       },
       {
-        "q": "Can HDMI requests go to whoever is nearest?",
+        "q": "Can HDMI Requests Go to Whoever Is Nearest?",
         "a": "Requests go to the whole IT team and the first to accept owns it, which in practice is usually someone close by and free."
       },
       {
-        q: "Can I ask for a specific adapter type?",
+        q: "Can I Ask for a Specific Adapter Type?",
         a: "Yes. Either pick a dedicated catalogue item, if your admin has set one up, or add a note such as “USB-C” or “Mini DisplayPort”. The technician sees the note before they leave.",
       },
       {
-        q: "How fast are HDMI requests usually handled?",
+        q: "How Fast Are HDMI Requests Usually Handled?",
         a: "It depends on your team and office layout. Pilot offices averaged 32 seconds to accept across all request types, and cable requests are usually among the quickest to deliver.",
       },
       {
-        q: "Does the cable need to be returned?",
+        q: "Does the Cable Need to Be Returned?",
         a: "ZapBuzzer tracks the request, not the cable as an asset. Many offices simply leave the cable in the room, which is where it should have been.",
       },
       {
-        q: "Can I see which rooms lose cables most?",
+        q: "Can I See Which Rooms Lose Cables Most?",
         a: "Yes. Request history shows destinations, and Pro analytics lets you see request volume by item and location.",
       },
+      { q: "Can the Request Say Which Laptop Port I Have?", a: "Yes. Add it to the note, for example USB-C or mini DisplayPort, so the technician brings a matching cable or adapter on the first trip." },
+      { q: "Will I Know When the HDMI Cable Is on Its Way?", a: "Yes. As soon as a technician accepts, you see their name, photo and ETA, so you can keep preparing instead of chasing IT." },
     ],
     related: [
       "solutions/it-support",
@@ -628,18 +637,18 @@ export const pages: PageContent[] = [
       "free-trial",
     ],
     cta: {
-      title: "Make HDMI cables a one-tap ask",
+      title: "Make HDMI Cables a One-Tap Ask",
       body: "Start free, add HDMI cable to your IT catalogue, and stop the “anyone have a cable?” messages.",
     },
   },
 
   // ───────────────────────── MEETING ROOM ─────────────────────────
   {
-    path: "solutions/it-support/meeting-room-support",
+    path: "solutions/it-support/meeting-room-it-support",
     title: "Meeting Room IT Support for Every Room",
     description:
       "Displays, conferencing kits, cables and room screens: ZapBuzzer gets IT into any meeting room quickly and shows which rooms cause the most trouble over time.",
-    h1: "Help in the meeting room while the meeting is still on",
+    h1: "Help in the Meeting Room While the Meeting Is Still On",
     eyebrow: "Meeting Room Support",
     lead:
       "Meeting rooms are where IT problems are most visible and most expensive. ZapBuzzer gives every room a fast route to IT: the requester picks the room, describes the issue, and a technician accepts within moments.",
@@ -654,7 +663,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Rooms fail in front of an audience",
+        heading: "Rooms Fail in Front of an Audience",
         paragraphs: [
           "When a desk laptop misbehaves, one person is inconvenienced. When the meeting room’s display, camera or speakerphone fails, eight people are waiting and maybe a client on the other end of a call. Meeting room support needs to be fast, and it needs to be easy to ask for from inside the room.",
           "ZapBuzzer treats meeting rooms as destinations. Each request says which room, so IT walks straight there. And because every request is logged against the room, you build a picture of which spaces need attention.",
@@ -663,14 +672,14 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "acceptance",
-        heading: "First free technician wins the room",
+        heading: "First Free Technician Wins the Room",
         body:
           "The request reaches the whole IT team at once. Whoever is nearest taps Accept and owns it, and the others see it’s handled, so no two people walk to the same room.",
       },
       {
         type: "table",
-        heading: "Typical meeting room asks",
-        headers: ["Catalogue item", "Example note", "Who usually takes it"],
+        heading: "Typical Meeting Room Asks",
+        headers: ["Catalogue Item", "Example Note", "Who Usually Takes It"],
         rows: [
           ["Room display / projector", "“Screen black, presenting at 3”", "IT"],
           ["Video call setup", "“Camera not detected, client on line”", "IT"],
@@ -682,13 +691,13 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "IT and facilities, one app",
+        title: "IT and Facilities, One App",
         body:
           "Meeting rooms need both teams. In ZapBuzzer, an AC complaint routes to facilities and a display issue routes to IT, from the same app, so employees don’t need to know who handles what.",
       },
       {
         type: "scenario",
-        heading: "A client call that almost didn’t start",
+        heading: "A Client Call That Almost Didn’t Start",
         persona: "Kavya, Sales Lead",
         setting: "Pitch on a video call from Conference Room A at 4:00; the camera isn’t detected.",
         timeline: [
@@ -701,50 +710,54 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "What meeting room support gets you",
+        heading: "What Meeting Room Support Gets You",
         items: [
-          { title: "Room-level history", body: "Every request tagged with its room, so recurring faults are easy to spot." },
-          { title: "Clear status for the room", body: "Everyone waiting can see someone accepted and when they’ll arrive." },
-          { title: "Tight deadlines", body: "On Pro, give room requests a short SLA and escalate if they run late." },
+          { title: "Room-Level History", body: "Every request tagged with its room, so recurring faults are easy to spot." },
+          { title: "Clear Status for the Room", body: "Everyone waiting can see someone accepted and when they’ll arrive." },
+          { title: "Tight Deadlines", body: "On Pro, give room requests a short SLA (time limit) and pass them to a manager if they run late." },
           { title: "Ratings", body: "Requesters rate the fix, giving IT feedback without a survey." },
         ],
       },
       {
         type: "audience",
-        heading: "Who benefits",
+        heading: "Who Benefits",
         items: [
           { role: "Presenters", benefit: "One tap from the room, and they see help is on the way." },
-          { role: "IT team", benefit: "Exact room and issue up front; no duplicate walks." },
-          { role: "Office manager", benefit: "Knows which rooms need investment before the next client visit." },
+          { role: "IT Team", benefit: "Exact room and issue up front; no duplicate walks." },
+          { role: "Office Manager", benefit: "Knows which rooms need investment before the next client visit." },
           { role: "Leadership", benefit: "Fewer meetings starting late because of kit." },
         ],
       },
       {
         type: "prose",
-        heading: "Running meeting rooms well across a whole office",
+        heading: "Running Meeting Rooms Well Across a Whole Office",
         paragraphs: [
-          "Offices with six or eight meeting rooms tend to have one or two problem rooms that cause most of the trouble: the one with the old display, the one where the HDMI keeps walking, the one under the AC vent. Without data those rooms just get a reputation. With ZapBuzzer each request is logged against its room, so the reputation turns into a number you can act on.",
-          "A simple habit helps: once a month, look at requests by room and pick the worst one to fix properly. Replace the hub, tether the cable, move the camera. Over a quarter the noisy rooms quieten down and IT spends less time running between floors.",
+          "Offices with six or eight meeting rooms tend to have one or two problem rooms that cause most of the trouble: the one with the old display, the one where the HDMI keeps walking, the one under the AC vent. Without data, those rooms just get a bad name. With ZapBuzzer each request is logged against its room, so you have a number you can act on.",
+          "A simple habit helps: once a month, look at requests by room and pick the worst one to fix properly. Replace the hub, tether the cable, move the camera. Over three months the problem rooms settle down and IT spends less time running between floors.",
         ],
       },
     ],
     faqs: [
       {
-        q: "Can we pre-check rooms before big meetings?",
+        q: "Can We Pre-Check Rooms Before Big Meetings?",
         a: "ZapBuzzer handles requests rather than room bookings, but an admin or EA can raise a request ahead of time, such as “check Board Room display before 11”, and IT will see it in the queue.",
       },
       {
-        q: "Does ZapBuzzer integrate with our room booking system?",
+        q: "Does ZapBuzzer Integrate With Our Room Booking System?",
         a: "ZapBuzzer does not list specific booking-system integrations. Enterprise includes a REST API and webhooks; talk to us about what you need.",
       },
       {
-        q: "How do I see which rooms have the most issues?",
+        q: "How Do I See Which Rooms Have the Most Issues?",
         a: "Request history records the destination of every request, and Pro analytics shows when and where requests cluster.",
       },
       {
-        q: "Can AC and display issues go to different teams?",
+        q: "Can AC and Display Issues Go to Different Teams?",
         a: "Yes. Routing is by category, so IT items go to IT and comfort items go to facilities, even when raised from the same room.",
       },
+      { q: "Which Meeting Room Problems Can Be Raised Through ZapBuzzer?", a: "Anything in your catalogue, such as projector or display issues, missing HDMI cables, video call setup or an AC that is too cold. Each item routes to the team that handles it." },
+      { q: "Can the Requester Pick the Exact Meeting Room?", a: "Yes. The destination is chosen at request time, so the technician knows which room to head to without a follow-up call." },
+      { q: "What If a Meeting Room Fix Is Still Pending When the Meeting Starts?", a: "The requester can see the owner and ETA throughout. On Pro, an overdue request escalates to a manager, so a slow fix gets attention rather than sitting quietly." },
+      { q: "Can the Host Raise a Request for a Visitor in the Room?", a: "Yes. The host chooses the room and notes what the visitor needs, such as an adapter for their laptop, and IT brings the right help there." },
     ],
     related: [
       "solutions/it-support",
@@ -756,7 +769,7 @@ export const pages: PageContent[] = [
       "pricing/pro",
     ],
     cta: {
-      title: "Give every meeting room a direct line to IT",
+      title: "Give Every Meeting Room a Direct Line to IT",
       body: "Try ZapBuzzer free for 14 days and see your room requests handled in minutes.",
     },
   },
@@ -767,7 +780,7 @@ export const pages: PageContent[] = [
     title: "Hardware Requests: Mice, Chargers and Spares",
     description:
       "Dead mouse, forgotten charger, broken headset. Request spare hardware in one tap and have IT bring it to your desk, with every request timed and rated.",
-    h1: "Spare mouse, charger or headset, brought to your desk",
+    h1: "Spare Mouse, Charger or Headset, Brought to Your Desk",
     eyebrow: "Hardware Requests",
     lead:
       "Small hardware swaps keep people working: a mouse that stopped clicking, a charger left at home, a headset before a call. ZapBuzzer makes each one a tap, and IT delivers it to the desk.",
@@ -782,16 +795,16 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Small swaps, big difference",
+        heading: "Small Swaps, Big Difference",
         paragraphs: [
           "Hardware requests in this sense are the quick ones: peripherals and accessories IT keeps in a cupboard. Nobody should lose an hour to a dead mouse, yet in many offices the path is: message IT, wait, walk over, find they’re out, walk back. ZapBuzzer shortens that to one tap and one walk by the technician.",
-          "Larger hardware, such as new laptops, procurement and asset tagging, usually belongs in your purchasing or IT asset process. ZapBuzzer is for the swap-and-go items, and we’d rather say so than pretend otherwise.",
+          "Larger hardware, such as new laptops, procurement and asset tagging, usually belongs in your purchasing or IT asset process. ZapBuzzer is for the swap-and-go items, and we’d rather say so up front.",
         ],
       },
       {
         type: "table",
-        heading: "Good candidates for the hardware catalogue",
-        headers: ["Item", "Why it suits one tap"],
+        heading: "Good Candidates for the Hardware Catalogue",
+        headers: ["Item", "Why It Suits One Tap"],
         rows: [
           ["Mouse / keyboard", "Fails without warning, easy swap"],
           ["Laptop charger", "Forgotten at home most mornings"],
@@ -803,13 +816,13 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "delivery",
-        heading: "Delivered, confirmed, rated",
+        heading: "Delivered, Confirmed, Rated",
         body:
           "When the technician drops off the charger, they mark it delivered, optionally with a photo. The requester confirms with a rating, and the request is closed with its full timing.",
       },
       {
         type: "scenario",
-        heading: "Charger left at home",
+        heading: "Charger Left at Home",
         persona: "Om, Engineer",
         setting: "Laptop at 8% battery, standup in 20 minutes.",
         timeline: [
@@ -821,32 +834,32 @@ export const pages: PageContent[] = [
       },
       {
         type: "features",
-        heading: "Why IT teams like it",
+        heading: "Why IT Teams Like It",
         items: [
-          { title: "Desk-level destinations", body: "Desk numbers or floors in the note mean the technician walks straight there." },
-          { title: "Demand patterns", body: "Request counts by item tell you what to stock more of." },
-          { title: "Fair attribution", body: "Scorecards credit whoever actually did the work, not whoever shouts loudest." },
-          { title: "Owner cost view", body: "Owners can see request costs where they are set, useful for loaners and consumables." },
+          { title: "Desk-Level Destinations", body: "Desk numbers or floors in the note mean the technician walks straight there." },
+          { title: "Demand Patterns", body: "Request counts by item tell you what to stock more of." },
+          { title: "Fair Credit", body: "Scorecards credit whoever actually did the work, not whoever shouts loudest." },
+          { title: "Owner Cost View", body: "Owners can see request costs where they are set, useful for loaners and consumables." },
         ],
       },
       {
         type: "metrics",
-        heading: "What to track",
+        heading: "What to Track",
         items: [
-          { metric: "Requests by item", meaning: "Chargers spiking? Consider a shared charging station." },
-          { metric: "Delivery time", meaning: "Long gaps often mean the stock is in the wrong place." },
-          { metric: "Repeat requesters", meaning: "One person asking weekly may need a permanent replacement." },
+          { metric: "Requests by Item", meaning: "Chargers spiking? Consider a shared charging station." },
+          { metric: "Delivery Time", meaning: "Long gaps often mean the stock is in the wrong place." },
+          { metric: "Repeat Requesters", meaning: "One person asking weekly may need a permanent replacement." },
         ],
       },
       {
         type: "callout",
         tone: "warning",
-        title: "Not an asset register",
+        title: "Not an Asset Register",
         body: "ZapBuzzer records requests, not serial numbers or ownership of devices. If you need full asset management, keep it in your asset tool.",
       },
       {
         type: "prose",
-        heading: "Where the hardware cupboard should live",
+        heading: "Where the Hardware Cupboard Should Live",
         paragraphs: [
           "Delivery time for a hardware swap is mostly walking time. If the spares cupboard is on the ground floor and most requests come from the 4th, every charger costs the technician ten minutes on the stairs. Request history shows where requests come from, which makes it easy to decide whether a second small stock point would pay for itself.",
           "It also helps to split items that need a technician from items anyone can hand over. A spare mouse can be delivered by whoever is free on the IT team; a loaner laptop may need someone to sign it out and log in the user. Keeping these as separate catalogue items means the right person accepts each one, and the requester gets a sensible ETA.",
@@ -855,18 +868,18 @@ export const pages: PageContent[] = [
       },
       {
         "type": "workflow",
-        "heading": "A hardware swap, step by step",
+        "heading": "A Hardware Swap, Step by Step",
         "steps": [
           {
-            "title": "Choose the item",
+            "title": "Choose the Item",
             "body": "Mouse, keyboard, charger or headset, picked from the IT catalogue with the desk as destination."
           },
           {
-            "title": "Accept and fetch",
+            "title": "Accept and Fetch",
             "body": "The first free technician accepts and takes it from the cupboard."
           },
           {
-            "title": "Deliver with a photo",
+            "title": "Deliver With a Photo",
             "body": "A delivered photo confirms the hand-over at the desk."
           }
         ]
@@ -874,35 +887,37 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "info",
-        "title": "Owner-only cost view",
+        "title": "Owner-Only Cost View",
         "body": "Where hardware items carry a cost, the owner sees request spend without exposing it to everyone."
       },
     ],
     faqs: [
       {
-        "q": "What if the item is out of stock?",
+        "q": "What If the Item Is Out of Stock?",
         "a": "The technician can accept the request and add a note with a realistic ETA, so the employee knows a spare is coming rather than assuming it was ignored. Repeated stock-outs show up as long delivery times for that item."
       },
       {
-        "q": "Can hardware requests be delivered to a hot desk or meeting room?",
+        "q": "Can Hardware Requests Be Delivered to a Hot Desk or Meeting Room?",
         "a": "Yes. The requester chooses the destination, so a charger can go to whichever desk or room they are sitting in today."
       },
       {
-        q: "Can ZapBuzzer track which device was handed out?",
+        q: "Can ZapBuzzer Track Which Device Was Handed Out?",
         a: "The technician can add a note or photo on delivery, but ZapBuzzer isn’t an asset register. Use your asset system for serial numbers and ownership.",
       },
       {
-        q: "Can we request a new laptop through ZapBuzzer?",
+        q: "Can We Request a New Laptop Through ZapBuzzer?",
         a: "You can set up any catalogue item, but new laptop procurement usually needs approvals that sit better in your purchasing process. ZapBuzzer works best for quick swaps and loaners.",
       },
       {
-        q: "Who sees the cost of hardware requests?",
+        q: "Who Sees the Cost of Hardware Requests?",
         a: "Spend visibility is owner-only. Other roles see the request but not the cost.",
       },
       {
-        q: "Does this work for hot-desking offices?",
+        q: "Does This Work for Hot-Desking Offices?",
         a: "Yes. Requesters add their current desk or floor as a note or destination, so the technician knows where to go today.",
       },
+      { q: "Which Hardware Items Work Well in the Catalogue?", a: "Quick swaps such as a mouse, keyboard, charger, headset or adapter. Keep the list short and focused on what people ask for most often." },
+      { q: "Is Hardware Delivered to the Employee’s Desk?", a: "Yes. The employee chooses their desk or room as the destination, and the technician who accepts brings the item there." },
     ],
     related: [
       "solutions/it-support",
@@ -914,18 +929,18 @@ export const pages: PageContent[] = [
       "pricing",
     ],
     cta: {
-      title: "Keep the spares cupboard one tap away",
+      title: "Keep the Spares Cupboard One Tap Away",
       body: "Start your free trial and add your common hardware swaps to the IT catalogue.",
     },
   },
 
   // ───────────────────────── SOFTWARE ─────────────────────────
   {
-    path: "solutions/it-support/software-requests",
+    path: "solutions/it-support/software-support-requests",
     title: "Software Support Requests: Logins and Installs",
     description:
-      "Locked out, app won’t open, need a tool installed before a deadline. ZapBuzzer gets someone from IT to your desk quickly and keeps a timed record of every software ask.",
-    h1: "When an app won’t open, get a person, not a form",
+      "Locked out, app won’t open, need a tool installed before a deadline? ZapBuzzer gets IT to your desk fast and keeps a timed record of each software ask.",
+    h1: "When an App Won’t Open, Get a Person, Not a Form",
     eyebrow: "Software Support",
     lead:
       "Most software help in an office is quick and in person: a password reset, a stuck update, a printer driver, a tool needed before tomorrow’s deadline. ZapBuzzer routes these to IT with one tap and shows who is coming.",
@@ -940,32 +955,32 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Desk-side help for everyday software trouble",
+        heading: "Desk-Side Help for Everyday Software Trouble",
         paragraphs: [
-          "Software problems vary more than hardware ones, but the everyday ones follow a pattern: someone is blocked and needs a person to sit with them for five minutes. Raising a formal ticket feels heavier than the problem, so people message whoever they know, and the request gets lost.",
+          "Software problems vary more than hardware ones, but the everyday ones follow a pattern: someone is blocked and needs a person to sit with them for five minutes. Raising a formal ticket feels like too much for a small problem, so people message whoever they know, and the request gets lost.",
           "ZapBuzzer gives these a lighter path. Employees tap Software help or Login help, describe it in a note, and the IT team gets it on every channel the plan allows. The requester knows within seconds whether someone’s coming.",
         ],
       },
       {
         type: "visual",
         visual: "notification-flow",
-        heading: "One request, every channel",
+        heading: "One Request, Every Channel",
         body:
           "On Pro, a software request pings IT on the app, Telegram, WhatsApp and email at the same time. On Free, it goes via the app and email. Pings repeat until someone accepts.",
       },
       {
         type: "features",
-        heading: "Catalogue items that work well",
+        heading: "Catalogue Items That Work Well",
         items: [
-          { title: "Login / password help", body: "Locked out of email or a business app. Quick but blocking." },
-          { title: "Install request", body: "A tool needed for a task, e.g. a design app before a client brief." },
-          { title: "App not working", body: "Crashes, freezes, failed updates, with the app name in the note." },
-          { title: "Printer driver / setup", body: "Often paired with the print room; IT handles the laptop side." },
+          { title: "Login / Password Help", body: "Locked out of email or a business app. Quick but blocking." },
+          { title: "Install Request", body: "A tool needed for a task, e.g. a design app before a client brief." },
+          { title: "App Not Working", body: "Crashes, freezes, failed updates, with the app name in the note." },
+          { title: "Printer Driver / Setup", body: "Often paired with the print room; IT handles the laptop side." },
         ],
       },
       {
         type: "scenario",
-        heading: "Locked out before payroll",
+        heading: "Locked Out Before Payroll",
         persona: "Meera, Finance",
         setting: "Payroll run due at noon; her account locked after a password change.",
         timeline: [
@@ -978,23 +993,23 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "info",
-        title: "Where formal tickets still belong",
+        title: "Where Formal Tickets Still Belong",
         body:
           "Licence approvals, security incidents and anything needing investigation over days fit better in a dedicated IT service tool. ZapBuzzer handles the ask-and-fix moments.",
       },
       {
         type: "comparison",
-        heading: "Quick software ask: message vs. ZapBuzzer",
-        columns: ["Direct message to IT", "ZapBuzzer"],
+        heading: "Quick Software Ask: Message vs. ZapBuzzer",
+        columns: ["Direct Message to IT", "ZapBuzzer"],
         rows: [
           { label: "Reaches", a: "One person, if they see it", b: "The whole IT team at once" },
-          { label: "If that person is busy", a: "Request waits silently", b: "Someone else accepts" },
+          { label: "If That Person Is Busy", a: "Request waits silently", b: "Someone else accepts" },
           { label: "Record", a: "Buried in a chat", b: "Timed, rated, in history" },
         ],
       },
       {
         type: "checklist",
-        heading: "Tips for software requests",
+        heading: "Tips for Software Requests",
         items: [
           "Ask employees to name the app in the note.",
           "Include any deadline, e.g. “client brief at 3”.",
@@ -1004,15 +1019,15 @@ export const pages: PageContent[] = [
       },
       {
         type: "prose",
-        heading: "Why a person still matters for software help",
+        heading: "Why a Person Still Matters for Software Help",
         paragraphs: [
-          "Self-service portals and knowledge bases are useful, but in a busy office the person stuck on a login screen ten minutes before a deadline doesn’t want to read an article. They want someone to come and look. ZapBuzzer is honest about that: it gets a person to the desk quickly, rather than trying to deflect the request.",
-          "Over time the request history becomes its own knowledge base. If the same app produces a dozen “won’t open” requests after every update, that is a signal to fix the rollout, not to keep sending technicians. Ratings help here too: a run of low ratings on one item often means the fix is a workaround rather than a cure.",
+          "Self-service portals and knowledge bases are useful, but in a busy office the person stuck on a login screen ten minutes before a deadline doesn’t want to read an article. They want someone to come and look. ZapBuzzer gets a person to the desk quickly instead of pointing them to an article.",
+          "Over time the request history becomes its own knowledge base. If the same app produces a dozen “won’t open” requests after every update, fix how the update is rolled out instead of sending technicians each time. Ratings help here too: a run of low ratings on one item often means the fix is a workaround rather than a cure.",
         ],
       },
       {
         "type": "audience",
-        "heading": "Who software requests help",
+        "heading": "Who Software Requests Help",
         "items": [
           {
             "role": "Employees",
@@ -1023,21 +1038,21 @@ export const pages: PageContent[] = [
             "benefit": "Know the app and the problem before they walk over."
           },
           {
-            "role": "IT lead",
+            "role": "IT Lead",
             "benefit": "See which apps generate the most help requests."
           }
         ]
       },
       {
         "type": "metrics",
-        "heading": "Software request metrics",
+        "heading": "Software Request Metrics",
         "items": [
           {
-            "metric": "Requests by app",
+            "metric": "Requests by App",
             "meaning": "Shows where training or documentation would cut demand."
           },
           {
-            "metric": "Delivery time",
+            "metric": "Delivery Time",
             "meaning": "Login help should be fast; installs naturally take longer."
           }
         ]
@@ -1045,35 +1060,37 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "warning",
-        "title": "Keep credentials out of notes",
+        "title": "Keep Credentials Out of Notes",
         "body": "Ask employees to describe the problem, not to type passwords or one-time codes into the request note. The technician will sort access in person at the desk."
       },
     ],
     faqs: [
       {
-        "q": "Can we tell software requests apart from hardware in reports?",
+        "q": "Can We Tell Software Requests Apart From Hardware in Reports?",
         "a": "Yes. Each catalogue item is reported separately on Pro analytics, so login help, app installs and printer drivers each show their own volume and timings."
       },
       {
-        "q": "Can software requests be raised from a phone if the laptop is locked?",
+        "q": "Can Software Requests Be Raised From a Phone If the Laptop Is Locked?",
         "a": "Yes. The mobile app lets an employee buzz IT even when their laptop is the problem."
       },
       {
-        q: "Should employees share passwords in the request note?",
+        q: "Should Employees Share Passwords in the Request Note?",
         a: "No. Notes are visible to the IT team and kept in history. The technician will handle credentials in person.",
       },
       {
-        q: "Can remote employees use it?",
+        q: "Can Remote Employees Use It?",
         a: "ZapBuzzer is designed for in-office requests where someone comes to you, but any employee can raise a request from the web or mobile app. How IT responds remotely is up to your team.",
       },
       {
-        q: "Can software requests go to a different person than hardware?",
+        q: "Can Software Requests Go to a Different Person Than Hardware?",
         a: "Yes. Route categories to different teams, for example an apps specialist for software and the floor technicians for hardware.",
       },
       {
-        q: "Is every action logged?",
-        a: "Yes. Every action is audit-logged, and on Pro you get audit logs and reports to review them.",
+        q: "Is Every Action Logged?",
+        a: "Yes. Every action is recorded in an audit log, a record of who did what and when. On Pro you get audit logs and reports to review them.",
       },
+      { q: "What Kinds of Software Help Suit ZapBuzzer?", a: "Quick, in-person help such as a password reset, a stuck update, a printer driver or an install someone needs before a deadline. Longer projects are better kept in your existing IT process." },
+      { q: "How Should an Employee Describe a Software Issue?", a: "Pick the software item, then add a short note with the application and what is going wrong, without any passwords. The technician who accepts can follow up in person." },
     ],
     related: [
       "solutions/it-support",
@@ -1085,21 +1102,21 @@ export const pages: PageContent[] = [
       "free-trial",
     ],
     cta: {
-      title: "Unblock people in minutes",
+      title: "Unblock People in Minutes",
       body: "Try ZapBuzzer free and route software help to whoever is free right now.",
     },
   },
 
   // ───────────────────────── ROUTING ─────────────────────────
   {
-    path: "solutions/it-support/ticket-routing",
+    path: "solutions/it-support/it-ticket-routing",
     title: "IT Ticket Routing by Category, First Accept Wins",
     description:
-      "Route each IT request to the right team by category, ping everyone on it at once, and let the first free technician own it. No dispatcher needed, no double handling.",
-    h1: "Route IT asks to the right people without a dispatcher",
+      "Route each IT request to the right team by category, ping everyone on it at once, and let the first free technician own it. No dispatcher, no double handling.",
+    h1: "Route IT Asks to the Right People Without a Dispatcher",
     eyebrow: "IT Routing",
     lead:
-      "ZapBuzzer routes each request by the catalogue item the employee picked. IT items go to the IT team; the whole team is notified; the first to accept owns it. That’s the whole model, and it removes most of the coordination overhead.",
+      "ZapBuzzer routes each request by the catalogue item the employee picked. IT items go to the IT team; the whole team is notified; the first to accept owns it. That’s the whole idea, and it takes away most of the back-and-forth of working out who does what.",
     keywords: [
       "it ticket routing",
       "it request routing",
@@ -1111,45 +1128,45 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Routing without a routing project",
+        heading: "Routing Without a Routing Project",
         paragraphs: [
-          "Traditional helpdesks route through rules, queues and often a human dispatcher deciding who takes what. That makes sense for complex work. For a cable or a projector it’s overhead: by the time someone has assigned the ticket, the meeting has started.",
+          "Traditional helpdesks route through rules, queues and often a human dispatcher deciding who takes what. That makes sense for complex work. For a cable or a projector it just slows things down. By the time someone has assigned the ticket, the meeting has started.",
           "ZapBuzzer’s routing has two parts. First, the item decides the team: HDMI cable goes to IT, AC too cold goes to facilities. Second, within the team, nobody is assigned in advance. Everyone is pinged, and the first to accept owns it. The person who’s free and closest naturally picks it up.",
         ],
       },
       {
         type: "visual",
         visual: "acceptance",
-        heading: "First accept wins",
+        heading: "First Accept Wins",
         body:
           "Three technicians receive the same ping. One taps Accept; the request is theirs and disappears from the others’ lists. There’s no “I thought you were doing it”.",
       },
       {
         type: "workflow",
-        heading: "How routing decides",
+        heading: "How Routing Decides",
         steps: [
-          { title: "Item chosen", body: "The employee picks an IT item; the item belongs to a category." },
-          { title: "Team matched", body: "The category is linked to the IT team (or a sub-team you define)." },
-          { title: "Fan-out", body: "Every member of that team is notified across the channels on your plan." },
+          { title: "Item Chosen", body: "The employee picks an IT item; the item belongs to a category." },
+          { title: "Team Matched", body: "The category is linked to the IT team (or a sub-team you define)." },
+          { title: "Notify the Team", body: "Every member of that team is notified on the channels your plan includes." },
           { title: "Claim", body: "First Accept takes ownership; the requester sees name and ETA." },
-          { title: "Fallback", body: "If nobody accepts, pings repeat; on Pro, overdue requests escalate." },
+          { title: "Fallback", body: "If nobody accepts, pings repeat. On Pro, overdue requests go up to a manager." },
         ],
       },
       {
         type: "table",
-        heading: "Example IT routing setup",
-        headers: ["Item", "Category", "Team pinged"],
+        heading: "Example IT Routing Setup",
+        headers: ["Item", "Category", "Team Pinged"],
         rows: [
-          ["HDMI cable", "IT – rooms", "Floor technicians"],
-          ["Projector help", "IT – rooms", "Floor technicians"],
-          ["Login help", "IT – software", "Apps support"],
-          ["Laptop charger", "IT – hardware", "Floor technicians"],
+          ["HDMI cable", "IT (rooms)", "Floor technicians"],
+          ["Projector help", "IT (rooms)", "Floor technicians"],
+          ["Login help", "IT (software)", "Apps support"],
+          ["Laptop charger", "IT (hardware)", "Floor technicians"],
           ["AC too cold", "Facilities", "Facilities team"],
         ],
       },
       {
         type: "scenario",
-        heading: "Two requests, two teams, one minute",
+        heading: "Two Requests, Two Teams, One Minute",
         persona: "Office at 10:00",
         setting: "Conference Room B: no display and the AC at 16°C.",
         timeline: [
@@ -1161,32 +1178,32 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Dispatcher-led vs. first-accept-wins",
-        columns: ["Dispatcher assigns", "First accept wins"],
+        heading: "Dispatcher-Led vs. First-Accept-Wins",
+        columns: ["Dispatcher Assigns", "First Accept Wins"],
         rows: [
           { label: "Speed", a: "Waits for the dispatcher", b: "Starts the moment someone’s free" },
-          { label: "Load balance", a: "Depends on the dispatcher’s view", b: "Free people naturally take more" },
-          { label: "Single point of failure", a: "Dispatcher on leave", b: "None" },
+          { label: "Load Balance", a: "Depends on the dispatcher’s view", b: "Free people naturally take more" },
+          { label: "If One Person Is Away", a: "Dispatcher on leave, everything stalls", b: "Nothing stalls" },
           { label: "Accountability", a: "Assigned name", b: "Accepted name, with timestamps" },
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Keep teams small enough to feel ownership",
+        title: "Keep Teams Small Enough to Feel Ownership",
         body: "If a ping goes to 30 people, everyone assumes someone else will take it. Split large IT groups by floor or speciality.",
       },
       {
         type: "prose",
-        heading: "Designing IT teams for routing",
+        heading: "Designing IT Teams for Routing",
         paragraphs: [
           "Routing works best when each team is small enough that a ping feels personal. Two to six people per team is a good range. Larger IT groups can split by floor, by building or by speciality, such as rooms and hardware versus software and accounts.",
-          "It is worth thinking about coverage too. If your apps specialist is the only person in the software team, every login request waits on them. Adding a floor technician as a backup member means someone can always accept, and the SLA timer on Pro will flag it if nobody does.",
+          "It is worth thinking about coverage too. If your apps specialist is the only person in the software team, every login request waits on them. Add a floor technician as a backup member so someone can always accept. On Pro, the SLA timer (the request’s time limit) will flag it if nobody does.",
         ],
       },
       {
         "type": "checklist",
-        "heading": "Routing health check",
+        "heading": "Routing Health Check",
         "items": [
           "Every IT catalogue item routes to one team.",
           "No team has only one member.",
@@ -1197,35 +1214,37 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "info",
-        "title": "Plan note",
-        "body": "Routing and first-accept-wins work on every plan. Telegram and WhatsApp pings, SLAs and escalation are on Pro; API and webhooks for custom routing needs are on Enterprise."
+        "title": "Plan Note",
+        "body": "Routing and first-accept-wins work on every plan. Telegram and WhatsApp pings, SLAs and escalation are on Pro. For custom routing needs, the API and webhooks (ways for your own software to connect to ZapBuzzer) are on Enterprise."
       },
     ],
     faqs: [
       {
-        "q": "Does routing work for a single technician?",
+        "q": "Does Routing Work for a Single Technician?",
         "a": "Yes, but a team of one has no cover. Even adding the office manager as a backup member means requests can still be accepted when the technician is on leave or in the middle of a long fix."
       },
       {
-        "q": "Can routing send IT requests to an external vendor?",
+        "q": "Can Routing Send IT Requests to an External Vendor?",
         "a": "If vendor staff are invited as users and added to a team, they receive requests like anyone else. For larger outsourced setups, talk to us about Enterprise."
       },
       {
-        q: "Can I assign a request directly to one technician?",
+        q: "Can I Assign a Request Directly to One Technician?",
         a: "ZapBuzzer is built around first-accept-wins, which avoids bottlenecks on any one person. You control who is in each team, which decides who can accept.",
       },
       {
-        q: "Can routing differ by office location?",
+        q: "Can Routing Differ by Office Location?",
         a: "Yes, with multi-location on Pro. Each location can have its own teams so a request in one office doesn’t ping technicians in another.",
       },
       {
-        q: "Is there routing via API?",
-        a: "REST API and webhooks are available on Enterprise. Talk to us about your use case and we’ll go through what’s possible.",
+        q: "Is There Routing via API?",
+        a: "The REST API and webhooks, which let your own software read ZapBuzzer data and react to it, are available on Enterprise. Tell us what you need and we’ll go through what’s possible.",
       },
       {
-        q: "What if the wrong team gets a request?",
+        q: "What If the Wrong Team Gets a Request?",
         a: "That usually means the item sits in the wrong category. Admins can adjust the catalogue so future requests route correctly.",
       },
+      { q: "How Does ZapBuzzer Decide Which Team Gets a Request?", a: "Routing follows the catalogue item the employee picks. IT items go to the IT team, pantry items to the pantry and so on, so nobody has to sort requests by hand." },
+      { q: "Why Notify the Whole IT Team Rather Than One Person?", a: "Whoever is free can take it, so requests are not stuck with someone in a meeting. The first to tap Accept owns it, which removes any ‘I thought you’d do it’." },
     ],
     related: [
       "solutions/it-support",
@@ -1237,18 +1256,18 @@ export const pages: PageContent[] = [
       "demo",
     ],
     cta: {
-      title: "Let the free technician take it",
+      title: "Let the Free Technician Take It",
       body: "Set up your IT categories in an afternoon and see first-accept-wins working the same day.",
     },
   },
 
   // ───────────────────────── SLA ─────────────────────────
   {
-    path: "solutions/it-support/sla",
-    title: "IT SLA Management with Automatic Escalation",
+    path: "solutions/it-support/it-sla-management",
+    title: "IT SLA Management With Automatic Escalation",
     description:
       "Give every IT request a deadline. ZapBuzzer times projector, HDMI and room requests and escalates overdue ones to a manager automatically on the Pro plan.",
-    h1: "Deadlines that match the meeting clock",
+    h1: "Deadlines That Match the Meeting Clock",
     eyebrow: "IT SLA",
     lead:
       "A projector fix that arrives after the meeting is useless. ZapBuzzer attaches a deadline to every IT request and, on Pro, escalates to your IT lead when one runs late, so nothing quietly misses its moment.",
@@ -1263,24 +1282,24 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "SLAs sized for quick asks",
+        heading: "SLAs Sized for Quick Asks",
         paragraphs: [
-          "In a full ITSM tool, SLAs are often measured in hours or days. For in-office asks they need to be measured in minutes. An HDMI cable that takes an hour is a failure even if it was technically delivered.",
+          "An SLA is the time limit for finishing a request. In a full IT service management tool, SLAs are often measured in hours or days. For in-office asks they need to be measured in minutes. An HDMI cable that takes an hour is a failure even if it was technically delivered.",
           "ZapBuzzer’s SLA is simple: every request has a deadline, the timer runs from the moment of the tap, and if it isn’t delivered on time it escalates. SLA deadlines with an escalation chain are part of Pro.",
         ],
       },
       {
         type: "visual",
         visual: "sla-timer",
-        heading: "A visible clock on every request",
+        heading: "A Visible Clock on Every Request",
         body:
-          "The technician sees time left; the IT lead sees which requests are close to breaching. When the timer runs out, escalation kicks in automatically.",
+          "The technician sees how much time is left. The IT lead sees which requests are about to miss their deadline. When the timer runs out, the request goes up to a manager automatically.",
       },
       {
         type: "table",
-        heading: "Example IT deadlines",
+        heading: "Example IT Deadlines",
         intro: "These are illustrations; set deadlines that reflect your office.",
-        headers: ["Request", "Suggested deadline", "Why"],
+        headers: ["Request", "Suggested Deadline", "Why"],
         rows: [
           ["Projector / room display", "10 minutes", "Meetings start on time or not at all"],
           ["HDMI / adapter", "10 minutes", "Usually needed right now"],
@@ -1291,13 +1310,13 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "escalation",
-        heading: "Escalation chain",
+        heading: "Escalation Chain",
         body:
-          "If a request breaches, it goes up the chain you set: for example the IT lead first, then the office manager. Each step is logged.",
+          "If a request misses its deadline, it goes up the chain you set: for example the IT lead first, then the office manager. Each step is logged.",
       },
       {
         type: "scenario",
-        heading: "A projector request that stalled",
+        heading: "A Projector Request That Stalled",
         persona: "Rohan, IT Lead",
         setting: "Both technicians are mid-job on another floor.",
         timeline: [
@@ -1310,38 +1329,38 @@ export const pages: PageContent[] = [
       },
       {
         type: "metrics",
-        heading: "SLA numbers for IT",
+        heading: "SLA Numbers for IT",
         items: [
-          { metric: "On-time %", meaning: "Share of IT requests delivered before deadline. Pilot offices hit 96% across all types." },
-          { metric: "Breaches by item", meaning: "Which kinds of request run late most often." },
+          { metric: "On-Time %", meaning: "Share of IT requests delivered before deadline. Pilot offices hit 96% across all types." },
+          { metric: "Breaches by Item", meaning: "Which kinds of request miss their deadline most often." },
           { metric: "Escalations", meaning: "How often managers had to step in." },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "Plan note",
+        title: "Plan Note",
         body: "Free shows request timings. SLA deadlines with an escalation chain, plus reports, are on Pro at ₹99 per seat per month.",
       },
       {
         type: "prose",
-        heading: "Choosing deadlines your team can meet",
+        heading: "Choosing Deadlines Your Team Can Meet",
         paragraphs: [
           "The best IT deadlines are slightly uncomfortable but achievable most of the time. Start with generous numbers for the first two weeks and look at actual delivery times. Then tighten the deadline for items where the team is consistently well inside it, and leave the others alone until staffing or stock changes.",
           "Keep in mind that the timer starts at the tap, not the accept. That is deliberate: the employee waiting in Conference Room B doesn’t care when IT saw the ping, only when the cable arrives. A deadline that includes accept time encourages the whole team to react quickly, not just to finish quickly.",
-          "Breaches are information, not failure. A cluster of breaches at 3 o’clock usually means meetings and technician breaks overlap. A breach pattern on one floor may mean stock is too far away. Review them weekly for the first month.",
+          "A missed deadline (a breach) tells you something; it isn’t a failure. A cluster of breaches at 3 o’clock usually means meetings and technician breaks overlap. A breach pattern on one floor may mean stock is too far away. Review them weekly for the first month.",
         ],
       },
       {
         "type": "comparison",
-        "heading": "IT SLA in a helpdesk tool vs. in ZapBuzzer",
+        "heading": "IT SLA in a Helpdesk Tool vs. In ZapBuzzer",
         "columns": [
-          "Typical ticket SLA",
-          "ZapBuzzer request SLA"
+          "Typical Ticket SLA",
+          "ZapBuzzer Request SLA"
         ],
         "rows": [
           {
-            "label": "Unit of work",
+            "label": "Unit of Work",
             "a": "Tickets that can run for days",
             "b": "Quick asks measured in minutes"
           },
@@ -1351,7 +1370,7 @@ export const pages: PageContent[] = [
             "b": "Timer seen by technician and requester"
           },
           {
-            "label": "When breached",
+            "label": "When Breached",
             "a": "Report at month end",
             "b": "Auto-escalation to a manager on Pro"
           }
@@ -1359,7 +1378,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "checklist",
-        "heading": "Before switching IT SLAs on",
+        "heading": "Before Switching IT SLAs On",
         "items": [
           "Set a deadline per item, starting generous.",
           "Confirm the escalation chain names a manager who is reachable.",
@@ -1369,35 +1388,37 @@ export const pages: PageContent[] = [
       {
         "type": "callout",
         "tone": "info",
-        "title": "Plan note",
+        "title": "Plan Note",
         "body": "SLA timers and the escalation chain are part of Pro at ₹99 per seat per month. Free still times every request, so you can collect a baseline before you set deadlines."
       },
     ],
     faqs: [
       {
-        "q": "How should we pick a first deadline for an item?",
+        "q": "How Should We Pick a First Deadline for an Item?",
         "a": "Look at how long that item takes today, either from Free history or a week of Pro data, and set the deadline a little above the typical delivery time. Tighten it once the team is hitting it comfortably."
       },
       {
-        "q": "Can the SLA be changed after go-live?",
+        "q": "Can the SLA Be Changed After Go-Live?",
         "a": "Yes. Most teams tighten or relax deadlines after the first few weeks of data. Changing an item’s deadline applies to new requests for that item."
       },
       {
-        q: "Can different IT items have different deadlines?",
+        q: "Can Different IT Items Have Different Deadlines?",
         a: "Yes. Deadlines are set per category or item, so a projector can have a tighter deadline than a spare mouse.",
       },
       {
-        q: "Who gets the escalation?",
+        q: "Who Gets the Escalation?",
         a: "Whoever you put in the escalation chain, typically the IT lead and then an office or operations manager. The chain is a Pro feature.",
       },
       {
-        q: "Does the timer pause outside office hours?",
+        q: "Does the Timer Pause Outside Office Hours?",
         a: "Set deadlines to match how your office works. If you have specific out-of-hours needs, talk to us during your trial.",
       },
       {
-        q: "Is the SLA visible to the requester?",
+        q: "Is the SLA Visible to the Requester?",
         a: "The requester sees who accepted and the ETA. Admins and managers see SLA state across all requests.",
       },
+      { q: "What Happens When an IT Request Misses Its Deadline?", a: "On Pro, the overdue request automatically escalates to a manager or the next step in your escalation chain, so a late fix is noticed before the meeting is lost." },
+      { q: "Can We Report on IT SLA Performance?", a: "Yes. Every request is timed, and Pro’s analytics and reports show on-time delivery, escalations and which items or rooms run late most often." },
     ],
     related: [
       "solutions/it-support",
@@ -1409,21 +1430,21 @@ export const pages: PageContent[] = [
       "pricing/pro",
     ],
     cta: {
-      title: "Put a clock on every IT ask",
+      title: "Put a Clock on Every IT Ask",
       body: "Start the 14-day trial with Pro features and watch late requests escalate on their own.",
     },
   },
 
   // ───────────────────────── ANALYTICS ─────────────────────────
   {
-    path: "solutions/it-support/analytics",
+    path: "solutions/it-support/it-support-analytics",
     title: "IT Support Analytics and Technician Scorecards",
     description:
       "See IT accept times, delivery times, on-time rate and ratings, plus which rooms and items buzz most. Full analytics and scorecards are part of ZapBuzzer Pro.",
-    h1: "Know how fast IT really responds, and where it’s needed",
+    h1: "Know How Fast IT Really Responds, and Where It’s Needed",
     eyebrow: "IT Analytics",
     lead:
-      "Because every ZapBuzzer request is timed from tap to rating, IT analytics come without extra data entry. Pro shows how fast your team accepts and delivers, who earns 5★, and which rooms keep calling.",
+      "Every ZapBuzzer request is timed from tap to rating, so you get IT analytics without typing anything in. Pro shows how fast your team accepts and delivers, who earns 5★, and which rooms keep calling.",
     keywords: [
       "it support analytics",
       "it response time report",
@@ -1435,7 +1456,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Data you already have, finally visible",
+        heading: "Data You Already Have, Finally Visible",
         paragraphs: [
           "Most small IT teams know they’re busy but can’t show it. Requests came by phone and WhatsApp, so there’s no count, no timing and no way to argue for another technician or better cables in Room B.",
           "With ZapBuzzer, every request already has timestamps for buzz, accept, start and delivery, plus a rating. Analytics turns those into a picture of IT workload and quality.",
@@ -1444,30 +1465,30 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "analytics",
-        heading: "The IT dashboard",
-        body: "KPI tiles for accept time, delivery time, on-time rate and rating, with a chart of request volume over the day.",
+        heading: "The IT Dashboard",
+        body: "Headline numbers for accept time, delivery time, on-time rate and rating, with a chart of request volume over the day.",
       },
       {
         type: "metrics",
-        heading: "Core IT metrics",
+        heading: "Core IT Metrics",
         items: [
-          { metric: "Average accept time", meaning: "From tap to someone owning it. Pilot offices averaged 32 seconds across request types." },
-          { metric: "Average delivery time", meaning: "From tap to delivered; what employees feel." },
-          { metric: "On-time delivery", meaning: "Share meeting their SLA deadline." },
-          { metric: "Average rating", meaning: "Requester satisfaction, 1–5★." },
-          { metric: "Peak hours", meaning: "When the office buzzes most, often just before meetings." },
+          { metric: "Average Accept Time", meaning: "From tap to someone owning it. Pilot offices averaged 32 seconds across request types." },
+          { metric: "Average Delivery Time", meaning: "From tap to delivered; what employees feel." },
+          { metric: "On-Time Delivery", meaning: "Share meeting their SLA deadline." },
+          { metric: "Average Rating", meaning: "Requester satisfaction, 1–5★." },
+          { metric: "Peak Hours", meaning: "When the office buzzes most, often just before meetings." },
         ],
       },
       {
         type: "visual",
         visual: "scorecard",
-        heading: "Scorecards that credit the work",
+        heading: "Scorecards That Credit the Work",
         body:
-          "Each technician gets a scorecard with requests handled, on-time % and average rating. It’s designed for fair attribution, not surveillance.",
+          "Each technician gets a scorecard with requests handled, on-time % and average rating. It’s there to give fair credit, not to watch people.",
       },
       {
         type: "scenario",
-        heading: "Making the case for a second cable box",
+        heading: "Making the Case for a Second Cable Box",
         persona: "Rohan, IT Lead",
         setting: "Monthly review with the office manager.",
         timeline: [
@@ -1480,23 +1501,23 @@ export const pages: PageContent[] = [
       },
       {
         type: "audience",
-        heading: "Who uses IT analytics",
+        heading: "Who Uses IT Analytics",
         items: [
-          { role: "IT lead", benefit: "Staffing, stock placement and recurring faults." },
+          { role: "IT Lead", benefit: "Staffing, stock placement and recurring faults." },
           { role: "Technicians", benefit: "Visible credit for fast, well-rated work." },
-          { role: "Office manager", benefit: "Which rooms need investment." },
+          { role: "Office Manager", benefit: "Which rooms need investment." },
           { role: "Owner", benefit: "Service quality and request costs in one view." },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "Plan note",
+        title: "Plan Note",
         body: "Full analytics, scorecards and reports are on Pro. Free keeps 30 days of request history.",
       },
       {
         type: "prose",
-        heading: "Reading IT analytics without over-reading them",
+        heading: "Reading IT Analytics Without Over-Reading Them",
         paragraphs: [
           "Numbers from a small IT team can swing a lot week to week, so look at trends over a month rather than reacting to a single bad day. A slow Monday might just be a projector failure in the Board Room that took an hour to diagnose.",
           "Pair the timing numbers with ratings. Fast delivery with low ratings suggests rushed fixes; slower delivery with 5★ may simply be thorough work on harder problems. And compare by item: HDMI requests and login help have very different natural speeds, so a single average across everything hides more than it shows.",
@@ -1505,11 +1526,11 @@ export const pages: PageContent[] = [
       },
       {
         "type": "table",
-        "heading": "Turning IT numbers into decisions",
+        "heading": "Turning IT Numbers Into Decisions",
         "headers": [
-          "What you see",
-          "What it may mean",
-          "What to try"
+          "What You See",
+          "What It May Mean",
+          "What to Try"
         ],
         "rows": [
           [
@@ -1531,7 +1552,7 @@ export const pages: PageContent[] = [
       },
       {
         "type": "checklist",
-        "heading": "A monthly IT review agenda",
+        "heading": "A Monthly IT Review Agenda",
         "items": [
           "On-time % this month vs. last month.",
           "Top five items by volume and their average delivery time.",
@@ -1541,38 +1562,37 @@ export const pages: PageContent[] = [
       },
       {
         "type": "prose",
-        "heading": "Analytics for a one- or two-person IT desk",
+        "heading": "Analytics for a One- or Two-Person IT Desk",
         "paragraphs": [
-          "Small teams sometimes assume analytics is for big helpdesks. In practice it matters more when IT is one or two people, because there is nobody else to vouch for how much they handle. A month of request counts, accept times and 5★ ratings is the clearest way to show an owner what the IT desk does between the big projects.",
+          "Small teams sometimes assume analytics is for big helpdesks. In practice it matters more when IT is one or two people, because nobody else can speak up for how much they handle. A month of request counts, accept times and 5★ ratings is the clearest way to show an owner what the IT desk does between the big projects.",
           "It also protects their time. When the data shows that half the week goes on HDMI cables and password resets, it becomes easier to justify spare cables in every room or a short login guide for new joiners."
         ]
       },
     ],
     faqs: [
       {
-        "q": "Do employees see IT analytics?",
+        "q": "Do Employees See IT Analytics?",
         "a": "Analytics and reports are meant for the people running the service, such as the IT lead, office manager and owner. Access follows the roles and permissions you set, and request costs stay in the owner-only view."
       },
       {
-        "q": "Does analytics include requests that were never accepted?",
+        "q": "Does Analytics Include Requests That Were Never Accepted?",
         "a": "Yes. Every request is timed from the buzz, so unaccepted or escalated requests show up rather than disappearing from the numbers."
       },
       {
-        q: "Can I export IT analytics?",
+        q: "Can I Export IT Analytics?",
         a: "Pro includes reports for sharing results. For data feeds into other systems, the REST API and webhooks on Enterprise are the route.",
       },
       {
-        q: "Are scorecards used to rank technicians publicly?",
-        a: "That’s your choice through roles and permissions. ZapBuzzer’s aim is fair attribution, so good work is visible, not to create a nag tool.",
+        q: "Are Scorecards Used to Rank Technicians Publicly?",
+        a: "That’s your choice through roles and permissions. ZapBuzzer’s aim is fair credit, so good work is seen. It isn’t meant to nag people.",
       },
       {
-        q: "Can I see analytics per office?",
+        q: "Can I See Analytics per Office?",
         a: "Yes. With multi-location on Pro you can look at each office separately.",
       },
-      {
-        q: "How soon is there useful data?",
-        a: "Within the first week of real use most teams see clear patterns in peak times and common items.",
-      },
+      { q: "How Long Before IT Analytics Show Meaningful Patterns?", a: "After a week or two of real use most IT teams can see peak hours, the most requested items and the rooms that call most often." },
+      { q: "Which IT Items and Rooms Generate the Most Requests?", a: "Analytics break requests down by catalogue item and destination. For example, you can see which meeting rooms keep asking for HDMI cables or projector help, and fix the real cause." },
+      { q: "What Do IT Technician Scorecards Include?", a: "They show how fast each technician accepts and delivers, and the ratings requesters give, so good work gets fair credit rather than going unnoticed." },
     ],
     related: [
       "solutions/it-support",
@@ -1585,7 +1605,7 @@ export const pages: PageContent[] = [
       "pricing/pro",
     ],
     cta: {
-      title: "See your IT desk in numbers",
+      title: "See Your IT Desk in Numbers",
       body: "Run the 14-day trial and get your first IT response-time picture within a week.",
     },
   },

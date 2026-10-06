@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import type { IndexedPage } from "@/lib/pageIndex";
 import { Icon } from "@/components/ui/Icon";
 
-/** "Explore all pages": search box, section chips with counts, collapsible groups. */
+/** "Explore All Pages": search box, section chips with counts, collapsible groups. */
 export function PageExplorer({ pages, groups }: { pages: IndexedPage[]; groups: { id: string; name: string }[] }) {
   const [q, setQ] = useState("");
   const [filter, setFilter] = useState("all");
@@ -55,7 +55,7 @@ export function PageExplorer({ pages, groups }: { pages: IndexedPage[]; groups: 
       <div className="rounded-3xl border border-line bg-surface-2/60 p-5 sm:p-7">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <label className="relative block w-full sm:max-w-md">
-            <span className="sr-only">Search pages</span>
+            <span className="sr-only">Search Pages</span>
             <Icon name="search" className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
             <input
               value={q}
@@ -65,13 +65,13 @@ export function PageExplorer({ pages, groups }: { pages: IndexedPage[]; groups: 
             />
           </label>
           <div className="flex items-center gap-6">
-            <span className="text-xs font-bold uppercase tracking-[0.15em]">{visible.length} pages</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em]">{visible.length} Pages</span>
             <button
               type="button"
               onClick={() => setCollapsed(allCollapsed ? new Set() : new Set(shownGroups.map((g) => g.id)))}
-              className="border-b-2 border-accent pb-0.5 text-xs font-bold tracking-wider text-fg transition-colors hover:text-accent-text"
+              className="tap border-b-2 border-accent pb-0.5 text-xs font-bold tracking-wider text-fg transition-colors hover:text-accent-text"
             >
-              {allCollapsed ? "Expand all" : "Collapse all"}
+              {allCollapsed ? "Expand all" : "Collapse All"}
             </button>
           </div>
         </div>
@@ -90,7 +90,7 @@ export function PageExplorer({ pages, groups }: { pages: IndexedPage[]; groups: 
           return (
             <section key={g.id} aria-labelledby={`grp-${g.id}`}>
               <div className="flex items-end justify-between gap-4 border-b border-line pb-4">
-                <h2 id={`grp-${g.id}`} className="font-heading text-3xl font-extrabold uppercase tracking-tight sm:text-4xl">
+                <h2 id={`grp-${g.id}`} className="min-w-0 break-words font-heading text-2xl font-extrabold uppercase tracking-tight sm:text-4xl">
                   {g.name}
                 </h2>
                 <button
@@ -98,9 +98,9 @@ export function PageExplorer({ pages, groups }: { pages: IndexedPage[]; groups: 
                   onClick={() => toggle(g.id)}
                   aria-expanded={!isCollapsed}
                   aria-controls={`list-${g.id}`}
-                  className="flex shrink-0 items-center gap-1.5 text-xs font-bold uppercase tracking-[0.15em] text-muted transition-colors hover:text-accent-text"
+                  className="tap flex shrink-0 items-center gap-1.5 text-xs font-bold uppercase tracking-[0.15em] text-muted transition-colors hover:text-accent-text"
                 >
-                  {items.length} pages
+                  {items.length} Pages
                   <Icon name="chevronDown" className={`h-4 w-4 transition-transform ${isCollapsed ? "-rotate-90" : ""}`} />
                 </button>
               </div>
@@ -108,7 +108,7 @@ export function PageExplorer({ pages, groups }: { pages: IndexedPage[]; groups: 
                 <ul id={`list-${g.id}`} className="anim-open mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
                   {items.map((p) => (
                     <li key={p.href} className="min-w-0">
-                      <Link href={p.href} title={p.label} className="block truncate text-[15px] text-fg/85 transition-colors hover:text-accent-text hover:underline hover:underline-offset-4">
+                      <Link href={p.href} title={p.label} className="tap block truncate text-[15px] text-fg/85 transition-colors hover:text-accent-text hover:underline hover:underline-offset-4">
                         {p.label}
                       </Link>
                     </li>

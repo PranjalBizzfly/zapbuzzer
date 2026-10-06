@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Typewriter } from "@/components/motion/Typewriter";
+import { titleCase, titleCaseNode } from "@/lib/titleCase";
 
 export type Status = "new" | "pinging" | "accepted" | "started" | "delivered" | "overdue" | "escalated";
 
@@ -23,18 +25,57 @@ export function StatusPill({ status, children }: { status: Status; children?: Re
 }
 
 const avatarTones = [
-  "from-accent to-violet",
-  "from-fuchsia to-violet",
-  "from-[oklch(70%_0.15_200)] to-accent",
-  "from-[oklch(75%_0.16_70)] to-[oklch(65%_0.2_20)]",
-  "from-[oklch(65%_0.16_155)] to-[oklch(60%_0.14_200)]",
+  "from-violet-500 to-indigo-600 text-white",
+  "from-amber-500 to-orange-600 text-white",
+  "from-emerald-500 to-teal-600 text-white",
+  "from-rose-500 to-pink-600 text-white",
+  "from-blue-500 to-cyan-600 text-white",
+  "from-fuchsia-500 to-purple-600 text-white",
 ];
 
-export function Avatar({ name, size = "h-8 w-8 text-xs" }: { name: string; size?: string }) {
-  const tone = avatarTones[name.charCodeAt(0) % avatarTones.length];
+export function Avatar({
+  name,
+  size = "h-8 w-8 text-xs",
+  alt,
+  src,
+}: {
+  name: string;
+  size?: string;
+  alt?: string;
+  src?: string;
+}) {
+  if (src) {
+    return (
+      <span className={`${size} relative inline-block shrink-0 overflow-hidden rounded-full ring-2 ring-accent/30 shadow-sm`} title={alt ?? name}>
+        <Image
+          src={src}
+          alt={alt ?? name}
+          fill
+          sizes="96px"
+          className="object-cover"
+        />
+      </span>
+    );
+  }
+
+  const initials = name
+    .split(/\s+/)
+    .map((w) => w[0])
+    .filter(Boolean)
+    .slice(0, 2)
+    .join("")
+    .toUpperCase() || name[0]?.toUpperCase() || "U";
+
+  const charCode = name.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  const tone = avatarTones[charCode % avatarTones.length];
+
   return (
-    <span className={`${size} inline-grid shrink-0 place-items-center rounded-full bg-gradient-to-br ${tone} font-semibold text-white`} aria-hidden>
-      {name[0]}
+    <span
+      className={`${size} relative inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br font-heading font-bold shadow-sm ring-2 ring-white/10 ${tone}`}
+      title={alt ?? name}
+      aria-label={alt ?? name}
+    >
+      <span>{initials}</span>
     </span>
   );
 }
@@ -65,7 +106,7 @@ export function Eyebrow({
       <svg className="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
         <path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3Z" />
       </svg>
-      <span>{children}</span>
+      <span>{titleCaseNode(children)}</span>
     </span>
   );
 }
@@ -92,11 +133,11 @@ export function SectionHeading({
     <div data-reveal className={`mb-6 sm:mb-10 md:mb-12 ${center ? "text-center" : "text-left"}`}>
       {eyebrow && (
         <div className="mb-3 sm:mb-4">
-          <Eyebrow invert={invert}>{eyebrow}</Eyebrow>
+          <Eyebrow invert={invert}>{titleCase(eyebrow)}</Eyebrow>
         </div>
       )}
       <H className={`mb-3 font-heading text-[1.6rem] font-extrabold leading-tight tracking-tight sm:mb-4 sm:text-4xl md:text-5xl ${invert ? "text-white" : "text-fg"}`}>
-        {typewriter ? <Typewriter text={title} /> : title}
+        {typewriter ? <Typewriter text={titleCase(title)} /> : titleCase(title)}
       </H>
       {intro && (
         <p className={`max-w-3xl text-base leading-relaxed sm:text-lg md:text-xl ${center ? "mx-auto" : ""} ${invert ? "text-white/75" : "text-muted"}`}>{intro}</p>
@@ -124,10 +165,10 @@ export function Button({
     "ghost-dark": "btn-shimmer border-2 border-white/70 text-white backdrop-blur-sm hover:bg-white/10",
     dark: "btn-shimmer bg-ink text-white hover:bg-ink-2 dark:bg-white dark:text-ink dark:hover:bg-white/90",
   }[variant];
-  const cls = `group inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold transition duration-300 hover:scale-[1.02] active:scale-[0.98] sm:px-8 sm:py-4 sm:text-base ${styles} ${className}`;
+  const cls = `group inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 active:translate-y-0 sm:px-8 sm:py-4 sm:text-base ${styles} ${className}`;
   const inner = (
     <>
-      <span className="relative z-[2]">{children}</span>
+      <span className="relative z-[2]">{titleCaseNode(children)}</span>
       {(variant === "primary" || variant === "light" || variant === "dark") && (
         <svg className="relative z-[2] h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M5 12h14m-6-6 6 6-6 6" />
@@ -150,7 +191,7 @@ export function Button({
 export function Frame({ title, children, className = "" }: { title: string; children: React.ReactNode; className?: string }) {
   return (
     <div className={`halo ${className}`}>
-    <div className="overflow-hidden rounded-2xl border border-line/90 bg-surface/95 shadow-lift backdrop-blur-xl">
+    <div className="overflow-hidden rounded-2xl border border-line/90 bg-surface/95 text-fg shadow-lift backdrop-blur-xl">
       <div className="flex items-center gap-2 border-b border-line bg-surface-2/70 px-4 py-2.5">
         <span className="flex gap-1.5" aria-hidden>
           <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
@@ -168,7 +209,7 @@ export function Frame({ title, children, className = "" }: { title: string; chil
 export function Phone({ children, label }: { children: React.ReactNode; label: string }) {
   return (
     <div className="mx-auto w-[260px] max-w-full rounded-[2.2rem] border-[7px] border-ink bg-ink p-0.5 shadow-lift" role="img" aria-label={label}>
-      <div className="overflow-hidden rounded-[1.7rem] bg-bg">
+      <div className="overflow-hidden rounded-[1.7rem] bg-bg text-fg">
         <div className="flex justify-center py-1.5">
           <span className="h-1.5 w-16 rounded-full bg-ink/80" />
         </div>

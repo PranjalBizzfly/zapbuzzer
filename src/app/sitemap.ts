@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { allPaths } from "@/content/manifest";
 import { absUrl, site } from "@/lib/site";
+import { companyPageList } from "@/lib/companyPages";
+import { allPosts } from "@/lib/blog";
 
 const noindex = new Set(["sign-in", "sign-up"]);
 
@@ -12,5 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: p === "" ? 1 : p.split("/").length === 1 ? 0.8 : 0.6,
     }));
-  return [...pages, { url: absUrl("explore"), changeFrequency: "monthly", priority: 0.5 }];
+  const company: MetadataRoute.Sitemap = companyPageList.map((c) => ({ url: absUrl(c.href), changeFrequency: "monthly", priority: 0.6 }));
+  const posts: MetadataRoute.Sitemap = allPosts.map((p) => ({ url: absUrl(`blog/${p.slug}`), lastModified: p.date, changeFrequency: "monthly", priority: 0.5 }));
+  return [...pages, ...company, ...posts, { url: absUrl("explore-all-pages"), changeFrequency: "monthly", priority: 0.5 }];
 }

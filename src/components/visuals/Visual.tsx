@@ -11,7 +11,7 @@ export function Visual({ kind }: { kind: VisualKind }) {
 }
 
 const queue: { icon: string; item: string; where: string; who: string; status: Status; time: string }[] = [
-  { icon: "☕", item: "2× Black coffee", where: "Boss Cabin", who: "Raj", status: "started", time: "ETA 3 min" },
+  { icon: "☕", item: "2× Black coffee", where: "Boss Cabin", who: "Arjun", status: "started", time: "ETA 3 min" },
   { icon: "📄", item: "Print · 24 pgs colour", where: "Desk 4B", who: "Suresh", status: "accepted", time: "00:41" },
   { icon: "❄️", item: "AC too cold · 16°C", where: "Conf Room B", who: "Deepak", status: "overdue", time: "+2 min" },
   { icon: "💻", item: "HDMI cable", where: "Meeting Rm 2", who: "Priya", status: "delivered", time: "3m 05s" },
@@ -20,7 +20,7 @@ const queue: { icon: string; item: string; where: string; who: string; status: S
 
 function RequestDashboard() {
   return (
-    <Frame title="Buzzer · Live requests — 3rd floor">
+    <Frame title="Buzzer · Live Requests, 3rd Floor">
       <div className="mb-4 grid grid-cols-3 gap-2 text-center">
         {[
           ["Open", "7"],
@@ -45,7 +45,7 @@ function RequestDashboard() {
             </div>
             <div className="flex flex-col items-end gap-1">
               <StatusPill status={r.status} />
-              <span className="text-[10px] tabular-nums text-muted">{r.time}</span>
+              <span className="text-[11px] tabular-nums text-muted">{r.time}</span>
             </div>
           </li>
         ))}
@@ -56,8 +56,8 @@ function RequestDashboard() {
 
 function StaffQueue() {
   return (
-    <Phone label="Pantry staff phone showing incoming requests with Accept buttons">
-      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted">Pantry team · Raj</p>
+    <Phone label="Pantry Staff Phone Showing Incoming Requests With Accept Buttons">
+      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted">Pantry team · Arjun</p>
       <div className="mt-2 space-y-2">
         {[
           { i: "☕", t: "2× Black coffee", w: "Boss Cabin · Aarav", s: "new" },
@@ -69,7 +69,7 @@ function StaffQueue() {
               <span aria-hidden>{r.i}</span>
               <div className="min-w-0 flex-1">
                 <p className="truncate text-[13px] font-semibold">{r.t}</p>
-                <p className="truncate text-[10px] text-muted">{r.w}</p>
+                <p className="truncate text-[11px] text-muted">{r.w}</p>
               </div>
             </div>
             {r.s === "new" ? (
@@ -80,7 +80,7 @@ function StaffQueue() {
             ) : (
               <div className="mt-2 flex items-center justify-between">
                 <StatusPill status="started">In progress</StatusPill>
-                <span className="text-[10px] text-muted">ETA 12 min</span>
+                <span className="text-[11px] text-muted">ETA 12 min</span>
               </div>
             )}
           </div>
@@ -93,15 +93,15 @@ function StaffQueue() {
 const lifecycle = [
   { t: "2:00:00", l: "Buzzed", d: "Aarav · 2× Black coffee → Boss Cabin" },
   { t: "2:00:01", l: "Routed", d: "Pantry team · app + Telegram + WhatsApp + email" },
-  { t: "2:00:12", l: "Accepted", d: "Raj tapped Accept first · owner assigned" },
+  { t: "2:00:12", l: "Accepted", d: "Arjun tapped Accept first · owner assigned" },
   { t: "2:01:00", l: "Started", d: "ETA 3 min · SLA timer running" },
   { t: "2:04:00", l: "Delivered", d: "Photo attached · requester notified" },
-  { t: "2:04:20", l: "Rated", d: "★★★★★ · counted in Raj’s scorecard" },
+  { t: "2:04:20", l: "Rated", d: "★★★★★ · counted in Arjun’s scorecard" },
 ];
 
 function RequestTimeline() {
   return (
-    <Frame title="Request #4821 · timeline">
+    <Frame title="Request #4821 · Timeline">
       <ol className="relative space-y-4 border-l-2 border-line pl-5" aria-label="Request lifecycle from buzz to rating">
         {lifecycle.map((s, i) => (
           <li key={s.l} className="anim-rise relative" style={{ animationDelay: `${i * 120}ms` }}>
@@ -123,7 +123,7 @@ function SlaTimer() {
   const c = 2 * Math.PI * r;
   const used = 0.72;
   return (
-    <Frame title="SLA · Facilities · AC too cold">
+    <Frame title="SLA · Facilities · AC Too Cold">
       <div className="flex flex-col items-center gap-5 sm:flex-row">
         <div className="relative h-32 w-32 shrink-0" role="img" aria-label="SLA timer: 10 minutes 48 seconds used of 15 minutes">
           <svg viewBox="0 0 110 110" className="h-full w-full -rotate-90">
@@ -137,7 +137,7 @@ function SlaTimer() {
           <div className="absolute inset-0 grid place-items-center text-center">
             <div>
               <p className="text-xl font-bold tabular-nums">04:12</p>
-              <p className="text-[10px] text-muted">left of 15:00</p>
+              <p className="text-[11px] text-muted">left of 15:00</p>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ function Analytics() {
   const bars = [38, 62, 90, 74, 55, 81, 46, 30];
   const hours = ["9", "10", "11", "12", "1", "2", "3", "4"];
   return (
-    <Frame title="Analytics · last 30 days">
+    <Frame title="Analytics · Last 30 Days">
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         {[
           ["Avg accept", "32s"],
@@ -184,7 +184,7 @@ function Analytics() {
         {bars.map((b, i) => (
           <div key={i} className="flex flex-1 flex-col items-center gap-1">
             <div className="anim-bar w-full rounded-t-md bg-gradient-to-t from-accent to-violet" style={{ height: `${b}%`, animationDelay: `${i * 60}ms` }} />
-            <span className="text-[10px] text-muted">{hours[i]}</span>
+            <span className="text-[11px] text-muted">{hours[i]}</span>
           </div>
         ))}
       </div>
@@ -194,13 +194,13 @@ function Analytics() {
 
 function Scorecard() {
   const staff = [
-    { n: "Raj", team: "Pantry", acc: "12s", ontime: 98, rating: "4.9" },
-    { n: "Suresh", team: "Print room", acc: "28s", ontime: 95, rating: "4.8" },
+    { n: "Arjun", team: "Pantry", acc: "12s", ontime: 98, rating: "4.9" },
+    { n: "Suresh", team: "Print Room", acc: "28s", ontime: 95, rating: "4.8" },
     { n: "Deepak", team: "Facilities", acc: "41s", ontime: 91, rating: "4.7" },
     { n: "Priya", team: "IT", acc: "19s", ontime: 97, rating: "4.9" },
   ];
   return (
-    <Frame title="Staff scorecards · this month">
+    <Frame title="Staff Scorecards · This Month">
       <ul className="space-y-3">
         {staff.map((s) => (
           <li key={s.n} className="flex items-center gap-3">
@@ -234,23 +234,23 @@ function MobileApp() {
     ["📄", "Print"], ["💻", "IT help"], ["❄️", "Facilities"], ["📦", "Courier"], ["🛡️", "Security"],
   ];
   return (
-    <Phone label="ZapBuzzer mobile app home with one-tap request tiles">
+    <Phone label="ZapBuzzer Mobile App Home With One-Tap Request Tiles">
       <p className="text-[11px] text-muted">Good afternoon, Aarav</p>
       <p className="text-sm font-bold">What do you need?</p>
       <div className="mt-3 grid grid-cols-3 gap-2">
         {items.map(([i, l]) => (
           <div key={l} className="rounded-xl border border-line bg-surface py-2.5 text-center">
             <span className="text-lg" aria-hidden>{i}</span>
-            <p className="text-[10px] font-medium">{l}</p>
+            <p className="text-[11px] font-medium">{l}</p>
           </div>
         ))}
       </div>
       <div className="mt-3 rounded-xl bg-ink p-2.5 text-white">
         <div className="flex items-center justify-between">
           <p className="text-[11px] font-semibold">☕ 2× Coffee · Boss Cabin</p>
-          <span className="text-[10px] text-white/60">ETA 3m</span>
+          <span className="text-[11px] text-white/60">ETA 3m</span>
         </div>
-        <p className="mt-0.5 text-[10px] text-white/70">Raj is on it · accepted in 12s</p>
+        <p className="mt-0.5 text-[11px] text-white/70">Arjun is on it · accepted in 12s</p>
       </div>
     </Phone>
   );
@@ -264,9 +264,9 @@ function NotificationFlow() {
     ["Email", "Team inbox", "✉️"],
   ];
   return (
-    <Frame title="One buzz → every channel at once">
+    <Frame title="One Buzz → Every Channel at Once">
       <div className="flex flex-col items-center gap-4">
-        <div className="anim-ping rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white">☕ 2× Coffee · Boss Cabin</div>
+        <div className="anim-ping rounded-xl bg-accent px-4 py-2 text-sm text-white font-semibold text-white">☕ 2× Coffee · Boss Cabin</div>
         <svg className="h-8 w-full max-w-sm text-line" viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden>
           {[37, 112, 188, 263].map((x) => (
             <path key={x} d={`M150 0 C150 15, ${x} 15, ${x} 30`} fill="none" stroke="currentColor" strokeWidth="2" />
@@ -289,12 +289,12 @@ function NotificationFlow() {
 
 function Acceptance() {
   const staff = [
-    { n: "Raj", s: "Accepted · 12s", win: true },
-    { n: "Manoj", s: "Too late — Raj has it", win: false },
+    { n: "Arjun", s: "Accepted · 12s", win: true },
+    { n: "Manoj", s: "Too late, Arjun has it", win: false },
     { n: "Sunita", s: "Notified · on break", win: false },
   ];
   return (
-    <Frame title="First-accept-wins · Pantry team">
+    <Frame title="First-Accept-Wins · Pantry Team">
       <p className="mb-3 text-sm">
         <span className="font-semibold">☕ 2× Coffee</span> <span className="text-muted">sent to 3 pantry staff</span>
       </p>
@@ -319,7 +319,7 @@ function Delivery() {
         <span className="grid h-10 w-10 place-items-center rounded-full bg-success text-white" aria-hidden>✓</span>
         <div>
           <p className="text-sm font-semibold">2× Black coffee delivered to Boss Cabin</p>
-          <p className="text-xs text-muted">by Raj · 4 min total · 0 phone calls</p>
+          <p className="text-xs text-muted">by Arjun · 4 min total · 0 phone calls</p>
         </div>
       </div>
       <div className="mt-4 grid h-24 place-items-center rounded-xl bg-gradient-to-br from-surface-2 to-accent-soft text-3xl" role="img" aria-label="Delivery photo attached by staff">
@@ -337,11 +337,11 @@ function Catalog() {
     ["🥤", "Fresh juice", ""], ["🍪", "Cookies", ""], ["🥜", "Dry fruits", ""], ["🥪", "Sandwich", ""],
   ];
   return (
-    <Frame title="Pantry catalogue">
+    <Frame title="Pantry Catalogue">
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         {items.map(([i, n, tag]) => (
           <div key={n} className="relative rounded-xl border border-line p-3 text-center transition hover:border-accent/40">
-            {tag && <span className="absolute right-1.5 top-1.5 rounded-full bg-accent-soft px-1.5 text-[9px] font-semibold text-accent-text">{tag}</span>}
+            {tag && <span className="absolute right-1.5 top-1.5 rounded-full bg-accent-soft px-1.5 text-[11px] font-semibold text-accent-text">{tag}</span>}
             <span className="text-2xl" aria-hidden>{i}</span>
             <p className="mt-1 text-xs font-medium">{n}</p>
           </div>
@@ -359,9 +359,9 @@ function Catalog() {
 
 function PrintJob() {
   return (
-    <Frame title="Print room · New job">
+    <Frame title="Print Room · New Job">
       <div className="flex items-center gap-3 rounded-xl border border-dashed border-accent/40 bg-accent-soft p-3">
-        <span className="grid h-10 w-9 place-items-center rounded-md bg-danger text-[10px] font-bold text-white" aria-hidden>PDF</span>
+        <span className="grid h-10 w-9 place-items-center rounded-md bg-danger text-[11px] font-bold text-white" aria-hidden>PDF</span>
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold">Q3-pitch-deck.pdf</p>
           <p className="text-[11px] text-muted">12 pages · uploaded by Kavya</p>
@@ -395,7 +395,7 @@ function Escalation() {
     { who: "Admin Head", when: "15:01", s: "escalated" as Status, d: "Auto-escalated with full history" },
   ];
   return (
-    <Frame title="Escalation chain · AC issue">
+    <Frame title="Escalation Chain · AC Issue">
       <ol className="space-y-2">
         {steps.map((s, i) => (
           <li key={s.who} className="anim-rise flex items-center gap-3 rounded-xl border border-line px-3 py-2.5" style={{ animationDelay: `${i * 110}ms` }}>
@@ -423,7 +423,7 @@ function Roles() {
     ["Audit log", [true, false, false, false]],
   ];
   return (
-    <Frame title="Roles & permissions (example)">
+    <Frame title="Roles & Permissions (Example)">
       <div className="overflow-x-auto">
         <table className="w-full min-w-[340px] text-sm">
           <thead>
@@ -454,15 +454,15 @@ function Roles() {
 
 function AuditLog() {
   const rows = [
-    ["14:00:12", "Raj", "accepted request #4821"],
-    ["14:01:00", "Raj", "marked #4821 started · ETA 3m"],
-    ["14:04:00", "Raj", "delivered #4821 · photo attached"],
+    ["14:00:12", "Arjun", "accepted request #4821"],
+    ["14:01:00", "Arjun", "marked #4821 started · ETA 3m"],
+    ["14:04:00", "Arjun", "delivered #4821 · photo attached"],
     ["14:06:31", "Priya (Manager)", "added “Cold brew” to pantry catalogue"],
     ["14:10:02", "System", "escalated #4817 to Admin Head (SLA)"],
     ["14:12:45", "Aarav (Owner)", "changed role of Neha → Manager"],
   ];
   return (
-    <Frame title="Audit log">
+    <Frame title="Audit Log">
       <ul className="divide-y divide-line font-mono text-[12px]">
         {rows.map(([t, who, what]) => (
           <li key={t} className="flex gap-3 py-2">
@@ -484,7 +484,7 @@ function BeforeAfter() {
         <p className="text-sm font-semibold">The phone-call way</p>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           <li><span className="tabular-nums text-fg">2:00</span> Aarav rings the pantry: two coffees for the boss cabin.</li>
-          <li><span className="tabular-nums text-fg">2:09</span> Still waiting. Second call — the order slipped Raju’s mind.</li>
+          <li><span className="tabular-nums text-fg">2:09</span> Still waiting. Second call. Raju forgot the order.</li>
           <li><span className="tabular-nums text-fg">2:14</span> Third call. Raju has stepped out for lunch.</li>
           <li><span className="tabular-nums text-fg">2:25</span> A colleague finally brings it. The meeting is half over.</li>
         </ul>
@@ -494,7 +494,7 @@ function BeforeAfter() {
         <p className="text-sm font-semibold">The ZapBuzzer way</p>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           <li><span className="tabular-nums text-fg">2:00:00</span> One tap sends two black coffees to the Boss Cabin.</li>
-          <li><span className="tabular-nums text-fg">2:00:12</span> Raj claims it; his name and photo appear.</li>
+          <li><span className="tabular-nums text-fg">2:00:12</span> Arjun claims it; his name and photo appear.</li>
           <li><span className="tabular-nums text-fg">2:01</span> Marked as started, three minutes away.</li>
           <li><span className="tabular-nums text-fg">2:04</span> Handed over with a photo, then rated five stars.</li>
         </ul>

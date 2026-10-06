@@ -7,7 +7,7 @@ export const pages: PageContent[] = [
     title: "Office Service Workflow: Request to Rating",
     description:
       "How every office request moves through ZapBuzzer: tap, route, ping, first accept, ETA, delivery, rating. One shared workflow behind nine everyday office jobs.",
-    h1: "One workflow behind every office request",
+    h1: "One Workflow Behind Every Office Request",
     eyebrow: "Workflows",
     lead:
       "Coffee, prints, a stuck projector, a courier at the gate: they look like different jobs, but in ZapBuzzer they all follow the same path. Learn it once and you understand all nine workflows below.",
@@ -22,7 +22,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Why a single workflow matters",
+        heading: "Why a Single Workflow Matters",
         paragraphs: [
           "Most offices run each kind of request on its own informal channel. Coffee goes through a shout down the corridor, prints through a WhatsApp group, IT problems through someone's DMs, and courier pickups through a call to reception. Each channel has its own way of getting lost.",
           "ZapBuzzer replaces all of them with one path. The employee taps, the right team is pinged, the first free person accepts, and the requester can see who is on it and when it will arrive. Because the steps are identical, staff learn one habit and managers read one set of numbers.",
@@ -30,31 +30,31 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The end-to-end workflow, step by step",
+        heading: "The Whole Workflow, Step by Step",
         intro: "These steps apply to every request type. Individual workflow pages show what changes for each one.",
         steps: [
-          { title: "Tap a catalogue item", body: "The employee picks what they need from the catalogue on the mobile or web app, adds a note if useful, and chooses a destination such as Boss Cabin or Conference Room B." },
+          { title: "Tap a Catalogue Item", body: "The employee picks what they need from the catalogue on the mobile or web app, adds a note if useful, and chooses a destination such as Boss Cabin or Conference Room B." },
           { title: "Buzz", body: "Tapping Buzz creates the request and starts its clock. Every request is timed from this moment." },
-          { title: "Route to the right team", body: "The request goes to the team that owns that category: pantry, print room, IT desk, facilities or mailroom. Nobody has to decide who to call." },
-          { title: "Ping every channel", body: "The team is notified in the app and by email. On Pro, Telegram and WhatsApp pings go out at the same time. Notifications repeat until someone accepts." },
-          { title: "First to accept owns it", body: "Whoever is free taps Accept. The request leaves everyone else's queue, so two people never walk to the same desk." },
-          { title: "Start with an ETA", body: "The owner marks the request as started with an ETA. The requester sees the staff member's name, photo and expected arrival." },
+          { title: "Route to the Right Team", body: "The request goes to the team that owns that category: pantry, print room, IT desk, facilities or mailroom. Nobody has to decide who to call." },
+          { title: "Ping Every Channel", body: "The team is notified in the app and by email. On Pro, Telegram and WhatsApp pings go out at the same time. Notifications repeat until someone accepts." },
+          { title: "First to Accept Owns It", body: "Whoever is free taps Accept. The request leaves everyone else's queue, so two people never walk to the same desk." },
+          { title: "Start With an ETA", body: "The owner marks the request as started with an ETA. The requester sees the staff member's name, photo and expected arrival." },
           { title: "Deliver", body: "The owner marks it delivered and can attach a photo as confirmation." },
           { title: "Rate", body: "The requester gives a 1–5 star rating. That rating stays attached to the request and the staff member." },
-          { title: "Escalate if late (Pro)", body: "With SLA and the escalation chain on Pro, a request that misses its deadline is automatically escalated to a manager." },
+          { title: "Escalate If Late (Pro)", body: "With SLA and the escalation chain on Pro, a request that misses its deadline is automatically escalated to a manager." },
         ],
       },
       {
         type: "visual",
         visual: "request-timeline",
-        heading: "Every state, visible to everyone involved",
+        heading: "Every State, Visible to Everyone Involved",
         body: "Requested, accepted, started, delivered, rated. The requester, the staff member and the admin all see the same timeline, so there is no need to call and ask where things are.",
         points: ["Timestamps on every state change", "Name and photo of the person who accepted", "Delivery photo when attached"],
       },
       {
         type: "scenario",
-        heading: "One morning, three different requests",
-        persona: "A 40-person office in Pune",
+        heading: "One Morning, Three Different Requests",
+        persona: "A 40-person Office in Pune",
         setting: "Board meeting at 11, a sales pitch at 10:30 and a warm conference room.",
         timeline: [
           { time: "10:14", event: "Kavya uploads a PDF and requests 24 colour copies for her pitch." },
@@ -68,8 +68,8 @@ export const pages: PageContent[] = [
       },
       {
         type: "table",
-        heading: "The nine workflows at a glance",
-        headers: ["Workflow", "Team pinged", "What is different"],
+        heading: "The Nine Workflows at a Glance",
+        headers: ["Workflow", "Team Pinged", "What Is Different"],
         rows: [
           ["Coffee request", "Pantry", "Usual order is one tap; destination matters most"],
           ["Print request", "Print room", "PDF upload, copies and colour set by requester"],
@@ -84,28 +84,31 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Informal channels vs one workflow",
-        columns: ["Calls, shouts and group chats", "ZapBuzzer workflow"],
+        heading: "Informal Channels vs One Workflow",
+        columns: ["Calls, Shouts and Group Chats", "ZapBuzzer Workflow"],
         rows: [
-          { label: "Who owns the job", a: "Unclear until someone replies", b: "First person to tap Accept" },
+          { label: "Who Owns the Job", a: "Unclear until someone replies", b: "First person to tap Accept" },
           { label: "Status", a: "Ask again", b: "Visible with ETA" },
-          { label: "Late requests", a: "Noticed when someone complains", b: "Escalated to a manager on Pro" },
+          { label: "Late Requests", a: "Noticed when someone complains", b: "Escalated to a manager on Pro" },
           { label: "Record", a: "Scattered chat history", b: "Timed request with rating" },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "What each plan includes",
+        title: "What Each Plan Includes",
         body: "Free covers one location, up to 10 staff, email notifications and 30 days of history. Pro adds Telegram and WhatsApp pings, SLA with the escalation chain, full analytics and scorecards, and multi-location, at ₹99 per seat per month.",
       },
     ],
     faqs: [
-      { q: "Do all request types really use the same steps?", a: "Yes. Every request is tapped, routed, accepted, started, delivered and rated. What changes is the catalogue item, the team it goes to and the details the requester adds, such as copies for a print job or a headcount for lunch." },
-      { q: "Can I start with just one workflow?", a: "Yes. Many offices start with coffee or prints because they are frequent and easy to measure, then add IT, facilities and courier categories once staff are used to accepting requests." },
-      { q: "What happens if nobody accepts?", a: "Notifications keep repeating until someone does. On Pro, the SLA timer also runs and an overdue request escalates to a manager through the escalation chain." },
-      { q: "Does the workflow work on phones?", a: "Yes. Employees can request and staff can accept and update from the mobile app, which still rings when the phone is locked or on silent. The web app works the same way for desk-based users." },
-      { q: "How long does setup take?", a: "Pricing is per seat with no setup fees or consultant, and most offices are running in an afternoon. You can try it free for 14 days without a credit card." },
+      { q: "Do All Request Types Really Use the Same Steps?", a: "Yes. Every request is tapped, routed, accepted, started, delivered and rated. What changes is the catalogue item, the team it goes to and the details the requester adds, such as copies for a print job or a headcount for lunch." },
+      { q: "Can I Start With Just One Workflow?", a: "Yes. Many offices start with coffee or prints because they are frequent and easy to measure, then add IT, facilities and courier categories once staff are used to accepting requests." },
+      { q: "Where Does a Request Wait If No Staff Member Accepts It?", a: "It stays in the team's open queue and notifications keep repeating until someone accepts. Every request is timed, and an overdue one escalates to a manager; the full escalation chain is part of Pro." },
+      { q: "Does the Workflow Work on Phones?", a: "Yes. Employees can request and staff can accept and update from the mobile app, which still rings when the phone is locked or on silent. The web app works the same way for desk-based users." },
+      { q: "How Long Does It Take to Set Up All Nine Workflows?", a: "Most offices are running in an afternoon: add catalogue items, assign each to a team and invite staff. There are no setup fees or consultant, and you can try it free for 14 days without a credit card." },
+      { q: "Which Nine Workflows Does ZapBuzzer Cover?", a: "Coffee, print, IT support, AC issues, projector, HDMI, courier pickup, lunch and emergency summon. All of them follow the same tap, route, accept, start, deliver and rate path." },
+      { q: "Can the Requester See Where Their Request Is?", a: "Yes. Every state is visible: who accepted it with their name and photo, the ETA once started, and delivery, often with a photo. Nobody needs to call to ask." },
+      { q: "Can We Add Our Own Request Types to the Workflow?", a: "Yes. You add items to your catalogue and assign each to a team. New items follow the same workflow, with routing, first-accept-wins, timing and ratings." },
     ],
     related: [
       "workflows/coffee-request",
@@ -117,7 +120,7 @@ export const pages: PageContent[] = [
       "workflows/courier-pickup",
       "workflows/lunch-request",
     ],
-    cta: { title: "Run your first workflow today", body: "Try it free for 14 days: add a catalogue item and send your first buzz, without a credit card or a setup call." },
+    cta: { title: "Run Your First Workflow Today", body: "Try it free for 14 days: add a catalogue item and send your first buzz, without a credit card or a setup call." },
   },
 
   // ─────────────────────────── COFFEE ───────────────────────────
@@ -126,7 +129,7 @@ export const pages: PageContent[] = [
     title: "Coffee Request Workflow for Offices",
     description:
       "Step-by-step coffee request workflow: tap your usual order, pick Boss Cabin, the pantry is pinged, first accept wins, hot coffee arrives and you rate it.",
-    h1: "From one tap to a hot cup at the boss cabin",
+    h1: "From One Tap to a Hot Cup at the Boss Cabin",
     eyebrow: "Workflow · Pantry",
     lead:
       "The classic office request is “Raju, two coffees in the boss cabin.” Handled over the phone, it can drag on for 25 minutes and three calls, and the cup turns up cold. Here is how the same request runs in ZapBuzzer.",
@@ -135,9 +138,9 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "problem-solution",
-        heading: "Why coffee is the hardest easy request",
+        heading: "Why Coffee Is the Hardest Easy Request",
         problem: {
-          title: "By phone or shout",
+          title: "By Phone or Shout",
           points: [
             "The caller has to know who is in the pantry right now",
             "Order details get lost: sugar, milk, how many cups",
@@ -157,20 +160,20 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The coffee request, step by step",
+        heading: "The Coffee Request, Step by Step",
         steps: [
-          { title: "Pick the item", body: "Open the pantry catalogue and tap Coffee. Alongside it you will find tea, juice, snacks and dry fruits." },
-          { title: "Add a note and quantity", body: "“Two cups, one without sugar” goes in the note so nobody has to call back for details." },
-          { title: "Choose the destination", body: "Select Boss Cabin, a conference room or your desk. This tells the pantry exactly where to walk." },
+          { title: "Pick the Item", body: "Open the pantry catalogue and tap Coffee. Alongside it you will find tea, juice, snacks and dry fruits." },
+          { title: "Add a Note and Quantity", body: "“Two cups, one without sugar” goes in the note so nobody has to call back for details." },
+          { title: "Choose the Destination", body: "Select Boss Cabin, a conference room or your desk. This tells the pantry exactly where to walk." },
           { title: "Tap Buzz", body: "The pantry team is pinged at once in the app and by email, and on Pro via Telegram and WhatsApp too." },
-          { title: "First accept", body: "Whoever is free in the pantry taps Accept. The request disappears from the others' queues." },
-          { title: "ETA shown", body: "The requester sees the staff member's name, photo and ETA instead of wondering whether anyone heard." },
-          { title: "Deliver and rate", body: "Coffee is delivered and marked done. The requester rates it from 1 to 5 stars." },
+          { title: "First Accept", body: "Whoever is free in the pantry taps Accept. The request disappears from the others' queues." },
+          { title: "ETA Shown", body: "The requester sees the staff member's name, photo and ETA instead of wondering whether anyone heard." },
+          { title: "Deliver and Rate", body: "Coffee is delivered and marked done. The requester rates it from 1 to 5 stars." },
         ],
       },
       {
         type: "scenario",
-        heading: "Aarav's board call",
+        heading: "Aarav's Board Call",
         persona: "Aarav, CEO",
         setting: "A board call is starting in the boss cabin and two guests have just arrived.",
         timeline: [
@@ -185,18 +188,18 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "before-after",
-        heading: "Twenty-five minutes vs four",
+        heading: "Twenty-Five Minutes vs Four",
         body: "The before-and-after we hear most often: 25 minutes, 3 phone calls and 1 cold coffee, against 4 minutes, 0 phone calls and 1 hot coffee.",
       },
       {
         type: "visual",
         visual: "acceptance",
-        heading: "No more “I thought you'd do it”",
+        heading: "No More “I Thought You'd Do It”",
         body: "The coffee request goes to the whole pantry team. Ownership goes to whoever taps Accept first, so it is never made twice and never skipped.",
       },
       {
         type: "checklist",
-        heading: "Setting up coffee requests",
+        heading: "Setting Up Coffee Requests",
         items: [
           "Add Coffee and your other common drinks to the pantry catalogue",
           "Add destinations people actually use: Boss Cabin, conference rooms, floor areas",
@@ -208,19 +211,22 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "Rings even on silent",
+        title: "Rings Even on Silent",
         body: "Pantry staff often keep their phones in a pocket. Silent mode and a locked screen do not stop the ZapBuzzer mobile app from ringing, so requests are not missed during a busy rush.",
       },
     ],
     faqs: [
-      { q: "Can I save my usual coffee order?", a: "The pantry catalogue keeps your usual order one tap away. Add specifics like sugar or milk in the note so the pantry has everything it needs." },
-      { q: "What if the pantry is busy and nobody accepts?", a: "Notifications repeat until someone accepts. On Pro, the request also has an SLA timer and escalates to a manager if it goes overdue." },
-      { q: "Does the CEO's request get priority?", a: "Every request is routed to the pantry team the same way and the first free person accepts it. The destination, such as Boss Cabin, tells staff where it is going." },
-      { q: "Do pantry staff need Telegram or WhatsApp?", a: "No. The app and email notifications work on every plan. Telegram and WhatsApp pings are an addition on Pro for teams that prefer them." },
-      { q: "Why rate a cup of coffee?", a: "Ratings give pantry staff fair credit for fast, good service. Over time they feed staff scorecards so the office can see who consistently delivers 5★." },
+      { q: "Can I Save My Usual Coffee Order?", a: "The pantry catalogue keeps your usual order one tap away. Add specifics like sugar or milk in the note so the pantry has everything it needs." },
+      { q: "What If the Pantry Is Busy and Nobody Accepts?", a: "Notifications repeat until someone accepts. On Pro, the request also has an SLA timer and escalates to a manager if it goes overdue." },
+      { q: "Does the CEO's Request Get Priority?", a: "Every request is routed to the pantry team the same way and the first free person accepts it. The destination, such as Boss Cabin, tells staff where it is going." },
+      { q: "Do Pantry Staff Need Telegram or WhatsApp?", a: "No. The app and email notifications work on every plan. Telegram and WhatsApp pings are an addition on Pro for teams that prefer them." },
+      { q: "Why Rate a Cup of Coffee?", a: "Ratings give pantry staff fair credit for fast, good service. Over time they feed staff scorecards so the office can see who consistently delivers 5★." },
+      { q: "How Quickly Can a Coffee Request Be Accepted?", a: "In Aarav's board-call example Raj accepted in 12 seconds. Pilot offices averaged a 32-second accept time in their first month." },
+      { q: "Can I Order Coffee for a Meeting Room Instead of My Desk?", a: "Yes. Choose the destination when you buzz, such as Boss Cabin or a conference room, and add how many cups in the note." },
+      { q: "How Is Buzzing Coffee Better Than Calling the Pantry?", a: "The phone version of “two coffees in the boss cabin” took 25 minutes, three calls and arrived cold. The buzz version took four minutes, zero calls and arrived hot." },
     ],
     related: ["workflows", "solutions/pantry/coffee-requests", "workflows/lunch-request", "features/first-accept-wins", "solutions/pantry/catalog", "use-cases/ceo", "free-trial"],
-    cta: { title: "Get the next coffee without a phone call", body: "Set up your pantry catalogue in minutes on the 14-day free trial." },
+    cta: { title: "Get the Next Coffee Without a Phone Call", body: "Set up your pantry catalogue in minutes on the 14-day free trial." },
   },
 
   // ─────────────────────────── PRINT ───────────────────────────
@@ -229,8 +235,8 @@ export const pages: PageContent[] = [
     title: "Print Request Workflow: PDF to Desk",
     description:
       "Print request workflow in ZapBuzzer: upload a PDF, set copies and colour, the print room accepts, prints are delivered to your seat before the meeting starts.",
-    h1: "Upload a PDF, get printed copies at your seat",
-    eyebrow: "Workflow · Print room",
+    h1: "Upload a PDF, Get Printed Copies at Your Seat",
+    eyebrow: "Workflow · Print Room",
     lead:
       "Print jobs used to get lost in a WhatsApp group: a file posted, a reply nobody saw, a printout that never came. In ZapBuzzer the file, the copy count and the delivery seat travel together as one request.",
     keywords: ["print request workflow", "office print request", "pdf print request", "print room workflow", "colour copies request"],
@@ -238,7 +244,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "What makes printing different",
+        heading: "What Makes Printing Different",
         paragraphs: [
           "Unlike coffee, a print request carries a file and a specification. The print room needs the right PDF, the right number of copies and to know whether it should be colour. Get any one wrong and the job has to be redone, usually when time is shortest.",
           "ZapBuzzer keeps those details inside the request, so whoever accepts it has everything in one place and the requester never has to resend the file or explain it twice.",
@@ -246,28 +252,28 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The print request, step by step",
+        heading: "The Print Request, Step by Step",
         steps: [
           { title: "Choose Print", body: "Pick the print item from the catalogue on the web or mobile app." },
           { title: "Upload the PDF", body: "Attach the file directly to the request instead of sending it in a chat." },
-          { title: "Set copies and colour", body: "Enter the number of copies and choose colour or black and white." },
-          { title: "Pick where to deliver", body: "Choose your seat or a room such as Conference Room B." },
-          { title: "Buzz the print room", body: "The print room is notified at once; notifications repeat until someone accepts." },
-          { title: "Accept and start", body: "The first free person accepts, starts the job and sets an ETA you can see." },
-          { title: "Deliver with proof", body: "Prints are delivered to the seat or room and marked delivered; a photo can be attached." },
-          { title: "Rate the job", body: "The requester rates the delivery 1–5 stars." },
+          { title: "Set Copies and Colour", body: "Enter the number of copies and choose colour or black and white." },
+          { title: "Pick Where to Deliver", body: "Choose your seat or a room such as Conference Room B." },
+          { title: "Buzz the Print Room", body: "The print room is notified at once; notifications repeat until someone accepts." },
+          { title: "Accept and Start", body: "The first free person accepts, starts the job and sets an ETA you can see." },
+          { title: "Deliver With Proof", body: "Prints are delivered to the seat or room and marked delivered; a photo can be attached." },
+          { title: "Rate the Job", body: "The requester rates the delivery 1–5 stars." },
         ],
       },
       {
         type: "visual",
         visual: "print-job",
-        heading: "A print job card that carries everything",
+        heading: "A Print Job Card That Carries Everything",
         body: "File, copies, colour and destination sit on one card that the print room accepts and works from.",
         points: ["PDF attached to the request", "Copies and colour set by the requester", "Delivery location shown up front"],
       },
       {
         type: "scenario",
-        heading: "Kavya's pitch in ten minutes",
+        heading: "Kavya's Pitch in Ten Minutes",
         persona: "Kavya, Sales Lead",
         setting: "A client pitch starts in 10 minutes and the deck changed this morning.",
         timeline: [
@@ -281,31 +287,34 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Print request in a group chat vs ZapBuzzer",
-        columns: ["WhatsApp group", "ZapBuzzer"],
+        heading: "Print Request in a Group Chat vs ZapBuzzer",
+        columns: ["WhatsApp Group", "ZapBuzzer"],
         rows: [
           { label: "File", a: "Buried under other messages", b: "Attached to the request" },
-          { label: "Copies and colour", a: "In a follow-up message, if at all", b: "Set as part of the request" },
-          { label: "Who is printing", a: "Unknown", b: "Name and photo of the person who accepted" },
-          { label: "Proof of delivery", a: "None", b: "Delivered state with optional photo" },
+          { label: "Copies and Colour", a: "In a follow-up message, if at all", b: "Set as part of the request" },
+          { label: "Who Is Printing", a: "Unknown", b: "Name and photo of the person who accepted" },
+          { label: "Proof of Delivery", a: "None", b: "Delivered state with optional photo" },
         ],
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Deadlines for print jobs",
+        title: "Deadlines for Print Jobs",
         body: "On Pro, each request has an SLA deadline. If a print job is overdue it auto-escalates to a manager, which matters most for client meetings.",
       },
     ],
     faqs: [
-      { q: "Which files can I send?", a: "The print room workflow is built around uploading a PDF. Export your document to PDF first so it prints exactly as you see it." },
-      { q: "Can I request colour and black-and-white in one go?", a: "Each request carries its own copies and colour settings. If you need both, raise two requests so the print room has clear instructions for each." },
-      { q: "Where are the prints delivered?", a: "To the seat or room you choose when you buzz. That could be your desk, a cabin or a conference room ahead of a meeting." },
-      { q: "How do I know the print room has my job?", a: "As soon as someone accepts, you see their name, photo and ETA. You will not need to call to check." },
-      { q: "Can a manager see late print jobs?", a: "On Pro, overdue requests escalate to a manager automatically, and analytics show on-time delivery across the print room." },
+      { q: "Which Files Can I Send?", a: "The print room workflow is built around uploading a PDF. Export your document to PDF first so it prints exactly as you see it." },
+      { q: "Can I Request Colour and Black-and-White in One Go?", a: "Each request carries its own copies and colour settings. If you need both, raise two requests so the print room has clear instructions for each." },
+      { q: "Where Are the Prints Delivered?", a: "To the seat or room you choose when you buzz. That could be your desk, a cabin or a conference room ahead of a meeting." },
+      { q: "How Do I Know the Print Room Has My Job?", a: "As soon as someone accepts, you see their name, photo and ETA. You will not need to call to check." },
+      { q: "Can a Manager See Late Print Jobs?", a: "On Pro, overdue requests escalate to a manager automatically, and analytics show on-time delivery across the print room." },
+      { q: "How Many Copies Can I Request in One Print Job?", a: "You set the copy count on the request. Kavya's pitch example was 24 colour copies, delivered before her demo started." },
+      { q: "Who in the Print Room Gets My Job?", a: "The whole print team is pinged at once and the first person free taps Accept. That person owns the job and you see their name and ETA." },
+      { q: "Is My Print File Lost in a Group Chat Like Before?", a: "No. The PDF, copy count, colour setting and delivery seat travel together as one request, so nothing depends on someone scrolling back through WhatsApp." },
     ],
     related: ["workflows", "solutions/print-room", "solutions/print-room/pdf-print-requests", "workflows/coffee-request", "features/delivery-confirmation", "use-cases/sales", "pricing"],
-    cta: { title: "Stop chasing print jobs", body: "Try the print room workflow free for 14 days." },
+    cta: { title: "Stop Chasing Print Jobs", body: "Try the print room workflow free for 14 days." },
   },
 
   // ─────────────────────────── IT SUPPORT ───────────────────────────
@@ -314,8 +323,8 @@ export const pages: PageContent[] = [
     title: "IT Support Request Workflow",
     description:
       "IT support request workflow: describe the problem, the request auto-routes to the IT desk, first technician to accept owns it, with timing and rating built in.",
-    h1: "IT help that doesn't die in someone's DMs",
-    eyebrow: "Workflow · IT support",
+    h1: "IT Help That Doesn't Die in Someone's DMs",
+    eyebrow: "Workflow · IT Support",
     lead:
       "A message to whichever IT person you know best is how most small offices ask for help, and it is how tickets disappear. This workflow sends every IT problem to the whole IT desk and keeps it visible until it is solved.",
     keywords: ["it support request workflow", "office it help request", "it desk routing", "internal it request", "it ticket workflow"],
@@ -323,9 +332,9 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "problem-solution",
-        heading: "The DM problem",
+        heading: "The DM Problem",
         problem: {
-          title: "Asking one person directly",
+          title: "Asking One Person Directly",
           points: [
             "Only one person knows, and they may be busy or on leave",
             "No record that the problem was raised",
@@ -334,7 +343,7 @@ export const pages: PageContent[] = [
           ],
         },
         solution: {
-          title: "Routing to the IT desk",
+          title: "Routing to the IT Desk",
           points: [
             "The request auto-routes to the whole IT team",
             "Every request is timed from the moment it is raised",
@@ -345,26 +354,26 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The IT support request, step by step",
+        heading: "The IT Support Request, Step by Step",
         steps: [
-          { title: "Tap IT help", body: "Choose the IT item from the catalogue, or a specific one like Projector or HDMI if your office has added them." },
-          { title: "Describe the issue", body: "Add a short note: “Laptop won't connect to office Wi-Fi” or “Monitor flickering”." },
-          { title: "Pick the location", body: "Choose your desk or the room you are in so the technician comes to the right place." },
-          { title: "Auto-route", body: "The category sends it straight to the IT desk. Nobody needs to know which technician is on duty." },
-          { title: "First accept", body: "The first technician free taps Accept and owns the ticket." },
-          { title: "Work and update", body: "The technician marks it started with an ETA; the requester can see progress." },
-          { title: "Resolve and rate", body: "Once fixed, the request is marked delivered and the requester rates it." },
+          { title: "Tap IT Help", body: "Choose the IT item from the catalogue, or a specific one like Projector or HDMI if your office has added them." },
+          { title: "Describe the Issue", body: "Add a short note: “Laptop won't connect to office Wi-Fi” or “Monitor flickering”." },
+          { title: "Pick the Location", body: "Choose your desk or the room you are in so the technician comes to the right place." },
+          { title: "Auto-Route", body: "The category sends it straight to the IT desk. Nobody needs to know which technician is on duty." },
+          { title: "First Accept", body: "The first technician free taps Accept and owns the ticket." },
+          { title: "Work and Update", body: "The technician marks it started with an ETA; the requester can see progress." },
+          { title: "Resolve and Rate", body: "Once fixed, the request is marked delivered and the requester rates it." },
         ],
       },
       {
         type: "visual",
         visual: "staff-queue",
-        heading: "The IT desk's queue",
+        heading: "The IT Desk's Queue",
         body: "Each technician sees open IT requests on their phone with an Accept button. Accepted items leave everyone else's queue, so effort is not duplicated.",
       },
       {
         type: "scenario",
-        heading: "A Monday-morning Wi-Fi problem",
+        heading: "A Monday-Morning Wi-Fi Problem",
         persona: "Ritika, Finance Analyst",
         setting: "Month-end reports are due and her laptop has dropped off the network.",
         timeline: [
@@ -378,31 +387,34 @@ export const pages: PageContent[] = [
       },
       {
         type: "metrics",
-        heading: "What IT managers can read from these requests",
+        heading: "What IT Managers Can Read From These Requests",
         intro: "Full analytics and scorecards are part of Pro.",
         items: [
-          { metric: "Accept time", meaning: "How long a problem waits before a technician takes it." },
-          { metric: "On-time delivery", meaning: "Share of IT requests resolved before their deadline." },
-          { metric: "Staff ratings", meaning: "Average stars per technician, for fair recognition." },
-          { metric: "Busy hours", meaning: "When the office buzzes most, to plan cover." },
+          { metric: "Accept Time", meaning: "How long a problem waits before a technician takes it." },
+          { metric: "On-Time Delivery", meaning: "Share of IT requests resolved before their deadline." },
+          { metric: "Staff Ratings", meaning: "Average stars per technician, for fair recognition." },
+          { metric: "Busy Hours", meaning: "When the office buzzes most, to plan cover." },
         ],
       },
       {
         type: "callout",
         tone: "info",
-        title: "Escalation for stuck tickets",
+        title: "Escalation for Stuck Tickets",
         body: "On Pro, every IT request carries an SLA deadline and the escalation chain moves overdue ones to a manager automatically.",
       },
     ],
     faqs: [
-      { q: "Is this a replacement for a full helpdesk?", a: "ZapBuzzer handles quick, in-office IT requests: a cable, a stuck projector, a laptop that will not connect. It focuses on getting the right person to the right desk fast, with timing and ratings." },
-      { q: "How does the request reach the right technician?", a: "IT items in the catalogue route to the IT desk team. Everyone on that team is pinged and the first to accept owns it." },
-      { q: "Can I add specific IT items to the catalogue?", a: "Yes. Common items such as projector help or an HDMI cable can sit in the catalogue so requests are clearer and faster to act on." },
-      { q: "What if the technician who accepts gets pulled away?", a: "The request stays open and timed. On Pro, if it goes past its deadline it escalates to a manager instead of quietly waiting." },
-      { q: "Does the Free plan include IT routing?", a: "Yes, routing and first-accept-wins work on Free for up to 10 staff in one location, with email notifications. SLA escalation and full analytics are on Pro." },
+      { q: "Is This a Replacement for a Full Helpdesk?", a: "ZapBuzzer handles quick, in-office IT requests: a cable, a stuck projector, a laptop that will not connect. It focuses on getting the right person to the right desk fast, with timing and ratings." },
+      { q: "How Does the Request Reach the Right Technician?", a: "IT items in the catalogue route to the IT desk team. Everyone on that team is pinged and the first to accept owns it." },
+      { q: "Can I Add Specific IT Items to the Catalogue?", a: "Yes. Common items such as projector help or an HDMI cable can sit in the catalogue so requests are clearer and faster to act on." },
+      { q: "What If the Technician Who Accepts Gets Pulled Away?", a: "The request stays open and timed. On Pro, if it goes past its deadline it escalates to a manager instead of quietly waiting." },
+      { q: "Does the Free Plan Include IT Routing?", a: "Yes, routing and first-accept-wins work on Free for up to 10 staff in one location, with email notifications. SLA escalation and full analytics are on Pro." },
+      { q: "Why Not Just Message the IT Person I Know?", a: "A direct message depends on one person seeing it. Buzzing IT pings the whole IT desk at once, so whoever is free accepts and the request stays visible until it is solved." },
+      { q: "Can I Add Details About My IT Problem?", a: "Yes. Add a short note such as the room, device or error, so the technician arrives knowing what to bring." },
+      { q: "Can IT Managers See Recurring Problems From These Requests?", a: "Yes. Requests record the item, room and time, so patterns like a Monday-morning Wi-Fi issue show up. Full analytics are on Pro." },
     ],
     related: ["workflows", "solutions/it-support", "solutions/it-support/ticket-routing", "workflows/hdmi-request", "workflows/projector-request", "use-cases/it-manager", "features/request-routing", "pricing/pro"],
-    cta: { title: "Give your IT desk one queue", body: "Start a 14-day free trial and route your first IT request today." },
+    cta: { title: "Give Your IT Desk One Queue", body: "Start a 14-day free trial and route your first IT request today." },
   },
 
   // ─────────────────────────── AC ISSUE ───────────────────────────
@@ -410,17 +422,17 @@ export const pages: PageContent[] = [
     path: "workflows/ac-issue",
     title: "AC Issue Workflow: Report, Fix, Escalate",
     description:
-      "AC issue workflow for offices: report a room that's too cold or warm, facilities is pinged, a technician accepts, and on Pro it goes to a manager after 15 minutes without a fix.",
-    h1: "Conference room at 16°C? Here's what happens next",
+      "AC issue workflow: report a room that's too cold or warm, facilities is pinged, a technician accepts, and on Pro a manager is alerted after 15 minutes unfixed.",
+    h1: "Conference Room at 16°C? Here's What Happens Next",
     eyebrow: "Workflow · Facilities",
     lead:
-      "AC complaints are small until they are not. A room stuck too cold can derail a two-hour workshop. This workflow gets facilities to the room quickly and makes sure the issue cannot sit unattended.",
+      "AC complaints seem small, but a room stuck too cold can ruin a two-hour workshop. This workflow gets facilities to the room quickly and makes sure the issue cannot sit unattended.",
     keywords: ["ac issue workflow", "office ac complaint", "facilities request workflow", "conference room ac", "ac too cold office"],
     heroVisual: "sla-timer",
     sections: [
       {
         type: "prose",
-        heading: "Why AC issues get ignored",
+        heading: "Why AC Issues Get Ignored",
         paragraphs: [
           "Everyone in the room feels the problem, so everyone assumes someone else has reported it. When someone does, it is usually by calling the admin desk, who then has to find the facilities person on the floor.",
           "In ZapBuzzer, anyone in the room can raise it in a few taps. Facilities is pinged directly, and the request has a deadline so it does not quietly wait until the meeting ends.",
@@ -428,27 +440,27 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The AC issue, step by step",
+        heading: "The AC Issue, Step by Step",
         steps: [
           { title: "Tap Facilities", body: "Pick the AC or facilities item from the catalogue." },
-          { title: "Describe it", body: "Note the problem plainly: “AC stuck at 16°C” or “No cooling, room warm”." },
-          { title: "Pick the room", body: "Select the room, for example Conference Room B, so the technician goes straight there." },
-          { title: "Facilities pinged", body: "The facilities team gets the request at once; notifications repeat until someone accepts." },
-          { title: "Accept and attend", body: "The first free team member accepts and marks it started with an ETA." },
-          { title: "Deadline runs (Pro)", body: "On Pro the SLA timer counts down. If it is not fixed in time, it auto-escalates to a manager." },
-          { title: "Fixed and rated", body: "Once the room is comfortable, the request is marked delivered and rated by the person who raised it." },
+          { title: "Describe It", body: "Note the problem plainly: “AC stuck at 16°C” or “No cooling, room warm”." },
+          { title: "Pick the Room", body: "Select the room, for example Conference Room B, so the technician goes straight there." },
+          { title: "Facilities Pinged", body: "The facilities team gets the request at once; notifications repeat until someone accepts." },
+          { title: "Accept and Attend", body: "The first free team member accepts and marks it started with an ETA." },
+          { title: "Deadline Runs (Pro)", body: "On Pro the SLA timer counts down. If it is not fixed in time, it auto-escalates to a manager." },
+          { title: "Fixed and Rated", body: "Once the room is comfortable, the request is marked delivered and rated by the person who raised it." },
         ],
       },
       {
         type: "visual",
         visual: "sla-timer",
-        heading: "A countdown on every AC complaint",
+        heading: "A Countdown on Every AC Complaint",
         body: "With SLA on Pro, each facilities request shows how long is left before its deadline and what happens if it is missed.",
         points: ["Deadline visible to staff", "Overdue requests auto-escalate", "Escalation chain on Pro"],
       },
       {
         type: "scenario",
-        heading: "Om's frozen workshop",
+        heading: "Om's Frozen Workshop",
         persona: "Om, Engineer",
         setting: "A design review in Conference Room B, and the AC is stuck at 16°C.",
         timeline: [
@@ -463,12 +475,12 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "escalation",
-        heading: "Who hears about it if it isn't fixed",
+        heading: "Who Hears About It If It Isn't Fixed",
         body: "The escalation chain on Pro moves an overdue request up to a manager, so a stuck AC does not depend on someone remembering to follow up.",
       },
       {
         type: "checklist",
-        heading: "Before you roll out AC requests",
+        heading: "Before You Roll Out AC Requests",
         items: [
           "Add an AC or facilities item to the catalogue",
           "List every meeting room and floor as a destination",
@@ -479,14 +491,17 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Who can report an AC problem?", a: "Any employee with access to ZapBuzzer. The request goes to the facilities team, not to a single person, so it does not depend on who happens to be at the desk." },
-      { q: "Is the 15-minute escalation automatic?", a: "SLA deadlines and automatic escalation to a manager are part of Pro. The 15-minute example is a deadline an office might choose for comfort issues in meeting rooms." },
-      { q: "What if several people report the same room?", a: "Each report is a request the facilities team can see. The first accepted one shows who is handling it, which helps others in the room see it is already in hand." },
-      { q: "Can facilities track recurring AC problems?", a: "Request history shows how often a room is reported. On Pro, analytics show patterns across rooms and times of day." },
-      { q: "Does it work on the Free plan?", a: "Yes, reporting and first-accept routing work on Free with email notifications. The SLA timer and escalation chain need Pro." },
+      { q: "Who Can Report an AC Problem?", a: "Any employee with access to ZapBuzzer. The request goes to the facilities team, not to a single person, so it does not depend on who happens to be at the desk." },
+      { q: "Is the 15-minute Escalation Automatic?", a: "SLA deadlines and automatic escalation to a manager are part of Pro. The 15-minute example is a deadline an office might choose for comfort issues in meeting rooms." },
+      { q: "What If Several People Report the Same Room?", a: "Each report is a request the facilities team can see. The first accepted one shows who is handling it, which helps others in the room see it is already in hand." },
+      { q: "Can Facilities Track Recurring AC Problems?", a: "Request history shows how often a room is reported. On Pro, analytics show patterns across rooms and times of day." },
+      { q: "Does It Work on the Free Plan?", a: "Yes, reporting and first-accept routing work on Free with email notifications. The SLA timer and escalation chain need Pro." },
+      { q: "How Do I Report a Conference Room That Is Too Cold?", a: "Tap Facilities, choose the room as the destination and add a note such as “AC stuck at 16°C”. The facilities team is pinged at once." },
+      { q: "Who Is Told If the AC Is Not Fixed in Time?", a: "When the deadline passes, the request escalates to a manager automatically. With an escalation chain on Pro, the next person hears about it if the first does not act." },
+      { q: "Can I See When Facilities Will Reach the Room?", a: "Yes. Once someone accepts and starts, you see their name, photo and ETA, so you know whether to move the meeting." },
     ],
     related: ["workflows", "solutions/facilities/ac-requests", "solutions/facilities/escalation", "workflows/projector-request", "sla/automatic-escalation", "use-cases/facilities-manager", "pricing/pro"],
-    cta: { title: "Keep meeting rooms comfortable", body: "Try facilities requests with SLA escalation on the 14-day free trial." },
+    cta: { title: "Keep Meeting Rooms Comfortable", body: "Try facilities requests with SLA escalation on the 14-day free trial." },
   },
 
   // ─────────────────────────── PROJECTOR ───────────────────────────
@@ -495,8 +510,8 @@ export const pages: PageContent[] = [
     title: "Projector Request Workflow for Meetings",
     description:
       "Projector request workflow: report a stuck projector or book help before a meeting, IT accepts, sets an ETA and fixes it in the room before the agenda starts.",
-    h1: "Projector stuck five minutes before the meeting",
-    eyebrow: "Workflow · IT support",
+    h1: "Projector Stuck Five Minutes Before the Meeting",
+    eyebrow: "Workflow · IT Support",
     lead:
       "A projector problem is tied to a room and a clock. Guests are arriving, the laptop shows nothing on the wall, and nobody knows who to call. This workflow gets IT into the right room with the problem already described.",
     keywords: ["projector request workflow", "projector not working office", "meeting room projector support", "it projector help", "conference room av request"],
@@ -504,7 +519,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "Time is the whole problem",
+        heading: "Time Is the Whole Problem",
         paragraphs: [
           "Most projector issues are quick to fix for someone who knows the room: a wrong input, a loose cable, a remote with dead batteries. The delay comes from finding that person while everyone waits.",
           "Because the request carries the room and a note, the technician who accepts can arrive with the right fix, and the person presenting can see an ETA and keep the room calm.",
@@ -512,20 +527,20 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The projector request, step by step",
+        heading: "The Projector Request, Step by Step",
         steps: [
           { title: "Tap Projector", body: "Choose the projector item in the IT section of the catalogue." },
-          { title: "Note the symptom", body: "“No signal from laptop” or “Projector won't power on” helps IT bring the right thing." },
-          { title: "Pick the room", body: "Select the conference room so the request is location-specific." },
-          { title: "IT desk pinged", body: "Every IT team member is notified; on Pro this also reaches Telegram and WhatsApp." },
-          { title: "Accept with ETA", body: "The first free technician accepts and sets an ETA the presenter can see." },
-          { title: "Fix in the room", body: "The technician sorts the issue and marks it delivered." },
+          { title: "Note the Symptom", body: "“No signal from laptop” or “Projector won't power on” helps IT bring the right thing." },
+          { title: "Pick the Room", body: "Select the conference room so the request is location-specific." },
+          { title: "IT Desk Pinged", body: "Every IT team member is notified; on Pro this also reaches Telegram and WhatsApp." },
+          { title: "Accept With ETA", body: "The first free technician accepts and sets an ETA the presenter can see." },
+          { title: "Fix in the Room", body: "The technician sorts the issue and marks it delivered." },
           { title: "Rate", body: "The presenter rates the help once the meeting is underway or over." },
         ],
       },
       {
         type: "scenario",
-        heading: "A client review at 11",
+        heading: "A Client Review at 11",
         persona: "Sameer, Account Manager",
         setting: "Client review in Conference Room A at 11:00; the projector shows “No signal”.",
         timeline: [
@@ -540,13 +555,13 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "request-dashboard",
-        heading: "What the admin sees",
+        heading: "What the Admin Sees",
         body: "The live request dashboard shows the projector request alongside everything else in the office, with its status and who owns it.",
       },
       {
         type: "table",
-        heading: "Projector request vs nearby workflows",
-        headers: ["Situation", "Use this workflow"],
+        heading: "Projector Request vs Nearby Workflows",
+        headers: ["Situation", "Use This Workflow"],
         rows: [
           ["Projector shows nothing or won't power on", "Projector request"],
           ["Missing cable to connect a laptop", "HDMI request"],
@@ -557,19 +572,22 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "tip",
-        title: "Raise it early",
+        title: "Raise It Early",
         body: "If you are setting up 15 minutes before a meeting and something looks wrong, buzz then. The earlier the request starts its clock, the more time IT has to fix it before guests arrive.",
       },
     ],
     faqs: [
-      { q: "Can IT see which rooms have repeat projector problems?", a: "Each request records the room, so request history shows where problems repeat. On Pro, analytics make those patterns easier to spot." },
-      { q: "Should I use the projector workflow or general IT support?", a: "Use the projector item when the issue is the room's display. It gives IT a clear picture and the room location straight away. General IT support is better for desk issues." },
-      { q: "Can I see when the technician will arrive?", a: "Yes. Once someone accepts, you see their name, photo and ETA on the request." },
-      { q: "What if IT doesn't respond in time?", a: "Notifications repeat until someone accepts. On Pro, overdue requests auto-escalate to a manager through the escalation chain." },
-      { q: "Can reception raise it for a visiting client?", a: "Anyone in ZapBuzzer can raise a request and choose the room, so reception or an assistant can buzz IT on behalf of a guest." },
+      { q: "Can IT See Which Rooms Have Repeat Projector Problems?", a: "Each request records the room, so request history shows where problems repeat. On Pro, analytics make those patterns easier to spot." },
+      { q: "Should I Use the Projector Workflow or General IT Support?", a: "Use the projector item when the issue is the room's display. It gives IT a clear picture and the room location straight away. General IT support is better for desk issues." },
+      { q: "Can I See When the Technician Will Arrive?", a: "Yes. Once someone accepts, you see their name, photo and ETA on the request." },
+      { q: "What If IT Doesn't Respond in Time?", a: "Notifications repeat until someone accepts. On Pro, overdue requests auto-escalate to a manager through the escalation chain." },
+      { q: "Can Reception Raise It for a Visiting Client?", a: "Anyone in ZapBuzzer can raise a request and choose the room, so reception or an assistant can buzz IT on behalf of a guest." },
+      { q: "How Do I Raise a Projector Problem From the Meeting Room?", a: "Tap the projector item, choose the room and add a short note like “laptop not detected”. The IT desk is pinged straight away with the location included." },
+      { q: "Can the Admin See Projector Requests Across Rooms?", a: "Yes. Each request is logged with its room, time and who handled it, so an admin can see which rooms need attention." },
+      { q: "How Quickly Does IT Get a Projector Request?", a: "Immediately. The whole IT team is notified at once on the app, plus Telegram and WhatsApp on Pro, and notifications repeat until someone accepts." },
     ],
     related: ["workflows", "solutions/it-support/projector-support", "solutions/it-support/meeting-room-support", "workflows/hdmi-request", "features/eta-tracking", "solutions/facilities/conference-room-issues", "demo"],
-    cta: { title: "Keep meetings starting on time", body: "Add a projector item to your catalogue on the 14-day free trial." },
+    cta: { title: "Keep Meetings Starting on Time", body: "Add a projector item to your catalogue on the 14-day free trial." },
   },
 
   // ─────────────────────────── HDMI ───────────────────────────
@@ -578,8 +596,8 @@ export const pages: PageContent[] = [
     title: "HDMI Cable Request Workflow",
     description:
       "HDMI request workflow: tap IT, say which room and adapter you need, the IT desk accepts and walks it over in minutes. Small item, short wait, fully tracked.",
-    h1: "Need an HDMI cable? Three minutes, not three calls",
-    eyebrow: "Workflow · IT support",
+    h1: "Need an HDMI Cable? Three Minutes, Not Three Calls",
+    eyebrow: "Workflow · IT Support",
     lead:
       "An HDMI cable is the smallest thing an office can need and one of the most urgent. It is usually missing at exactly the moment someone wants to share a screen. This workflow is built for that kind of quick fetch.",
     keywords: ["hdmi request workflow", "hdmi cable office request", "meeting room cable request", "it accessory request", "adapter request office"],
@@ -587,7 +605,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "A fetch, not a fix",
+        heading: "A Fetch, Not a Fix",
         paragraphs: [
           "Most IT requests involve diagnosing something. HDMI requests do not. Someone needs a specific item brought to a specific room, fast. The whole value is in skipping the search for who has the cable cupboard key.",
           "The request tells IT what to bring and where to go before anyone has to ask, so the technician can grab the cable on the way.",
@@ -595,26 +613,26 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The HDMI request, step by step",
+        heading: "The HDMI Request, Step by Step",
         steps: [
           { title: "Tap IT → HDMI", body: "Choose the HDMI item from the IT section of the catalogue on your phone." },
-          { title: "Say which connector", body: "Note what your laptop needs, for example “USB-C to HDMI adapter”." },
-          { title: "Pick the room", body: "Select the room where you are setting up." },
+          { title: "Say Which Connector", body: "Note what your laptop needs, for example “USB-C to HDMI adapter”." },
+          { title: "Pick the Room", body: "Select the room where you are setting up." },
           { title: "Buzz", body: "The IT team is pinged immediately on every channel your plan includes." },
           { title: "Accept", body: "The nearest free person accepts; you see their name and ETA." },
-          { title: "Hand over", body: "The cable arrives and the request is marked delivered." },
+          { title: "Hand Over", body: "The cable arrives and the request is marked delivered." },
           { title: "Rate", body: "Tap a star rating before you start presenting." },
         ],
       },
       {
         type: "visual",
         visual: "mobile-app",
-        heading: "Raised from the meeting room",
+        heading: "Raised From the Meeting Room",
         body: "Most HDMI requests come from a phone in a meeting room. The mobile app's request grid puts the item one tap away.",
       },
       {
         type: "scenario",
-        heading: "Tanvi's design review",
+        heading: "Tanvi's Design Review",
         persona: "Tanvi, Designer",
         setting: "Reviewing mock-ups in the 2nd-floor huddle room; no cable on the table.",
         timeline: [
@@ -628,10 +646,10 @@ export const pages: PageContent[] = [
       },
       {
         type: "comparison",
-        heading: "Finding a cable the old way vs buzzing",
-        columns: ["Asking around", "HDMI request"],
+        heading: "Finding a Cable the Old Way vs Buzzing",
+        columns: ["Asking Around", "HDMI Request"],
         rows: [
-          { label: "First step", a: "Leave the room to look for IT", b: "Tap HDMI from your seat" },
+          { label: "First Step", a: "Leave the room to look for IT", b: "Tap HDMI from your seat" },
           { label: "Details", a: "Explained in person, often twice", b: "Connector and room in the request" },
           { label: "Waiting", a: "No idea when help is coming", b: "Name and ETA on screen" },
           { label: "Afterwards", a: "No record", b: "Timed request with a rating" },
@@ -639,41 +657,44 @@ export const pages: PageContent[] = [
       },
       {
         type: "stats",
-        heading: "First-month results from pilot offices",
+        heading: "First-Month Results From Pilot Offices",
         items: [
-          { value: "32s", label: "average accept time" },
-          { value: "96%", label: "on-time delivery" },
-          { value: "−87%", label: "phone calls" },
-          { value: "4.8★", label: "average staff rating" },
+          { value: "32s", label: "Average Accept Time" },
+          { value: "96%", label: "On-Time Delivery" },
+          { value: "−87%", label: "Phone Calls" },
+          { value: "4.8★", label: "Average Staff Rating" },
         ],
         note: "Figures from ZapBuzzer pilot offices across all request types, not HDMI requests alone.",
       },
       {
         type: "callout",
         tone: "tip",
-        title: "Keep the catalogue specific",
+        title: "Keep the Catalogue Specific",
         body: "If your office regularly needs particular adapters, add them as their own catalogue items. Clear items mean fewer clarifying questions and faster fetches.",
       },
     ],
     faqs: [
-      { q: "Can I see how often HDMI requests happen?", a: "Request history shows every HDMI request with its room and time. On Pro, analytics show patterns, such as one meeting room that always needs a cable, so you can leave a spare there for good." },
-      { q: "Why have a separate HDMI item instead of general IT help?", a: "A dedicated item tells IT exactly what to bring without reading a long note. It also lets you see in request history how often cables are needed and where." },
-      { q: "Can I ask for an adapter instead of a cable?", a: "Yes. Add the connector you need in the note, or ask your admin to add common adapters to the catalogue." },
-      { q: "Who receives HDMI requests?", a: "They route to the IT desk team. Everyone on it is notified and the first person to accept owns the request." },
-      { q: "Will I know if nobody picks it up?", a: "The request shows as not yet accepted, and notifications keep repeating to the team. On Pro, it escalates to a manager if it passes its deadline." },
+      { q: "Can I See How Often HDMI Requests Happen?", a: "Request history shows every HDMI request with its room and time. On Pro, analytics show patterns, such as one meeting room that always needs a cable, so you can leave a spare there for good." },
+      { q: "Why Have a Separate HDMI Item Instead of General IT Help?", a: "A dedicated item tells IT exactly what to bring without reading a long note. It also lets you see in request history how often cables are needed and where." },
+      { q: "Can I Ask for an Adapter Instead of a Cable?", a: "Yes. Add the connector you need in the note, or ask your admin to add common adapters to the catalogue." },
+      { q: "Who Receives HDMI Requests?", a: "They route to the IT desk team. Everyone on it is notified and the first person to accept owns the request." },
+      { q: "Will I Know If Nobody Picks It Up?", a: "The request shows as not yet accepted, and notifications keep repeating to the team. On Pro, it escalates to a manager if it passes its deadline." },
+      { q: "How Fast Can an HDMI Cable Arrive?", a: "In Tanvi's design review, Priya brought the cable in three minutes. The first free person on the IT desk accepts and you see their ETA." },
+      { q: "Can I Request an HDMI Cable From Inside the Meeting Room?", a: "Yes. Buzz from your phone or laptop in the room and choose it as the destination, so IT brings the cable to exactly where you are." },
+      { q: "Do HDMI Requests Count Towards IT Analytics?", a: "Yes. Every HDMI request is timed and rated like any other, so accept times and ratings feed into IT analytics and scorecards on Pro." },
     ],
     related: ["workflows", "solutions/it-support/hdmi-requests", "workflows/projector-request", "workflows/it-support", "mobile-app/requests", "features/one-tap-requests", "free-trial"],
-    cta: { title: "Put cables one tap away", body: "Start your free 14-day trial and add HDMI to the catalogue." },
+    cta: { title: "Put Cables One Tap Away", body: "Start your free 14-day trial and add HDMI to the catalogue." },
   },
 
   // ─────────────────────────── COURIER ───────────────────────────
   {
     path: "workflows/courier-pickup",
-    title: "Courier Pickup Workflow with Audit Trail",
+    title: "Courier Pickup Workflow With Audit Trail",
     description:
       "Courier pickup workflow: reception taps Courier Pickup, the mailroom is pinged, accepts and logs the handover, and every step is audit-trailed for later lookup.",
-    h1: "Courier at the gate, logged in a few taps",
-    eyebrow: "Workflow · Courier & reception",
+    h1: "Courier at the Gate, Logged in a Few Taps",
+    eyebrow: "Workflow · Courier & Reception",
     lead:
       "Courier handovers are easy to do and hard to prove later. “Did that contract go out?” is a common question with no good answer. This workflow makes every pickup a logged, timed request.",
     keywords: ["courier pickup workflow", "office courier management", "mailroom pickup request", "reception courier log", "courier audit trail"],
@@ -681,9 +702,9 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "problem-solution",
-        heading: "When nobody wrote it down",
+        heading: "When Nobody Wrote It Down",
         problem: {
-          title: "Paper registers and phone calls",
+          title: "Paper Registers and Phone Calls",
           points: [
             "Reception calls the mailroom, who may be on another floor",
             "The courier waits at the gate",
@@ -692,7 +713,7 @@ export const pages: PageContent[] = [
           ],
         },
         solution: {
-          title: "A courier pickup request",
+          title: "A Courier Pickup Request",
           points: [
             "Reception buzzes the mailroom in one tap",
             "The first free person accepts and goes to the gate",
@@ -703,19 +724,19 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The courier pickup, step by step",
+        heading: "The Courier Pickup, Step by Step",
         steps: [
-          { title: "Courier arrives", body: "The courier reaches the gate or front desk." },
-          { title: "Reception taps Courier Pickup", body: "Reception picks the item and adds a note such as the courier company and parcel count." },
-          { title: "Mailroom pinged", body: "The mailroom team is notified; notifications repeat until someone accepts." },
+          { title: "Courier Arrives", body: "The courier reaches the gate or front desk." },
+          { title: "Reception Taps Courier Pickup", body: "Reception picks the item and adds a note such as the courier company and parcel count." },
+          { title: "Mailroom Pinged", body: "The mailroom team is notified; notifications repeat until someone accepts." },
           { title: "Accept", body: "The first free mailroom person accepts and heads to the gate." },
-          { title: "Hand over", body: "Parcels are handed over and the request is marked delivered; a photo can be attached as proof." },
+          { title: "Hand Over", body: "Parcels are handed over and the request is marked delivered; a photo can be attached as proof." },
           { title: "Logged", body: "Each action is recorded in the audit log, with who did it and when." },
         ],
       },
       {
         type: "scenario",
-        heading: "Neha at the front desk",
+        heading: "Neha at the Front Desk",
         persona: "Neha, Reception",
         setting: "An outgoing contract packet needs to leave with the afternoon courier.",
         timeline: [
@@ -730,32 +751,34 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "audit-log",
-        heading: "Every handover, on record",
+        heading: "Every Handover, on Record",
         body: "Audit log rows show who raised the pickup, who accepted it and when it was delivered. Audit logs and reports are part of Pro.",
       },
       {
         type: "visual",
         visual: "delivery",
-        heading: "Proof at the moment of handover",
+        heading: "Proof at the Moment of Handover",
         body: "Marking a pickup delivered can include a photo, which is often the quickest way to settle a later question.",
       },
       {
         type: "callout",
         tone: "info",
-        title: "History on each plan",
+        title: "History on Each Plan",
         body: "Free keeps the last 30 days of request history. Pro adds audit logs and reports, which suit offices that need to look back further on courier movements.",
       },
     ],
     faqs: [
-      { q: "What should reception put in the note?", a: "Enough for the mailroom to act without calling back: the courier company, how many parcels and whether it is incoming or outgoing. Short notes are fine." },
-      { q: "Who usually raises a courier pickup?", a: "Reception, since they see the courier first. Any employee expecting a pickup can also raise one from their desk." },
-      { q: "Can we attach proof of handover?", a: "Yes. When the request is marked delivered, a photo can be attached. That photo stays with the request." },
-      { q: "How far back can we look up pickups?", a: "The Free plan keeps the last 30 days of history. Pro adds audit logs and reports for longer-term records." },
-      { q: "Does this replace our courier company's tracking?", a: "No. ZapBuzzer tracks the internal side: who in your office handled the pickup and when. The courier company's own tracking covers the parcel after it leaves." },
-      { q: "Can the courier wait less?", a: "The mailroom is pinged at once and the first free person accepts, so there is no round of calls to find someone. Requests are timed, which makes long waits visible." },
+      { q: "What Should Reception Put in the Note?", a: "Enough for the mailroom to act without calling back: the courier company, how many parcels and whether it is incoming or outgoing. Short notes are fine." },
+      { q: "Who Usually Raises a Courier Pickup?", a: "Reception, since they see the courier first. Any employee expecting a pickup can also raise one from their desk." },
+      { q: "Can We Attach Proof of Handover?", a: "Yes. When the request is marked delivered, a photo can be attached. That photo stays with the request." },
+      { q: "How Far Back Can We Look Up Pickups?", a: "The Free plan keeps the last 30 days of history. Pro adds audit logs and reports for longer-term records." },
+      { q: "Does This Replace Our Courier Company's Tracking?", a: "No. ZapBuzzer tracks the internal side: who in your office handled the pickup and when. The courier company's own tracking covers the parcel after it leaves." },
+      { q: "Can the Courier Wait Less?", a: "The mailroom is pinged at once and the first free person accepts, so there is no round of calls to find someone. Requests are timed, which makes long waits visible." },
+      { q: "Is Every Courier Pickup Audit-Trailed?", a: "Yes. The mailroom logs each pickup as a timed request, so you can later see who handled it and when. Audit logs and reports are part of Pro." },
+      { q: "Who Gets Notified When Reception Logs a Courier?", a: "The mailroom team is pinged at once and the first free person accepts, as in Neha's front-desk example. Reception sees who is on it." },
     ],
     related: ["workflows", "solutions/courier/pickup", "solutions/courier/reception-workflow", "admin/audit-logs", "use-cases/reception", "workflows/emergency-summon", "pricing/pro"],
-    cta: { title: "Make every pickup traceable", body: "Try courier pickups free for 14 days; a credit card is not required." },
+    cta: { title: "Make Every Pickup Traceable", body: "Try courier pickups free for 14 days; a credit card is not required." },
   },
 
   // ─────────────────────────── LUNCH ───────────────────────────
@@ -764,7 +787,7 @@ export const pages: PageContent[] = [
     title: "Lunch Request Workflow for Teams",
     description:
       "Lunch request workflow for a team of 12: pick items, add notes, the pantry queues the order, the requester rates it and the owner sees what the lunch cost.",
-    h1: "Lunch for twelve, ordered without a group chat",
+    h1: "Lunch for Twelve, Ordered Without a Group Chat",
     eyebrow: "Workflow · Pantry",
     lead:
       "A team lunch has more moving parts than a coffee: several items, a headcount, dietary notes and a cost the owner will want to see. This workflow keeps all of it in one request.",
@@ -773,7 +796,7 @@ export const pages: PageContent[] = [
     sections: [
       {
         type: "prose",
-        heading: "A bigger order with a bill attached",
+        heading: "A Bigger Order With a Bill Attached",
         paragraphs: [
           "Team lunches usually start in a group chat with twelve opinions and end with someone calling the pantry to read out an order. Items get missed, the count is wrong, and the office owner sees the cost weeks later, if at all.",
           "In ZapBuzzer, the organiser builds the order from the catalogue, adds notes, and buzzes it as one request. The pantry works from the same list, and the owner can see what each lunch cost.",
@@ -781,26 +804,26 @@ export const pages: PageContent[] = [
       },
       {
         type: "workflow",
-        heading: "The lunch request, step by step",
+        heading: "The Lunch Request, Step by Step",
         steps: [
-          { title: "Pick items", body: "The organiser selects lunch items from the pantry catalogue." },
-          { title: "Add a note", body: "Headcount and dietary needs go in the note: “12 people, 3 veg, 1 no onion”." },
-          { title: "Choose the destination", body: "Pick the room where the team is eating, such as the 4th-floor meeting room." },
-          { title: "Buzz the pantry", body: "The pantry team is pinged and the order joins its queue." },
-          { title: "Accept and prepare", body: "The first free pantry member accepts, starts the order and sets an ETA." },
+          { title: "Pick Items", body: "The organiser selects lunch items from the pantry catalogue." },
+          { title: "Add a Note", body: "Headcount and dietary needs go in the note: “12 people, 3 veg, 1 no onion”." },
+          { title: "Choose the Destination", body: "Pick the room where the team is eating, such as the 4th-floor meeting room." },
+          { title: "Buzz the Pantry", body: "The pantry team is pinged and the order joins its queue." },
+          { title: "Accept and Prepare", body: "The first free pantry member accepts, starts the order and sets an ETA." },
           { title: "Deliver", body: "Lunch arrives and is marked delivered, with a photo if useful." },
-          { title: "Rate and cost", body: "The organiser rates the delivery. The owner sees the cost of the order." },
+          { title: "Rate and Cost", body: "The organiser rates the delivery. The owner sees the cost of the order." },
         ],
       },
       {
         type: "visual",
         visual: "catalog",
-        heading: "Built from the pantry catalogue",
+        heading: "Built From the Pantry Catalogue",
         body: "Lunch items sit in the same catalogue as the pantry's coffee, tea, juice, snacks and dry fruits, so ordering feels the same as any other pantry request.",
       },
       {
         type: "scenario",
-        heading: "Vivek's quarterly planning lunch",
+        heading: "Vivek's Quarterly Planning Lunch",
         persona: "Vivek, Operations",
         setting: "Twelve people in a planning session that runs through lunch.",
         timeline: [
@@ -815,28 +838,31 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "roles",
-        heading: "Cost is for the owner's eyes",
+        heading: "Cost Is for the Owner's Eyes",
         body: "Request cost visibility and the spend view are owner-only, set through role permissions. Employees order; the owner sees what it costs.",
       },
       {
         type: "audience",
-        heading: "Who gets what from this workflow",
+        heading: "Who Gets What From This Workflow",
         items: [
           { role: "Organiser", benefit: "One request with the full order instead of chasing replies in a group." },
-          { role: "Pantry staff", benefit: "A clear item list, headcount and room, plus fair credit through ratings." },
-          { role: "Office owner", benefit: "Visibility into what each lunch order cost." },
+          { role: "Pantry Staff", benefit: "A clear item list, headcount and room, plus fair credit through ratings." },
+          { role: "Office Owner", benefit: "See what each lunch order cost." },
         ],
       },
     ],
     faqs: [
-      { q: "What if the pantry cannot meet the requested time?", a: "The person who accepts sets an ETA, so the organiser sees the expected time straight away and can adjust plans. On Pro, the request also has an SLA deadline and escalates to a manager if it runs late." },
-      { q: "Can one request include several lunch items?", a: "Yes. The organiser picks items and adds a note with headcount and dietary needs, then buzzes it as one request." },
-      { q: "Who can see the cost of a lunch order?", a: "The owner. The spend view is owner-only, so employees can order without seeing cost data." },
-      { q: "How does the pantry handle several orders at once?", a: "Each order joins the pantry queue. Staff accept them one by one, and the requester sees who accepted and the ETA." },
-      { q: "Can we rate the lunch?", a: "Yes. The organiser rates the delivery from 1 to 5 stars, which feeds into pantry staff ratings over time." },
+      { q: "What If the Pantry Cannot Meet the Requested Time?", a: "The person who accepts sets an ETA, so the organiser sees the expected time straight away and can adjust plans. On Pro, the request also has an SLA deadline and escalates to a manager if it runs late." },
+      { q: "Can One Request Include Several Lunch Items?", a: "Yes. The organiser picks items and adds a note with headcount and dietary needs, then buzzes it as one request." },
+      { q: "Who Can See the Cost of a Lunch Order?", a: "The owner. The spend view is owner-only, so employees can order without seeing cost data." },
+      { q: "How Does the Pantry Handle Several Orders at Once?", a: "Each order joins the pantry queue. Staff accept them one by one, and the requester sees who accepted and the ETA." },
+      { q: "Can We Rate the Lunch?", a: "Yes. The organiser rates the delivery from 1 to 5 stars, which feeds into pantry staff ratings over time." },
+      { q: "Can I Add Dietary Notes to a Team Lunch Order?", a: "Yes. Add headcount and dietary needs in the note, such as “12 people, 3 vegetarian”, so the pantry has everything in one place." },
+      { q: "Can the Owner See What a Team Lunch Cost?", a: "Yes. Request cost visibility lets the owner see the cost of a lunch order, while it stays hidden from employees and staff." },
+      { q: "How Does Vivek's Lunch for Twelve Work?", a: "Vivek picks items from the pantry catalogue, adds a note and buzzes. The pantry queues the order, Vivek rates it on delivery and the owner sees the cost." },
     ],
     related: ["workflows", "solutions/pantry/lunch-requests", "workflows/coffee-request", "admin/spend-visibility", "use-cases/operations", "solutions/pantry/ordering-workflow", "pricing"],
-    cta: { title: "Order the next team lunch in one request", body: "Set up lunch items on the 14-day free trial." },
+    cta: { title: "Order the Next Team Lunch in One Request", body: "Set up lunch items on the 14-day free trial." },
   },
 
   // ─────────────────────────── EMERGENCY ───────────────────────────
@@ -845,16 +871,16 @@ export const pages: PageContent[] = [
     title: "Emergency Summon Workflow for Offices",
     description:
       "Emergency summon workflow: one tap on the ZapBuzzer mobile app summons staff or security, rings through silent and locked phones, and records who responded.",
-    h1: "When you need someone now, not in a minute",
-    eyebrow: "Workflow · Staff & security",
+    h1: "When You Need Someone Now, Not in a Minute",
+    eyebrow: "Workflow · Staff & Security",
     lead:
-      "Some requests cannot wait for a reply in a chat. The ZapBuzzer mobile app has one-tap options to summon staff or security and to raise an emergency, and its alerts keep ringing even when the phone is silenced or locked.",
+      "Some requests can’t wait for someone to reply in a chat. The ZapBuzzer mobile app has one-tap options to summon staff or security and to raise an emergency, and its alerts keep ringing even when the phone is silenced or locked.",
     keywords: ["emergency summon workflow", "summon security office", "office emergency alert app", "call staff one tap", "office security request"],
     heroVisual: "notification-flow",
     sections: [
       {
         type: "prose",
-        heading: "Built for the urgent end of office requests",
+        heading: "Built for the Urgent End of Office Requests",
         paragraphs: [
           "Most workflows on this site are about convenience: coffee, prints, cables. A summon is different. Someone in the office needs a person to come right away, whether that is security at the entrance or a staff member to a specific room.",
           "ZapBuzzer handles a summon with the same mechanics as other requests, which is why it works: the right team is pinged, alerts break through silent phones, and the first responder to accept is visible to everyone.",
@@ -863,30 +889,30 @@ export const pages: PageContent[] = [
       {
         type: "callout",
         tone: "warning",
-        title: "Not a substitute for emergency services",
+        title: "Not a Substitute for Emergency Services",
         body: "For medical emergencies, fire or any threat to safety, call your local emergency number first. ZapBuzzer helps get people inside your office moving; it does not contact outside emergency services.",
       },
       {
         type: "workflow",
-        heading: "The emergency summon, step by step",
+        heading: "The Emergency Summon, Step by Step",
         steps: [
-          { title: "Open the mobile app", body: "The summon and emergency options are one tap away on the app's home screen." },
-          { title: "Choose summon or emergency", body: "Summon staff or security, or raise an emergency, depending on what is happening." },
-          { title: "Location and note", body: "Pick where you are and add a short note if there is time." },
-          { title: "Alert goes out", body: "The team is pinged at once. On the mobile app, the alert rings through silent mode and locked screens." },
-          { title: "First responder accepts", body: "The first person to accept owns the response; the requester sees their name." },
-          { title: "Resolve and record", body: "The request is closed once handled, leaving a timed record of who responded and when." },
+          { title: "Open the Mobile App", body: "The summon and emergency options are one tap away on the app's home screen." },
+          { title: "Choose Summon or Emergency", body: "Summon staff or security, or raise an emergency, depending on what is happening." },
+          { title: "Location and Note", body: "Pick where you are and add a short note if there is time." },
+          { title: "Alert Goes Out", body: "The team is pinged at once. On the mobile app, the alert rings through silent mode and locked screens." },
+          { title: "First Responder Accepts", body: "The first person to accept owns the response; the requester sees their name." },
+          { title: "Resolve and Record", body: "The request is closed once handled, leaving a timed record of who responded and when." },
         ],
       },
       {
         type: "visual",
         visual: "notification-flow",
-        heading: "One tap, every channel",
+        heading: "One Tap, Every Channel",
         body: "A summon fans out to the app and email on every plan; Telegram and WhatsApp pings are added on Pro. Alerts repeat until someone accepts.",
       },
       {
         type: "scenario",
-        heading: "An unwanted visitor at the entrance",
+        heading: "An Unwanted Visitor at the Entrance",
         persona: "Neha, Reception",
         setting: "A visitor is refusing to leave the front desk and is becoming agitated.",
         timeline: [
@@ -901,12 +927,12 @@ export const pages: PageContent[] = [
       {
         type: "visual",
         visual: "mobile-app",
-        heading: "Designed for a phone in your hand",
+        heading: "Designed for a Phone in Your Hand",
         body: "The Android app (v1.15.2) puts summon, emergency and everyday orders on one screen. Your account and workspace are stored on the server, so nothing is lost if a phone changes.",
       },
       {
         type: "checklist",
-        heading: "Preparing your office",
+        heading: "Preparing Your Office",
         items: [
           "Make sure security and on-call staff have the mobile app installed and signed in",
           "Check that notifications are allowed for the app on their phones",
@@ -917,13 +943,16 @@ export const pages: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Will the alert wake a phone on silent?", a: "Yes. The ZapBuzzer mobile app still rings when a phone is locked or set to silent, which is why it suits summons." },
-      { q: "Does ZapBuzzer call the police or an ambulance?", a: "No. It alerts people inside your office. For medical, fire or safety emergencies, call your local emergency number first." },
-      { q: "Who receives a summon?", a: "The team set up for it, such as security or on-call staff. Everyone on that team is alerted and the first to accept owns the response." },
-      { q: "Is there a record of the response?", a: "Every request is timed, so you can see when the summon was raised and when it was accepted. On Pro, audit logs and reports add a fuller history." },
-      { q: "Do summons work on the Free plan?", a: "The mobile app and email notifications are available on Free. Telegram and WhatsApp pings and the escalation chain are Pro features." },
+      { q: "Will the Alert Wake a Phone on Silent?", a: "Yes. The ZapBuzzer mobile app still rings when a phone is locked or set to silent, which is why it suits summons." },
+      { q: "Does ZapBuzzer Call the Police or an Ambulance?", a: "No. It alerts people inside your office. For medical, fire or safety emergencies, call your local emergency number first." },
+      { q: "Who Receives a Summon?", a: "The team set up for it, such as security or on-call staff. Everyone on that team is alerted and the first to accept owns the response." },
+      { q: "Is There a Record of the Response?", a: "Every request is timed, so you can see when the summon was raised and when it was accepted. On Pro, audit logs and reports add a fuller history." },
+      { q: "Do Summons Work on the Free Plan?", a: "The mobile app and email notifications are available on Free. Telegram and WhatsApp pings and the escalation chain are Pro features." },
+      { q: "How Do I Summon Security in One Tap?", a: "Open the mobile app and tap the summon or emergency option. Everyone on the security or on-call team is alerted at once and the first to accept owns the response." },
+      { q: "Can I Add Details to an Emergency Summon?", a: "Yes. Add a short note such as the location or what is happening, so whoever accepts knows where to go." },
+      { q: "How Should We Prepare the Office for Emergency Summons?", a: "Decide who is on the security or on-call team, make sure they install the mobile app and keep notifications on, and run a test summon so everyone knows how it works." },
     ],
     related: ["workflows", "mobile-app", "mobile-app/notifications", "notifications/push", "use-cases/reception", "workflows/courier-pickup", "enterprise/security"],
-    cta: { title: "Get the right people moving, fast", body: "Install the mobile app and try summons during your 14-day free trial." },
+    cta: { title: "Get the Right People Moving, Fast", body: "Install the mobile app and try summons during your 14-day free trial." },
   },
 ];
