@@ -20,10 +20,72 @@ export const metadata: Metadata = {
 };
 
 /**
- * Verified open positions. Leave empty unless a role is genuinely open.
- * Each entry renders as a card with an "Apply" link that pre-fills the application form.
+ * Current open positions. Each renders as a card whose "Apply Now" link opens the
+ * application form below with the role pre-selected. No salary, location, experience,
+ * benefits or deadlines are listed: only what is confirmed for each role.
  */
-const openings: { title: string; team: string; location: string; type: string; summary: string }[] = [];
+const openings: { title: string; team: string; summary: string; responsibilities: string[]; skills: string[] }[] = [
+  {
+    title: "Sales Executive",
+    team: "Sales & Partnerships",
+    summary: "Talk to offices about the chase calls and lost requests they want to get rid of, and show them how our product helps.",
+    responsibilities: [
+      "Reach out to office managers, admin heads and founders who are interested in the product",
+      "Run product demos and explain the Free, Pro and Enterprise plans clearly",
+      "Follow up on leads and keep the sales pipeline up to date",
+      "Share what customers ask for with the product team",
+    ],
+    skills: ["Clear spoken and written communication", "Running a good product demo", "Organised follow-up", "Listening to what an office actually needs"],
+  },
+  {
+    title: "Software Developer Coordinator",
+    team: "Engineering",
+    summary: "Keep development work organised and moving across our web app and Android app.",
+    responsibilities: [
+      "Plan and track development tasks from start to release",
+      "Coordinate between developers, product and design so work stays on schedule",
+      "Turn feedback and bug reports into clear tasks",
+      "Keep release notes and project documentation up to date",
+    ],
+    skills: ["Understanding of how web and mobile apps are built", "Planning and task tracking", "Clear written communication", "Attention to detail"],
+  },
+  {
+    title: "Email Marketing Executive",
+    team: "Marketing & Content",
+    summary: "Plan and send the emails that explain our product to offices and help new workspaces get started.",
+    responsibilities: [
+      "Plan and write email campaigns and newsletters",
+      "Build and look after email lists and segments",
+      "Track opens, clicks and replies, and improve what works",
+      "Write plainly about real office problems, without hype",
+    ],
+    skills: ["Email marketing tools", "Clear copywriting", "Reading campaign results", "Planning and scheduling"],
+  },
+  {
+    title: "Business Development Executive",
+    team: "Sales & Partnerships",
+    summary: "Find new offices and partners who could use our product, and open the first conversations with them.",
+    responsibilities: [
+      "Research and reach out to offices, groups and facility companies",
+      "Build relationships with potential partners and customers",
+      "Set up meetings and demos for the sales team",
+      "Keep track of opportunities and next steps",
+    ],
+    skills: ["Research and outreach", "Relationship building", "Clear communication", "Organisation and follow-up"],
+  },
+  {
+    title: "Prompt Engineer",
+    team: "Engineering",
+    summary: "Design, test and improve prompts for the AI tools the team uses in its everyday work.",
+    responsibilities: [
+      "Write, test and refine prompts for AI tools",
+      "Check AI output for accuracy and quality",
+      "Document prompts and good practices so the team can reuse them",
+      "Work with other teams to find tasks where AI can save time",
+    ],
+    skills: ["Hands-on experience with AI language models", "Clear, structured writing", "Testing and evaluation", "Problem solving"],
+  },
+];
 
 const values: { icon: IconName; title: string; body: string }[] = [
   { icon: "building", title: "Built for Real Offices", body: "We design for the pantry, the print room, the IT desk, facilities and the courier counter as they actually work, not for an imaginary office in a slide deck." },
@@ -116,18 +178,44 @@ export default function CareersPage() {
       </Band>
 
       <Band alt id="openings">
-        <SectionHeading eyebrow="Open Positions" title={openings.length ? `${openings.length} open position${openings.length > 1 ? "s" : ""}` : "No Open Positions Right Now"} typewriter={false} />
+        <SectionHeading eyebrow="Open Positions" title={openings.length ? `${openings.length} Open Position${openings.length > 1 ? "s" : ""}` : "No Open Positions Right Now"} typewriter={false} />
         {openings.length ? (
-          <div className="grid gap-4">
+          <div className="mx-auto grid max-w-5xl gap-4">
             {openings.map((o) => (
-              <div key={o.title} data-reveal className="glass-panel flex flex-col gap-4 rounded-2xl p-6 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <h3 className="font-heading text-lg font-bold">{o.title}</h3>
-                  <p className="mt-1 text-sm text-muted">{o.team} · {o.location} · {o.type}</p>
-                  <p className="mt-2 text-[15px] text-muted">{o.summary}</p>
+              <article key={o.title} data-reveal className="glass-panel rounded-2xl p-6 sm:p-7">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="min-w-0">
+                    <h3 className="font-heading text-xl font-bold">{o.title}</h3>
+                    <p className="mt-1 text-sm font-medium text-accent-text">{o.team}</p>
+                    <p className="mt-2 text-[15px] leading-relaxed text-muted">{o.summary}</p>
+                  </div>
+                  <a
+                    href={`?area=${encodeURIComponent(o.title)}#apply`}
+                    className="btn-shimmer inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-accent-hover"
+                    aria-label={`Apply Now for ${o.title}`}
+                  >
+                    Apply Now <Icon name="arrowRight" className="h-4 w-4" />
+                  </a>
                 </div>
-                <a href="#apply" className="shrink-0 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white">Apply</a>
-              </div>
+                <div className="mt-5 grid gap-5 border-t border-line pt-5 md:grid-cols-2">
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted">Key Responsibilities</h4>
+                    <ul className="mt-3 space-y-2 text-[15px] leading-relaxed">
+                      {o.responsibilities.map((r) => (
+                        <li key={r} className="flex gap-2.5"><Icon name="check" className="mt-1 h-4 w-4 shrink-0 text-accent" />{r}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-muted">Relevant Skills</h4>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {o.skills.map((s) => (
+                        <li key={s} className="rounded-full border border-line bg-surface px-3 py-1.5 text-sm">{s}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         ) : (
@@ -143,9 +231,9 @@ export default function CareersPage() {
 
       <Band>
         <SectionHeading eyebrow="Hiring Process" title="What Applying Looks Like" />
-        <ol className="mx-auto grid max-w-5xl items-start gap-4 md:grid-cols-5">
+        <ol className="eq-titles mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:[--eq-lines:3] xl:[--eq-lines:2]">
           {process.map((s, i) => (
-            <li key={s.title} data-reveal className="glass-panel rounded-2xl p-5">
+            <li key={s.title} data-reveal className="glass-panel flex h-full flex-col rounded-2xl p-5 sm:last:col-span-2 lg:last:col-span-1">
               <span className="font-heading text-3xl font-extrabold text-accent/40">{String(i + 1).padStart(2, "0")}</span>
               <h3 className="mt-2 font-semibold">{s.title}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-muted">{s.body}</p>

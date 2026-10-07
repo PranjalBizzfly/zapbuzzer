@@ -12,14 +12,15 @@ import { SearchDialog } from "./SearchDialog";
 
 const columnIcon: Record<string, IconName> = {
   Platform: "layers",
-  "Core features": "bolt",
-  "By team": "building",
+  "Core Features": "bolt",
+  "By Team": "building",
   Workflows: "workflow",
-  "By role": "users",
-  "By problem": "target",
+  "By Role": "users",
+  "By Problem": "target",
   Learn: "book",
   Evaluate: "compass",
   ZapBuzzer: "sparkles",
+  "Newsroom & People": "users",
 };
 const companyIcons: IconName[] = ["sparkles", "users", "chart", "mail", "calendar"];
 
@@ -106,12 +107,23 @@ export function Header() {
               const isDropdown = menu.columns.length === 1;
               return (
                 // Mega-menus centre on the full-width header (not the trigger) so they never run off-screen.
-                <div key={menu.label} className={isDropdown ? "relative" : "static"} onMouseEnter={() => enter(menu.label)} onMouseLeave={leave}>
+                <div
+                  key={menu.label}
+                  className={isDropdown ? "relative" : "static"}
+                  onMouseEnter={() => enter(menu.label)}
+                  onMouseLeave={leave}
+                  onBlur={(e) => {
+                    // Close when keyboard focus leaves this menu (trigger + panel).
+                    if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen((o) => (o === menu.label ? null : o));
+                  }}
+                >
                   <button
                     type="button"
-                    onClick={() => setOpen(isOpen ? null : menu.label)}
-                    onFocus={() => enter(menu.label)}
+                    // Keyboard (Enter/Space, detail 0) toggles; a mouse click keeps a hover-opened menu open.
+                    onClick={(e) => setOpen(e.detail === 0 && isOpen ? null : menu.label)}
                     aria-expanded={isOpen}
+                    aria-haspopup="true"
+                    aria-controls={`menu-${mi}`}
                     className={`relative flex items-center gap-1 py-2 text-[13px] font-medium transition-colors xl:text-sm ${
                       isOpen || active ? "font-semibold text-accent-text" : "text-fg/80 hover:text-accent-text"
                     }`}
@@ -122,7 +134,7 @@ export function Header() {
                   </button>
 
                   {isOpen && !isDropdown && (
-                    <div className="anim-menu absolute left-1/2 top-full z-50 mt-1 grid w-[860px] max-w-[95vw] -translate-x-1/2 grid-cols-3 gap-6 overflow-hidden whitespace-normal rounded-2xl border border-line/90 bg-surface p-6 text-fg shadow-2xl">
+                    <div id={`menu-${mi}`} className="anim-menu absolute left-1/2 top-full z-50 mt-1 grid w-[860px] max-w-[95vw] -translate-x-1/2 grid-cols-3 gap-6 overflow-hidden whitespace-normal rounded-2xl border border-line/90 bg-surface p-6 text-fg shadow-2xl">
                       {menu.columns.map((col) => (
                         <div key={col.title} className="space-y-3">
                           <div className="flex items-center gap-2 border-b border-line pb-2">
@@ -177,7 +189,7 @@ export function Header() {
                   )}
 
                   {isOpen && isDropdown && (
-                    <div className={`anim-menu absolute top-full z-50 mt-1 w-[360px] max-w-[90vw] space-y-1 overflow-hidden whitespace-normal rounded-2xl border border-line/90 bg-surface p-3 shadow-2xl ${mi > 2 ? "right-0" : "left-0"}`}>
+                    <div id={`menu-${mi}`} className={`anim-menu absolute top-full z-50 mt-1 w-[360px] max-w-[90vw] space-y-1 overflow-hidden whitespace-normal rounded-2xl border border-line/90 bg-surface p-3 shadow-2xl ${mi > 2 ? "right-0" : "left-0"}`}>
                       {menu.columns[0].links.map((l, i) => (
                         <Link key={l.href} href={l.href} className="group flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-surface-2">
                           <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-accent-soft text-accent transition-transform group-hover:scale-110">
@@ -248,7 +260,7 @@ export function Header() {
           <div className="anim-slide-in absolute bottom-0 right-0 top-0 flex h-full w-[85%] max-w-sm flex-col overflow-hidden border-l border-line bg-surface shadow-2xl">
             <div className="flex shrink-0 items-center justify-between border-b border-line p-4">
               <Logo />
-              <button type="button" onClick={() => setMobile(false)} aria-label="Close Mobile Navigation" className="rounded-lg p-2 text-muted transition-colors hover:bg-surface-2 hover:text-fg">
+              <button type="button" autoFocus onClick={() => setMobile(false)} aria-label="Close Mobile Navigation" className="rounded-lg p-2 text-muted transition-colors hover:bg-surface-2 hover:text-fg">
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
                   <path d="M6 6l12 12M18 6 6 18" />
                 </svg>

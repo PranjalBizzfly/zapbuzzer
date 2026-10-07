@@ -118,7 +118,7 @@ export const pages: PageContent[] = [
       { q: "What Should a CEO Look at in the Analytics Each Week?", a: "A quick glance at average accept time, on-time delivery, staff ratings and owner-only request spend. Pilot offices averaged 32 seconds to accept and 96% on-time delivery in their first month." },
       { q: "Does the CEO Need to Configure ZapBuzzer Personally?", a: "No. Your office manager sets up the catalogues and teams. Your part is to use it yourself from week one, because when the CEO buzzes instead of calling, everyone else follows." },
     ],
-    related: ["use-cases/founder", "admin/owner-dashboard", "admin/spend-visibility", "workflows/coffee-request", "analytics", "pricing/pro", "free-trial"],
+    related: ["use-cases/founder", "administration/owner-dashboard", "administration/spend-visibility", "workflows/coffee-request", "analytics", "pricing/pro-plan", "free-trial"],
     cta: { title: "Try It From the Boss Cabin", body: "Start a 14-day free trial, invite your pantry team and buzz your first coffee today." },
   },
 
@@ -236,7 +236,7 @@ export const pages: PageContent[] = [
       { q: "What Does a 40-person Team Pay on Pro?", a: "Pro is ₹99 per seat per month, so you pay for the seats you use with no setup fees. You can cancel anytime, and the 14-day trial needs no credit card." },
       { q: "Will It Replace Our Pantry WhatsApp Group?", a: "That is usually the first thing it replaces. Requests go to the right team on the app, plus Telegram and WhatsApp on Pro, and the first to accept owns it, so nothing gets lost in a busy group chat." },
     ],
-    related: ["use-cases/ceo", "use-cases/office-manager", "pricing/free", "pricing/pro", "how-it-works", "use-cases/reduce-whatsapp-requests", "sign-up"],
+    related: ["use-cases/ceo", "use-cases/office-manager", "pricing/free-plan", "pricing/pro-plan", "how-it-works", "use-cases/reduce-whatsapp-requests", "sign-up"],
     cta: { title: "Set It Up This Afternoon", body: "Start free for up to 10 staff, or take the 14-day Pro trial with no credit card." },
   },
 
@@ -353,7 +353,7 @@ export const pages: PageContent[] = [
       { q: "Do I Still Have to Relay Requests to Staff?", a: "No. Employees buzz the catalogue item themselves and it routes straight to the right team. Your role shifts from switchboard to designing catalogues and watching the numbers." },
       { q: "Which Numbers Should an Office Manager Watch?", a: "Accept time, on-time delivery, staff ratings and the busiest hours. Those tell you where cover is thin and which teams need help, with full analytics and scorecards on Pro." },
     ],
-    related: ["use-cases/admin-team", "admin/team-management", "solutions/pantry", "use-cases/reduce-whatsapp-requests", "admin/staff-dashboard", "pricing/pro", "demo"],
+    related: ["use-cases/admin-team", "administration/team-management", "solutions/pantry", "use-cases/reduce-whatsapp-requests", "administration/staff-dashboard", "pricing/pro-plan", "book-a-demo"],
     cta: { title: "Give Your Phone a Rest", body: "Start the 14-day free trial and route your pantry requests through ZapBuzzer this week." },
   },
 
@@ -490,7 +490,7 @@ export const pages: PageContent[] = [
       { q: "Does ZapBuzzer Help With New Joiners' First Day?", a: "A new joiner can ask for coffee, an HDMI cable or IT help through the same simple catalogue as everyone else, without needing to know whose extension to call." },
       { q: "Can HR See Office Complaints Before Exit Interviews?", a: "Requests and ratings give HR a running picture of how well the office serves employees, such as repeat AC complaints or slow responses, rather than hearing about it when someone leaves." },
     ],
-    related: ["use-cases/staff-accountability", "analytics/staff", "analytics/ratings", "admin/roles-and-permissions", "use-cases/office-manager", "pricing/pro"],
+    related: ["use-cases/staff-accountability", "analytics/staff-analytics", "analytics/rating-analytics", "administration/roles-and-permissions", "use-cases/office-manager", "pricing/pro-plan"],
     cta: { title: "Make Service Fair for Every Employee", body: "Try ZapBuzzer free for 14 days and see your first scorecards by the end of the month." },
   },
 
@@ -600,7 +600,7 @@ export const pages: PageContent[] = [
       { q: "What Happens When an Admin Job Runs Past Its Deadline?", a: "It escalates to a manager on its own, with the timeline attached. On Pro you can set an escalation chain, so if the first manager is busy the next person hears about it." },
       { q: "Can the Admin Head See How Each Person Is Doing?", a: "Yes. Scorecards show accept times, deliveries and ratings for each team member with fair attribution. Full analytics and scorecards are part of Pro." },
     ],
-    related: ["use-cases/facilities-manager", "features/first-accept-wins", "sla/automatic-escalation", "workflows/ac-issue", "admin/audit-logs", "pricing/pro"],
+    related: ["use-cases/facilities-manager", "features/first-accept-wins", "sla-and-escalation/automatic-escalation", "workflows/ac-issue", "administration/audit-logs", "pricing/pro-plan"],
     cta: { title: "Give Your Admin Team One Queue", body: "Start a free 14-day trial and route your first facilities ticket in minutes." },
   },
 
@@ -710,7 +710,7 @@ export const pages: PageContent[] = [
       { q: "Can the IT Manager See Walk-Up Request Trends?", a: "Yes. Analytics show which rooms, items and hours generate the most IT asks, so you can leave spare cables or fix a problem projector for good. Full analytics are on Pro." },
       { q: "Do Walk-Up IT Requests Have Deadlines?", a: "Every request is timed, and if one runs past its deadline it escalates to a manager automatically. The full escalation chain is part of Pro." },
     ],
-    related: ["solutions/it-support", "workflows/hdmi-request", "workflows/projector-request", "compare/helpdesk", "notifications/multi-channel", "pricing/enterprise"],
+    related: ["solutions/it-support", "workflows/hdmi-request", "workflows/projector-request", "feature-comparison/vs-helpdesk", "notifications/multi-channel-notifications", "pricing/enterprise-plan"],
     cta: { title: "Put a Button in Every Meeting Room", body: "Start the 14-day trial and route your first walk-up IT request through ZapBuzzer today." },
   },
 
@@ -841,7 +841,7 @@ export const pages: PageContent[] = [
       { q: "What Happens If a Facilities Fix Stalls?", a: "Each job has a deadline. If it is not delivered in time it escalates to a manager automatically, as in Om's 15-minute AC example, and Pro adds a full escalation chain." },
       { q: "Can Technicians Close a Job With a Photo?", a: "Yes. When marking a request delivered, staff can attach a photo, and the requester can rate the fix from 1 to 5★. That closes the loop with proof." },
     ],
-    related: ["solutions/facilities", "use-cases/facilities-operations", "workflows/ac-issue", "sla/escalation-chains", "enterprise/multi-location", "pricing/pro"],
+    related: ["solutions/facilities", "use-cases/better-facilities-operations", "workflows/ac-issue", "sla-and-escalation/escalation-chains", "enterprise/multi-location", "pricing/pro-plan"],
     cta: { title: "Put Every Facilities Job on a Clock", body: "Try ZapBuzzer Pro free for 14 days with SLA timers and escalation." },
   },
 
@@ -963,7 +963,7 @@ export const pages: PageContent[] = [
       { q: "Can Reception Buzz IT for a Meeting Room Before a Guest Arrives?", a: "Yes. Choose the room as the destination and buzz IT or facilities from the front desk. The team is pinged at once and you see who accepted and their ETA." },
       { q: "Does Reception Need to Stay on the Phone to Chase Requests?", a: "No. Notifications repeat until someone accepts and you can see each request's status, so the front desk can keep greeting visitors instead of ringing extensions." },
     ],
-    related: ["solutions/courier-and-reception/reception-requests", "workflows/courier-pickup", "workflows/emergency-summon", "solutions/courier", "admin/audit-logs", "use-cases/reduce-phone-calls", "pricing/pro"],
+    related: ["solutions/courier-and-reception/reception-requests", "workflows/courier-pickup", "workflows/emergency-summon", "solutions/courier-and-reception", "administration/audit-logs", "use-cases/reduce-phone-calls", "pricing/pro-plan"],
     cta: { title: "Free Up Your Front Desk", body: "Start the free trial and log your first courier pickup in ZapBuzzer today." },
   },
 
@@ -1088,7 +1088,7 @@ export const pages: PageContent[] = [
       { q: "Can I Fix a Projector Problem Right Before a Client Meeting?", a: "Buzz IT with the meeting room as the destination. The IT desk is pinged at once, the first free person accepts and you see their ETA on your phone." },
       { q: "Can a Sales Manager See How Pitch Prep Requests Went?", a: "Every request is timed and rated, so analytics show how quickly prints, coffee and IT help arrived for meetings. Full analytics and scorecards are on Pro." },
     ],
-    related: ["solutions/print-room", "workflows/print-request", "solutions/print-room/color-printing", "use-cases/stop-office-chase-calls", "solutions/it-support/meeting-room-support", "free-trial"],
+    related: ["solutions/print-room", "workflows/print-request", "solutions/print-room/color-printing", "use-cases/stop-chase-calls", "solutions/it-support/meeting-room-it-support", "free-trial"],
     cta: { title: "Walk Into Your Next Pitch Ready", body: "Start the free trial and send your next proposal to print with one tap." },
   },
 
@@ -1219,7 +1219,7 @@ export const pages: PageContent[] = [
       { q: "How Long Before the Data Is Useful?", a: "A week shows busy hours and top items. A month gives you dependable accept times, on-time rates and ratings to plan with." },
       { q: "Can Operations Set Up the Lunch-for-Twelve Workflow?", a: "Yes. The organiser picks items from the pantry catalogue, adds headcount and dietary notes, and buzzes it as one request. The pantry queues it, the requester rates it and the owner sees the cost." },
     ],
-    related: ["analytics", "admin/spend-visibility", "workflows/lunch-request", "use-cases/track-office-requests", "enterprise/multi-location", "resources/workplace-operations-guide", "pricing/pro"],
+    related: ["analytics", "administration/spend-visibility", "workflows/lunch-request", "use-cases/track-office-requests", "enterprise/multi-location", "resource-hub/workplace-operations-guide", "pricing/pro-plan"],
     cta: { title: "See Your Office in Numbers", body: "Start the 14-day Pro trial, no credit card, and review your first month of data." },
   },
 ];

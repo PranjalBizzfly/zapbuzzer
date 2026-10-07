@@ -1024,3 +1024,14 @@ export const legacyRedirects = [
     "permanent": true
   }
 ];
+
+/** Page path (no leading slash) → every path it had before URL renames. */
+const previousPaths = new Map<string, string[]>();
+for (const r of legacyRedirects) {
+  const k = r.destination.slice(1);
+  previousPaths.set(k, [...(previousPaths.get(k) ?? []), r.source.slice(1)]);
+}
+
+/** Looks up content keyed by a page's path, falling back to any of its pre-rename paths. */
+export const byPath = <T,>(map: Record<string, T>, path: string): T | undefined =>
+  map[path] ?? (previousPaths.get(path) ?? []).map((p) => map[p]).find((v) => v !== undefined);

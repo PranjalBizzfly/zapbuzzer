@@ -38,7 +38,7 @@ export function FeatureExplorer({ tabs, items }: { tabs: string[]; items: Explor
           </button>
         ))}
       </div>
-      <div className="flex flex-wrap justify-center gap-5">
+      <div className="eq-titles flex flex-wrap justify-center gap-5">
         {shown.map((f) => (
           <div key={f.title} className="w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(25%-0.94rem)]">
             <Spotlight className="glass-panel card-fx group flex h-full flex-col justify-between rounded-2xl p-6 transition duration-300 hover:-translate-y-2">

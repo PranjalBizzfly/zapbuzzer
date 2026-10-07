@@ -24,6 +24,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       type="button"
       onClick={toggle}
       aria-label="Toggle dark/light theme"
+      aria-pressed={dark}
       className={`grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-fg/70 transition duration-200 hover:scale-[1.08] hover:bg-surface-2 hover:text-accent-text active:scale-90 ${className}`}
     >
       <svg key={dark ? "sun" : "moon"} className="anim-fade-in h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

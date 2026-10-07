@@ -24,9 +24,9 @@ import { titleCase } from "@/lib/titleCase";
 import { standaloneFaqs } from "@/content/standaloneFaqs";
 
 export const metadata: Metadata = {
-  title: { absolute: "ZapBuzzer | Internal Request CRM for Offices | Press a button. Staff knows." },
+  title: { absolute: "ZapBuzzer | Internal Request CRM for Offices" },
   description:
-    "One tap for coffee, prints, IT help, facilities and courier pickups. ZapBuzzer routes it to the right team, first to accept owns it, and every request is timed and rated.",
+    "One tap for coffee, prints, IT help, facilities and courier pickups. ZapBuzzer routes it to the right team; the first to accept owns it. Every job is timed.",
   alternates: { canonical: "/" },
   openGraph: { title: "ZapBuzzer | One Tap. Everyone Who Needs to Know, Knows.", url: "/" },
 };
@@ -114,9 +114,9 @@ const spotlightsData: Record<
     hubTag: "Pantry · Real-Time Queue",
     statusText: "Operational",
     stats: [
-      { label: "Avg Fulfillment", value: "3m 12s", sub: "96% on-time", highlight: true },
-      { label: "Daily Volume", value: "140+ orders", sub: "zero chase calls" },
-      { label: "Staff Attribution", value: "4.9★", sub: "Arjun (Pantry Team)" },
+      { label: "Pilot Avg Accept", value: "32s", sub: "96% on-time delivery", highlight: true },
+      { label: "Phone Calls", value: "−87%", sub: "pilot offices, first month" },
+      { label: "Avg Staff Rating", value: "4.8★", sub: "Arjun (Pantry Team)" },
     ],
     activeRequest: {
       icon: "☕",
@@ -134,7 +134,7 @@ const spotlightsData: Record<
     hubTag: "Print Room · High-Speed Duplex",
     statusText: "Active Job",
     stats: [
-      { label: "Queue Response", value: "41s", sub: "first-accept-wins", highlight: true },
+      { label: "Routing", value: "Whole Team", sub: "first-accept-wins", highlight: true },
       { label: "Active Deck", value: "24 Copies", sub: "Colour Duplex · Stapled" },
       { label: "Delivery Target", value: "Desk 4B", sub: "Kavya (Sales Lead)" },
     ],
@@ -154,9 +154,9 @@ const spotlightsData: Record<
     hubTag: "IT Desk · Instant Dispatch",
     statusText: "Dispatched",
     stats: [
-      { label: "Avg Response", value: "42s", sub: "auto-routed to IT", highlight: true },
-      { label: "Resolution SLA", value: "3m 05s", sub: "first-visit fix" },
-      { label: "Escalation Risk", value: "0%", sub: "Priya (IT Support)" },
+      { label: "Routing", value: "Auto", sub: "auto-routed to IT", highlight: true },
+      { label: "HDMI Delivered", value: "3 min", sub: "Tanvi (Design)" },
+      { label: "Overdue", value: "Auto-Escalates", sub: "Priya (IT Desk)" },
     ],
     activeRequest: {
       icon: "💻",
@@ -194,9 +194,9 @@ const spotlightsData: Record<
     hubTag: "Reception · Audit Log",
     statusText: "Audit-Trailed",
     stats: [
-      { label: "Check-In Time", value: "08s", sub: "instant recipient ping", highlight: true },
-      { label: "Courier Partner", value: "BlueDart", sub: "Waybill #8841" },
-      { label: "Audit Handover", value: "Logged", sub: "Neha (Reception Lead)" },
+      { label: "Request", value: "Courier Pickup", sub: "mailroom pinged", highlight: true },
+      { label: "Pickup", value: "Logged", sub: "Mailroom notified" },
+      { label: "Audit Trail", value: "Recorded", sub: "Neha (Reception)" },
     ],
     activeRequest: {
       icon: "📦",
@@ -448,7 +448,7 @@ export default function Home() {
           </ol>
 
           {/* The first three stages, explained */}
-          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="eq-titles mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
             {journey.map((s, i) => (
               <div key={s.t} data-reveal style={delay(i)} className="relative overflow-hidden rounded-2xl border border-accent/20 bg-accent-soft p-6">
                 <h3 className="flex items-center gap-2 font-heading text-lg font-bold">
@@ -535,7 +535,7 @@ export default function Home() {
       <section className="bg-surface-2/60 py-10 sm:py-12 md:py-14">
         <div className="container-x">
           <SectionHeading eyebrow="Our Principles" title="Three Ideas Behind the Product" />
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="eq-titles grid grid-cols-1 gap-5 md:grid-cols-3">
             {(
               [
                 ["Shaped Around Real Office Work", "Pantry, print room, IT, facilities and courier each get their own setup. It isn’t a generic task list.", "building"],
@@ -607,7 +607,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-7">
+            <div className="eq-titles grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-7">
               {(["use-cases/ceo", "use-cases/office-manager", "use-cases/it-manager", "use-cases/facilities-manager"] as const).map((path, i) => {
                 const pg = getPage(path);
                 return (
@@ -669,7 +669,7 @@ export default function Home() {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full border border-emerald-500/30 bg-black/75 px-3 py-1 text-xs font-semibold text-emerald-400 backdrop-blur-md">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Android APK v1.15.2 · Rings on Silent & Lock</span>
+                  <span>Android APK v1.16.0 · Rings on Silent & Lock</span>
                 </div>
               </div>
               <div className="mt-3.5 flex items-center justify-between rounded-xl border border-white/10 bg-black/40 px-3.5 py-2.5 text-xs text-white/90">
@@ -693,7 +693,7 @@ export default function Home() {
             intro="Larger organisations can let staff sign in with their company login (SSO and SAML) and run ZapBuzzer under their own brand and domain. They also get a REST API with webhooks, a named customer success manager and the option to host it on their own servers."
           />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {(["enterprise/security", "enterprise/multi-location", "integrations/sso-saml", "developers/api"] as const).map((path, i) => {
+            {(["enterprise/security", "enterprise/multi-location", "integrations/sso-and-saml", "developers/api-documentation"] as const).map((path, i) => {
               const pg = getPage(path);
               return (
                 <Link key={path} href={`/${path}`} data-reveal style={delay(i, 4)} className="glass-panel card-fx group flex flex-col rounded-2xl p-6 transition duration-300 hover:-translate-y-1.5">
@@ -716,7 +716,7 @@ export default function Home() {
       <section className="bg-surface-2/60 py-10 sm:py-12 md:py-14">
         <div className="container-x">
           <SectionHeading eyebrow="In Their Words" title="What Changed, According to the People Using It" />
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="eq-titles grid grid-cols-1 gap-5 md:grid-cols-3">
             {quotes.map(([q, n, r], i) => (
               <figure key={n} data-reveal style={delay(i)} className="glass-panel group relative flex flex-col rounded-2xl p-7 transition duration-300 hover:-translate-y-1.5 hover:border-accent/50">
                 <span className="absolute right-6 top-4 font-heading text-6xl leading-none text-accent/15" aria-hidden>“</span>

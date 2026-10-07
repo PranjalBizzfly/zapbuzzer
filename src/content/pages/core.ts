@@ -130,7 +130,7 @@ const partA: PageContent[] = [
       { q: "Can I See Where My Request Has Got to After It Is Accepted?", a: "Yes. You see who is on it, with their name and photo, plus an ETA. The request then moves through Started and Delivered, and a photo can be attached on delivery." },
       { q: "Can I Add a Destination or a Note When I Tap a Request?", a: "Yes. Pick the item from your catalogue, add a note and choose where it should go, such as the Boss Cabin or a meeting room, then tap Buzz." },
     ],
-    related: ["features", "features/first-accept-wins", "sla", "notifications/multi-channel", "workflows", "workflows/coffee-request", "demo", "free-trial"],
+    related: ["features", "features/first-accept-wins", "sla-and-escalation", "notifications/multi-channel-notifications", "workflows", "workflows/coffee-request", "book-a-demo", "free-trial"],
     cta: { title: "See the Lifecycle on Your Own Office", body: "Start a 14-day trial with no card, or open the read-only demo and follow a request from tap to rating." },
   },
   {
@@ -257,7 +257,7 @@ const partA: PageContent[] = [
       { q: "Is There a Feature for Owners to See What Requests Cost?", a: "Yes. The owner-only spend view shows the cost of requests, such as a team lunch order. Roles keep it hidden from everyone else, and every action is audit-logged." },
       { q: "Which Analytics Features Come With the Scorecard?", a: "The analytics show who is fastest, who earns 5★ ratings and when the office buzzes most. Full analytics and the scorecard are part of Pro." },
     ],
-    related: ["how-it-works", "features/one-tap-requests", "features/first-accept-wins", "sla", "analytics", "notifications", "admin", "pricing"],
+    related: ["how-it-works", "features/one-tap-requests", "features/first-accept-wins", "sla-and-escalation", "analytics", "notifications", "administration", "pricing"],
     cta: { title: "Try Every Feature for 14 Days", body: "Pro features are open during the trial. No credit card and no setup call." },
   },
   {
@@ -338,7 +338,7 @@ const partA: PageContent[] = [
           { time: "2:51", event: "Kavya sees the owner and the ETA on her phone." },
           { time: "2:57", event: "Prints are placed on the table and marked Delivered with a photo." },
         ],
-        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead",
+        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead, Northwind",
       },
       {
         type: "visual",
@@ -375,7 +375,7 @@ const partA: PageContent[] = [
       { q: "Which Request Types Does the Product Cover Out of the Box?", a: "Pantry orders, print jobs, IT help, facilities issues and courier pickups. Each category routes to its own team, so a stuck projector never lands with the pantry." },
       { q: "Where Does the Product Keep Request History?", a: "Every request is timed and stored in your workspace on the server. Free keeps the last 30 days of history, while Pro adds audit logs and reports." },
     ],
-    related: ["features", "how-it-works", "mobile-app", "why-zapbuzzer", "use-cases/office-manager", "pricing", "demo"],
+    related: ["features", "how-it-works", "mobile-app", "why-zapbuzzer", "use-cases/office-manager", "pricing", "book-a-demo"],
     cta: { title: "Put ZapBuzzer on One Floor First", body: "Start free for up to 10 staff, or take the 14-day trial of Pro with no card." },
   },
   {
@@ -460,7 +460,7 @@ const partA: PageContent[] = [
           { time: "14:12", event: "Deepak accepts and sets an ETA." },
           { time: "14:25", event: "If it were still not fixed at 15 minutes, it would escalate to the manager." },
         ],
-        outcome: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.” — Deepak, Admin Head",
+        outcome: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.” — Deepak, Admin Head, Meridian",
       },
       {
         type: "stats",
@@ -525,7 +525,7 @@ const partA: PageContent[] = [
       { q: "Why Choose ZapBuzzer Over a Generic To-Do or Ticketing App?", a: "It is built for real office work such as pantry, print, IT, facilities and courier, with first-accept-wins, SLA timers and auto-escalation working out of the box rather than as add-ons you configure." },
       { q: "What Results Did Offices See After Switching to ZapBuzzer?", a: "In their first month, pilot offices recorded a 32-second average accept time, 96% on-time delivery, 87% fewer phone calls and a 4.8★ average staff rating." },
     ],
-    related: ["about-us", "how-it-works", "compare/whatsapp", "compare/phone-calls", "use-cases/stop-office-chase-calls", "clients", "free-trial"],
+    related: ["about-us", "how-it-works", "feature-comparison/vs-whatsapp", "feature-comparison/vs-phone-calls", "use-cases/stop-chase-calls", "clients", "free-trial"],
     cta: { title: "Make Your Office Quieter This Week", body: "Start the 14-day trial: no card, no setup call." },
   },
   {
@@ -649,7 +649,7 @@ const partA: PageContent[] = [
       { q: "What Will a Guided Demo Show Us About First-Accept-Wins?", a: "We buzz a sample request and show the whole team being pinged, one person accepting, the requester seeing their name, photo and ETA, and the rating at the end." },
       { q: "Can the Read-Only Demo Be Shared With Colleagues?", a: "Yes. Anyone can open zapbuzzer.com/sign-in?demo=1 without an account, so you can pass the link round before booking a guided demo together." },
     ],
-    related: ["free-trial", "contact", "how-it-works", "product", "resources/product-tour", "pricing", "enterprise"],
+    related: ["free-trial", "contact-us", "how-it-works", "overview", "resource-hub/product-tour", "pricing", "enterprise"],
     cta: { title: "Open the Demo Now", body: "Use the read-only demo in your browser, or email hello@zapbuzzer.com for a guided walkthrough." },
   },
   {
@@ -704,9 +704,9 @@ const partA: PageContent[] = [
         type: "audience",
         heading: "In Their Own Words",
         items: [
-          { role: "Priya, Office Manager", benefit: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.”" },
-          { role: "Kavya, Sales Lead", benefit: "“Print jobs land at my desk before the client even sits down. Zero chase calls.”" },
-          { role: "Deepak, Admin Head", benefit: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.”" },
+          { role: "Priya, Office Manager, Lumen Labs", benefit: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.”" },
+          { role: "Kavya, Sales Lead, Northwind", benefit: "“Print jobs land at my desk before the client even sits down. Zero chase calls.”" },
+          { role: "Deepak, Admin Head, Meridian", benefit: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.”" },
         ],
       },
       {
@@ -779,7 +779,7 @@ const partA: PageContent[] = [
       { q: "Which Client Names Appear on the ZapBuzzer Clients Page?", a: "The offices shown are Acme HQ, Northwind, Lumen Labs, Volt & Co, Brightpath and Meridian, alongside more than 200 offices onboarded across 14 cities." },
       { q: "What Has Acme HQ Said About Using ZapBuzzer?", a: "Aarav Sharma, Founder & CEO of Acme HQ in Pune, said: “The office runs quieter. Nobody’s shouting names down the hall. Coffee arrives before anyone asks twice.”" },
     ],
-    related: ["customer-stories", "why-zapbuzzer", "about", "use-cases/office-manager", "demo", "free-trial"],
+    related: ["customer-stories", "why-zapbuzzer", "about-us", "use-cases/office-manager", "book-a-demo", "free-trial"],
     cta: { title: "Join 200+ Quieter Offices", body: "Start free for one floor, or try Pro for 14 days with no card." },
   },
   {
@@ -888,7 +888,7 @@ const partA: PageContent[] = [
       { q: "What Is ZapBuzzer’s Mission?", a: "We’re building the quiet office. ZapBuzzer was founded in a Pune office tired of phone tag: three calls for one coffee, print jobs lost in a WhatsApp group and IT tickets dying in someone’s DMs." },
       { q: "What Values Guide How ZapBuzzer Is Built?", a: "Three: built for real offices such as pantry, print, IT, facilities and courier; fast by default, with first-accept-wins, SLA timers and auto-escalation; and people-first, giving staff fair credit and scorecards." },
     ],
-    related: ["why-zapbuzzer", "clients", "contact", "product", "how-it-works", "free-trial"],
+    related: ["why-zapbuzzer", "clients", "contact-us", "overview", "how-it-works", "free-trial"],
     cta: { title: "Make Your Office a Quiet One", body: "Try ZapBuzzer free for 14 days. No card, no setup call." },
   },
 ];
@@ -1022,7 +1022,7 @@ const partB: PageContent[] = [
       { q: "Who Counts as a Seat on Pro?", a: "Pro is priced per seat, so each person using ZapBuzzer counts. Pro has no staff cap, which is why offices that outgrow Free’s 10-staff limit move to it. See Billing & Seats for how seats are added and removed." },
       { q: "Can We Run Several Offices on Pro, or Do We Need Enterprise?", a: "Pro already includes multi-location. Enterprise is for when you also need things like SSO, white-label under your own domain, API access, a dedicated CSM or on-prem." },
     ],
-    related: ["pricing/free-plan", "pricing/pro", "pricing/enterprise", "pricing/billing", "free-trial", "enterprise", "features", "contact"],
+    related: ["pricing/free-plan", "pricing/pro-plan", "pricing/enterprise-plan", "pricing/billing-and-seats", "free-trial", "enterprise", "features", "contact-us"],
     cta: { title: "Start Your 14-day Trial", body: "No card, no setup call. Invite your team today." },
   },
   {
@@ -1094,7 +1094,7 @@ const partB: PageContent[] = [
         headers: ["Item", "Detail"],
         rows: [
           ["Platform", "Android (APK)"],
-          ["Current version", "v1.15.2 (build 47)"],
+          ["Current version", "v1.16.0 (build 48)"],
           ["Size", "61 MB"],
           ["Account and data", "Your account and workspace live on the server"],
           ["Also available", "Web app for everyone"],
@@ -1151,11 +1151,11 @@ const partB: PageContent[] = [
       { q: "Is the Mobile App Included on Free?", a: "Yes. The mobile and web apps are included on every plan, including Free." },
       { q: "Where Is My Data Stored?", a: "Your account and workspace live on the server, not on the phone, so switching devices does not lose anything." },
       { q: "Can Employees Raise an Emergency From the App?", a: "Yes. One tap lets an employee summon staff or security, or raise an emergency." },
-      { q: "How Big Is the App, and Which Version Is Current?", a: "The current Android APK is v1.15.2 (build 47) and is about 61 MB. Because your data lives on the server, updating the app does not touch your requests or history." },
+      { q: "How Big Is the App, and Which Version Is Current?", a: "The current Android APK is v1.16.0 (build 48) and is about 61 MB. Because your data lives on the server, updating the app does not touch your requests or history." },
       { q: "What If a Staff Member Loses Their Phone?", a: "Nothing is lost, because the workspace lives on the server. They sign in on a new phone, and meanwhile the rest of the team still receives every request, since requests go to the whole team." },
       { q: "Can I Accept and Track Requests From the Mobile App While Away From My Desk?", a: "Yes. The app lets staff accept and track requests on the move, so whoever is free near the pantry or print room can take ownership straight from their phone." },
     ],
-    related: ["mobile-app/android-app", "mobile-app/request-acceptance", "mobile-app/staff-workflow", "notifications/push", "workflows/emergency-summon", "features", "free-trial"],
+    related: ["mobile-app/android-app", "mobile-app/mobile-request-acceptance", "mobile-app/mobile-staff-workflow", "notifications/mobile-push-notifications", "workflows/emergency-summon", "features", "free-trial"],
     cta: { title: "Get the App on Your Team’s Phones", body: "Start a 14-day trial and install the Android app for your staff today." },
   },
   {
@@ -1314,7 +1314,7 @@ const partB: PageContent[] = [
       { q: "Can We Start on Pro and Move to Enterprise Later?", a: "Yes. Many groups prove ZapBuzzer at one or two sites on Pro first. Moving to Enterprise adds options such as SSO, white-label and the API on top of what you have already set up." },
       { q: "What Does the Dedicated CSM Actually Do?", a: "A named customer success manager helps plan the rollout site by site, works with each location as it goes live and stays your point of contact afterwards. The exact scope is agreed during scoping." },
     ],
-    related: ["pricing/enterprise-plan", "enterprise/rollout", "enterprise/security", "enterprise/multi-location", "integrations/sso-saml", "integrations/white-label", "contact", "demo"],
+    related: ["pricing/enterprise-plan", "enterprise/enterprise-rollout", "enterprise/security", "enterprise/multi-location", "integrations/sso-and-saml", "integrations/white-label", "contact-us", "book-a-demo"],
     cta: { title: "Talk to Us About Enterprise", body: "Email hello@zapbuzzer.com or use the contact form. We reply within one business day." },
   },
   {
@@ -1415,7 +1415,7 @@ const partB: PageContent[] = [
       { q: "What Should I Include When I Contact the ZapBuzzer Team?", a: "Tell us your office size, how many locations you have and which teams handle requests, such as pantry, print or IT. If you have a currency or plan in mind, mention that too." },
       { q: "Is Email the Best Way to Reach ZapBuzzer?", a: "Yes. Write to hello@zapbuzzer.com or use the contact form on this page; both reach the same team in Pune, and we reply within one business day." },
     ],
-    related: ["book-a-demo", "enterprise", "pricing", "free-trial", "about", "resources/faq"],
+    related: ["book-a-demo", "enterprise", "pricing", "free-trial", "about-us", "resource-hub/faq"],
     cta: { title: "Prefer to Try It Yourself?", body: "Start the 14-day trial. No card, no setup call." },
   },
   {
@@ -1502,7 +1502,7 @@ const partB: PageContent[] = [
       { q: "Can I Sign in on the Web App and the Android App at the Same Time?", a: "Yes. Your account and workspace live on the server, so you can stay signed in on the web app at your desk and on the Android app on the move." },
       { q: "Where Do I Go to Sign in to ZapBuzzer?", a: "Open zapbuzzer.com/sign-in and use the email your office invited. If you only want to look around, add ?demo=1 to open the read-only demo workspace." },
     ],
-    related: ["sign-up", "demo", "mobile-app", "how-it-works", "contact"],
+    related: ["sign-up", "book-a-demo", "mobile-app", "how-it-works", "contact-us"],
   },
   {
     path: "sign-up",
@@ -1630,7 +1630,7 @@ const partB: PageContent[] = [
           { time: "10:00", event: "Ten employees are invited." },
           { time: "10:12", event: "The first coffee is buzzed, accepted and delivered." },
         ],
-        outcome: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager",
+        outcome: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager, Lumen Labs",
       },
       {
         type: "visual",
@@ -1700,7 +1700,7 @@ const partB: PageContent[] = [
       { q: "Are Pro Features Such as Multi-Location Included in the Free Trial?", a: "Yes, Pro features such as multi-location are open during the trial so you can test them properly. If you want to check anything specific, email hello@zapbuzzer.com." },
       { q: "Is There a Setup Call or Onboarding Fee Before the Free Trial Starts?", a: "No. There is no setup call and no setup fee. Sign up, add your catalogue and invite your team, and most offices are running within an afternoon." },
     ],
-    related: ["sign-up", "pricing", "pricing/free", "pricing/pro", "how-it-works", "demo"],
+    related: ["sign-up", "pricing", "pricing/free-plan", "pricing/pro-plan", "how-it-works", "book-a-demo"],
     cta: { title: "Start Your 14 Days", body: "No card, no setup call. Your first coffee can be buzzed in minutes." },
   },
 ];

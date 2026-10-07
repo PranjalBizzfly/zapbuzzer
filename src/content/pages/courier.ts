@@ -187,12 +187,12 @@ export const pages: PageContent[] = [
       },
     ],
     related: [
-      "solutions/courier/pickup",
-      "solutions/courier/mailroom",
-      "solutions/courier/tracking",
+      "solutions/courier-and-reception/courier-pickup",
+      "solutions/courier-and-reception/mailroom-requests",
+      "solutions/courier-and-reception/courier-tracking",
       "workflows/courier-pickup",
-      "use-cases/reception",
-      "admin/audit-logs",
+      "use-cases/reception-team",
+      "administration/audit-logs",
       "pricing",
       "free-trial",
     ],
@@ -308,7 +308,7 @@ export const pages: PageContent[] = [
       { q: "What Should Reception Write in the Pickup Note?", a: "Keep it to one line the mailroom can act on: the courier company, number of packages, who it is for and where the agent is waiting, such as ‘Blue Dart, 2 boxes, Gate 1’." },
       { q: "Will the Mailroom Phone Ring for a Pickup If It Is on Silent?", a: "Yes. The Android app rings through even when the phone is on silent or locked, which matters when an agent is waiting at the gate. Notifications repeat until someone accepts." },
     ],
-    related: ["solutions/courier-and-reception", "solutions/courier/reception", "workflows/courier-pickup", "features/first-accept-wins", "mobile-app/android", "pricing/pro"],
+    related: ["solutions/courier-and-reception", "solutions/courier-and-reception/reception-requests", "workflows/courier-pickup", "features/first-accept-wins", "mobile-app/android-app", "pricing/pro-plan"],
     cta: { title: "Make the Gate Wait Shorter", body: "Try Courier Pickup with your reception team free for 14 days, with no card required." },
   },
 
@@ -424,7 +424,7 @@ export const pages: PageContent[] = [
       { q: "What Happens When the Mailroom Is Overloaded and a Job Runs Late?", a: "Every request has an SLA deadline. If a mailroom job goes overdue it auto-escalates to a manager, and on Pro it follows your escalation chain so someone steps in." },
       { q: "Do Mailroom Staff Get Notified on WhatsApp or Telegram?", a: "On Pro, yes. Requests ring on the app, email, Telegram and WhatsApp at the same time. The Free plan uses app and email notifications." },
     ],
-    related: ["solutions/courier-and-reception", "solutions/courier/mailroom-analytics", "solutions/courier/outgoing-workflow", "features/request-management", "analytics/staff", "pricing"],
+    related: ["solutions/courier-and-reception", "solutions/courier-and-reception/mailroom-analytics", "solutions/courier-and-reception/outgoing-courier-workflow", "features/request-management", "analytics/staff-analytics", "pricing"],
     cta: { title: "Give Your Mailroom One Queue", body: "Set it up in an afternoon. Sign up free, add your mailroom team and start routing." },
   },
 
@@ -524,7 +524,7 @@ export const pages: PageContent[] = [
       { q: "Can the Front Desk Tell a Waiting Courier Agent Who Is Coming?", a: "Yes. As soon as someone accepts, reception sees their name, photo and ETA, so the agent can be told who is on the way instead of waiting while extensions are called." },
       { q: "How Much Time Does This Save Reception During a Busy Morning?", a: "Pilot offices saw phone calls fall by 87% in their first month across all request types. For reception, one tap replaces the round of calls to find someone free." },
     ],
-    related: ["solutions/courier-and-reception", "solutions/courier/reception-workflow", "use-cases/reception", "solutions/courier/pickup", "features/one-tap-requests", "free-trial"],
+    related: ["solutions/courier-and-reception", "solutions/courier-and-reception/reception-workflow", "use-cases/reception-team", "solutions/courier-and-reception/courier-pickup", "features/one-tap-requests", "free-trial"],
     cta: { title: "Give Your Front Desk One Tap", body: "Free for up to 10 staff on one location. Sign up and add your reception team today." },
   },
 
@@ -634,7 +634,7 @@ export const pages: PageContent[] = [
       { q: "Who Gets the Delivery Request If the Usual Runner Is on Leave?", a: "Delivery requests go to the whole team, not one person, so whoever is free accepts it. Nobody needs to know the rota for the parcel to move." },
       { q: "Is There a Deadline for Getting a Parcel From the Mailroom to a Desk?", a: "Each delivery request carries an SLA timer from the moment it is raised. If it goes overdue, it escalates to a manager automatically." },
     ],
-    related: ["solutions/courier-and-reception", "solutions/courier/incoming-workflow", "features/delivery-confirmation", "features/eta-tracking", "solutions/courier/tracking", "pricing/pro"],
+    related: ["solutions/courier-and-reception", "solutions/courier-and-reception/incoming-courier-workflow", "features/delivery-confirmation", "features/eta-tracking", "solutions/courier-and-reception/courier-tracking", "pricing/pro-plan"],
     cta: { title: "Close the Last Fifty Metres", body: "Try delivery requests free for 14 days. No credit card required." },
   },
 
@@ -731,7 +731,7 @@ export const pages: PageContent[] = [
       { q: "Can We Prove When an Incoming Parcel Arrived and Who Signed for It?", a: "Yes. Every action is audit-logged with a name and timestamp, and staff can attach a photo when they mark it delivered. That record answers ‘who took it?’ later." },
       { q: "Does the Employee Get Told Their Parcel Has Arrived?", a: "If the employee raised the request, they see its status change to accepted, started and delivered. If reception raised it, the note names the recipient, and visibility depends on your roles and permissions." },
     ],
-    related: ["solutions/courier-and-reception", "solutions/courier/outgoing-workflow", "solutions/courier/delivery-requests", "workflows/courier-pickup", "sla/automatic-escalation", "demo"],
+    related: ["solutions/courier-and-reception", "solutions/courier-and-reception/outgoing-courier-workflow", "solutions/courier-and-reception/delivery-requests", "workflows/courier-pickup", "sla-and-escalation/automatic-escalation", "book-a-demo"],
     cta: { title: "Map Your Inbound Path in ZapBuzzer", body: "Book a demo or explore the read-only demo workspace to see a request timeline end to end." },
   },
 
@@ -846,7 +846,7 @@ export const pages: PageContent[] = [
       { q: "Can the Sender See That Their Outgoing Parcel Has Been Handed Over?", a: "Yes. The sender sees who accepted the request, the ETA and when it is marked delivered, and staff can attach a photo as proof of the handover." },
       { q: "Can Outgoing Dispatch Be Its Own Catalogue Item?", a: "Yes. Many offices add an Outgoing Dispatch item next to Courier Pickup, routed to the same team, so collections from desks are clearly separated from parcels arriving at the gate." },
     ],
-    related: ["solutions/courier-and-reception", "solutions/courier/incoming-workflow", "solutions/courier/mailroom", "sla", "use-cases/sales", "pricing"],
+    related: ["solutions/courier-and-reception", "solutions/courier-and-reception/incoming-courier-workflow", "solutions/courier-and-reception/mailroom-requests", "sla-and-escalation", "use-cases/sales-team", "pricing"],
     cta: { title: "Never Miss the Last Pickup", body: "Add an Outgoing Dispatch item on a free trial and let your senders track their own packets." },
   },
 
@@ -960,7 +960,7 @@ export const pages: PageContent[] = [
       { q: "Can I See Who Has My Parcel Right Now?", a: "Yes. Once someone accepts, the request shows their name and photo along with the ETA, so you know who to ask without walking down to the mailroom." },
       { q: "Can Managers Spot Parcels That Are Stuck Inside the Office?", a: "Yes. Every request is timed against its SLA, and overdue ones auto-escalate to a manager, so a parcel sitting in the mailroom does not go unnoticed." },
     ],
-    related: ["solutions/courier-and-reception", "features/request-tracking", "features/real-time-updates", "solutions/courier/delivery-requests", "mobile-app/request-tracking", "free-trial"],
+    related: ["solutions/courier-and-reception", "features/request-tracking", "features/real-time-updates", "solutions/courier-and-reception/delivery-requests", "mobile-app/mobile-request-tracking", "free-trial"],
     cta: { title: "See Every Parcel’s Last Fifty Metres", body: "Start free and track your first courier request today." },
   },
 
@@ -1068,7 +1068,7 @@ export const pages: PageContent[] = [
       { q: "Can Reception Raise a Facilities or IT Request on Behalf of a Visitor-Facing Room?", a: "Yes. Reception can pick any catalogue item, such as AC / Facilities or IT Help, choose the room as the destination and add a note. The request routes to that team as usual." },
       { q: "Does the Reception Routine Change When the Office Moves to Pro?", a: "The steps stay the same. Pro adds Telegram and WhatsApp pings for the teams, escalation chains, multi-location and full audit logs with reports." },
     ],
-    related: ["solutions/courier-and-reception", "solutions/courier/reception", "use-cases/reception", "notifications/multi-channel", "features/request-catalog", "pricing/free"],
+    related: ["solutions/courier-and-reception", "solutions/courier-and-reception/reception-requests", "use-cases/reception-team", "notifications/multi-channel-notifications", "features/request-catalog", "pricing/free-plan"],
     cta: { title: "Try It at Your Front Desk", body: "Sign up free, add Courier Pickup and two other items, and run Monday morning on it." },
   },
 
@@ -1172,7 +1172,7 @@ export const pages: PageContent[] = [
       { q: "Which Mailroom Numbers Should an Admin Head Check Each Week?", a: "Start with volume by hour, average accept time and on-time delivery against SLA. Together they show when the mailroom is busiest and whether staffing matches the peaks." },
       { q: "Can Mailroom Analytics Compare Our Different Offices?", a: "Yes. With multi-location on Pro, every site’s courier requests are timed the same way, so you can compare accept times and on-time delivery across offices." },
     ],
-    related: ["solutions/courier-and-reception", "analytics", "analytics/staff", "solutions/courier/mailroom", "sla/reporting", "pricing/pro"],
+    related: ["solutions/courier-and-reception", "analytics", "analytics/staff-analytics", "solutions/courier-and-reception/mailroom-requests", "sla-and-escalation/sla-reporting", "pricing/pro-plan"],
     cta: { title: "See Your Mailroom’s Numbers", body: "Run a 14-day free trial of Pro and look at the data after the first week." },
   },
 ];

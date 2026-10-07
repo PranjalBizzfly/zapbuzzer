@@ -15,6 +15,7 @@ export function BackToTop() {
     <button
       type="button"
       aria-label="Back to top"
+      tabIndex={show ? 0 : -1}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className={`fixed bottom-5 right-5 z-40 grid h-11 w-11 place-items-center rounded-full border border-line bg-surface/90 text-fg shadow-lift backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-accent/50 hover:text-accent-text ${show ? "opacity-100" : "pointer-events-none translate-y-3 opacity-0"}`}
     >

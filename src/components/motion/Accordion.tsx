@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 
 /** Single-open FAQ accordion (numbered, Sky9 style). Answers stay in the DOM for SEO. */
 export function Accordion({ items, numbered = false, defaultOpen = 0 }: { items: { q: string; a: string }[]; numbered?: boolean; defaultOpen?: number | null }) {
   const [open, setOpen] = useState<number | null>(defaultOpen);
+  const uid = useId();
   return (
     <div className="mx-auto max-w-3xl space-y-3 sm:space-y-4">
       {items.map((f, i) => {
@@ -22,6 +23,8 @@ export function Accordion({ items, numbered = false, defaultOpen = 0 }: { items:
               type="button"
               onClick={() => setOpen(isOpen ? null : i)}
               aria-expanded={isOpen}
+              aria-controls={`${uid}-a${i}`}
+              id={`${uid}-q${i}`}
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left sm:px-6 sm:py-5"
             >
               <span className="flex items-start gap-3">
@@ -39,7 +42,7 @@ export function Accordion({ items, numbered = false, defaultOpen = 0 }: { items:
                 </svg>
               </span>
             </button>
-            <div hidden={!isOpen} className={isOpen ? "anim-open" : ""}>
+            <div id={`${uid}-a${i}`} role="region" aria-labelledby={`${uid}-q${i}`} hidden={!isOpen} className={isOpen ? "anim-open" : ""}>
               <p className={`mt-1 border-t border-line px-5 pb-6 pt-4 text-sm leading-relaxed text-muted sm:px-6 sm:text-base ${numbered ? "sm:pl-16" : ""}`}>{f.a}</p>
             </div>
           </div>

@@ -143,6 +143,14 @@ p {
   mask-image: radial-gradient(closest-side, #000 40%, transparent);
 }
 
+/* Cards side by side: reserve the same title height in every card of a row, so the text
+   under each title starts on the same line even when one title wraps. Stacked (phone)
+   layouts are left alone. Override the line count with [--eq-lines:3]. */
+@media (min-width: 640px) {
+  .eq-titles > * :where(h3, h4):first-of-type,
+  .eq-titles > :where(h3, h4) { min-height: calc(var(--eq-lines, 2) * 1lh); }
+}
+
 .bg-grid {
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),

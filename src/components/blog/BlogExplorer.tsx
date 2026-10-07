@@ -81,7 +81,7 @@ export function BlogExplorer({ posts, categories }: { posts: BlogPost[]; categor
       </p>
 
       {shown.length ? (
-        <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="eq-titles [--eq-lines:3] mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((p) => <BlogCard key={p.slug} post={p} />)}
         </div>
       ) : (

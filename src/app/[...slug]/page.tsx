@@ -4,6 +4,7 @@ import { contentPaths, crumbsFor, getPage, relatedFor, siblingsFor } from "@/con
 import { SectionRenderer, StatsBar } from "@/components/sections/SectionRenderer";
 import { CTASection, FAQSection, PageHero, RelatedPages, SiblingGrid } from "@/components/sections/PageParts";
 import { AuthPanel, ContactBlock, PricingCards, SitemapList } from "@/components/templates/Templates";
+import { AndroidInstall } from "@/components/templates/AndroidInstall";
 import type { VisualKind } from "@/content/types";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { absUrl, site } from "@/lib/site";
@@ -69,6 +70,9 @@ export default async function ContentPage({ params }: Props) {
         }}
       />
       <PageHero page={page} crumbs={crumbs} />
+
+      {/* Android download + install QR: the Mobile App page only (the one place on the site) */}
+      {page.path === "mobile-app" && <AndroidInstall />}
 
       {t !== "standard" && (
         <section className="bg-bg py-10 sm:py-14">

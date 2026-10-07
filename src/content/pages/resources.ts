@@ -100,7 +100,7 @@ export const pages: PageContent[] = [
       { q: "Which Guide Should an Admin or Facilities Head Read First?", a: "The SLA management guide, then the workplace operations guide. Together they cover setting realistic deadlines, escalating without blame and running all service teams as one operation." },
       { q: "Where Can I Look Up Terms Like First-Accept-Wins or SLA Breach?", a: "The glossary gives plain definitions of office request terms, with a note on how each shows up in ZapBuzzer and which plan includes it." },
     ],
-    related: ["pricing", "resources/product-tour", "compare", "customers", "resources/internal-request-management-guide", "resources/glossary", "free-trial"],
+    related: ["pricing", "resource-hub/product-tour", "feature-comparison", "customer-stories", "resource-hub/internal-request-management-guide", "resource-hub/glossary", "free-trial"],
     cta: { title: "Ready When You Are", body: "Start a 14-day free trial or book a demo with the team." },
   },
   {
@@ -212,7 +212,7 @@ export const pages: PageContent[] = [
       { q: "Does the Free Plan Include the Mobile App?", a: "Yes. Free users get the same web app and Android app as Pro, and the mobile app still rings when a phone is locked or set to silent." },
       { q: "What Are the Signs We Have Outgrown the Free Plan?", a: "More than 10 staff handling requests, a second floor or branch, staff who miss email and want Telegram or WhatsApp, or a need for escalation, history beyond 30 days or audit logs." },
     ],
-    related: ["pricing", "pricing/pro", "pricing/billing", "features/one-tap-requests", "use-cases/office-manager", "sign-up", "free-trial"],
+    related: ["pricing", "pricing/pro-plan", "pricing/billing-and-seats", "features/one-tap-requests", "use-cases/office-manager", "sign-up", "free-trial"],
     cta: { title: "Start Free on One Floor", body: "Sign up, invite up to 10 staff and send your first request today." },
   },
   {
@@ -322,7 +322,7 @@ export const pages: PageContent[] = [
       { q: "Does Pro Include the API?", a: "No. The REST API and webhooks are part of Enterprise." },
       { q: "Which Pro Feature Do Offices Notice First?", a: "Usually escalation. A facilities complaint that used to be raised three times now reaches a manager on its own. Analytics tend to matter more from the second month, once there is history." },
     ],
-    related: ["pricing", "pricing/free", "pricing/enterprise", "pricing/billing", "sla/escalation-chains", "notifications/multi-channel", "analytics", "free-trial"],
+    related: ["pricing", "pricing/free-plan", "pricing/enterprise-plan", "pricing/billing-and-seats", "sla-and-escalation/escalation-chains", "notifications/multi-channel-notifications", "analytics", "free-trial"],
     cta: { title: "Try Pro Free for 14 Days", body: "You will not need a card or an onboarding call. Bring your colleagues in this afternoon." },
   },
   {
@@ -419,7 +419,7 @@ export const pages: PageContent[] = [
       { q: "Can Enterprise Run on Our Own Infrastructure?", a: "Yes, there is an on-prem option for organisations whose policy requires it. Deployment specifics are shared during scoping, so talk to us about your setup." },
       { q: "What Does the Dedicated CSM Do on Enterprise?", a: "A named customer success manager helps plan the rollout site by site and supports you afterwards. It is included with Enterprise." },
     ],
-    related: ["pricing", "pricing/pro", "enterprise", "integrations/sso-saml", "integrations/white-label", "developers/api", "demo", "contact"],
+    related: ["pricing", "pricing/pro-plan", "enterprise", "integrations/sso-and-saml", "integrations/white-label", "developers/api-documentation", "book-a-demo", "contact-us"],
     cta: { title: "Talk to Us About Enterprise", body: "Email hello@zapbuzzer.com or book a demo. We reply within one business day." },
   },
   {
@@ -512,7 +512,7 @@ export const pages: PageContent[] = [
       { q: "Is There Anything to Pay on Top of the Seat Price?", a: "No. There are no setup fees and no consultant, so the seat price is the whole cost of Pro. You sign up and invite your team." },
       { q: "How Is Enterprise Billed?", a: "Enterprise pricing is custom. We agree it with you during scoping." },
     ],
-    related: ["pricing", "pricing/free", "pricing/pro", "pricing/enterprise", "free-trial", "contact"],
+    related: ["pricing", "pricing/free-plan", "pricing/pro-plan", "pricing/enterprise-plan", "free-trial", "contact-us"],
     cta: { title: "Start Your 14-day Trial", body: "No credit card. Cancel anytime." },
   },
   {
@@ -599,7 +599,7 @@ export const pages: PageContent[] = [
       { q: "What Does the Owner See at the End of the Tour?", a: "Every request feeds analytics: accept times, delivery times, ratings and busy hours. The owner can also see request costs such as a team lunch. Full analytics and scorecards are on Pro." },
       { q: "Does the Tour Apply to Print, IT and Facilities Too?", a: "Yes. The same flow covers Kavya’s 24 colour copies, Tanvi’s HDMI cable, Om’s stuck AC and Neha’s courier pickup; only the catalogue item and team change." },
     ],
-    related: ["how-it-works", "resources", "features", "features/first-accept-wins", "workflows/coffee-request", "demo", "free-trial"],
+    related: ["how-it-works", "resource-hub", "features", "features/first-accept-wins", "workflows/coffee-request", "book-a-demo", "free-trial"],
     cta: { title: "Send Your Own First Request", body: "Start a 14-day free trial and run the tour on your own floor." },
   },
   {
@@ -685,7 +685,7 @@ export const pages: PageContent[] = [
       { q: "Will the Mobile App Ring If My Phone Is on Silent?", a: "Yes. The Android app still rings when the phone is locked or set to silent. Anyone can also use the web app in a browser, as accounts live on the server." },
       { q: "How Do We Get Started With ZapBuzzer?", a: "Sign up, invite your team and send the first request. Most offices are up and running in an afternoon. There are no setup fees, no consultant and no setup call." },
     ],
-    related: ["resource-hub", "resources/product-tour", "pricing", "how-it-works", "mobile-app", "contact", "free-trial"],
+    related: ["resource-hub", "resource-hub/product-tour", "pricing", "how-it-works", "mobile-app", "contact-us", "free-trial"],
     cta: { title: "See It for Yourself", body: "Open the read-only demo or start a 14-day free trial." },
   },
   {
@@ -796,7 +796,7 @@ export const pages: PageContent[] = [
       { q: "Which Offices Are Named as ZapBuzzer Customers?", a: "Acme HQ, Northwind, Lumen Labs, Volt & Co, Brightpath and Meridian are among the offices running on ZapBuzzer." },
       { q: "What Does the 4.8★ in the Pilot Results Measure?", a: "It is the average rating requesters gave deliveries in pilot offices’ first month. It shows faster service did not come at the cost of the people doing the work." },
     ],
-    related: ["clients", "resources", "compare", "why-zapbuzzer", "use-cases/ceo", "pricing", "demo"],
+    related: ["clients", "resource-hub", "feature-comparison", "why-zapbuzzer", "use-cases/ceo", "pricing", "book-a-demo"],
     cta: { title: "Make Your Office Quieter", body: "Try it free for 14 days, with no card required and no onboarding call." },
   },
   {
@@ -886,7 +886,7 @@ export const pages: PageContent[] = [
       { q: "What Does ‘Owner’ Mean in ZapBuzzer?", a: "It has two uses: the workspace owner, who can see spend, and the staff member who has accepted and owns a particular request." },
       { q: "What Is an Internal-Request CRM?", a: "Software that manages requests from employees to service teams in the same organisation, with owners, states, timers and history, much as a sales CRM does for customers." },
     ],
-    related: ["resource-hub", "resources/faq", "resources/sla-management-guide", "features/first-accept-wins", "sla", "pricing"],
+    related: ["resource-hub", "resource-hub/faq", "resource-hub/sla-management-guide", "features/first-accept-wins", "sla-and-escalation", "pricing"],
     cta: { title: "See the Terms in Action", body: "Start a 14-day free trial and watch a request go from Buzzed to Rated." },
   },
   {
@@ -918,6 +918,6 @@ export const pages: PageContent[] = [
       { q: "I Can’t Find the Page I Need. Who Can I Ask?", a: "Email hello@zapbuzzer.com. The team is based in Pune and replies within one business day." },
       { q: "Can I See the Product Without Reading Every Page?", a: "Yes. The read-only demo on the sign-in page lets you click through real screens, and the product tour follows one request from tap to rating." },
     ],
-    related: ["resource-hub", "features", "pricing", "contact"],
+    related: ["resource-hub", "features", "pricing", "contact-us"],
   },
 ];

@@ -23,7 +23,7 @@ export const standaloneFaqs: Record<string, { q: string; a: string }[]> = {
     { q: "How Can I Try the Ideas From the Blog in My Own Office?", a: "Open a free workspace for one floor and up to 10 staff, or try Pro free for 14 days. Neither needs a credit card or a setup call." },
   ],
   careers: [
-    { q: "Are There Any Open Positions Right Now?", a: "There are no open positions listed at the moment. When a role opens, it will appear on this page with its details. You can still send a general application and we will keep it in mind." },
+    { q: "Are There Any Open Positions Right Now?", a: "Yes. The current openings are Sales Executive, Software Developer Coordinator, Email Marketing Executive, Business Development Executive and Prompt Engineer, listed under Open Positions on this page. You can also send a general application and we will keep it in mind." },
     { q: "Where Would I Be Working If I Joined ZapBuzzer?", a: "ZapBuzzer is based in Pune, Maharashtra, India. Location and remote-work details are given with each role when it is posted." },
     { q: "What Should I Include in a General Application?", a: "Your name, the area you want to work in, a link to your CV or LinkedIn profile, and a few lines on why internal office requests interest you. Links to work you are proud of help most." },
     { q: "Do You Offer Internships?", a: "Internships are not currently listed. If one opens, it will be posted here like any other role." },

@@ -128,7 +128,7 @@ export const pages: PageContent[] = [
       { q: "How Is ZapBuzzer Different From a Generic To-Do or Chat App?", a: "It is an internal-request CRM built for pantry, print, IT, facilities and courier work, with a catalogue, first-accept-wins ownership, SLA timers, auto-escalation and ratings, not a to-do list or a Telegram bot." },
       { q: "Does Switching Cost Anything to Set Up?", a: "No setup fees and no consultant. Free covers up to 10 staff, and Pro is ₹99 per seat per month, cancel anytime. Most offices are running within an afternoon." },
     ],
-    related: ["feature-comparison/vs-whatsapp", "compare/phone-calls", "compare/manual-requests", "compare/helpdesk", "why-zapbuzzer", "features/first-accept-wins", "pricing", "free-trial"],
+    related: ["feature-comparison/vs-whatsapp", "feature-comparison/vs-phone-calls", "feature-comparison/vs-manual-requests", "feature-comparison/vs-helpdesk", "why-zapbuzzer", "features/first-accept-wins", "pricing", "free-trial"],
     cta: { title: "See the Difference on Your Own Floor", body: "Start a 14-day free trial, invite your pantry or print team, and compare a week of requests." },
   },
   {
@@ -236,7 +236,7 @@ export const pages: PageContent[] = [
       { q: "What Happens to a Request When the One Person Who Usually Handles It Is Away?", a: "With manual requests it simply waits. In ZapBuzzer the whole team is pinged, the first free person accepts, and if nobody does before the deadline it auto-escalates to a manager." },
       { q: "How Much Time Do Manual Requests Really Waste?", a: "In the classic example, “two coffees in the boss cabin” took 25 minutes, 3 phone calls and arrived cold. Through ZapBuzzer it took 4 minutes, no calls, and arrived hot." },
     ],
-    related: ["feature-comparison", "compare/phone-calls", "features/one-tap-requests", "use-cases/stop-office-chase-calls", "workflows/coffee-request", "pricing/free"],
+    related: ["feature-comparison", "feature-comparison/vs-phone-calls", "features/one-tap-requests", "use-cases/stop-chase-calls", "workflows/coffee-request", "pricing/free-plan"],
     cta: { title: "Retire the Corridor Relay", body: "Try ZapBuzzer free for 14 days. You won't need a card or a setup call." },
   },
   {
@@ -321,7 +321,7 @@ export const pages: PageContent[] = [
         type: "callout",
         tone: "tip",
         title: "In Priya’s Words",
-        body: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager",
+        body: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager, Lumen Labs",
       },
       {"type":"workflow","heading":"Moving Requests Out of the Group in a Week","steps":[{"title":"Day 1","body":"Pick one request type, usually coffee or prints, and set it up in the catalogue."},{"title":"Day 2","body":"Pin a message in the group asking people to send that request through ZapBuzzer instead."},{"title":"Days 3–5","body":"Pantry staff reply to stray group requests with a reminder to buzz it."},{"title":"End of Week","body":"Look at accept times and decide which request type moves next."}]},
       {"type":"callout","tone":"info","title":"WhatsApp Stays, as a Channel","body":"On Pro, WhatsApp is one of the channels requests notify on. The difference is that the request itself has an owner, a state and a timer instead of being a line in a chat."},
@@ -336,7 +336,7 @@ export const pages: PageContent[] = [
       { q: "Can We Try It Alongside the Group First?", a: "Yes. Start the 14-day trial, route one request type such as coffee through ZapBuzzer, and keep the group running for everything else until you are ready." },
       { q: "How Do We Stop Two Pantry Staff Making the Same Order From the Group?", a: "With first-accept-wins, the request goes to the whole team but only the first person to tap Accept owns it. Everyone else sees it is taken, so nothing gets made twice." },
     ],
-    related: ["feature-comparison", "compare/phone-calls", "notifications/whatsapp", "use-cases/reduce-whatsapp-requests", "notifications/multi-channel", "pricing/pro", "free-trial"],
+    related: ["feature-comparison", "feature-comparison/vs-phone-calls", "notifications/whatsapp-notifications", "use-cases/reduce-whatsapp-requests", "notifications/multi-channel-notifications", "pricing/pro-plan", "free-trial"],
     cta: { title: "Make the Pantry Group Quiet", body: "Start your 14-day free trial and move one request type out of WhatsApp this week." },
   },
   {
@@ -426,7 +426,7 @@ export const pages: PageContent[] = [
       { q: "How Does the Requester Know Someone Is on It Without Calling Back?", a: "As soon as someone accepts, the requester sees their name and photo, then an ETA once work starts. That status is what removes the follow-up calls." },
       { q: "Is There a Record of Requests That Used to Be Made by Phone?", a: "Yes. Every request is timed and logged with who asked, who accepted and when it was delivered. A phone call leaves nothing behind once it ends." },
     ],
-    related: ["feature-comparison", "compare/manual-requests", "use-cases/reduce-phone-calls", "use-cases/stop-office-chase-calls", "mobile-app", "workflows/ac-issue", "free-trial"],
+    related: ["feature-comparison", "feature-comparison/vs-manual-requests", "use-cases/reduce-phone-calls", "use-cases/stop-chase-calls", "mobile-app", "workflows/ac-issue", "free-trial"],
     cta: { title: "End Phone Tag in Your Office", body: "Start free for 14 days and count your calls at the end of week one." },
   },
   {
@@ -514,7 +514,7 @@ export const pages: PageContent[] = [
       { q: "Do Requesters Have to Fill in a Ticket Form?", a: "No. There is no category tree or priority dropdown. Requesters tap an item, add a note, choose a destination and tap Buzz." },
       { q: "How Are Requests Assigned Without a Helpdesk Triage Step?", a: "The request goes to the whole team for that item, and the first person free taps Accept and owns it. There is no queue waiting for someone to triage and assign." },
     ],
-    related: ["feature-comparison", "compare/whatsapp", "solutions/it-support", "workflows/hdmi-request", "sla", "pricing/enterprise", "demo"],
+    related: ["feature-comparison", "feature-comparison/vs-whatsapp", "solutions/it-support", "workflows/hdmi-request", "sla-and-escalation", "pricing/enterprise-plan", "book-a-demo"],
     cta: { title: "Keep Tickets for Tickets", body: "Move quick requests to ZapBuzzer with a 14-day free trial." },
   },
 ];

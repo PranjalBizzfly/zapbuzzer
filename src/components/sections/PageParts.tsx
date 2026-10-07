@@ -250,7 +250,7 @@ export function SiblingGrid({ name, links }: { name: string; links: { href: stri
         <h3 data-reveal className="mb-4 font-heading text-xl font-bold sm:mb-6 sm:text-2xl">
           Other Topics in {name}
         </h3>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="eq-titles flex flex-wrap justify-center gap-4">
           {links.map((l, i) => (
             <Link
               key={l.href}
@@ -284,7 +284,7 @@ export function RelatedPages({ items }: { items: { href: string; label: string; 
             <Icon name="layers" className="h-5 w-5 text-accent" />
             Connected Pages
           </h3>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+          <div className="eq-titles grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
             {items.map((r, i) => (
               <Link
                 key={r.href}

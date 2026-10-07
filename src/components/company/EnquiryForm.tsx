@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { site } from "@/lib/site";
 import { PhoneField, phoneError, phoneValue } from "@/components/ui/PhoneField";
 
@@ -26,6 +26,19 @@ export function EnquiryForm({ subject, fields, submitLabel, to = site.email }: {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [state, setState] = useState<"idle" | "handoff" | "error">("idle");
   const [draft, setDraft] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Pre-select a dropdown from the URL, e.g. ?area=Sales%20Executive (used by "Apply Now"
+  // on job cards). Only an exact match with one of the field options is applied.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    for (const fl of fields) {
+      const v = params.get(fl.name);
+      if (fl.type !== "select" || !v || !fl.options?.includes(v)) continue;
+      const el = formRef.current?.querySelector<HTMLSelectElement>(`select[name="${fl.name}"]`);
+      if (el) el.value = v;
+    }
+  }, [fields]);
 
   function validate(f: FormData) {
     const e: Record<string, string> = {};
@@ -64,7 +77,7 @@ export function EnquiryForm({ subject, fields, submitLabel, to = site.email }: {
     "mt-1.5 w-full rounded-xl border bg-bg/70 px-3.5 py-3 text-[15px] outline-none transition duration-200 hover:border-accent/30 focus:border-accent focus:bg-surface focus:ring-4 focus:ring-accent/15";
 
   return (
-    <form noValidate onSubmit={onSubmit} className="glass-panel relative overflow-hidden rounded-3xl p-6 shadow-lift sm:p-8">
+    <form ref={formRef} noValidate onSubmit={onSubmit} className="glass-panel relative overflow-hidden rounded-3xl p-6 shadow-lift sm:p-8">
       <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-violet to-fuchsia" aria-hidden />
       {state === "error" && (
         <p role="alert" className="mb-5 rounded-xl border border-danger/40 bg-danger/10 px-4 py-3 text-sm font-medium text-danger">

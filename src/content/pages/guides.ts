@@ -144,7 +144,7 @@ export const pages: PageContent[] = [
       { q: "Why Are Phone Calls and WhatsApp Groups Inefficient for Office Requests?", a: "Requests get lost, nobody knows who is handling them, and people call again to chase. One ask can turn into several calls and a long wait." },
       { q: "What Numbers Should an Office Track to Improve Efficiency?", a: "Time to accept, time to deliver, on-time rate, number of chase calls and requester ratings. Together they show both speed and quality." },
     ],
-    related: ["resource-hub", "resources/internal-request-management-guide", "resources/workplace-operations-guide", "use-cases/stop-office-chase-calls", "analytics", "pricing/free"],
+    related: ["resource-hub", "resource-hub/internal-request-management-guide", "resource-hub/workplace-operations-guide", "use-cases/stop-chase-calls", "analytics", "pricing/free-plan"],
     cta: { title: "Measure Your Own Office", body: "Start a 14-day free trial and see your real accept and delivery times by the end of week one." },
   },
   {
@@ -281,7 +281,7 @@ export const pages: PageContent[] = [
       { q: "How Should Internal Requests Be Routed?", a: "By what is being asked for. Pantry items go to the pantry, prints to the print room and IT items to IT, so the requester never needs to know who to call." },
       { q: "What Records Should Be Kept for Internal Requests?", a: "Who asked, what, where, who accepted, when it was started and delivered, and how it was rated. That record is what makes fair reporting possible." },
     ],
-    related: ["resource-hub", "resources/office-efficiency-guide", "resources/sla-management-guide", "features/request-routing", "features/first-accept-wins", "features/request-catalog", "free-trial"],
+    related: ["resource-hub", "resource-hub/office-efficiency-guide", "resource-hub/sla-management-guide", "features/request-routing", "features/first-accept-wins", "features/request-catalog", "free-trial"],
     cta: { title: "Put Your Process on Rails", body: "Try ZapBuzzer free for 14 days without a credit card or a setup call." },
   },
   {
@@ -420,7 +420,7 @@ export const pages: PageContent[] = [
       { q: "What Should a Monthly Operations Review Cover?", a: "Volume by request type, on-time rate, escalations, peak hours and staff ratings. Look for patterns before blaming individuals." },
       { q: "How Do We Recognise Good Work by Support Staff?", a: "Give fair credit: record who handled each request and how it was rated. Scorecards make quiet, reliable work visible." },
     ],
-    related: ["resource-hub", "resources/office-efficiency-guide", "resources/sla-management-guide", "use-cases/office-manager", "use-cases/facilities-operations", "admin/spend-visibility", "pricing/pro"],
+    related: ["resource-hub", "resource-hub/office-efficiency-guide", "resource-hub/sla-management-guide", "use-cases/office-manager", "use-cases/better-facilities-operations", "administration/spend-visibility", "pricing/pro-plan"],
     cta: { title: "Give Your Office One Front Door", body: "Start a 14-day free trial and route pantry, print, IT, facilities and courier through one app." },
   },
   {
@@ -558,7 +558,7 @@ export const pages: PageContent[] = [
       { q: "How Do We Set Realistic SLAs for Office Requests?", a: "Start from how long requests take today, then set deadlines that most can meet comfortably. Tighten them gradually once the flow is stable." },
       { q: "Who Should Be in the Escalation Chain?", a: "The team’s supervisor first, then the office or admin head. Keep it short so ownership stays clear." },
     ],
-    related: ["resource-hub", "sla", "sla/escalation-chains", "sla/breach-detection", "resources/internal-request-management-guide", "use-cases/sla-compliance", "pricing/pro"],
+    related: ["resource-hub", "sla-and-escalation", "sla-and-escalation/escalation-chains", "sla-and-escalation/sla-breach-detection", "resource-hub/internal-request-management-guide", "use-cases/sla-compliance", "pricing/pro-plan"],
     cta: { title: "Put a Clock on Every Request", body: "Try Pro’s SLA and escalation chain free for 14 days." },
   },
   {
@@ -697,7 +697,7 @@ export const pages: PageContent[] = [
       { q: "How Long Does It Take to Set Up Automated Routing and Escalation?", a: "Most offices go live within a single afternoon, with no setup fee and no consultant." },
       { q: "How Do Automated Reminders Work?", a: "Notifications repeat until someone accepts the request, so nobody has to chase manually. On ZapBuzzer they go out on the app, Telegram, WhatsApp and email depending on your plan." },
     ],
-    related: ["resource-hub", "resources/sla-management-guide", "resources/office-efficiency-guide", "features/request-routing", "notifications/multi-channel", "sla/automatic-escalation", "free-trial"],
+    related: ["resource-hub", "resource-hub/sla-management-guide", "resource-hub/office-efficiency-guide", "features/request-routing", "notifications/multi-channel-notifications", "sla-and-escalation/automatic-escalation", "free-trial"],
     cta: { title: "Stop Paying the Coordination Tax", body: "Start a 14-day free trial and let ZapBuzzer do the chasing." },
   },
 ];

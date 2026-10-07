@@ -143,12 +143,12 @@ export const pages: PageContent[] = [
       { q: "How Much Did Notifications Cut Phone Calls in Pilot Offices?", a: "Pilot offices saw phone calls drop by 87% in their first month, with a 32-second average accept time. Alerts reaching the whole team at once, on every channel, is a big part of that." },
     ],
     related: [
-      "notifications/multi-channel",
-      "notifications/whatsapp",
-      "notifications/telegram",
-      "notifications/push",
+      "notifications/multi-channel-notifications",
+      "notifications/whatsapp-notifications",
+      "notifications/telegram-integration",
+      "notifications/mobile-push-notifications",
       "features/first-accept-wins",
-      "sla/automatic-escalation",
+      "sla-and-escalation/automatic-escalation",
       "pricing",
       "free-trial",
     ],
@@ -207,7 +207,7 @@ export const pages: PageContent[] = [
           { time: "10:51", event: "Arjun, away from his desk, sees it on WhatsApp and accepts." },
           { time: "10:58", event: "The prints arrive at Kavya’s desk before the client sits down." },
         ],
-        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead",
+        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead, Northwind",
       },
       {
         type: "comparison",
@@ -282,7 +282,7 @@ export const pages: PageContent[] = [
       },
       { q: "Which Channels Fire Together on the Pro Plan?", a: "On Pro, a request goes out on the app, email, Telegram and WhatsApp at the same moment. Free uses the app and email. Pro is ₹99 per seat per month." },
     ],
-    related: ["notifications", "notifications/telegram", "notifications/whatsapp", "notifications/email", "features/real-time-updates", "pricing/pro"],
+    related: ["notifications", "notifications/telegram-integration", "notifications/whatsapp-notifications", "notifications/email-notifications", "features/real-time-updates", "pricing/pro-plan"],
     cta: { title: "Reach Staff Wherever They Are", body: "Try multi-channel notifications free for 14 days, including Telegram and WhatsApp on the Pro trial." },
   },
 
@@ -420,7 +420,7 @@ export const pages: PageContent[] = [
       },
       { q: "Do Staff Need to Change How They Use Telegram?", a: "No. They keep using Telegram as normal and the buzz arrives there alongside the app and other channels. Accepting, starting and delivering the request still happen in ZapBuzzer." },
     ],
-    related: ["notifications", "notifications/whatsapp", "notifications/multi-channel", "features/first-accept-wins", "compare/whatsapp", "pricing/pro"],
+    related: ["notifications", "notifications/whatsapp-notifications", "notifications/multi-channel-notifications", "features/first-accept-wins", "feature-comparison/vs-whatsapp", "pricing/pro-plan"],
     cta: { title: "Bring Requests to Telegram, Properly", body: "Start a Pro trial free for 14 days. No credit card needed." },
   },
 
@@ -483,7 +483,7 @@ export const pages: PageContent[] = [
         heading: "Quieter, Not Just Faster",
         paragraphs: [
           "The goal is not more WhatsApp messages. It is fewer, better ones. Each alert is about one request for one team, and it stops repeating once someone accepts.",
-          "As one office manager put it: “Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager",
+          "As one office manager put it: “Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager, Lumen Labs",
         ],
       },
       {
@@ -600,7 +600,7 @@ export const pages: PageContent[] = [
         "a": "The 14-day free trial needs no credit card, and you can try Pro features such as WhatsApp pings during it. After that, WhatsApp needs a Pro plan."
       },
     ],
-    related: ["notifications", "notifications/telegram", "use-cases/reduce-whatsapp-requests", "compare/whatsapp", "solutions/pantry", "pricing/pro"],
+    related: ["notifications", "notifications/telegram-integration", "use-cases/reduce-whatsapp-requests", "feature-comparison/vs-whatsapp", "solutions/pantry", "pricing/pro-plan"],
     cta: { title: "Quiet the Group Chat", body: "Try WhatsApp notifications on a 14-day Pro trial. You won't need a card or a setup call." },
   },
 
@@ -768,7 +768,7 @@ export const pages: PageContent[] = [
       },
       { q: "Who Is Email Alerting Best Suited To?", a: "Desk-based staff who keep their inbox open, and offices starting on the Free plan. Staff who move around the building usually do better with the mobile app, which rings through on silent." },
     ],
-    related: ["notifications", "notifications/push", "notifications/multi-channel", "pricing/free", "integrations/custom-domain", "sign-up"],
+    related: ["notifications", "notifications/mobile-push-notifications", "notifications/multi-channel-notifications", "pricing/free-plan", "integrations/custom-domain", "sign-up"],
     cta: { title: "Start Free With Email Alerts", body: "Free forever for up to 10 staff on one location. Sign up and send your first buzz." },
   },
 
@@ -820,13 +820,13 @@ export const pages: PageContent[] = [
           { time: "14:01", event: "Deepak accepts. If it isn’t fixed within 15 minutes, it auto-escalates." },
           { time: "14:10", event: "Fixed and marked delivered." },
         ],
-        outcome: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.” — Deepak, Admin Head",
+        outcome: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.” — Deepak, Admin Head, Meridian",
       },
       {
         type: "callout",
         tone: "info",
         title: "Getting the App",
-        body: "The ZapBuzzer Android app (v1.15.2, 61 MB) is included on every plan, Free included.",
+        body: "The ZapBuzzer Android app (v1.16.0, 61 MB) is included on every plan, Free included.",
       },
       {
         "type": "comparison",
@@ -921,7 +921,7 @@ export const pages: PageContent[] = [
       },
       { q: "Do Mobile Alerts Work When the Phone Is Locked?", a: "Yes. The Android app is built to ring through on a locked phone as well as on silent, once notification permission has been granted after install." },
     ],
-    related: ["notifications", "mobile-app", "mobile-app/android", "mobile-app/notifications", "notifications/email", "free-trial"],
+    related: ["notifications", "mobile-app", "mobile-app/android-app", "mobile-app/mobile-notifications", "notifications/email-notifications", "free-trial"],
     cta: { title: "Put a Buzzer in Every Pocket", body: "Sign up free and install the Android app on your staff phones today." },
   },
 
@@ -1080,7 +1080,7 @@ export const pages: PageContent[] = [
       },
       { q: "Can IT and Facilities Requests Go to Different Teams?", a: "Yes. Each catalogue item routes to its own team, so an HDMI request reaches the IT desk while a cold AC goes to facilities, without anyone forwarding it." },
     ],
-    related: ["notifications", "features/request-routing", "solutions/it-support/ticket-routing", "solutions/facilities/routing", "notifications/escalation", "enterprise/multi-location"],
+    related: ["notifications", "features/request-routing", "solutions/it-support/it-ticket-routing", "solutions/facilities/facilities-routing", "notifications/notification-escalation", "enterprise/multi-location"],
     cta: { title: "Route Every Request to the Right Desk", body: "Set up your catalogue on a free trial in an afternoon." },
   },
 
@@ -1230,7 +1230,7 @@ export const pages: PageContent[] = [
       },
       { q: "How Soon Does an Overdue Request Escalate?", a: "Each request has its own deadline. If it is not done in time, it auto-escalates to a manager. For example, a stuck conference-room AC can escalate if not fixed within 15 minutes." },
     ],
-    related: ["notifications", "sla/automatic-escalation", "sla/escalation-chains", "solutions/facilities/escalation", "notifications/routing", "pricing/pro"],
+    related: ["notifications", "sla-and-escalation/automatic-escalation", "sla-and-escalation/escalation-chains", "solutions/facilities/facilities-escalation", "notifications/notification-routing", "pricing/pro-plan"],
     cta: { title: "Let the System Chase, Not You", body: "Try SLA escalation on a 14-day Pro trial." },
   },
 
@@ -1388,7 +1388,7 @@ export const pages: PageContent[] = [
       },
       { q: "Can Each Team Use a Different Set of Channels?", a: "Yes. A pantry team might lean on WhatsApp while the IT desk prefers the app and email. Telegram and WhatsApp need Pro; the app and email are on every plan." },
     ],
-    related: ["notifications", "notifications/multi-channel", "admin/roles-and-permissions", "admin/team-management", "notifications/push", "pricing"],
+    related: ["notifications", "notifications/multi-channel-notifications", "administration/roles-and-permissions", "administration/team-management", "notifications/mobile-push-notifications", "pricing"],
     cta: { title: "Fit Alerts to Your Teams", body: "Start free and try different channels with each team for two weeks." },
   },
 
@@ -1571,7 +1571,7 @@ export const pages: PageContent[] = [
       { q: "What Happens to the Notifications After Someone Accepts?", a: "They stop for the rest of the team. The request now belongs to the person who accepted, and the requester moves from waiting to seeing a name, photo and, once started, an ETA." },
       { q: "Does the Requester Get a Prompt When the Job Is Delivered?", a: "Yes. Once the request is marked delivered, sometimes with a photo, the requester is asked to rate it 1–5★. That closes the loop and feeds the analytics." },
     ],
-    related: ["notifications", "how-it-works", "features/request-status", "workflows/coffee-request", "notifications/escalation", "demo"],
+    related: ["notifications", "how-it-works", "features/request-status", "workflows/coffee-request", "notifications/notification-escalation", "book-a-demo"],
     cta: { title: "Follow a Buzz Yourself", body: "Open the read-only demo or start a free trial and send one." },
   },
 ];

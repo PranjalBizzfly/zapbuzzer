@@ -131,7 +131,7 @@ export default function VendorsPage() {
 
       <Band>
         <SectionHeading eyebrow="Onboarding" title="How a Vendor Conversation Works" intro="Five steps, starting with a short enquiry and a real trial rather than a slide deck." />
-        <ol className="grid gap-4 md:grid-cols-5">
+        <ol className="eq-titles [--eq-lines:3] grid gap-4 md:grid-cols-5">
           {steps.map((s, i) => (
             <li key={s.title} data-reveal className="glass-panel relative rounded-2xl p-5">
               <span className="font-heading text-3xl font-extrabold text-accent/40">{String(i + 1).padStart(2, "0")}</span>

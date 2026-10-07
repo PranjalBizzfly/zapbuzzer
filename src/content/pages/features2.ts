@@ -150,7 +150,7 @@ export const pages: PageContent[] = [
       { q: "What Does the Countdown Ring Show Staff?", a: "How much time is left before the request’s deadline, so staff can see at a glance which jobs need attention first." },
       { q: "Which Timer Metric Should We Look at First?", a: "Accept time. It shows how quickly someone takes ownership, and in pilot offices it averaged 32 seconds in the first month." },
     ],
-    related: ["features", "features/eta-tracking", "sla/timers", "sla", "analytics/response-time", "workflows/ac-issue", "pricing/pro"],
+    related: ["features", "features/eta-tracking", "sla-and-escalation/sla-timers", "sla-and-escalation", "analytics/response-time-analytics", "workflows/ac-issue", "pricing/pro-plan"],
     cta: { title: "Find Out How Long Things Really Take", body: "Run ZapBuzzer free for 14 days and see your office’s real accept and delivery times." },
   },
 
@@ -276,7 +276,7 @@ export const pages: PageContent[] = [
       { q: "Why Is Seeing an ETA Better Than Asking When Something Will Arrive?", a: "An ETA lets you plan, such as starting a meeting knowing the prints are minutes away, without calling the print room or walking over to ask." },
       { q: "How Does an ETA Help When Prints Are Needed Before a Pitch?", a: "When Kavya sends 24 colour copies ahead of a demo, the ETA tells her when they’ll arrive, so she can prepare her pitch instead of chasing the print room." },
     ],
-    related: ["features", "features/request-timers", "features/request-tracking", "mobile-app/delivery-tracking", "solutions/print-room/request-tracking", "use-cases/sales", "free-trial"],
+    related: ["features", "features/request-timers", "features/request-tracking", "mobile-app/mobile-delivery-tracking", "solutions/print-room/print-request-tracking", "use-cases/sales-team", "free-trial"],
     cta: { title: "Give Every Request an Arrival Time", body: "Try ZapBuzzer free with no card required, and be live within one afternoon." },
   },
 
@@ -430,7 +430,7 @@ export const pages: PageContent[] = [
       { q: "Who Moves a Request From One Status to the Next?", a: "The requester buzzes and later rates it; the staff member who accepts it marks it started and delivered. Each change is a single tap." },
       { q: "Why Use a Fixed Set of Request Statuses?", a: "Everyone reads the same words the same way, so “started” means someone is actually working on it. Fixed statuses also make timings comparable across teams." },
     ],
-    related: ["features", "features/request-tracking", "features/delivery-confirmation", "admin/audit-logs", "resources/glossary", "workflows", "pricing"],
+    related: ["features", "features/request-tracking", "features/delivery-confirmation", "administration/audit-logs", "resource-hub/glossary", "workflows", "pricing"],
     cta: { title: "Give Your Office One Language for Requests", body: "Start free and see the lifecycle in action on your first request." },
   },
 
@@ -600,7 +600,7 @@ export const pages: PageContent[] = [
       { q: "What If Prints Are Left in an Empty Meeting Room?", a: "Staff mark the request delivered and attach a photo of the prints in the room, so the requester knows exactly where to find them." },
       { q: "What Delivery Habits Should Staff Follow?", a: "Mark delivered at the moment of hand-over, add a photo when the requester isn’t there, and note anything unusual. That keeps timings accurate and ratings fair." },
     ],
-    related: ["features", "features/request-ratings", "features/request-status", "mobile-app/delivery-tracking", "solutions/courier/tracking", "workflows/print-request", "free-trial"],
+    related: ["features", "features/request-ratings", "features/request-status", "mobile-app/mobile-delivery-tracking", "solutions/courier-and-reception/courier-tracking", "workflows/print-request", "free-trial"],
     cta: { title: "Make Every Request End Properly", body: "Try ZapBuzzer free for 14 days and see delivery confirmation on your first job." },
   },
 
@@ -745,7 +745,7 @@ export const pages: PageContent[] = [
       { q: "What Can Ratings Tell an Office Manager?", a: "Patterns: which teams and items consistently earn 5★ and where quality dips. In pilot offices, staff averaged a 4.8★ rating in the first month." },
       { q: "How Should Managers Talk to Staff About Their Ratings?", a: "As recognition and coaching, not as a stick. Celebrate consistent 5★ work and talk through patterns of low ratings with the request details in front of you." },
     ],
-    related: ["features", "features/delivery-confirmation", "analytics/ratings", "analytics/staff", "use-cases/staff-accountability", "mobile-app/ratings", "pricing/pro"],
+    related: ["features", "features/delivery-confirmation", "analytics/rating-analytics", "analytics/staff-analytics", "use-cases/staff-accountability", "mobile-app/mobile-ratings", "pricing/pro-plan"],
     cta: { title: "Let Your Staff’s Good Work Show", body: "Turn on ratings and scorecards with a 14-day Pro trial." },
   },
 
@@ -871,7 +871,7 @@ export const pages: PageContent[] = [
       { q: "How Can History Help With a Recurring Problem?", a: "Look back at the same item and room over time. A projector that fails every week shows up clearly, which makes the case for a repair or replacement." },
       { q: "Can History Settle a Question About a Courier Pickup?", a: "Yes. Courier pickups are logged with who handled them and when, and on Pro every action is also in the audit log." },
     ],
-    related: ["features", "features/request-reports", "admin/audit-logs", "solutions/courier/tracking", "use-cases/prevent-lost-requests", "pricing/free", "pricing/pro"],
+    related: ["features", "features/request-reports", "administration/audit-logs", "solutions/courier-and-reception/courier-tracking", "use-cases/prevent-lost-requests", "pricing/free-plan", "pricing/pro-plan"],
     cta: { title: "Stop Relying on Memory", body: "Start free with 30 days of history, or try Pro’s full history free for 14 days." },
   },
 
@@ -1025,7 +1025,7 @@ export const pages: PageContent[] = [
       { q: "How Should We Run a Monthly Request Review?", a: "Look at volume, on-time delivery and ratings by team, then pick one or two items to improve. Review weekly during the first month while habits form." },
       { q: "Who Usually Reads Request Reports?", a: "Owners for spend and overall service, office managers for team performance, and admin heads for facilities and IT trends." },
     ],
-    related: ["features", "features/request-history", "analytics", "analytics/requests", "sla/reporting", "use-cases/ceo", "pricing/pro", "demo"],
+    related: ["features", "features/request-history", "analytics", "analytics/request-analytics", "sla-and-escalation/sla-reporting", "use-cases/ceo", "pricing/pro-plan", "book-a-demo"],
     cta: { title: "Get the Numbers Behind Your Office", body: "Start a 14-day Pro trial, no credit card, and see your first report within a week." },
   },
 ];

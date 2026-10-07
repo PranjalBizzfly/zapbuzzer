@@ -1,4 +1,5 @@
 import type { PageContent } from "../types";
+import { byPath } from "../redirects";
 
 const base: PageContent[] = [
   {
@@ -202,14 +203,14 @@ const base: PageContent[] = [
       },
     ],
     related: [
-      "admin/owner-dashboard",
-      "admin/roles-and-permissions",
-      "admin/audit-logs",
+      "administration/owner-dashboard",
+      "administration/roles-and-permissions",
+      "administration/audit-logs",
       "features/request-management",
       "use-cases/office-manager",
       "analytics",
       "pricing",
-      "demo",
+      "book-a-demo",
     ],
     cta: {
       title: "See Your Office on One Screen",
@@ -351,13 +352,13 @@ const base: PageContent[] = [
       },
     ],
     related: [
-      "admin",
-      "admin/team-management",
-      "admin/audit-logs",
-      "admin/spend-visibility",
-      "enterprise/permissions",
+      "administration",
+      "administration/team-management",
+      "administration/audit-logs",
+      "administration/spend-visibility",
+      "enterprise/enterprise-permissions",
       "use-cases/admin-team",
-      "pricing/pro",
+      "pricing/pro-plan",
     ],
     cta: {
       title: "Set Up Roles in Minutes",
@@ -482,7 +483,7 @@ const base: PageContent[] = [
         a: "Yes. The dashboard shows which categories escalated and why, so an owner can notice two facilities escalations on the same room and raise it directly rather than hearing about it third-hand.",
       },
     ],
-    related: ["administration", "admin/spend-visibility", "admin/manager-dashboard", "analytics", "use-cases/founder", "use-cases/ceo", "pricing/pro"],
+    related: ["administration", "administration/spend-visibility", "administration/manager-dashboard", "analytics", "use-cases/founder", "use-cases/ceo", "pricing/pro-plan"],
     cta: {
       title: "Know How Your Office Is Really Running",
       body: "Try ZapBuzzer free for 14 days. You won’t need a card or a setup call.",
@@ -576,7 +577,7 @@ const base: PageContent[] = [
       { q: "Why Should Staff Give an ETA When They Start a Job?", a: "Marking a request started with an ETA tells the requester when to expect it, so they stop wondering or calling. It is one of the main reasons phone calls drop." },
       { q: "How Are Staff Measured on the Staff Dashboard?", a: "On three things: accept time, on-time delivery against the deadline, and the 1–5★ rating the requester gives. Full scorecards are part of Pro." },
     ],
-    related: ["administration", "admin/staff-assignment", "mobile-app/staff-workflow", "features/first-accept-wins", "analytics/staff", "solutions/pantry", "free-trial"],
+    related: ["administration", "administration/staff-assignment", "mobile-app/mobile-staff-workflow", "features/first-accept-wins", "analytics/staff-analytics", "solutions/pantry", "free-trial"],
     cta: { title: "Give Your Staff a Queue, Not a Group Chat", body: "Start a free trial and invite your pantry team today." },
   },
   {
@@ -630,7 +631,7 @@ const base: PageContent[] = [
           { time: "14:57", event: "Copies delivered with a photo of the stack." },
           { time: "15:00", event: "Client sits down; Kavya rates 5★." },
         ],
-        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead",
+        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead, Northwind",
       },
       {
         type: "prose",
@@ -655,7 +656,7 @@ const base: PageContent[] = [
       { q: "Can I Add Instructions Like “Oat Milk” to a Request?", a: "Yes. Pick an item from the catalogue, add a note such as “oat milk” or “double-sided”, choose the destination and tap Buzz." },
       { q: "How Do I Know My Request Is Actually Being Handled?", a: "As soon as someone accepts, their name and photo replace “waiting”. You then see it move to started with an ETA, and to delivered, sometimes with a photo." },
     ],
-    related: ["administration", "mobile-app/requests", "features/one-tap-requests", "features/request-tracking", "use-cases/sales", "workflows/print-request", "free-trial"],
+    related: ["administration", "mobile-app/mobile-requests", "features/one-tap-requests", "features/request-tracking", "use-cases/sales-team", "workflows/print-request", "free-trial"],
     cta: { title: "Give Everyone a Button", body: "Try ZapBuzzer free for 14 days and stop the phone tag." },
   },
   {
@@ -700,7 +701,7 @@ const base: PageContent[] = [
           { time: "10:17", event: "Deepak sees the escalation, calls in the technician and marks it started." },
           { time: "10:35", event: "Delivered; Om rates it." },
         ],
-        outcome: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.” — Deepak, Admin Head",
+        outcome: "“Facilities tickets auto-escalate now. Nothing rots in someone’s DMs.” — Deepak, Admin Head, Meridian",
       },
       {
         type: "metrics",
@@ -727,14 +728,14 @@ const base: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Does Every Plan Escalate Overdue Requests?", a: "Every request is timed, and overdue requests auto-escalate to a manager. A full escalation chain with further steps is part of Pro." },
+      { q: "Does Every Plan Escalate Overdue Requests?", a: "Every request is timed on every plan. SLA deadlines and the escalation chain that moves overdue requests up to a manager are listed as part of Pro." },
       { q: "Can Managers See Spend?", a: "No. The spend view is owner-only." },
       { q: "Can a Manager Look After Several Teams?", a: "Yes. Set roles and teams to match who is responsible for what." },
       { q: "Are Scorecards on Free?", a: "Full analytics and scorecards are part of Pro at ₹99 per seat per month." },
       { q: "Does a Manager Have to Watch the Queue All Day?", a: "No. Overdue requests come to the manager automatically, so you can get on with your work and step in only when something escalates." },
       { q: "How Can a Manager Tell If the Team Is Overloaded?", a: "Accept time by person, open and overdue counts, and the busy-hours chart show who is stretched and when. If the print room slows every Monday morning, you can add cover rather than blame a person." },
     ],
-    related: ["administration", "sla/manager-escalation", "sla/escalation-chains", "analytics/team-performance", "use-cases/facilities-manager", "admin/team-management", "pricing/pro"],
+    related: ["administration", "sla-and-escalation/manager-escalation", "sla-and-escalation/escalation-chains", "analytics/team-performance", "use-cases/facilities-manager", "administration/team-management", "pricing/pro-plan"],
     cta: { title: "Hear About Problems Before Your Boss Does", body: "Start a 14-day trial and let overdue requests find you." },
   },
   {
@@ -795,7 +796,7 @@ const base: PageContent[] = [
           { time: "Day 1", event: "She points 3rd-floor coffee requests at the new team." },
           { time: "Day 2", event: "Requests from the new floor reach the closer pantry first." },
         ],
-        outcome: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager",
+        outcome: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager, Lumen Labs",
       },
       {
         type: "checklist",
@@ -810,7 +811,7 @@ const base: PageContent[] = [
       { q: "Can Teams Span Offices?", a: "Multi-location is on Pro. Larger groups can talk to us about Enterprise." },
       { q: "How Does a Catalogue Item Know Which Team to Ping?", a: "Each catalogue item is mapped to one team, such as coffee to the pantry or HDMI to the IT desk. When someone buzzes, the whole team is pinged and the first to accept owns it." },
     ],
-    related: ["administration", "admin/staff-assignment", "admin/roles-and-permissions", "features/request-routing", "enterprise/multi-location", "use-cases/office-manager", "pricing"],
+    related: ["administration", "administration/staff-assignment", "administration/roles-and-permissions", "features/request-routing", "enterprise/multi-location", "use-cases/office-manager", "pricing"],
     cta: { title: "Set Up Your First Team Today", body: "Invite your pantry staff, add a catalogue, and watch requests route themselves." },
   },
   {
@@ -888,7 +889,7 @@ const base: PageContent[] = [
       { q: "Do We Still Need a Dispatcher With First-Accept-Wins?", a: "No. The request goes to the whole team and whoever is free taps Accept, so nobody has to sit and hand out jobs. Pilot offices averaged 32 seconds from buzz to accept." },
       { q: "What If the First Person to Accept Gets Stuck?", a: "The deadline keeps running after acceptance. If the job is not delivered in time, it auto-escalates to a manager, with a full escalation chain on Pro." },
     ],
-    related: ["administration", "features/first-accept-wins", "features/request-assignment", "mobile-app/staff-assignment", "admin/team-management", "workflows/hdmi-request", "free-trial"],
+    related: ["administration", "features/first-accept-wins", "features/request-assignment", "mobile-app/mobile-staff-assignment", "administration/team-management", "workflows/hdmi-request", "free-trial"],
     cta: { title: "Stop Dispatching by Hand", body: "Try first-accept-wins free for 14 days." },
   },
   {
@@ -965,7 +966,7 @@ const base: PageContent[] = [
       { q: "Can I Export Reports?", a: "Pro includes audit logs and reports. Ask us if you have a specific reporting format in mind." },
       { q: "Can the Audit Log Prove a Courier Was Handed Over?", a: "Yes. Courier pickups are audit-trailed, so the log shows when reception logged the pickup, who in the mailroom accepted it and when it was handed over." },
     ],
-    related: ["administration", "admin/roles-and-permissions", "enterprise/audit-logs", "solutions/courier/tracking", "use-cases/staff-accountability", "features/request-history", "pricing/pro"],
+    related: ["administration", "administration/roles-and-permissions", "enterprise/enterprise-audit-logs", "solutions/courier-and-reception/courier-tracking", "use-cases/staff-accountability", "features/request-history", "pricing/pro-plan"],
     cta: { title: "Get the Record Straight", body: "Try Pro free for 14 days and see every action in the audit log." },
   },
   {
@@ -1038,7 +1039,7 @@ const base: PageContent[] = [
       { q: "Is Spend Visibility a Pro Feature?", a: "The owner-only spend view is part of how roles work in ZapBuzzer. Full analytics and reports to put spend in context are on Pro." },
       { q: "Can I Use This to Bill Clients?", a: "The spend view shows what requests cost. How you use that internally is up to you." },
     ],
-    related: ["administration", "admin/owner-dashboard", "admin/roles-and-permissions", "workflows/lunch-request", "solutions/pantry/lunch-requests", "use-cases/founder", "pricing"],
+    related: ["administration", "administration/owner-dashboard", "administration/roles-and-permissions", "workflows/lunch-request", "solutions/pantry/lunch-requests", "use-cases/founder", "pricing"],
     cta: { title: "See the Cost Behind the Coffee", body: "Start a free trial and open the owner view." },
   },
 ];
@@ -1431,7 +1432,7 @@ const more: Record<string, Extra> = {
 };
 
 export const pages: PageContent[] = base.map((p) => {
-  const parts = [extra[p.path], more[p.path]].filter((x): x is Extra => Boolean(x));
+  const parts = [byPath(extra, p.path), byPath(more, p.path)].filter((x): x is Extra => Boolean(x));
   return parts.reduce<PageContent>(
     (acc, e) => ({ ...acc, sections: [...acc.sections, ...e.sections], faqs: [...(acc.faqs ?? []), ...e.faqs] }),
     p,

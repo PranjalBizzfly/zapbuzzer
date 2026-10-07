@@ -94,7 +94,7 @@ export const pages: PageContent[] = [
           { time: "Week 3", event: "Pantry shifts are moved so two people cover both peaks." },
           { time: "Week 4", event: "Accept time at 11 drops and the pantry’s on-time rate rises." },
         ],
-        outcome: "“The office runs quieter. Nobody’s shouting names down the hall. Coffee arrives before anyone asks twice.” — Aarav Sharma, Founder & CEO, Acme HQ",
+        outcome: "“The office runs quieter. Nobody’s shouting names down the hall. Coffee arrives before anyone asks twice.” — Aarav Sharma, Founder & CEO, Acme HQ (Pune)",
       },
       {
         type: "audience",
@@ -147,13 +147,13 @@ export const pages: PageContent[] = [
       { q: "What Does the Analytics Overview Actually Answer?", a: "Who is fastest, who gets 5★, and when the office buzzes most. It brings accept time, on-time delivery, ratings and busy hours together so you can see how internal service is running." },
     ],
     related: [
-      "analytics/staff",
+      "analytics/staff-analytics",
       "analytics/on-time-performance",
-      "analytics/office-activity",
-      "sla/analytics",
-      "admin/owner-dashboard",
+      "analytics/office-activity-analytics",
+      "sla-and-escalation/sla-analytics",
+      "administration/owner-dashboard",
       "use-cases/staff-accountability",
-      "pricing/pro",
+      "pricing/pro-plan",
       "free-trial",
     ],
     cta: { title: "Get Your Office’s Numbers", body: "Start a 14-day Pro trial with full analytics and scorecards. No card, no setup call." },
@@ -208,7 +208,7 @@ export const pages: PageContent[] = [
           { time: "Tue", event: "She raises the weekly order and moves tea nearer the 3rd-floor station." },
           { time: "Following week", event: "No more out-of-stock notes on tea requests." },
         ],
-        outcome: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager",
+        outcome: "“Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet.” — Priya, Office Manager, Lumen Labs",
       },
       {
         type: "table",
@@ -257,7 +257,7 @@ export const pages: PageContent[] = [
       { q: "What Counts as a Category?", a: "Categories come from your catalogue, such as pantry items, prints, IT help, facilities and courier pickup." },
       { q: "Which Request Categories Usually Take Up Most of the Volume?", a: "It varies by office, which is why the breakdown is useful. Request analytics count every buzz by catalogue item, so you can see whether pantry, print, IT, facilities or courier requests dominate your week." },
     ],
-    related: ["analytics", "analytics/office-activity", "features/request-catalog", "features/request-history", "admin/spend-visibility", "solutions/pantry", "pricing/pro"],
+    related: ["analytics", "analytics/office-activity-analytics", "features/request-catalog", "features/request-history", "administration/spend-visibility", "solutions/pantry", "pricing/pro-plan"],
     cta: { title: "Count What Your Office Asks For", body: "Try ZapBuzzer free for 14 days and see your first request breakdown." },
   },
 
@@ -360,7 +360,7 @@ export const pages: PageContent[] = [
       { q: "Are Scorecards Available on Free?", a: "No, scorecards are part of Pro and Enterprise." },
       { q: "Can Scorecards Highlight Staff Who Quietly Carry the Most Work?", a: "Yes. Because every accept is a deliberate tap, scorecards show who took the most requests and how they were rated, so busy staff get credit instead of the work disappearing into a chat." },
     ],
-    related: ["analytics", "analytics/team-performance", "analytics/ratings", "features/first-accept-wins", "use-cases/staff-accountability", "admin/staff-dashboard", "pricing/pro"],
+    related: ["analytics", "analytics/team-performance", "analytics/rating-analytics", "features/first-accept-wins", "use-cases/staff-accountability", "administration/staff-dashboard", "pricing/pro-plan"],
     cta: { title: "Give Your Staff the Credit They Earn", body: "Start a 14-day Pro trial and open your first scorecards." },
   },
 
@@ -462,7 +462,7 @@ export const pages: PageContent[] = [
       { q: "Which Plan Do I Need?", a: "Pro or Enterprise, as team performance is part of full analytics." },
       { q: "Can Team Performance Show Where to Add Staff?", a: "Yes. Load per person, accept times and escalations by team show which service team is stretched, so you can add cover to the print room or pantry where it is actually needed." },
     ],
-    related: ["analytics", "analytics/staff", "analytics/on-time-performance", "admin/team-management", "use-cases/facilities-operations", "solutions/it-support/analytics", "pricing/pro"],
+    related: ["analytics", "analytics/staff-analytics", "analytics/on-time-performance", "administration/team-management", "use-cases/better-facilities-operations", "solutions/it-support/it-support-analytics", "pricing/pro-plan"],
     cta: { title: "Compare Your Teams Fairly", body: "Try full analytics free for 14 days on Pro." },
   },
 
@@ -559,7 +559,7 @@ export const pages: PageContent[] = [
       { q: "Is Response Time Analytics on Free?", a: "Full analytics is a Pro feature. Every request is still timed on Free." },
       { q: "Does the ETA Given at Started Affect Response Time?", a: "No. Response time ends when the job is marked Started. The ETA tells the requester when to expect delivery, which is measured separately as delivery time." },
     ],
-    related: ["analytics", "analytics/acceptance-time", "analytics/delivery-time", "use-cases/improve-response-time", "notifications/multi-channel", "workflows/hdmi-request", "pricing/pro"],
+    related: ["analytics", "analytics/acceptance-time-analytics", "analytics/delivery-time-analytics", "use-cases/improve-response-time", "notifications/multi-channel-notifications", "workflows/hdmi-request", "pricing/pro-plan"],
     cta: { title: "Shrink the Silent Wait", body: "Start a 14-day free trial and measure your real response time." },
   },
 
@@ -659,7 +659,7 @@ export const pages: PageContent[] = [
       { q: "Is Acceptance Time Analytics Included on Free?", a: "Accept times are recorded on all plans; full analytics to explore them is part of Pro." },
       { q: "How Fast Did Pilot Offices Accept Requests?", a: "Pilot offices averaged 32 seconds from buzz to accept in their first month, with notifications repeating across channels until someone tapped Accept." },
     ],
-    related: ["analytics", "analytics/response-time", "features/first-accept-wins", "mobile-app/request-acceptance", "notifications/multi-channel", "workflows/coffee-request", "pricing/pro"],
+    related: ["analytics", "analytics/response-time-analytics", "features/first-accept-wins", "mobile-app/mobile-request-acceptance", "notifications/multi-channel-notifications", "workflows/coffee-request", "pricing/pro-plan"],
     cta: { title: "See How Fast Your Team Claims Work", body: "Try ZapBuzzer free for 14 days." },
   },
 
@@ -756,7 +756,7 @@ export const pages: PageContent[] = [
       { q: "Which Plan Includes Delivery Time Analytics?", a: "Full analytics is part of Pro and Enterprise." },
       { q: "Why Is Delivery Time the Number Employees Care About?", a: "It covers the whole wait, from tapping Buzz to the job marked Delivered. In the before-and-after coffee example, that wait dropped from 25 minutes to 4." },
     ],
-    related: ["analytics", "analytics/on-time-performance", "analytics/response-time", "features/delivery-confirmation", "sla/timers", "workflows/print-request", "pricing/pro"],
+    related: ["analytics", "analytics/on-time-performance", "analytics/response-time-analytics", "features/delivery-confirmation", "sla-and-escalation/sla-timers", "workflows/print-request", "pricing/pro-plan"],
     cta: { title: "Measure the Full Wait", body: "Start a free 14-day trial and see your real delivery times." },
   },
 
@@ -816,7 +816,7 @@ export const pages: PageContent[] = [
           { time: "Month 2", event: "Sales starts buzzing big decks the evening before; the print room adds morning cover." },
           { time: "Month 3", event: "Print on-time % rises to match the other teams." },
         ],
-        outcome: "Kavya: “Print jobs land at my desk before the client even sits down. Zero chase calls.”",
+        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead, Northwind",
       },
       {
         type: "checklist",
@@ -856,7 +856,7 @@ export const pages: PageContent[] = [
       { q: "Is On-Time Performance Tracked on the Free Plan?", a: "Every request is timed against its deadline on all plans. Full analytics to track on-time % over time, by team and by person, is part of Pro and Enterprise." },
       { q: "What Happens to On-Time % When Requests Escalate a Lot?", a: "Frequent escalations usually mean deadlines are being missed, so on-time % falls. Look at which categories escalate most and fix the cause or review the SLA." },
     ],
-    related: ["analytics", "analytics/delivery-time", "sla", "sla/reporting", "use-cases/sla-compliance", "solutions/print-room/analytics", "pricing/pro"],
+    related: ["analytics", "analytics/delivery-time-analytics", "sla-and-escalation", "sla-and-escalation/sla-reporting", "use-cases/sla-compliance", "solutions/print-room/print-analytics", "pricing/pro-plan"],
     cta: { title: "Track Your On-Time Rate", body: "Start a 14-day Pro trial and see how often your office delivers on time." },
   },
 
@@ -952,7 +952,7 @@ export const pages: PageContent[] = [
       { q: "Is Rating Analytics on Free?", a: "Ratings are collected on all plans. Full rating analytics and scorecards are part of Pro." },
       { q: "What Average Rating Did Pilot Offices See?", a: "Pilot offices averaged 4.8★ across staff in their first month. Use your own trend over time as the main benchmark rather than chasing a single number." },
     ],
-    related: ["analytics", "analytics/staff", "features/request-ratings", "mobile-app/ratings", "analytics/delivery-time", "solutions/pantry", "pricing/pro"],
+    related: ["analytics", "analytics/staff-analytics", "features/request-ratings", "mobile-app/mobile-ratings", "analytics/delivery-time-analytics", "solutions/pantry", "pricing/pro-plan"],
     cta: { title: "Hear What the Office Thinks", body: "Try ZapBuzzer free for 14 days and collect your first ratings." },
   },
 
@@ -1054,7 +1054,7 @@ export const pages: PageContent[] = [
       { q: "Which Plan Includes Office Activity Analytics?", a: "Pro and Enterprise, as part of full analytics." },
       { q: "Can Activity Analytics Show Our Busiest Hour for Coffee?", a: "Yes. Every request carries a timestamp and category, so the activity view shows waves like the 9:30 coffee rush or the pre-meeting print peak, and you can staff the pantry for them." },
     ],
-    related: ["analytics", "analytics/requests", "analytics/acceptance-time", "sla/analytics", "use-cases/office-manager", "use-cases/pantry-operations", "pricing/pro"],
+    related: ["analytics", "analytics/request-analytics", "analytics/acceptance-time-analytics", "sla-and-escalation/sla-analytics", "use-cases/office-manager", "use-cases/better-pantry-operations", "pricing/pro-plan"],
     cta: { title: "See Your Office’s Rhythm", body: "Start a 14-day Pro trial and find your peak hours." },
   },
 ];

@@ -126,7 +126,7 @@ export const pages: PageContent[] = [
       { q: "Does the Requester Find Out When the Job Is Delivered?", a: "Yes. The request is marked delivered, optionally with a photo, and the requester is prompted to rate it, so there is no need to call to check it arrived." },
       { q: "What Can Staff Do to Prevent Chase Calls?", a: "Two habits matter most: accept quickly and set an ETA when starting each job. Those two signals answer the questions a chase call would ask." },
     ],
-    related: ["use-cases/reduce-phone-calls", "features/eta-tracking", "features/request-tracking", "use-cases/sales", "compare/phone-calls", "free-trial"],
+    related: ["use-cases/reduce-phone-calls", "features/eta-tracking", "features/request-tracking", "use-cases/sales-team", "feature-comparison/vs-phone-calls", "free-trial"],
     cta: { title: "End the Chase", body: "Try ZapBuzzer free for 14 days and see how many calls your office stops making." },
   },
 
@@ -244,7 +244,7 @@ export const pages: PageContent[] = [
       { q: "Why Do Requests Get Lost in WhatsApp Groups?", a: "Orders get mixed with good-morning messages, two people reply “ok” and nobody is sure who owns it, and nothing is timed. ZapBuzzer gives each request one owner, a deadline and a record." },
       { q: "Do Employees Need WhatsApp to Send Requests?", a: "No. Employees buzz requests from the web or mobile app. On Pro, WhatsApp is one of the channels used to ping staff, alongside the app, Telegram and email." },
     ],
-    related: ["feature-comparison/vs-whatsapp", "notifications/whatsapp", "solutions/pantry", "use-cases/office-manager", "use-cases/prevent-lost-requests", "pricing/pro"],
+    related: ["feature-comparison/vs-whatsapp", "notifications/whatsapp-notifications", "solutions/pantry", "use-cases/office-manager", "use-cases/prevent-lost-requests", "pricing/pro-plan"],
     cta: { title: "Quiet the Group", body: "Start the 14-day trial and move your pantry orders into a tracked queue." },
   },
 
@@ -307,7 +307,7 @@ export const pages: PageContent[] = [
           { time: "10:02", event: "The buzz reaches the pantry on Telegram, and Raj accepts within 12 seconds." },
           { time: "10:06", event: "Coffee delivered. No call made." },
         ],
-        outcome: "“The office runs quieter. Nobody's shouting names down the hall.” — Aarav Sharma, Founder & CEO, Acme HQ",
+        outcome: "“The office runs quieter. Nobody's shouting names down the hall.” — Aarav Sharma, Founder & CEO, Acme HQ (Pune)",
       },
       {
         type: "callout",
@@ -376,7 +376,7 @@ export const pages: PageContent[] = [
       { q: "What Should Staff Say When Someone Still Phones With a Routine Request?", a: "Politely ask them to buzz it instead. Once requesters see that buzzing gets a faster, visible response, most routine calls stop on their own." },
       { q: "What Changes on the Office Floor When Calls Drop?", a: "Fewer extensions ringing out, nobody calling names down the corridor and fewer meetings paused for a call about tea. That is the quiet office ZapBuzzer is built for." },
     ],
-    related: ["use-cases/stop-chase-calls", "compare/phone-calls", "mobile-app/notifications", "workflows/coffee-request", "use-cases/ceo", "free-trial"],
+    related: ["use-cases/stop-chase-calls", "feature-comparison/vs-phone-calls", "mobile-app/mobile-notifications", "workflows/coffee-request", "use-cases/ceo", "free-trial"],
     cta: { title: "Count Your Calls, Then Cut Them", body: "Start the free trial and compare your call volume after the first month." },
   },
 
@@ -519,7 +519,7 @@ export const pages: PageContent[] = [
       { q: "Can We Prove a Request Was Completed?", a: "Each request is marked delivered, optionally with a photo, and then rated by the requester. That is usually enough to settle any “I never got it” question." },
       { q: "Where Do Office Requests Usually Get Lost?", a: "In group chats where messages scroll away, in someone’s DMs, or in a hallway ask that nobody wrote down. Putting every request into one tracked queue removes those hiding places." },
     ],
-    related: ["sla-and-escalation/overdue-requests", "sla/automatic-escalation", "features/request-tracking", "use-cases/admin-team", "use-cases/reduce-whatsapp-requests", "pricing/pro"],
+    related: ["sla-and-escalation/overdue-requests", "sla-and-escalation/automatic-escalation", "features/request-tracking", "use-cases/admin-team", "use-cases/reduce-whatsapp-requests", "pricing/pro-plan"],
     cta: { title: "Catch Every Request", body: "Try ZapBuzzer free for 14 days, with SLA timers and escalation included in the Pro trial." },
   },
 
@@ -666,7 +666,7 @@ export const pages: PageContent[] = [
       { q: "Should We Set Targets for Staff?", a: "Share the team number first and let people see it improve. Individual targets work better once everyone trusts the data." },
       { q: "Does Faster Accept Mean Rushed Work?", a: "Accepting only claims the job. Delivery still has its own deadline and rating, so quality is tracked separately from speed." },
     ],
-    related: ["features/first-accept-wins", "analytics/acceptance-time", "analytics/response-time", "notifications/multi-channel", "use-cases/it-manager", "pricing/pro"],
+    related: ["features/first-accept-wins", "analytics/acceptance-time-analytics", "analytics/response-time-analytics", "notifications/multi-channel-notifications", "use-cases/it-manager", "pricing/pro-plan"],
     cta: { title: "Measure Your Accept Time", body: "Start the 14-day trial and see your office's average accept time by the end of week one." },
   },
 
@@ -816,7 +816,7 @@ export const pages: PageContent[] = [
       { q: "Is Tracking Useful in a Small Office?", a: "Yes. Even with ten people on the Free plan, seeing the last 30 days of requests shows patterns you would otherwise miss, like the daily 4 p.m. tea rush." },
       { q: "Can Managers See Every Open Request at Once?", a: "Yes, depending on role permissions. Managers can see open, in-progress and overdue requests across teams in one place, so they know where things stand without asking." },
     ],
-    related: ["features/request-tracking", "features/request-status", "analytics/requests", "use-cases/operations", "features/request-history", "pricing/pro"],
+    related: ["features/request-tracking", "features/request-status", "analytics/request-analytics", "use-cases/operations-team", "features/request-history", "pricing/pro-plan"],
     cta: { title: "Start Your Request Record", body: "Try ZapBuzzer free and see your first week of office requests in one place." },
   },
 
@@ -971,7 +971,7 @@ export const pages: PageContent[] = [
       { q: "Does Accountability Apply to Managers Too?", a: "Escalations land with named managers, and their response is part of the record. Managers are accountable too, not just staff." },
       { q: "How Do We Introduce Scorecards to Staff Fairly?", a: "Lead with credit: show staff the work they did that used to go unnoticed. Look at patterns over a month rather than single ratings, and make clear scorecards are for fair credit, not nagging." },
     ],
-    related: ["analytics/staff-analytics", "admin/audit-logs", "use-cases/hr", "features/request-ratings", "analytics/team-performance", "pricing/pro"],
+    related: ["analytics/staff-analytics", "administration/audit-logs", "use-cases/hr-team", "features/request-ratings", "analytics/team-performance", "pricing/pro-plan"],
     cta: { title: "Give Credit Where It Is Due", body: "Start a 14-day Pro trial and see your first staff scorecards." },
   },
 
@@ -1116,7 +1116,7 @@ export const pages: PageContent[] = [
       { q: "Can Facility Companies Report SLAs to Clients?", a: "Enterprise is designed for groups and facility companies, with white-label and reporting options. Talk to us at hello@zapbuzzer.com for details." },
       { q: "Who Is Alerted When an Internal SLA Is Breached?", a: "An overdue request escalates to a manager automatically. On Pro, the escalation chain can pass it further up if it still is not handled." },
     ],
-    related: ["sla-and-escalation", "sla/timers", "sla/escalation-chains", "sla/breach-detection", "resources/sla-management-guide", "use-cases/facilities-manager", "pricing/pro"],
+    related: ["sla-and-escalation", "sla-and-escalation/sla-timers", "sla-and-escalation/escalation-chains", "sla-and-escalation/sla-breach-detection", "resource-hub/sla-management-guide", "use-cases/facilities-manager", "pricing/pro-plan"],
     cta: { title: "Put Your SLAs on a Clock", body: "Try Pro free for 14 days with SLA timers and escalation chains." },
   },
 
@@ -1266,7 +1266,7 @@ export const pages: PageContent[] = [
       { q: "Can We See What the Pantry Costs?", a: "Owners can see the cost of requests such as lunch orders. That view is owner-only, so it is not shown to every employee." },
       { q: "Is the Pantry Available on the Free Plan?", a: "Yes. Free supports up to 10 staff in one location with email notifications. Telegram and WhatsApp pings, SLA escalation and full analytics come with Pro." },
     ],
-    related: ["solutions/pantry", "solutions/pantry/catalog", "workflows/coffee-request", "workflows/lunch-request", "use-cases/office-manager", "pricing/free"],
+    related: ["solutions/pantry", "solutions/pantry/pantry-catalog", "workflows/coffee-request", "workflows/lunch-request", "use-cases/office-manager", "pricing/free-plan"],
     cta: { title: "Calm Your Pantry", body: "Start free with up to 10 staff, or trial Pro for 14 days." },
   },
 
@@ -1429,7 +1429,7 @@ export const pages: PageContent[] = [
       { q: "What If a Fix Depends on an Outside Vendor?", a: "The technician starts the job with a longer ETA. If it still passes its deadline, escalation tells the manager who deals with the vendor." },
       { q: "Can Employees Report Issues From Their Phone?", a: "Yes. The mobile and web app both let anyone tap Facilities, choose the room and add a note." },
     ],
-    related: ["solutions/facilities", "use-cases/facilities-manager", "workflows/ac-issue", "solutions/facilities/escalation", "sla/automatic-escalation", "pricing/pro"],
+    related: ["solutions/facilities", "use-cases/facilities-manager", "workflows/ac-issue", "solutions/facilities/facilities-escalation", "sla-and-escalation/automatic-escalation", "pricing/pro-plan"],
     cta: { title: "Put Facilities on a Clock", body: "Try ZapBuzzer Pro free for 14 days and route your first facilities job today." },
   },
 ];

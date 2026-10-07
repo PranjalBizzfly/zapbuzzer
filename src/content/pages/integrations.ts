@@ -137,7 +137,7 @@ export const pages: PageContent[] = [
       { q: "Which Integrations Come With the Free Plan?", a: "Free includes the mobile and web apps with email notifications for one location and up to 10 staff. Telegram and WhatsApp pings arrive with Pro, and the API, webhooks, SSO and white-label sit on Enterprise." },
       { q: "Can We Run ZapBuzzer on Our Own Servers?", a: "Enterprise includes an on-prem option for organisations that need the system on their own infrastructure. Write to hello@zapbuzzer.com and we will talk through what that involves for your setup." },
     ],
-    related: ["enterprise", "pricing/enterprise", "developers/api", "developers/webhooks", "integrations/sso-saml", "notifications/multi-channel", "contact"],
+    related: ["enterprise", "pricing/enterprise-plan", "developers/api-documentation", "developers/webhooks", "integrations/sso-and-saml", "notifications/multi-channel-notifications", "contact-us"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -245,7 +245,7 @@ export const pages: PageContent[] = [
       { q: "Is There a Sandbox or Test Workspace for API Development?", a: "How testing works for your account is agreed during Enterprise onboarding. Tell your customer success manager how your team likes to build and test, and they will set things up accordingly." },
       { q: "Does Using the API Change How Requests Flow for Staff?", a: "No. Employees still tap, the right team is pinged on the app, Telegram, WhatsApp or email, and the first to accept owns the request. The API simply gives your systems access to those same records." },
     ],
-    related: ["integrations", "developers/rest-api", "developers/webhooks", "developers/authentication", "features/request-reports", "enterprise/reporting", "pricing/enterprise"],
+    related: ["integrations", "developers/rest-api", "developers/webhooks", "developers/api-authentication", "features/request-reports", "enterprise/enterprise-reporting", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -349,7 +349,7 @@ export const pages: PageContent[] = [
       { q: "Are There Rate Limits on the REST API?", a: "Usage guidance for your account is part of the documentation shared during Enterprise onboarding. Scheduled, incremental syncs rather than repeated full pulls are good practice either way." },
       { q: "Should We Pull Everything Every Night or Only What Changed?", a: "Pull only what changed since your last successful sync wherever you can. It is lighter, faster and less likely to fail halfway, and requests still in progress can be picked up again on a later run." },
     ],
-    related: ["developers/api-documentation", "developers/api-requests", "developers/authentication", "developers/webhooks", "enterprise/reporting", "admin/spend-visibility", "pricing/enterprise"],
+    related: ["developers/api-documentation", "developers/api-requests", "developers/api-authentication", "developers/webhooks", "enterprise/enterprise-reporting", "administration/spend-visibility", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -450,7 +450,7 @@ export const pages: PageContent[] = [
       { q: "How Often Should We Rotate API Credentials?", a: "Set a regular rotation schedule that suits your security policy, and rotate immediately when someone with access leaves or a credential may have been exposed. Your Enterprise documentation explains how replacement works for your account." },
       { q: "Does a Leaver’s SSO Removal Also Cut Off API Access?", a: "Not automatically. SSO controls people signing in to the app, while API credentials belong to integrations. When an integration owner leaves, review and rotate the credentials they could see." },
     ],
-    related: ["developers/api-documentation", "developers/rest-api", "integrations/sso-saml", "enterprise/security", "admin/roles-and-permissions", "admin/audit-logs", "pricing/enterprise"],
+    related: ["developers/api-documentation", "developers/rest-api", "integrations/sso-and-saml", "enterprise/security", "administration/roles-and-permissions", "administration/audit-logs", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -552,7 +552,7 @@ export const pages: PageContent[] = [
       { q: "How Should We Work Out Accept and Delivery Times From Request Data?", a: "Use the timings recorded at each lifecycle step, from buzz to accept to delivery, rather than when your sync happened to read the record. That keeps your reports consistent with what ZapBuzzer’s own analytics show." },
       { q: "Should We Treat a Delivered Request as Final?", a: "Not entirely. A delivered request can still gain a rating afterwards, so keep it updatable for a while. Records that are rated are the ones least likely to change." },
     ],
-    related: ["developers/rest-api", "developers/api", "developers/webhook-events", "features/request-management", "features/request-status", "admin", "pricing/enterprise"],
+    related: ["developers/rest-api", "developers/api-documentation", "developers/webhook-events", "features/request-management", "features/request-status", "administration", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -655,7 +655,7 @@ export const pages: PageContent[] = [
       { q: "Can Webhooks Alert Our Operations Team When an SLA Is Breached?", a: "Escalation is one of the request moments webhooks are designed for, so your system can react when a request runs late. The exact events available to your account are confirmed during Enterprise onboarding." },
       { q: "Should We Still Poll the REST API If We Use Webhooks?", a: "Yes, an occasional check through the REST API is good practice. Webhooks give you speed, and an occasional sync catches anything missed while your receiver was unavailable." },
     ],
-    related: ["developers/webhook-events", "developers/api", "developers/rest-api", "sla/automatic-escalation", "sla/breach-detection", "notifications/multi-channel", "pricing/enterprise"],
+    related: ["developers/webhook-events", "developers/api-documentation", "developers/rest-api", "sla-and-escalation/automatic-escalation", "sla-and-escalation/sla-breach-detection", "notifications/multi-channel-notifications", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -769,7 +769,7 @@ export const pages: PageContent[] = [
       { q: "How Do We Handle the Same Event Arriving Twice?", a: "Make repeats harmless. Record what you have already handled and ignore anything you have seen before. Combined with checking the request’s current state, duplicates then do no harm." },
       { q: "Can We Filter Events by Team, Such as Only Facilities Requests?", a: "Subscribe to the lifecycle events you need and filter by team or request type on your side if necessary. What filtering your account supports is covered during Enterprise onboarding." },
     ],
-    related: ["developers/webhooks", "developers/api-requests", "features/request-status", "sla/automatic-escalation", "features/request-ratings", "workflows/print-request", "pricing/enterprise"],
+    related: ["developers/webhooks", "developers/api-requests", "features/request-status", "sla-and-escalation/automatic-escalation", "features/request-ratings", "workflows/print-request", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -866,7 +866,7 @@ export const pages: PageContent[] = [
       { q: "Will Existing Bookmarks and Sign-In Links Keep Working After We Switch Domains?", a: "Plan the switch with your customer success manager so employees get the new address and any changes to sign-in are explained in advance. A short announcement usually avoids confusion." },
       { q: "Does a Custom Domain Work With SSO?", a: "Both are Enterprise capabilities and can be used together. How sign-in looks on your domain is set up with your customer success manager during onboarding." },
     ],
-    related: ["integrations", "integrations/white-label", "integrations/sso-saml", "enterprise", "enterprise/rollout", "demo", "pricing/enterprise"],
+    related: ["integrations", "integrations/white-label", "integrations/sso-and-saml", "enterprise", "enterprise/enterprise-rollout", "book-a-demo", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -963,7 +963,7 @@ export const pages: PageContent[] = [
       { q: "Will Employees See the ZapBuzzer Name Anywhere?", a: "The aim of white-label is that employees see your brand. Exactly which screens, emails and notifications are branded is agreed with your customer success manager for your setup." },
       { q: "Do We Keep Access to Analytics and Scorecards Under White-Label?", a: "Yes. White-label changes branding, not features. Analytics, staff scorecards, audit logs and reports work the same way behind your brand." },
     ],
-    related: ["integrations", "integrations/custom-domain", "enterprise", "enterprise/multi-location", "analytics", "solutions/facilities", "pricing/enterprise"],
+    related: ["integrations", "integrations/custom-domain", "enterprise", "enterprise/multi-location", "analytics", "solutions/facilities", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 
@@ -1064,7 +1064,7 @@ export const pages: PageContent[] = [
       { q: "How Quickly Does a Leaver Lose Access With SSO?", a: "Access follows the company account. Once your IT team disables that account, the person can no longer sign in to ZapBuzzer, without anyone needing to remember a separate step." },
       { q: "Can We Enable SSO for One Location Before the Whole Group?", a: "Tell us how you want to roll it out and your customer success manager will plan the setup with you during Enterprise onboarding." },
     ],
-    related: ["integrations", "enterprise/security", "enterprise/user-management", "admin/roles-and-permissions", "developers/authentication", "integrations/custom-domain", "pricing/enterprise"],
+    related: ["integrations", "enterprise/security", "enterprise/enterprise-user-management", "administration/roles-and-permissions", "developers/api-authentication", "integrations/custom-domain", "pricing/enterprise-plan"],
     cta: ENTERPRISE_CTA,
   },
 ];

@@ -225,7 +225,7 @@ export const pages: PageContent[] = [
       { q: "Can I Order Coffee for a Meeting Room Instead of My Desk?", a: "Yes. Choose the destination when you buzz, such as Boss Cabin or a conference room, and add how many cups in the note." },
       { q: "How Is Buzzing Coffee Better Than Calling the Pantry?", a: "The phone version of “two coffees in the boss cabin” took 25 minutes, three calls and arrived cold. The buzz version took four minutes, zero calls and arrived hot." },
     ],
-    related: ["workflows", "solutions/pantry/coffee-requests", "workflows/lunch-request", "features/first-accept-wins", "solutions/pantry/catalog", "use-cases/ceo", "free-trial"],
+    related: ["workflows", "solutions/pantry/coffee-requests", "workflows/lunch-request", "features/first-accept-wins", "solutions/pantry/pantry-catalog", "use-cases/ceo", "free-trial"],
     cta: { title: "Get the Next Coffee Without a Phone Call", body: "Set up your pantry catalogue in minutes on the 14-day free trial." },
   },
 
@@ -313,7 +313,7 @@ export const pages: PageContent[] = [
       { q: "Who in the Print Room Gets My Job?", a: "The whole print team is pinged at once and the first person free taps Accept. That person owns the job and you see their name and ETA." },
       { q: "Is My Print File Lost in a Group Chat Like Before?", a: "No. The PDF, copy count, colour setting and delivery seat travel together as one request, so nothing depends on someone scrolling back through WhatsApp." },
     ],
-    related: ["workflows", "solutions/print-room", "solutions/print-room/pdf-print-requests", "workflows/coffee-request", "features/delivery-confirmation", "use-cases/sales", "pricing"],
+    related: ["workflows", "solutions/print-room", "solutions/print-room/pdf-print-requests", "workflows/coffee-request", "features/delivery-confirmation", "use-cases/sales-team", "pricing"],
     cta: { title: "Stop Chasing Print Jobs", body: "Try the print room workflow free for 14 days." },
   },
 
@@ -413,7 +413,7 @@ export const pages: PageContent[] = [
       { q: "Can I Add Details About My IT Problem?", a: "Yes. Add a short note such as the room, device or error, so the technician arrives knowing what to bring." },
       { q: "Can IT Managers See Recurring Problems From These Requests?", a: "Yes. Requests record the item, room and time, so patterns like a Monday-morning Wi-Fi issue show up. Full analytics are on Pro." },
     ],
-    related: ["workflows", "solutions/it-support", "solutions/it-support/ticket-routing", "workflows/hdmi-request", "workflows/projector-request", "use-cases/it-manager", "features/request-routing", "pricing/pro"],
+    related: ["workflows", "solutions/it-support", "solutions/it-support/it-ticket-routing", "workflows/hdmi-request", "workflows/projector-request", "use-cases/it-manager", "features/request-routing", "pricing/pro-plan"],
     cta: { title: "Give Your IT Desk One Queue", body: "Start a 14-day free trial and route your first IT request today." },
   },
 
@@ -500,7 +500,7 @@ export const pages: PageContent[] = [
       { q: "Who Is Told If the AC Is Not Fixed in Time?", a: "When the deadline passes, the request escalates to a manager automatically. With an escalation chain on Pro, the next person hears about it if the first does not act." },
       { q: "Can I See When Facilities Will Reach the Room?", a: "Yes. Once someone accepts and starts, you see their name, photo and ETA, so you know whether to move the meeting." },
     ],
-    related: ["workflows", "solutions/facilities/ac-requests", "solutions/facilities/escalation", "workflows/projector-request", "sla/automatic-escalation", "use-cases/facilities-manager", "pricing/pro"],
+    related: ["workflows", "solutions/facilities/ac-requests", "solutions/facilities/facilities-escalation", "workflows/projector-request", "sla-and-escalation/automatic-escalation", "use-cases/facilities-manager", "pricing/pro-plan"],
     cta: { title: "Keep Meeting Rooms Comfortable", body: "Try facilities requests with SLA escalation on the 14-day free trial." },
   },
 
@@ -586,7 +586,7 @@ export const pages: PageContent[] = [
       { q: "Can the Admin See Projector Requests Across Rooms?", a: "Yes. Each request is logged with its room, time and who handled it, so an admin can see which rooms need attention." },
       { q: "How Quickly Does IT Get a Projector Request?", a: "Immediately. The whole IT team is notified at once on the app, plus Telegram and WhatsApp on Pro, and notifications repeat until someone accepts." },
     ],
-    related: ["workflows", "solutions/it-support/projector-support", "solutions/it-support/meeting-room-support", "workflows/hdmi-request", "features/eta-tracking", "solutions/facilities/conference-room-issues", "demo"],
+    related: ["workflows", "solutions/it-support/projector-support", "solutions/it-support/meeting-room-it-support", "workflows/hdmi-request", "features/eta-tracking", "solutions/facilities/conference-room-issues", "book-a-demo"],
     cta: { title: "Keep Meetings Starting on Time", body: "Add a projector item to your catalogue on the 14-day free trial." },
   },
 
@@ -683,7 +683,7 @@ export const pages: PageContent[] = [
       { q: "Can I Request an HDMI Cable From Inside the Meeting Room?", a: "Yes. Buzz from your phone or laptop in the room and choose it as the destination, so IT brings the cable to exactly where you are." },
       { q: "Do HDMI Requests Count Towards IT Analytics?", a: "Yes. Every HDMI request is timed and rated like any other, so accept times and ratings feed into IT analytics and scorecards on Pro." },
     ],
-    related: ["workflows", "solutions/it-support/hdmi-requests", "workflows/projector-request", "workflows/it-support", "mobile-app/requests", "features/one-tap-requests", "free-trial"],
+    related: ["workflows", "solutions/it-support/hdmi-requests", "workflows/projector-request", "workflows/it-support", "mobile-app/mobile-requests", "features/one-tap-requests", "free-trial"],
     cta: { title: "Put Cables One Tap Away", body: "Start your free 14-day trial and add HDMI to the catalogue." },
   },
 
@@ -777,7 +777,7 @@ export const pages: PageContent[] = [
       { q: "Is Every Courier Pickup Audit-Trailed?", a: "Yes. The mailroom logs each pickup as a timed request, so you can later see who handled it and when. Audit logs and reports are part of Pro." },
       { q: "Who Gets Notified When Reception Logs a Courier?", a: "The mailroom team is pinged at once and the first free person accepts, as in Neha's front-desk example. Reception sees who is on it." },
     ],
-    related: ["workflows", "solutions/courier/pickup", "solutions/courier/reception-workflow", "admin/audit-logs", "use-cases/reception", "workflows/emergency-summon", "pricing/pro"],
+    related: ["workflows", "solutions/courier-and-reception/courier-pickup", "solutions/courier-and-reception/reception-workflow", "administration/audit-logs", "use-cases/reception-team", "workflows/emergency-summon", "pricing/pro-plan"],
     cta: { title: "Make Every Pickup Traceable", body: "Try courier pickups free for 14 days; a credit card is not required." },
   },
 
@@ -861,7 +861,7 @@ export const pages: PageContent[] = [
       { q: "Can the Owner See What a Team Lunch Cost?", a: "Yes. Request cost visibility lets the owner see the cost of a lunch order, while it stays hidden from employees and staff." },
       { q: "How Does Vivek's Lunch for Twelve Work?", a: "Vivek picks items from the pantry catalogue, adds a note and buzzes. The pantry queues the order, Vivek rates it on delivery and the owner sees the cost." },
     ],
-    related: ["workflows", "solutions/pantry/lunch-requests", "workflows/coffee-request", "admin/spend-visibility", "use-cases/operations", "solutions/pantry/ordering-workflow", "pricing"],
+    related: ["workflows", "solutions/pantry/lunch-requests", "workflows/coffee-request", "administration/spend-visibility", "use-cases/operations-team", "solutions/pantry/pantry-ordering-workflow", "pricing"],
     cta: { title: "Order the Next Team Lunch in One Request", body: "Set up lunch items on the 14-day free trial." },
   },
 
@@ -928,7 +928,7 @@ export const pages: PageContent[] = [
         type: "visual",
         visual: "mobile-app",
         heading: "Designed for a Phone in Your Hand",
-        body: "The Android app (v1.15.2) puts summon, emergency and everyday orders on one screen. Your account and workspace are stored on the server, so nothing is lost if a phone changes.",
+        body: "The Android app (v1.16.0) puts summon, emergency and everyday orders on one screen. Your account and workspace are stored on the server, so nothing is lost if a phone changes.",
       },
       {
         type: "checklist",
@@ -952,7 +952,7 @@ export const pages: PageContent[] = [
       { q: "Can I Add Details to an Emergency Summon?", a: "Yes. Add a short note such as the location or what is happening, so whoever accepts knows where to go." },
       { q: "How Should We Prepare the Office for Emergency Summons?", a: "Decide who is on the security or on-call team, make sure they install the mobile app and keep notifications on, and run a test summon so everyone knows how it works." },
     ],
-    related: ["workflows", "mobile-app", "mobile-app/notifications", "notifications/push", "use-cases/reception", "workflows/courier-pickup", "enterprise/security"],
+    related: ["workflows", "mobile-app", "mobile-app/mobile-notifications", "notifications/mobile-push-notifications", "use-cases/reception-team", "workflows/courier-pickup", "enterprise/security"],
     cta: { title: "Get the Right People Moving, Fast", body: "Install the mobile app and try summons during your 14-day free trial." },
   },
 ];

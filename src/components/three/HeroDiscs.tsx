@@ -30,20 +30,22 @@ type Look = {
   exposure: number; body: number; bodyMetal: number; edge: number; mark: number; markMetal: number; markGlow: number;
   bezel: number; bezelGlow: number; rim: number; rimA: number; rimBackA: number; plinth: number; plinthMetal: number; bump: number;
   trace: [number, number, number]; traceA: number; halo: [number, number, number]; haloA: number; clapperGlow: number;
-  bead: number; beadMetal: number; bodyGlow: number;
+  bead: number; beadMetal: number; bodyGlow: number; ringK: number; shadow: [number, number, number]; shadowA: number;
 };
 const DARK: Look = {
   exposure: 0.9, body: 0x1c1f36, bodyMetal: 1, edge: 0x8a8fc4, mark: 0xc9cbff, markMetal: 0.35, markGlow: 0.16,
   bezel: LAVENDER, bezelGlow: 0.18, rim: 0x8b8eff, rimA: 0.32, rimBackA: 0.22, plinth: 0x0d0f1c, plinthMetal: 1, bump: 0.4,
   trace: [0.42, 0.44, 0.98], traceA: 0.5, halo: [0.36, 0.37, 0.9], haloA: 0.16, clapperGlow: 0.12,
-  bead: 0x3a3f78, beadMetal: 0.6, bodyGlow: 0,
+  bead: 0x3a3f78, beadMetal: 0.6, bodyGlow: 0, ringK: 2.7, shadow: [0, 0, 0.02], shadowA: 0.55,
 };
 // Light: frosted white glass discs and a pearly platform with lavender light, indigo line-art.
+// Contrast comes from shading, indigo edges and a contact shadow rather than from grey: the
+// bodies stay white, the reeded edges and plinth lips pick up indigo, the icons are deep indigo.
 const LIGHT: Look = {
-  exposure: 1.12, body: 0xffffff, bodyMetal: 0.04, edge: 0xd9daff, mark: INDIGO, markMetal: 0.2, markGlow: 0.06,
-  bezel: 0x6a6df0, bezelGlow: 0.12, rim: 0x8b8eff, rimA: 0.5, rimBackA: 0.16, plinth: 0xffffff, plinthMetal: 0.04, bump: 0.05,
-  trace: [0.36, 0.37, 0.9], traceA: 0, halo: [0.66, 0.67, 1.0], haloA: 0.38, clapperGlow: 0.1,
-  bead: 0xe6e7ff, beadMetal: 0.05, bodyGlow: 0.24,
+  exposure: 1.0, body: 0xffffff, bodyMetal: 0, edge: 0x8f92f2, mark: 0x4447d8, markMetal: 0, markGlow: 0.32,
+  bezel: 0x5c5fe6, bezelGlow: 0.55, rim: 0x6f72ee, rimA: 0.7, rimBackA: 0.2, plinth: 0xe9eafd, plinthMetal: 0, bump: 0.04,
+  trace: [0.36, 0.37, 0.9], traceA: 0, halo: [0.62, 0.6, 1.0], haloA: 0.42, clapperGlow: 0.25,
+  bead: 0xf3f3ff, beadMetal: 0, bodyGlow: 0.16, ringK: 1.15, shadow: [0.27, 0.25, 0.62], shadowA: 0.34,
 };
 
 export function HeroDiscs({ className = "" }: { className?: string }) {
@@ -107,7 +109,7 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         return keep(pmrem.fromScene(envScene, 0.03).texture);
       };
       const envDark = buildEnv(0x05060c, 1);
-      const envLight = buildEnv(0xdfe2f2, 0.8);
+      const envLight = buildEnv(0xeef0fb, 0.85);
 
       // Direct lights for shading the relief: soft key, indigo and violet rims.
       const key = new THREE.DirectionalLight(0xffffff, 1.5);
@@ -404,6 +406,26 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
       halo.position.set(0, 0.25, -1.0);
       stage.add(halo);
 
+      // Contact shadows: soft ellipses grounding the plinth and the bell disc on its top tier.
+      // One cheap transparent quad each, no shadow maps.
+      const shadowUniforms = { uColor: { value: new THREE.Vector3() }, uAlpha: { value: 0 } };
+      const shadowMat = keep(
+        new THREE.ShaderMaterial({
+          uniforms: shadowUniforms,
+          transparent: true,
+          depthWrite: false,
+          vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }",
+          fragmentShader: "uniform vec3 uColor; uniform float uAlpha; varying vec2 vUv; void main(){ float d = length(vUv - 0.5) * 2.0; gl_FragColor = vec4(uColor, smoothstep(1.0, 0.35, d) * uAlpha); }",
+        }),
+      );
+      const floorShadow = new THREE.Mesh(keep(new THREE.PlaneGeometry(5.6, 5.6)), shadowMat);
+      floorShadow.rotation.x = -Math.PI / 2;
+      floorShadow.position.y = -1.675;
+      const topShadow = new THREE.Mesh(keep(new THREE.PlaneGeometry(2.2, 1.0)), shadowMat);
+      topShadow.rotation.x = -Math.PI / 2;
+      topShadow.position.set(0, -0.995, 0.1);
+      stage.add(floorShadow, topShadow);
+
       // Ten discs on a slow wheel arching behind the centre disc; the lower half of the wheel runs
       // below the frame, so discs rise in on one side and sink out on the other.
       const SAT = ["coffee", "print", "it", "facilities", "courier", "assign"];
@@ -458,6 +480,7 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         halo: [0, 1, 2].map((i) => mix(a.halo[i], b.halo[i], t)) as Look["halo"], haloA: mix(a.haloA, b.haloA, t),
         clapperGlow: mix(a.clapperGlow, b.clapperGlow, t),
         bead: mixHex(a.bead, b.bead, t), beadMetal: mix(a.beadMetal, b.beadMetal, t), bodyGlow: mix(a.bodyGlow, b.bodyGlow, t),
+        ringK: mix(a.ringK, b.ringK, t), shadow: [0, 1, 2].map((i) => mix(a.shadow[i], b.shadow[i], t)) as Look["shadow"], shadowA: mix(a.shadowA, b.shadowA, t),
       });
       const fade = { from: isDark() ? DARK : LIGHT, to: isDark() ? DARK : LIGHT, toDark: isDark(), start: -1 };
       const FADE_MS = 520;
@@ -490,7 +513,7 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         glowBlue.color.set(L.rim);
         glowBlue.opacity = L.rimA;
         ringMat.color.set(L.rim);
-        ringMat.opacity = Math.min(1, L.rimA * (isDark() ? 2.7 : 1.5));
+        ringMat.opacity = Math.min(1, L.rimA * L.ringK);
         const blend = isDark() ? THREE.AdditiveBlending : THREE.NormalBlending;
         if (ringMat.blending !== blend) { ringMat.blending = blend; ringMat.needsUpdate = true; }
         glowViolet.opacity = L.rimBackA;
@@ -500,6 +523,8 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         traceUniforms.uAlpha.value = L.traceA;
         haloUniforms.uColor.value.set(...L.halo);
         haloUniforms.uAlpha.value = L.haloA;
+        shadowUniforms.uColor.value.set(...L.shadow);
+        shadowUniforms.uAlpha.value = L.shadowA;
         // a soft white self-light in light mode reads as frosted glass instead of grey metal
         bodyMat.emissive.set(0xffffff);
         bodyMat.emissiveIntensity = L.bodyGlow;
@@ -547,8 +572,8 @@ export function HeroDiscs({ className = "" }: { className?: string }) {
         const cx = W_ * 0.5;
         // The plinth hangs below the cluster centre, so aim a little above the band middle;
         // otherwise the sculpture sat low, leaving a blank strip under the copy and a cropped base.
-        const cy = H_ - stageH * (desktop ? 0.455 : compact ? 0.5 : 0.58);
-        const rpx = compact ? Math.min(W_ * 0.5, stageH * 0.64) : Math.min(W_ * (desktop ? 0.27 : 0.46), stageH * (desktop ? 0.8 : 0.66));
+        const cy = H_ - stageH * (desktop ? (W_ < 1200 ? 0.41 : 0.47) : compact ? 0.47 : 0.5);
+        const rpx = compact ? Math.min(W_ * 0.46, stageH * 0.64) : Math.min(W_ * (desktop ? 0.27 : 0.44), stageH * (desktop ? 0.74 : 0.64));
         const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
         baseDist = ((compact ? CLUSTER_R_COMPACT : CLUSTER_R) * (H_ / 2)) / (tan * rpx);
         camera.setViewOffset(W_, H_, W_ / 2 - cx, H_ / 2 - cy, W_, H_);

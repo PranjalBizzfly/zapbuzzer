@@ -181,7 +181,7 @@ export default async function BlogPostPage({ params }: Props) {
         <section className="border-t border-line bg-surface-2/60 py-12">
           <div className="mx-auto max-w-7xl px-4">
             <h2 className="mb-6 font-heading text-2xl font-bold">Related Articles</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="eq-titles [--eq-lines:3] grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((p) => <BlogCard key={p.slug} post={p} />)}
             </div>
             <p className="mt-8 text-center"><Link href="/blog" className="font-semibold text-accent-text hover:underline">Blog →</Link></p>

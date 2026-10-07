@@ -1,15 +1,16 @@
 import type { PageContent } from "../types";
+import { byPath } from "../redirects";
 
 const base: PageContent[] = [
   {
     path: "mobile-app/android-app",
     title: "ZapBuzzer Android App: Download and Install",
     description:
-      "Install the ZapBuzzer Android app (v1.15.2, build 47, 61 MB APK). Alerts ring through on silent, and your account and workspace stay on the server.",
+      "Install the ZapBuzzer Android app (v1.16.0, build 48, 61 MB APK). Alerts ring through on silent, and your account and workspace stay on the server.",
     h1: "Get Buzzer on Your Android Phone",
     eyebrow: "Android App",
     lead:
-      "The Android app puts the whole office in your pocket: buzz for coffee, accept a print job, summon security. The current release is v1.15.2 (build 47), a 61 MB APK.",
+      "The Android app puts the whole office in your pocket: buzz for coffee, accept a print job, summon security. The current release is v1.16.0 (build 48), a 61 MB APK.",
     keywords: ["zapbuzzer android app", "zapbuzzer apk download", "office request android app", "buzzer app install"],
     heroVisual: "mobile-app",
     sections: [
@@ -19,7 +20,7 @@ const base: PageContent[] = [
         headers: ["Detail", "Value"],
         rows: [
           ["Platform", "Android (APK)"],
-          ["Version", "v1.15.2"],
+          ["Version", "v1.16.0"],
           ["Build", "47"],
           ["Download size", "61 MB"],
           ["Account data", "Lives on the server, not the phone"],
@@ -42,7 +43,7 @@ const base: PageContent[] = [
         tone: "warning",
         title: "Seeing “App Not Installed”?",
         body:
-          "If you installed a build from before 11 August 2026, Android may refuse the new APK with “App not installed”. Uninstall the old Buzzer app first, then install v1.15.2. Nothing is lost: your account and workspace are kept on the server, and everything comes back once you sign in again.",
+          "If you installed a build from before 11 August 2026, Android may refuse the new APK with “App not installed”. Uninstall the old Buzzer app first, then install v1.16.0. Nothing is lost: your account and workspace are kept on the server, and everything comes back once you sign in again.",
       },
       {
         type: "visual",
@@ -90,15 +91,15 @@ const base: PageContent[] = [
       },
     ],
     faqs: [
-      { q: "Which Version Is Current?", a: "The current Android release is v1.15.2, build 47. The APK is 61 MB." },
-      { q: "Why Does Android Say “App Not Installed”?", a: "This happens if you have a build from before 11 August 2026 on the phone. Uninstall the old app and install v1.15.2; your account is on the server so nothing is lost." },
+      { q: "Which Version Is Current?", a: "The current Android release is v1.16.0, build 48. The APK is 61 MB." },
+      { q: "Why Does Android Say “App Not Installed”?", a: "This happens if you have a build from before 11 August 2026 on the phone. Uninstall the old app and install v1.16.0; your account is on the server so nothing is lost." },
       { q: "Will I Lose My Requests If I Reinstall?", a: "No. Your account and workspace live on the server. Sign back in and your history and teams come back." },
       { q: "Does It Work When the Phone Is on Silent?", a: "Yes. Request alerts still sound when the phone is locked or set to silent." },
       { q: "Can I Use ZapBuzzer Without the App?", a: "Yes. There is a web app too, and the same account works on both." },
       { q: "Why Does Android Ask Me to Allow the Install?", a: "The app is distributed as an APK rather than through a store listing, so Android asks you to allow your browser or file manager to install it. You only need to allow it for this one install." },
       { q: "Which Permission Should I Grant After Installing the Android App?", a: "Grant notification permission when Buzzer asks. Without it, request alerts can’t ring through on silent or on a locked phone, which is the main reason staff install the app." },
     ],
-    related: ["mobile-app", "mobile-app/notifications", "mobile-app/staff-workflow", "notifications/push", "features/one-tap-requests", "workflows/emergency-summon", "free-trial"],
+    related: ["mobile-app", "mobile-app/mobile-notifications", "mobile-app/mobile-staff-workflow", "notifications/mobile-push-notifications", "features/one-tap-requests", "workflows/emergency-summon", "free-trial"],
     cta: { title: "Put the Office in Your Pocket", body: "Start a free trial, install the Android app and send your first buzz." },
   },
   {
@@ -174,7 +175,7 @@ const base: PageContent[] = [
       { q: "Can Colleagues Without the Android App Still Buzz for Things?", a: "Yes. The app currently available is the Android APK, and anyone can make the same requests from the web app with the same account and catalogue." },
       { q: "Can I Send a Request to a Meeting Room Instead of My Desk?", a: "Yes. Choose a destination such as Boss Cabin or Meeting Room 2 when you buzz, so the person who accepts walks straight to the right door." },
     ],
-    related: ["mobile-app", "mobile-app/request-tracking", "features/one-tap-requests", "features/request-catalog", "workflows/coffee-request", "use-cases/ceo", "free-trial"],
+    related: ["mobile-app", "mobile-app/mobile-request-tracking", "features/one-tap-requests", "features/request-catalog", "workflows/coffee-request", "use-cases/ceo", "free-trial"],
     cta: { title: "Ask Without Leaving Your Seat", body: "Try ZapBuzzer free for 14 days." },
   },
   {
@@ -250,7 +251,7 @@ const base: PageContent[] = [
       { q: "Do I Need to Keep the App Open to Get Request Alerts?", a: "No. Once notification permission is granted, alerts ring through even when the phone is locked or on silent, so staff can keep the phone in a pocket between jobs." },
       { q: "Do Employees Get Notifications Too?", a: "Requesters see status changes such as who accepted and the ETA, so they know what’s happening without calling." },
     ],
-    related: ["mobile-app", "notifications", "notifications/push", "notifications/multi-channel", "mobile-app/android", "use-cases/reduce-phone-calls", "pricing/pro"],
+    related: ["mobile-app", "notifications", "notifications/mobile-push-notifications", "notifications/multi-channel-notifications", "mobile-app/android-app", "use-cases/reduce-phone-calls", "pricing/pro-plan"],
     cta: { title: "Never Miss a Buzz", body: "Install the app and try ZapBuzzer free for 14 days." },
   },
   {
@@ -325,7 +326,7 @@ const base: PageContent[] = [
       { q: "Does the Requester See My Name?", a: "Yes. They see your name, photo and ETA once you accept." },
       { q: "Is This Available on Free?", a: "Yes. First-accept-wins is on every plan." },
     ],
-    related: ["mobile-app", "mobile-app/request-acceptance", "admin/staff-assignment", "features/first-accept-wins", "solutions/print-room/staff-workflow", "free-trial"],
+    related: ["mobile-app", "mobile-app/mobile-request-acceptance", "administration/staff-assignment", "features/first-accept-wins", "solutions/print-room/print-room-staff-workflow", "free-trial"],
     cta: { title: "Let the Nearest Person Take It", body: "Install the app and start a free trial." },
   },
   {
@@ -402,7 +403,7 @@ const base: PageContent[] = [
       { q: "Is the ETA Exact?", a: "The ETA is set by the person who accepted. It’s their honest estimate, and the timer keeps running against the deadline." },
       { q: "How Far Back Can I See?", a: "Free shows the last 30 days. Pro adds audit logs and reports." },
     ],
-    related: ["mobile-app", "mobile-app/delivery-tracking", "features/request-tracking", "features/eta-tracking", "use-cases/track-office-requests", "workflows/projector-request", "demo"],
+    related: ["mobile-app", "mobile-app/mobile-delivery-tracking", "features/request-tracking", "features/eta-tracking", "use-cases/track-office-requests", "workflows/projector-request", "book-a-demo"],
     cta: { title: "See Every Request, Live", body: "Try it free for 14 days; you won't need a credit card." },
   },
   {
@@ -479,7 +480,7 @@ const base: PageContent[] = [
       { q: "How Fast Do Teams Usually Accept Requests?", a: "Pilot offices averaged a 32-second accept time in their first month, because every request rings the whole team at once, even on silent phones." },
       { q: "Can I Accept From Telegram or WhatsApp?", a: "On Pro, requests are also pinged on Telegram and WhatsApp. The app is the most direct way to accept and track." },
     ],
-    related: ["mobile-app", "mobile-app/staff-assignment", "features/first-accept-wins", "analytics/acceptance-time", "use-cases/improve-response-time", "workflows/coffee-request", "free-trial"],
+    related: ["mobile-app", "mobile-app/mobile-staff-assignment", "features/first-accept-wins", "analytics/acceptance-time-analytics", "use-cases/improve-response-time", "workflows/coffee-request", "free-trial"],
     cta: { title: "Get to “Accepted” in Seconds", body: "Try ZapBuzzer free for 14 days." },
   },
   {
@@ -545,7 +546,7 @@ const base: PageContent[] = [
       { q: "Can Delivery Be Late?", a: "Yes. Every request has a deadline. Late ones are recorded and, if overdue before delivery, escalate to a manager." },
       { q: "Where Can I See Delivery Times?", a: "In analytics. Full analytics and scorecards are on Pro." },
     ],
-    related: ["mobile-app", "mobile-app/ratings", "features/delivery-confirmation", "analytics/delivery-time", "workflows/print-request", "solutions/print-room", "pricing"],
+    related: ["mobile-app", "mobile-app/mobile-ratings", "features/delivery-confirmation", "analytics/delivery-time-analytics", "workflows/print-request", "solutions/print-room", "pricing"],
     cta: { title: "Close Every Request Properly", body: "Start your 14-day free trial." },
   },
   {
@@ -614,7 +615,7 @@ const base: PageContent[] = [
       { q: "What Scale Is Used?", a: "A 1–5★ scale." },
       { q: "When Does the App Ask Me to Rate a Request?", a: "Right after the request is marked delivered. Rating then, while you still remember whether the coffee was hot or the prints were in the right room, gives the most useful feedback." },
     ],
-    related: ["mobile-app", "mobile-app/delivery-tracking", "features/request-ratings", "analytics/ratings", "use-cases/staff-accountability", "analytics/staff", "pricing/pro"],
+    related: ["mobile-app", "mobile-app/mobile-delivery-tracking", "features/request-ratings", "analytics/rating-analytics", "use-cases/staff-accountability", "analytics/staff-analytics", "pricing/pro-plan"],
     cta: { title: "Give Your Staff the Credit They Earn", body: "Start a free trial and see ratings build up." },
   },
   {
@@ -681,7 +682,7 @@ const base: PageContent[] = [
       {
         type: "checklist",
         heading: "Staff App Setup",
-        items: ["Install the Android app (v1.15.2).", "Allow notifications.", "Confirm you’re on the right team.", "Test a request with your manager."],
+        items: ["Install the Android app (v1.16.0).", "Allow notifications.", "Confirm you’re on the right team.", "Test a request with your manager."],
       },
     ],
     faqs: [
@@ -690,7 +691,7 @@ const base: PageContent[] = [
       { q: "Is Work Recorded?", a: "Every action is logged and timed. Audit logs and reports are on Pro." },
       { q: "What If a Job Will Take Longer Than Expected?", a: "Set a realistic ETA when you start. If it runs overdue, it escalates to a manager." },
     ],
-    related: ["mobile-app", "admin/staff-dashboard", "mobile-app/request-acceptance", "solutions/facilities", "use-cases/facilities-operations", "workflows", "free-trial"],
+    related: ["mobile-app", "administration/staff-dashboard", "mobile-app/mobile-request-acceptance", "solutions/facilities", "use-cases/better-facilities-operations", "workflows", "free-trial"],
     cta: { title: "Give Staff a Better Shift", body: "Install the app and start a 14-day free trial." },
   },
   {
@@ -767,7 +768,7 @@ const base: PageContent[] = [
       { q: "Is the Data the Same as on the Web?", a: "Yes. Your account and workspace live on the server." },
       { q: "Can I Handle Escalations From My Phone?", a: "Yes. Overdue requests auto-escalate to a manager, and the app lets you see who owns the request and step in from the corridor instead of returning to your desk." },
     ],
-    related: ["mobile-app", "admin", "admin/manager-dashboard", "use-cases/office-manager", "mobile-app/requests", "enterprise/multi-location", "pricing"],
+    related: ["mobile-app", "administration", "administration/manager-dashboard", "use-cases/office-manager", "mobile-app/mobile-requests", "enterprise/multi-location", "pricing"],
     cta: { title: "Take the Office With You", body: "Begin a free trial without a credit card or a setup call." },
   },
 ];
@@ -782,7 +783,7 @@ const extra: Record<string, Extra> = {
         heading: "Updating From an Older Build",
         paragraphs: [
           "Most updates are simple: download the new APK and install it over the old one. The exception is phones still running a build from before 11 August 2026. On those, Android can refuse the new version with a plain “App not installed” message and no further explanation.",
-          "The fix is to uninstall the old Buzzer app and then install v1.15.2 fresh. That sounds drastic, but nothing important lives on the phone. Your account and workspace are stored on the server, so once you sign in again your teams, catalogue and request history are all there.",
+          "The fix is to uninstall the old Buzzer app and then install v1.16.0 fresh. That sounds drastic, but nothing important lives on the phone. Your account and workspace are stored on the server, so once you sign in again your teams, catalogue and request history are all there.",
           "If you run an office with many staff phones, it is worth sending one message to everyone before rollout: if the install fails, uninstall first, then install. It saves a round of calls to whoever manages IT.",
         ],
       },
@@ -800,7 +801,7 @@ const extra: Record<string, Extra> = {
     faqs: [
       {
         q: "How Big Is the Download?",
-        a: "The v1.15.2 APK is 61 MB. Downloading over Wi-Fi is easiest, especially when rolling out to a whole team at once.",
+        a: "The v1.16.0 APK is 61 MB. Downloading over Wi-Fi is easiest, especially when rolling out to a whole team at once.",
       },
     ],
   },
@@ -1403,7 +1404,7 @@ const depth: Record<string, Extra> = {
 };
 
 export const pages: PageContent[] = base.map((p) => {
-  const parts = [extra[p.path], more[p.path], depth[p.path]].filter((x): x is Extra => Boolean(x));
+  const parts = [byPath(extra, p.path), byPath(more, p.path), byPath(depth, p.path)].filter((x): x is Extra => Boolean(x));
   return parts.reduce<PageContent>(
     (acc, e) => ({ ...acc, sections: [...acc.sections, ...e.sections], faqs: [...(acc.faqs ?? []), ...e.faqs] }),
     p,

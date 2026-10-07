@@ -206,13 +206,25 @@ export function SectionRenderer({
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} intro={section.intro} />
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="eq-titles grid grid-cols-1 gap-6 md:grid-cols-2">
             {[
               { t: section.problem.title, pts: section.problem.points, icon: "target" as IconName, bad: true },
               { t: section.solution.title, pts: section.solution.points, icon: "check" as IconName, bad: false },
             ].map((c, i) => (
               <div key={c.t} data-reveal style={delay(i, 2)} className={`glass-panel rounded-3xl p-7 sm:p-9 ${c.bad ? "" : "border-accent/40"}`}>
-                {!c.bad && (
+                {/* Matching status bar on both cards keeps icons, headings and lists aligned. */}
+                {c.bad ? (
+                  <div className="mb-6 flex items-center justify-between rounded-xl border border-danger/20 bg-danger/[0.06] px-4 py-2.5 text-xs font-semibold text-danger">
+                    <span className="flex items-center gap-2">
+                      <Icon name="phone" className="h-4 w-4" />
+                      <span>Today · Manual & Noisy</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 font-medium">
+                      <span className="h-1.5 w-1.5 rounded-full bg-danger" />
+                      Unowned
+                    </span>
+                  </div>
+                ) : (
                   <div className="mb-6 flex items-center justify-between rounded-xl border border-accent/25 bg-accent-soft/60 px-4 py-2.5 text-xs font-semibold text-accent-text">
                     <span className="flex items-center gap-2">
                       <Icon name="sparkles" className="h-4 w-4 text-accent" />
@@ -247,7 +259,7 @@ export function SectionRenderer({
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} intro={section.intro} />
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="eq-titles grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {section.items.map((f, i) => (
               <div key={i} className={spanLast(i, section.items.length, "md:col-span-2 lg:col-span-1")}>
                 <FeatureCard icon={icons[i % icons.length]} title={f.title} body={f.body} i={i} />
@@ -262,7 +274,7 @@ export function SectionRenderer({
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} intro={section.intro} />
-          <ol className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${section.steps.length % 3 === 0 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
+          <ol className={`eq-titles lg:[--eq-lines:3] xl:[--eq-lines:2] grid grid-cols-1 gap-6 sm:grid-cols-2 ${section.steps.length % 3 === 0 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
             {section.steps.map((s, i) => (
               <li key={i} data-reveal style={delay(i, 4)} className="glass-panel group rounded-2xl p-6 transition duration-300 hover:-translate-y-1.5 hover:border-accent/50">
                 <span className="mb-5 grid h-10 w-10 place-items-center rounded-lg bg-accent-soft font-heading font-bold text-accent-text transition-colors group-hover:bg-accent group-hover:text-white">
@@ -448,7 +460,7 @@ export function SectionRenderer({
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} intro={section.intro} />
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="eq-titles grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {section.items.map((it, i) => (
               <div key={i} data-reveal style={delay(i)} className="glass-panel flex items-start gap-3 rounded-xl p-5 transition hover:border-accent/50">
                 <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-accent" strokeWidth={2.6} />
@@ -479,7 +491,7 @@ export function SectionRenderer({
         return (
         <div>
           <SectionHeading {...headProps} title={section.heading} />
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="eq-titles [--eq-lines:3] lg:max-xl:[--eq-lines:4] flex flex-wrap justify-center gap-6">
             {section.items.map((a, i) => {
               return (
                 <div key={a.role} data-reveal style={delay(i, 4)} className={`glass-panel card-fx group w-full overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1.5 hover:border-accent/50 sm:w-[calc(50%-12px)] ${itemW}`}>
@@ -511,7 +523,7 @@ export function SectionRenderer({
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} intro={section.intro} />
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="eq-titles grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {section.items.map((m, i) => (
               <div key={m.metric} className={spanLast(i, section.items.length, "md:col-span-2 lg:col-span-1")}>
                 <FeatureCard icon="chart" title={m.metric} body={m.meaning} i={i} />
@@ -525,7 +537,7 @@ export function SectionRenderer({
       return (
         <div>
           <SectionHeading {...headProps} title={section.heading} />
-          <dl className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <dl className="eq-titles grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[...section.terms]
               .sort((a, b) => a.term.localeCompare(b.term))
               .map((t, i) => (

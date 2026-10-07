@@ -104,7 +104,7 @@ export const pages: PageContent[] = [
     ],
     faqs: [
       { q: "How Long Does an Enterprise Rollout Take?", a: "A single office can be live in an afternoon. A group rollout is paced by how quickly each site adopts the habit, so most groups pilot one office for a few weeks and then expand site by site. Your CSM will help set a realistic timeline." },
-      { q: "Can We Try ZapBuzzer Before Committing to Enterprise?", a: "Yes. Every plan starts with a 14-day free trial with no credit card. Many groups pilot one office on the trial or on Pro before moving to Enterprise for the whole group." },
+      { q: "Can We Try ZapBuzzer Before Committing to Enterprise?", a: "Yes. ZapBuzzer offers a 14-day free trial with no credit card and no setup call. Many groups pilot one office on the trial or on Pro before moving to Enterprise for the whole group." },
       { q: "Do We Need a Consultant or IT Project?", a: "No. There are no setup fees and no consultant. Enterprise options like SSO or on-prem involve your IT team, and we work through them with you during onboarding." },
       { q: "Can Each Office Have Its Own Catalogue?", a: "Yes. Locations differ: one has a print room, another only a pantry. You can shape catalogues and teams per location while keeping one view for the group." },
       { q: "What Does the Dedicated CSM Do During Rollout?", a: "They help plan the order of sites, review catalogues and routing, and walk through early analytics with you. They are your single point of contact for Enterprise options." },
@@ -112,7 +112,7 @@ export const pages: PageContent[] = [
       { q: "How Do We Get Staff at Each Site to Actually Use It?", a: "Set up the catalogue items people already ask for, such as coffee, prints and IT help, and route them to teams. When requests arrive faster than a phone call, the habit spreads on its own." },
       { q: "When Should SSO and White-Label Be Switched on During Rollout?", a: "Identity and branding are usually set up after the pilot site, before the wider rollout, so every later office joins with company sign-in and your branding from day one." },
     ],
-    related: ["enterprise", "enterprise/multi-location", "enterprise/support", "how-it-works", "use-cases/office-manager", "pricing/enterprise", "free-trial"],
+    related: ["enterprise", "enterprise/multi-location", "enterprise/enterprise-support", "how-it-works", "use-cases/office-manager", "pricing/enterprise-plan", "free-trial"],
     cta: { title: "Plan Your Rollout", body: "Tell us how many offices you run and where the chase calls hurt most. We will suggest a pilot and a path to the rest of the group." },
   },
   {
@@ -222,7 +222,7 @@ export const pages: PageContent[] = [
       { q: "Is Every Change in the Workspace Recorded for Security Reviews?", a: "Yes. Every action is audit-logged against a named person and a time, which gives your security team a trail to review." },
       { q: "How Do We Ask Security Questions Before Buying?", a: "Email hello@zapbuzzer.com with your questionnaire or requirements. We reply within one business day and will be clear about anything we cannot meet." },
     ],
-    related: ["enterprise", "integrations/sso-saml", "enterprise/permissions", "enterprise/audit-logs", "admin/roles-and-permissions", "pricing/enterprise", "contact"],
+    related: ["enterprise", "integrations/sso-and-saml", "enterprise/enterprise-permissions", "enterprise/enterprise-audit-logs", "administration/roles-and-permissions", "pricing/enterprise-plan", "contact-us"],
     cta: { title: "Talk Security With Us", body: "Share your requirements and we will walk through SSO, roles, audit logs and on-prem options for your group." },
   },
   {
@@ -322,7 +322,7 @@ export const pages: PageContent[] = [
       { q: "Can Admins See Who Changed a Setting?", a: "Yes. Every action is audit-logged, including changes to catalogues, teams, roles and settings, so admins can see who changed what and when." },
       { q: "Can We Run the Admin Console Under Our Own Brand?", a: "Enterprise includes white-label and a custom domain, which suits facility companies managing sites for clients. Talk to us about how far branding goes for your setup." },
     ],
-    related: ["enterprise", "enterprise/user-management", "enterprise/permissions", "admin", "admin/team-management", "sla/escalation-chains", "pricing/enterprise"],
+    related: ["enterprise", "enterprise/enterprise-user-management", "enterprise/enterprise-permissions", "administration", "administration/team-management", "sla-and-escalation/escalation-chains", "pricing/enterprise-plan"],
     cta: { title: "See Group Administration", body: "Book a walkthrough and we will show how owners and location admins share the work." },
   },
   {
@@ -417,7 +417,7 @@ export const pages: PageContent[] = [
       { q: "Can We Export Data to Our Own Reporting Tool?", a: "On Enterprise you can pull data through the REST API or receive webhooks. We share the specifics during onboarding rather than publishing them." },
       { q: "Who Sees Spend Data?", a: "Only owners. Cost visibility is owner-only by design." },
     ],
-    related: ["enterprise", "enterprise/reporting", "analytics", "analytics/team-performance", "analytics/staff", "developers/api", "pricing/enterprise"],
+    related: ["enterprise", "enterprise/enterprise-reporting", "analytics", "analytics/team-performance", "analytics/staff-analytics", "developers/api-documentation", "pricing/enterprise-plan"],
     cta: { title: "See Group Analytics", body: "Try the read-only demo or book a walkthrough to see analytics across locations." },
   },
   {
@@ -534,7 +534,7 @@ export const pages: PageContent[] = [
       { q: "Can Head Office See Requests From Every Location in One Place?", a: "Yes. Locations run in one account, so group owners keep one view while each site has its own catalogue, teams and analytics." },
       { q: "Can Different Offices Offer Different Catalogue Items?", a: "Yes. One site may have a print room and another only a pantry, so each location can have its own catalogue items routed to its own teams." },
     ],
-    related: ["enterprise", "enterprise/rollout", "enterprise/analytics", "features/request-routing", "use-cases/facilities-operations", "pricing/pro", "pricing/enterprise"],
+    related: ["enterprise", "enterprise/enterprise-rollout", "enterprise/enterprise-analytics", "features/request-routing", "use-cases/better-facilities-operations", "pricing/pro-plan", "pricing/enterprise-plan"],
     cta: { title: "Bring Every Office Onto One System", body: "Tell us your sites and cities and we will suggest a setup." },
   },
   {
@@ -630,7 +630,7 @@ export const pages: PageContent[] = [
       { q: "How Do We Remove Access When Someone Leaves?", a: "Remove or disable the user. Accounts live on the server, so access stops even if they still have the app on their phone, and with SSO on Enterprise access follows your company identity system." },
       { q: "Can We Add Staff to the Right Team as They Join?", a: "Yes. Admins invite people and place them in teams per location, so new staff start receiving the requests routed to their team straight away." },
     ],
-    related: ["enterprise", "enterprise/permissions", "integrations/sso-saml", "admin/team-management", "admin/staff-assignment", "use-cases/hr", "pricing/enterprise"],
+    related: ["enterprise", "enterprise/enterprise-permissions", "integrations/sso-and-saml", "administration/team-management", "administration/staff-assignment", "use-cases/hr-team", "pricing/enterprise-plan"],
     cta: { title: "Make Onboarding Painless", body: "Talk to us about SSO and user management for your group." },
   },
   {
@@ -730,7 +730,7 @@ export const pages: PageContent[] = [
       { q: "Can a Requester See Requests Raised by Other People?", a: "That depends on the permissions you give their role. Many offices let reception view open requests while ordinary requesters only see their own." },
       { q: "Who Should Be Allowed to Change Escalation Settings?", a: "Keep it to owners and a few admins. Each role has its own permissions, and every change is audit-logged, so you can check later who adjusted an SLA or escalation chain." },
     ],
-    related: ["enterprise", "enterprise/security", "enterprise/user-management", "admin/roles-and-permissions", "admin/spend-visibility", "enterprise/audit-logs", "pricing/enterprise"],
+    related: ["enterprise", "enterprise/security", "enterprise/enterprise-user-management", "administration/roles-and-permissions", "administration/spend-visibility", "enterprise/enterprise-audit-logs", "pricing/enterprise-plan"],
     cta: { title: "Design Your Roles With Us", body: "A CSM can help you map your org chart to ZapBuzzer roles." },
   },
   {
@@ -828,7 +828,7 @@ export const pages: PageContent[] = [
       { q: "Which Plan Includes Audit Logs?", a: "Audit logs and reports are part of Pro at ₹99 per seat per month. Enterprise builds on them with API and webhook access for bringing data into your own tools." },
       { q: "Can We Export Audit Data?", a: "Reports are available on Pro, and on Enterprise you can bring data into your own tools via the REST API and webhooks. Specifics are shared during onboarding." },
     ],
-    related: ["enterprise", "admin/audit-logs", "enterprise/security", "solutions/courier/tracking", "use-cases/staff-accountability", "enterprise/reporting", "pricing/enterprise"],
+    related: ["enterprise", "administration/audit-logs", "enterprise/security", "solutions/courier-and-reception/courier-tracking", "use-cases/staff-accountability", "enterprise/enterprise-reporting", "pricing/enterprise-plan"],
     cta: { title: "Settle Questions With Facts", body: "See the audit log in the read-only demo or book a walkthrough." },
   },
   {
@@ -926,7 +926,7 @@ export const pages: PageContent[] = [
       { q: "Can Reports Show Which Site Misses Its SLAs Most Often?", a: "Yes. Every request is timed against its deadline, so reports can show on-time delivery and escalations by location, team and request type." },
       { q: "Can Reports Show Our Busiest Hours?", a: "Yes. Analytics show when the office buzzes most, which helps plan pantry, print and facilities staffing around real peaks." },
     ],
-    related: ["enterprise", "enterprise/analytics", "sla/reporting", "features/request-reports", "developers/api", "integrations/white-label", "pricing/enterprise"],
+    related: ["enterprise", "enterprise/enterprise-analytics", "sla-and-escalation/sla-reporting", "features/request-reports", "developers/api-documentation", "integrations/white-label", "pricing/enterprise-plan"],
     cta: { title: "Get Reports That End Arguments", body: "Book a walkthrough and see the data behind a monthly service report." },
   },
   {
@@ -1025,7 +1025,7 @@ export const pages: PageContent[] = [
       { q: "How Quickly Does the ZapBuzzer Team Reply to Support Emails?", a: "We reply within one business day at hello@zapbuzzer.com. Enterprise customers also have a dedicated CSM as their named point of contact." },
       { q: "Does the CSM Stay Involved After Rollout?", a: "Yes. The CSM supports each site as it goes live and remains your point of contact afterwards, including reviewing analytics across sites with you." },
     ],
-    related: ["enterprise", "enterprise/rollout", "pricing/enterprise", "contact", "demo", "resources/faq"],
+    related: ["enterprise", "enterprise/enterprise-rollout", "pricing/enterprise-plan", "contact-us", "book-a-demo", "resource-hub/faq"],
     cta: { title: "Meet Your CSM", body: "Tell us about your group and we will introduce the person who will help you roll out." },
   },
 ];

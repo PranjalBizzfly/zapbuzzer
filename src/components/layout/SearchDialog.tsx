@@ -20,8 +20,11 @@ function score(p: IndexedPage, words: string[]) {
   const label = p.label.toLowerCase();
   const hay = `${label} ${p.title} ${p.group} ${p.description}`.toLowerCase();
   let s = 0;
-  for (const w of words) {
-    if (!hay.includes(w)) return 0;
+  for (const word of words) {
+    // Match the word, or its root, so "printer", "printing" and "prints" all find "print".
+    const root = word.length > 4 ? word.replace(/(ers|er|ing|es|ed|s)$/, "") : word;
+    const w = hay.includes(word) ? word : root.length >= 3 && hay.includes(root) ? root : "";
+    if (!w) return 0;
     s += label.startsWith(w) ? 6 : label.includes(w) ? 4 : p.title.toLowerCase().includes(w) ? 2 : 1;
   }
   return s;

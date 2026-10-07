@@ -142,7 +142,7 @@ export const pages: PageContent[] = [
       { q: "Do I Have to Type My Usual Coffee Order Every Time?", a: "No. The pantry catalogue keeps your usual order one tap away. Add a note only when something changes, such as an extra cup for a guest." },
       { q: "How Fast Do One-Tap Requests Get Picked Up?", a: "In pilot offices, the average accept time in the first month was 32 seconds, with 96% of requests delivered on time." },
     ],
-    related: ["features", "features/request-catalog", "features/first-accept-wins", "workflows/coffee-request", "mobile-app/requests", "use-cases/reduce-phone-calls", "free-trial"],
+    related: ["features", "features/request-catalog", "features/first-accept-wins", "workflows/coffee-request", "mobile-app/mobile-requests", "use-cases/reduce-phone-calls", "free-trial"],
     cta: { title: "Try One Tap in Your Office This Afternoon", body: "Try it free for 14 days without a card or an onboarding call. Create an account, bring your colleagues in and send the first buzz." },
   },
 
@@ -285,7 +285,7 @@ export const pages: PageContent[] = [
       { q: "Which Request Categories Do Offices Usually Manage First?", a: "Pantry, print room, IT, facilities and courier. Together they cover most everyday asks, and each maps neatly to its own team." },
       { q: "How Long Does It Take to Get Request Management Running?", a: "Most offices are up and running in an afternoon, with no setup fees, no consultant and no setup call. The 14-day trial needs no credit card." },
     ],
-    related: ["features", "features/request-tracking", "features/request-routing", "admin", "use-cases/office-manager", "use-cases/prevent-lost-requests", "pricing"],
+    related: ["features", "features/request-tracking", "features/request-routing", "administration", "use-cases/office-manager", "use-cases/prevent-lost-requests", "pricing"],
     cta: { title: "Give Your Office Requests a Proper Home", body: "Start free with one floor and up to 10 staff, or try Pro for 14 days with no credit card." },
   },
 
@@ -425,7 +425,7 @@ export const pages: PageContent[] = [
       { q: "Why Use Catalogue Tiles Instead of Free-Text Messages?", a: "Tiles make every request clear and routable: the item decides the team, and requests are counted consistently in reports. Free-text messages get misread, forwarded and lost." },
       { q: "Can the Catalogue Handle a Group Order Like Lunch for Twelve?", a: "Yes. Pick the items, add a note with quantities and timing, and the pantry queues it. The requester rates it on delivery and the owner sees the cost." },
     ],
-    related: ["features", "features/one-tap-requests", "features/request-routing", "solutions/pantry/catalog", "solutions/print-room/pdf-print-requests", "workflows/lunch-request", "admin/spend-visibility"],
+    related: ["features", "features/one-tap-requests", "features/request-routing", "solutions/pantry/pantry-catalog", "solutions/print-room/pdf-print-requests", "workflows/lunch-request", "administration/spend-visibility"],
     cta: { title: "Put Your Office Menu in Everyone’s Pocket", body: "Set up your first catalogue in minutes on the free plan, then invite your team." },
   },
 
@@ -543,7 +543,7 @@ export const pages: PageContent[] = [
       { q: "Is a Routed Request Sent to One Person or the Whole Team?", a: "The whole team, on every channel your plan supports at once. The first free person to tap Accept owns it." },
       { q: "Do We Need to Write Rules or Code to Set Up Routing?", a: "No. An admin sets up teams and catalogue items in the web app, and routing follows from that. There’s no consultant or setup call involved." },
     ],
-    related: ["features", "features/first-accept-wins", "notifications/routing", "solutions/it-support/ticket-routing", "solutions/facilities/routing", "workflows/ac-issue", "pricing/pro"],
+    related: ["features", "features/first-accept-wins", "notifications/notification-routing", "solutions/it-support/it-ticket-routing", "solutions/facilities/facilities-routing", "workflows/ac-issue", "pricing/pro-plan"],
     cta: { title: "Stop Telling People Who to Call", body: "Set up teams and categories once, and every request finds its way. Try Pro free for 14 days." },
   },
 
@@ -701,7 +701,7 @@ export const pages: PageContent[] = [
       { q: "Why Not Just Assign Every Request to a Named Person?", a: "Named assignment waits on that one person, even when they’re busy or away. Broadcasting to the team lets whoever is free take it, which keeps accept times short." },
       { q: "Won’t Staff Just Grab Every Request to Look Fast?", a: "Accepting makes you the owner, with your name on the request, its timer and its rating. Scorecards weigh on-time delivery and ratings, not just quick taps." },
     ],
-    related: ["features", "features/request-routing", "features/request-assignment", "sla", "notifications/multi-channel", "admin/staff-assignment", "analytics/acceptance-time", "demo"],
+    related: ["features", "features/request-routing", "features/request-assignment", "sla-and-escalation", "notifications/multi-channel-notifications", "administration/staff-assignment", "analytics/acceptance-time-analytics", "book-a-demo"],
     cta: { title: "See First-Accept-Wins on Your Own Team", body: "Start a 14-day free trial, add your pantry team, and watch the first request get picked up in seconds." },
   },
 
@@ -831,7 +831,7 @@ export const pages: PageContent[] = [
       { q: "Can a Staff Member Be Assigned to More Than One Team?", a: "Yes. Someone who covers both IT and facilities can belong to both teams and receive requests from each." },
       { q: "How Do I Check That Assignment Is Working Well?", a: "Watch accept times, on-time delivery and ratings by team. On Pro, analytics and scorecards show assignment health at a glance." },
     ],
-    related: ["features", "features/first-accept-wins", "admin/staff-assignment", "admin/team-management", "use-cases/staff-accountability", "workflows/hdmi-request", "pricing/pro"],
+    related: ["features", "features/first-accept-wins", "administration/staff-assignment", "administration/team-management", "use-cases/staff-accountability", "workflows/hdmi-request", "pricing/pro-plan"],
     cta: { title: "Retire the Human Switchboard", body: "Let your teams claim their own work. Start free with up to 10 staff." },
   },
 
@@ -991,7 +991,7 @@ export const pages: PageContent[] = [
       { q: "Which Stages of a Request Can Be Tracked?", a: "Buzzed, accepted, started with an ETA, delivered and rated, each with a timestamp, so anyone with access can see exactly where a request stands." },
       { q: "Can I Track a Print Job Before a Client Meeting?", a: "Yes. Once the print room accepts, you see who has it, and an ETA when they start, so you know whether the copies will reach you before the pitch." },
     ],
-    related: ["features", "features/request-status", "features/eta-tracking", "mobile-app/request-tracking", "use-cases/track-office-requests", "use-cases/stop-office-chase-calls", "free-trial"],
+    related: ["features", "features/request-status", "features/eta-tracking", "mobile-app/mobile-request-tracking", "use-cases/track-office-requests", "use-cases/stop-chase-calls", "free-trial"],
     cta: { title: "Replace Status Calls With a Status Screen", body: "Try ZapBuzzer free for 14 days, with no card required and no onboarding call." },
   },
 
@@ -1151,7 +1151,7 @@ export const pages: PageContent[] = [
       { q: "Are Managers Alerted in Real Time When a Request Runs Late?", a: "Yes. Overdue requests auto-escalate to a manager, and on Pro this follows an escalation chain." },
       { q: "How Are Live Updates Better Than an Office WhatsApp Group?", a: "In a group chat, messages scroll away and nobody knows who replied. Live updates are tied to the request, so everyone sees the same owner, status and ETA." },
     ],
-    related: ["features", "features/request-tracking", "notifications", "notifications/push", "mobile-app/notifications", "compare/whatsapp", "pricing"],
+    related: ["features", "features/request-tracking", "notifications", "notifications/mobile-push-notifications", "mobile-app/mobile-notifications", "feature-comparison/vs-whatsapp", "pricing"],
     cta: { title: "Make Your Office Run on Live Information", body: "Start a free trial and send a test request to your team’s phones." },
   },
 ];

@@ -259,15 +259,9 @@ export function Footer() {
           <div className="flex flex-col gap-3">
             <StoreBadge
               href="/mobile-app/android-app"
-              top="Get It on"
-              bottom="Google Play"
-              icon={<svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden><path fill="#00d7fe" d="M3.6 2.3 13.4 12l-9.8 9.7c-.3-.2-.6-.6-.6-1.1V3.4c0-.5.3-.9.6-1.1Z" /><path fill="#ffce00" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.9-2.2c.8-.5.8-1.9 0-2.4l-3.9-2.2Z" /><path fill="#ff3a44" d="M13.4 12 3.6 21.7c.4.2.9.2 1.4-.1l11.8-6.2-3.4-3.4Z" /><path fill="#00f076" d="M3.6 2.3c.4-.2.9-.2 1.4.1l11.8 6.2-3.4 3.4-9.8-9.7Z" /></svg>}
-            />
-            <StoreBadge
-              href="/mobile-app"
-              top="Download on the"
-              bottom="App Store"
-              icon={<svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1ZM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5Z" /></svg>}
+              top="Download the"
+              bottom="Android APK"
+              icon={<svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="#3ddc84" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16" /></svg>}
             />
           </div>
 
@@ -293,11 +287,11 @@ export function Footer() {
           <Column col={about} />
           <Column col={compare}>
             <div className="mt-8 flex flex-col items-stretch gap-3">
-              <Link href="/book-a-demo" className="inline-flex w-full max-w-[190px] items-center justify-between gap-2 whitespace-nowrap rounded-full border border-[#a5a8ff]/25 bg-accent/20 py-2.5 pl-4 pr-2.5 text-sm font-semibold text-white transition hover:bg-accent/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b9bbff]/70">
+              <Link href="/book-a-demo" className="inline-flex w-full max-w-[190px] items-center justify-between gap-2 rounded-full leading-tight border border-[#a5a8ff]/25 bg-accent/20 py-2.5 pl-4 pr-2.5 text-sm font-semibold text-white transition hover:bg-accent/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b9bbff]/70">
                 Book a Demo
                 <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white text-accent"><Icon name="arrowRight" className="h-3 w-3" /></span>
               </Link>
-              <a href={site.app.signUp} className="w-full max-w-[190px] whitespace-nowrap rounded-full bg-gradient-to-r from-accent via-violet to-fuchsia px-4 py-2.5 text-center text-sm font-semibold text-white shadow-[0_12px_30px_-12px_oklch(56%_0.2_277/0.8)] transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b9bbff]/70">
+              <a href={site.app.signUp} className="w-full max-w-[190px] text-balance rounded-full leading-tight bg-gradient-to-r from-accent via-violet to-fuchsia px-4 py-2.5 text-center text-sm font-semibold text-white shadow-[0_12px_30px_-12px_oklch(56%_0.2_277/0.8)] transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b9bbff]/70">
                 Get Free Access
               </a>
             </div>

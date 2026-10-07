@@ -1,6 +1,6 @@
 # ZapBuzzer — verified product facts
 
-Source: https://zapbuzzer.com (captured 2026-10-05). Page copy must stay within these facts.
+Source: https://zapbuzzer.com (captured 2026-10-05; re-checked 2026-10-07). Page copy must stay within these facts.
 Anything not listed here must be described generically ("available on Enterprise — talk to us
 for details") and never given invented specifics (endpoint names, payload fields, certifications,
 integrations with third-party tools, uptime SLAs beyond 99.9%, etc.).
@@ -40,7 +40,7 @@ Lifecycle states seen in product: Buzzed/requested → Accepted → Started (wit
 - Request cost visibility: owner sees the cost (e.g. of a lunch order).
 - Mobile app: rings through even on silent or a locked phone; one tap to summon staff or security,
   raise an emergency, or place an order; accept & track requests on the move.
-  Android APK, v1.15.2 (build 47), 61 MB. Account & workspace live on the server.
+  Android APK, v1.16.0 (build 48), 61 MB. Account & workspace live on the server.
 - Web app + mobile app.
 
 ## Pricing — "Pay per seat. Cancel anytime." No setup fees, no consultant. Up and running in an afternoon.
@@ -61,9 +61,9 @@ Lifecycle states seen in product: Buzzed/requested → Accepted → Started (wit
 - Quotes (only these are real — never invent other quotes or attribute new words to people):
   - "The office runs quieter. Nobody's shouting names down the hall. Coffee arrives before anyone
     asks twice." — Aarav Sharma, Founder & CEO, Acme HQ (Pune)
-  - "Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet." — Priya, Office Manager
-  - "Print jobs land at my desk before the client even sits down. Zero chase calls." — Kavya, Sales Lead
-  - "Facilities tickets auto-escalate now. Nothing rots in someone's DMs." — Deepak, Admin Head
+  - "Coffee arrives before anyone asks twice. The pantry WhatsApp group is finally quiet." — Priya, Office Manager, Lumen Labs
+  - "Print jobs land at my desk before the client even sits down. Zero chase calls." — Kavya, Sales Lead, Northwind
+  - "Facilities tickets auto-escalate now. Nothing rots in someone's DMs." — Deepak, Admin Head, Meridian
 
 ## Canonical scenarios (cast)
 - Aarav (CEO) in a board call taps Coffee → Boss Cabin; pantry sees it on Telegram; Raj accepts in 12s.
@@ -78,3 +78,10 @@ Lifecycle states seen in product: Buzzed/requested → Accepted → Started (wit
 ## Contact
 hello@zapbuzzer.com · Pune, Maharashtra, India · replies within one business day.
 App: sign in https://zapbuzzer.com/sign-in · sign up https://zapbuzzer.com/signup · read-only demo https://zapbuzzer.com/sign-in?demo=1
+
+## Re-check notes (2026-10-07, zapbuzzer.com home)
+- Mobile: Android only, APK direct download + QR code. No Google Play or App Store link, no iOS app.
+- APK notice: builds installed before 11 August 2026 must be uninstalled first ("App not installed").
+- SLA + escalation chain and Telegram/WhatsApp are listed under Pro only; Free lists email notifications.
+- 14-day trial text is not tied to a named plan on the site.
+- Free price renders oddly on the live site ("ALL 0.04 forever + 40% tax") — owner to confirm; treat Free as free.

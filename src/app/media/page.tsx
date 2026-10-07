@@ -48,7 +48,7 @@ const pilot = [
 const announcements = [
   {
     title: "ZapBuzzer Android App Available",
-    body: "The ZapBuzzer Android app is available as a direct APK download, version 1.15.2 (build 47). It rings through even when the phone is on silent or locked, and lets staff accept and track requests on the move.",
+    body: "The ZapBuzzer Android app is available as a direct APK download, version 1.16.0 (build 48). It rings through even when the phone is on silent or locked, and lets staff accept and track requests on the move.",
     href: "/mobile-app/android-app",
     cta: "Android App Details",
   },

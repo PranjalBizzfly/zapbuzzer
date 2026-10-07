@@ -176,13 +176,13 @@ export const pages: PageContent[] = [
       { q: "What On-Time Rate Can We Expect With SLAs?", a: "Pilot offices reached 96% on-time delivery and a 32-second average accept time in their first month. Your figures depend on your teams and targets." },
     ],
     related: [
-      "sla/timers",
-      "sla/automatic-escalation",
-      "sla/escalation-chains",
+      "sla-and-escalation/sla-timers",
+      "sla-and-escalation/automatic-escalation",
+      "sla-and-escalation/escalation-chains",
       "analytics/on-time-performance",
       "use-cases/sla-compliance",
-      "resources/sla-management-guide",
-      "pricing/pro",
+      "resource-hub/sla-management-guide",
+      "pricing/pro-plan",
       "free-trial",
     ],
     cta: {
@@ -243,7 +243,7 @@ export const pages: PageContent[] = [
           { time: "14:53", event: "Sunil marks it Started; the countdown is visible on his phone." },
           { time: "14:58", event: "Copies are delivered to Kavya’s desk and marked Delivered, inside the deadline." },
         ],
-        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead",
+        outcome: "“Print jobs land at my desk before the client even sits down. Zero chase calls.” — Kavya, Sales Lead, Northwind",
       },
       {
         type: "table",
@@ -296,7 +296,7 @@ export const pages: PageContent[] = [
       { q: "What Does the Request Timer Actually Measure?", a: "It measures from buzz to delivery, with accept time and start time recorded along the way. That shows whether a delay came from slow pickup or slow work." },
       { q: "Can Staff Change the ETA Once a Timer Is Running?", a: "Staff set an ETA when they start the job, which the requester sees. The SLA deadline itself stays the same, so the timer remains a fair measure." },
     ],
-    related: ["sla-and-escalation", "sla/tracking", "sla/breach-detection", "features/request-timers", "features/eta-tracking", "workflows/print-request", "pricing"],
+    related: ["sla-and-escalation", "sla-and-escalation/sla-tracking", "sla-and-escalation/sla-breach-detection", "features/request-timers", "features/eta-tracking", "workflows/print-request", "pricing"],
     cta: { title: "See the Countdown on a Real Request", body: "Open the read-only demo or start a free trial and buzz your first coffee." },
   },
 
@@ -399,7 +399,7 @@ export const pages: PageContent[] = [
       { q: "Does the Live Board Sort Requests by Urgency?", a: "Yes. Open requests are shown with their owner, state and time left, so managers see the jobs closest to breach first rather than whoever shouted loudest." },
       { q: "Which Request States Appear on the Tracking Board?", a: "Requested, accepted, started with an ETA, and delivered, along with overdue when a deadline passes. Each state change appears as soon as staff tap it." },
     ],
-    related: ["sla-and-escalation", "sla/timers", "sla/overdue-requests", "features/request-tracking", "admin/manager-dashboard", "use-cases/track-office-requests", "demo"],
+    related: ["sla-and-escalation", "sla-and-escalation/sla-timers", "sla-and-escalation/overdue-requests", "features/request-tracking", "administration/manager-dashboard", "use-cases/track-office-requests", "book-a-demo"],
     cta: { title: "Watch a Live Board Fill Up", body: "Explore the read-only demo, then start a free trial for your own office." },
   },
 
@@ -500,7 +500,7 @@ export const pages: PageContent[] = [
       { q: "What Counts as an SLA Breach in ZapBuzzer?", a: "A breach happens when a request's deadline passes and it has not been marked Delivered. It is flagged at that moment by the system, not hours later by a colleague." },
       { q: "How Should We Review Breaches Without Blaming Staff?", a: "Look at the stage where each breach happened, before accept, before start or during work. That points to staffing, workload or a too-tight target rather than one person." },
     ],
-    related: ["sla-and-escalation", "sla/overdue-requests", "sla/automatic-escalation", "sla/reporting", "solutions/it-support/sla", "use-cases/prevent-lost-requests", "pricing/pro"],
+    related: ["sla-and-escalation", "sla-and-escalation/overdue-requests", "sla-and-escalation/automatic-escalation", "sla-and-escalation/sla-reporting", "solutions/it-support/it-sla-management", "use-cases/prevent-lost-requests", "pricing/pro-plan"],
     cta: { title: "Catch Late Jobs at the Deadline", body: "Try ZapBuzzer free for 14 days and see breaches flagged in real time." },
   },
 
@@ -602,7 +602,7 @@ export const pages: PageContent[] = [
       { q: "What Triggers an Automatic Escalation?", a: "A request passing its deadline without being delivered. At that point a manager is told automatically, with the full timeline attached, and nobody has to pick up the phone." },
       { q: "Can Staff Escalate a Request Manually Before the Deadline?", a: "Escalation is driven by the deadline so it happens consistently. If a job needs help earlier, staff can add a note or tell their manager, who can add help or reassign." },
     ],
-    related: ["sla-and-escalation", "sla/manager-escalation", "sla/escalation-chains", "notifications/escalation", "solutions/facilities/escalation", "use-cases/stop-office-chase-calls", "free-trial"],
+    related: ["sla-and-escalation", "sla-and-escalation/manager-escalation", "sla-and-escalation/escalation-chains", "notifications/notification-escalation", "solutions/facilities/facilities-escalation", "use-cases/stop-chase-calls", "free-trial"],
     cta: { title: "Let Requests Escalate Themselves", body: "Start a 14-day free trial and stop being the person who chases." },
   },
 
@@ -704,7 +704,7 @@ export const pages: PageContent[] = [
       { q: "What Information Arrives With a Manager Escalation?", a: "The request, its owner, its state and its timeline: when it was buzzed, accepted and started. That lets the manager decide in a minute without calling anyone." },
       { q: "How Can a Manager Resolve an Escalated Request?", a: "Usually one of three ways: nudge the current owner, add help, or reassign the job. Which actions each manager can take depends on their role's permissions." },
     ],
-    related: ["sla-and-escalation", "sla/automatic-escalation", "sla/escalation-chains", "admin/manager-dashboard", "admin/staff-assignment", "use-cases/office-manager", "pricing/pro"],
+    related: ["sla-and-escalation", "sla-and-escalation/automatic-escalation", "sla-and-escalation/escalation-chains", "administration/manager-dashboard", "administration/staff-assignment", "use-cases/office-manager", "pricing/pro-plan"],
     cta: { title: "Handle Exceptions, Not Every Request", body: "Try ZapBuzzer free for 14 days and only hear about the jobs that need you." },
   },
 
@@ -807,7 +807,7 @@ export const pages: PageContent[] = [
       { q: "Can I See How Often Chains Fire?", a: "Yes, through Pro reports and SLA analytics, which show escalations by team and period." },
       { q: "What Happens If a Chain Step Is on Leave?", a: "The chain does not wait for them. If the request stays unresolved, it moves to the next step, which is why a chain beats relying on a single manager." },
     ],
-    related: ["sla-and-escalation", "sla/manager-escalation", "sla/automatic-escalation", "notifications/escalation", "solutions/facilities/escalation", "pricing/pro", "free-trial"],
+    related: ["sla-and-escalation", "sla-and-escalation/manager-escalation", "sla-and-escalation/automatic-escalation", "notifications/notification-escalation", "solutions/facilities/facilities-escalation", "pricing/pro-plan", "free-trial"],
     cta: { title: "Make Sure Late Jobs Always Land Somewhere", body: "Start a 14-day Pro trial and set up your first escalation chain." },
   },
 
@@ -910,7 +910,7 @@ export const pages: PageContent[] = [
       { q: "What Are the Two Kinds of Overdue Request?", a: "Overdue before anyone accepted, which usually means no free staff or missed notifications, and overdue after accept, which usually means workload or a hard job. They need different fixes." },
       { q: "How Should We Run a Weekly Overdue Review?", a: "Look at overdue counts by team and hour, then check whether they were unaccepted or slow to deliver. Change one thing, such as cover or a target, and watch the next week." },
     ],
-    related: ["sla-and-escalation", "sla/breach-detection", "sla/tracking", "features/request-status", "use-cases/prevent-lost-requests", "analytics/on-time-performance", "demo"],
+    related: ["sla-and-escalation", "sla-and-escalation/sla-breach-detection", "sla-and-escalation/sla-tracking", "features/request-status", "use-cases/prevent-lost-requests", "analytics/on-time-performance", "book-a-demo"],
     cta: { title: "Get Overdue Requests Under Control", body: "Start free and see which jobs slip, and why, within a week." },
   },
 
@@ -1012,7 +1012,7 @@ export const pages: PageContent[] = [
       { q: "What Does an SLA Report Contain?", a: "On-time rate, overdue counts, average accept and delivery times and escalations, cut by team, category, location and period. It is built from timed requests, so nobody fills it in by hand." },
       { q: "Can I Use SLA Reports in a Monthly Leadership Review?", a: "Yes. A monthly report gives leadership a short answer on whether the office runs on time and is improving, without them needing to watch the live board." },
     ],
-    related: ["sla-and-escalation", "sla/analytics", "features/request-reports", "analytics/on-time-performance", "enterprise/reporting", "use-cases/sla-compliance", "pricing/pro"],
+    related: ["sla-and-escalation", "sla-and-escalation/sla-analytics", "features/request-reports", "analytics/on-time-performance", "enterprise/enterprise-reporting", "use-cases/sla-compliance", "pricing/pro-plan"],
     cta: { title: "Show Your Service Levels With Data", body: "Start a 14-day Pro trial and run your first SLA report on real requests." },
   },
 
@@ -1115,7 +1115,7 @@ export const pages: PageContent[] = [
       { q: "How Many Weeks of Requests Before SLA Patterns Show Up?", a: "Breach patterns by stage, hour and category usually appear within a couple of weeks of normal use, because every request contributes timed data from day one." },
       { q: "Can SLA Analytics Show Breaches by Hour of Day?", a: "Yes. Breaches can be viewed by stage and hour, which surfaces patterns such as slow IT pickups just after lunch that a single on-time rate would hide." },
     ],
-    related: ["sla-and-escalation", "sla/reporting", "analytics", "analytics/response-time", "analytics/office-activity", "solutions/it-support/analytics", "pricing/pro"],
+    related: ["sla-and-escalation", "sla-and-escalation/sla-reporting", "analytics", "analytics/response-time-analytics", "analytics/office-activity-analytics", "solutions/it-support/it-support-analytics", "pricing/pro-plan"],
     cta: { title: "See Where Your Minutes Go", body: "Try Pro free for 14 days and get SLA analytics on your own requests." },
   },
 ];

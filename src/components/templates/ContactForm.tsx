@@ -19,7 +19,7 @@ export function ContactForm() {
     const email = String(f.get("email") ?? "").trim();
     if (!String(f.get("name") ?? "").trim()) er.name = "Name is required.";
     if (!email) er.email = "Work email is required.";
-    else if (!/^[^s@]+@[^s@]+.[^s@]+$/.test(email)) er.email = "Enter a valid email address, like name@company.com.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) er.email = "Enter a valid email address, like name@company.com.";
     const pe = phoneError(f);
     if (pe) er.phone = pe;
     setErrors(er);
@@ -42,13 +42,13 @@ export function ContactForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="text-sm font-medium">
           Name *
-          <input name="name" required autoComplete="name" aria-invalid={errors.name ? true : undefined} className={`${input} ${errors.name ? "!border-danger" : ""}`} />
-          {errors.name && <span className="mt-1.5 block text-xs font-medium text-danger">{errors.name}</span>}
+          <input name="name" required autoComplete="name" aria-invalid={errors.name ? true : undefined} aria-describedby={errors.name ? "cf-name-err" : undefined} className={`${input} ${errors.name ? "!border-danger" : ""}`} />
+          {errors.name && <span id="cf-name-err" className="mt-1.5 block text-xs font-medium text-danger">{errors.name}</span>}
         </label>
         <label className="text-sm font-medium">
           Work Email *
-          <input name="email" type="email" required autoComplete="email" aria-invalid={errors.email ? true : undefined} className={`${input} ${errors.email ? "!border-danger" : ""}`} />
-          {errors.email && <span className="mt-1.5 block text-xs font-medium text-danger">{errors.email}</span>}
+          <input name="email" type="email" required autoComplete="email" aria-invalid={errors.email ? true : undefined} aria-describedby={errors.email ? "cf-email-err" : undefined} className={`${input} ${errors.email ? "!border-danger" : ""}`} />
+          {errors.email && <span id="cf-email-err" className="mt-1.5 block text-xs font-medium text-danger">{errors.email}</span>}
         </label>
         <div className="sm:col-span-2">
           <PhoneField error={errors.phone} inputClass={input.replace("border-line ", "")} />
